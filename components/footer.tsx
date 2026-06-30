@@ -2,13 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-
-const footerLinks = {
-  Product: ["Features", "Pricing", "Changelog", "Roadmap", "API"],
-  Resources: ["Documentation", "Guides", "Blog", "Community", "Templates"],
-  Company: ["About", "Careers", "Press", "Partners", "Contact"],
-  Legal: ["Privacy", "Terms", "Security", "Cookies", "Licenses"],
-}
+import { Anchor } from "lucide-react"
 
 export function Footer() {
   const ref = useRef(null)
@@ -21,39 +15,77 @@ export function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-5 gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
-                <span className="text-zinc-950 font-bold text-sm">A</span>
-              </div>
-              <span className="font-semibold text-white">Apex</span>
+            <a href="/" className="flex items-center gap-2 mb-4">
+              <Anchor className="w-5 h-5 text-white" strokeWidth={1.5} />
+              <span className="font-semibold text-white tracking-wide text-sm uppercase">Grounded</span>
             </a>
-            <p className="text-sm text-zinc-500 mb-4">The modern platform for teams who ship fast.</p>
-            {/* System Status */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 pulse-glow" />
-              <span className="text-xs text-zinc-400">All Systems Operational</span>
-            </div>
+            <p className="text-sm text-zinc-500">
+              We make your business readable, trustworthy and eligible for AI.
+            </p>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-sm font-semibold text-white mb-4">{title}</h4>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Site */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Site</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="/#how-it-works" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  How It Works
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="/#cases" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Cases
+                </a>
+              </li>
+              <li>
+                <a href="#audit" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Free Audit
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Legal</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Privacy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Terms
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Contact</h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@grounded.so"
+                  className="text-sm text-zinc-500 hover:text-white transition-colors"
+                >
+                  hello@grounded.so
+                </a>
+              </li>
+            </ul>
+          </div>
         </motion.div>
 
         {/* Bottom */}
@@ -61,20 +93,9 @@ export function Footer() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-16 pt-8 border-t border-zinc-800 flex items-center justify-center"
         >
-          <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} Apex, Inc. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
-              Twitter
-            </a>
-            <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
-              GitHub
-            </a>
-            <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
-              Discord
-            </a>
-          </div>
+          <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} GROUNDED. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

@@ -1,13 +1,13 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { useMemo, useRef } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 const stats = [
-  { value: "10+", label: "Hrs saved per person each week" },
-  { value: "90%", label: "Less time on manual review" },
-  { value: "Days → Min", label: "Approval turnaround" },
-  { value: "0", label: "Missed deadlines" },
+  { value: "−33%", label: "Google search traffic to websites, last year" },
+  { value: "~60%", label: "Searches that end with zero clicks" },
+  { value: "<1%", label: "Of that lost traffic chatbots send back" },
+  { value: "−97%", label: "Traffic drop at some leading publishers" },
 ]
 
 type Drop = {
@@ -91,25 +91,25 @@ function Rain({ drops, className = "" }: { drops: Drop[]; className?: string }) 
 export function TrustedAtScale() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
 
-  // Two independent organic fields: a denser one for the desktop right column,
-  // and a sparser, full-section field that sits behind the content on mobile.
   const columnDrops = useMemo(() => generateDrops(28, 1337), [])
   const ambientDrops = useMemo(() => generateDrops(22, 90210), [])
 
   return (
-    <section ref={ref} className="relative overflow-hidden px-4 py-24 sm:py-32">
-      {/* Ambient full-section rain — visible below lg, sits behind all content */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1.2 }}
-        className="pointer-events-none absolute inset-0 z-0 lg:hidden"
-      >
-        <Rain drops={ambientDrops} className="opacity-40" />
-        {/* Legibility wash: subtle dark gradient so numbers stay readable on top */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/40 to-zinc-950/70" />
-      </motion.div>
+    <section id="infrastructure" ref={ref} className="relative overflow-hidden px-4 py-24 sm:py-32">
+      {mounted && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1.2 }}
+          className="pointer-events-none absolute inset-0 z-0 lg:hidden"
+        >
+          <Rain drops={ambientDrops} className="opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/40 to-zinc-950/70" />
+        </motion.div>
+      )}
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-8">
@@ -121,7 +121,7 @@ export function TrustedAtScale() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-center gap-2"
             >
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">Trusted at Scale</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">The Shift</span>
               <span className="h-2 w-2 rounded-full bg-emerald-500 pulse-glow" />
             </motion.div>
 
@@ -132,21 +132,22 @@ export function TrustedAtScale() {
               className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-cal-sans)" }}
             >
-              Everything we build runs on your infrastructure.{" "}
-              <span className="text-zinc-500">Your data stays under your security, your access, your audit trail.</span>
+              The click is dying.{" "}
+              <span className="text-zinc-500">Google stopped sending traffic — and no one is getting it back.</span>
             </motion.h2>
 
           </div>
 
-          {/* Right: animated falling-line field (desktop only) */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="relative hidden h-[28rem] lg:block"
-          >
-            <Rain drops={columnDrops} />
-          </motion.div>
+          {mounted && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative hidden h-[28rem] lg:block"
+            >
+              <Rain drops={columnDrops} />
+            </motion.div>
+          )}
         </div>
 
         {/* Stats */}

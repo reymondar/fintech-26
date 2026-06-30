@@ -22,9 +22,8 @@ const instrumentSans = Instrument_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Apex - Enterprise SaaS Platform",
-  description: "The modern platform for teams who ship fast. Built for scale, designed for speed.",
-    generator: 'v0.app'
+  title: "The Stack House — Scale your operation. Move faster.",
+  description: "Scale your operation and move faster. Do more without hiring more — even when your processes are scattered across tools, teams, and time zones.",
 }
 
 export default function RootLayout({

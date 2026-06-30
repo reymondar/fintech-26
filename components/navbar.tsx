@@ -1,21 +1,33 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useCallback } from "react"
+import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Menu, X, Anchor } from "lucide-react"
 
 const navItems = [
-  { label: "Features", href: "#features" },
-  { label: "Integrations", href: "#integrations" },
-  { label: "Docs", href: "#docs" },
-  { label: "Blog", href: "#blog" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Services", href: "/services" },
+  { label: "Cases", href: "/#cases" },
 ]
 
 export function Navbar() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const navRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
+
+  const handleNav = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setMobileMenuOpen(false)
+    if (href.startsWith("/#")) {
+      const hash = href.slice(1)
+      if (pathname === "/") {
+        e.preventDefault()
+        const el = document.querySelector(hash)
+        if (el) el.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [pathname])
 
   return (
     <motion.header
@@ -29,11 +41,9 @@ export function Navbar() {
         className="relative flex items-center justify-between px-4 py-3 rounded-full bg-zinc-900/40 backdrop-blur-md border border-zinc-800"
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
-            <span className="text-zinc-950 font-bold text-sm">A</span>
-          </div>
-          <span className="font-semibold text-white hidden sm:block">Apex</span>
+        <a href="/" className="flex items-center gap-2">
+          <Anchor className="w-5 h-5 text-white" strokeWidth={1.5} />
+          <span className="font-semibold text-white hidden sm:block tracking-wide text-sm uppercase">Grounded</span>
         </a>
 
         {/* Desktop Nav Items */}
@@ -42,6 +52,7 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
+              onClick={(e) => handleNav(e, item.href)}
               className="relative px-4 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -59,24 +70,22 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* CTA Buttons */}
-        <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="text-zinc-400 hover:text-white hover:bg-zinc-800">
-            Sign In
-          </Button>
-          <Button size="sm" className="shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200 rounded-full px-4">
-            Get Started
-          </Button>
+        {/* CTA + Mobile Menu */}
+        <div className="flex items-center gap-2">
+          <a
+            href="#audit"
+            className="hidden sm:inline-flex items-center px-5 py-1.5 rounded-full bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors"
+          >
+            Free Audit
+          </a>
+          <button
+            className="md:hidden p-2 text-zinc-400 hover:text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-zinc-400 hover:text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
       </nav>
 
       {/* Mobile Menu */}
@@ -93,16 +102,17 @@ export function Navbar() {
                 key={item.label}
                 href={item.href}
                 className="px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleNav(e, item.href)}
               >
                 {item.label}
               </a>
             ))}
-            <hr className="border-zinc-800 my-2" />
-            <Button variant="ghost" className="justify-start text-zinc-400 hover:text-white">
-              Sign In
-            </Button>
-            <Button className="shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200 rounded-full">Get Started</Button>
+            <a
+              href="#audit"
+              className="mt-2 flex items-center justify-center px-5 py-3 rounded-full bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors"
+            >
+              Free Audit
+            </a>
           </div>
         </motion.div>
       )}

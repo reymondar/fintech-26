@@ -5,7 +5,7 @@ import { useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export function FinalCTA() {
+export function ServicesCTA() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -22,12 +22,12 @@ export function FinalCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-white">Find out if the AI sees you.</span>{" "}
-          <span className="text-zinc-500">It takes one audit.</span>
+          <span className="text-white">Start with the audit.</span>{" "}
+          <span className="text-zinc-500">See exactly where you stand.</span>
         </h2>
         <p className="text-lg sm:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-          Real prompts, real engines, your real competitors. See exactly where you stand against the names AI recommends
-          today.
+          Real prompts, real engines, your real competitors. No commitment — just a clear picture of whether AI sees
+          you.
         </p>
 
         <div className="flex items-center justify-center">
@@ -43,7 +43,7 @@ export function FinalCTA() {
           </Button>
         </div>
 
-        <p className="mt-8 text-sm text-zinc-500">Free audit · no credit card · results in days.</p>
+        <p className="mt-8 text-sm text-zinc-500">Free · no credit card · results in days.</p>
       </motion.div>
     </section>
   )

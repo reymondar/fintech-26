@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
-import { FileSearch, FileText, Inbox, PenLine, Plug } from "lucide-react"
+import { Code, ShieldCheck, ChartLine, Bot, Plug } from "lucide-react"
 
 const containerVariants = {
   hidden: {},
@@ -101,10 +101,12 @@ export function BentoGrid() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            We build where you already work
+            <span className="block">Readable. Trustworthy. Eligible.</span>
+            <span className="block text-zinc-500">The layers that make AI pick you.</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            No new platform, no migration. We meet your operation inside the tools your team already opens every day.
+            Not a prettier website. The data infrastructure and authority an AI engine needs to read you, trust you, and
+            choose you.
           </p>
         </motion.div>
 
@@ -115,7 +117,7 @@ export function BentoGrid() {
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-          {/* Large card - Payment Operations */}
+          {/* Large card - Machine-readable */}
           <motion.div
             variants={itemVariants}
             className="md:col-span-2 group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300 overflow-hidden"
@@ -123,22 +125,22 @@ export function BentoGrid() {
             <div className="flex items-start justify-between mb-8">
               <div>
                 <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-                  <FileSearch className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+                  <Code className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Contract analysis</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Readable for machines</h3>
                 <p className="text-zinc-400 text-sm max-w-md">
-                  Read every contract. Miss nothing. Your team stops scanning 40-page agreements for the three clauses
-                  that matter. Contracts come back flagged, summarized, and ready to review.
+                  We structure your data — catalog, specs, capabilities — so engines read you without guessing. Schema,
+                  entities and feeds, kept in sync.
                 </p>
               </div>
               <SystemStatus />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { value: "2 min", label: "per 40 pages" },
-                { value: "100%", label: "clauses checked" },
-                { value: "0", label: "missed renewals" },
-                { value: "24/7", label: "turnaround" },
+                { value: "100%", label: "machine-readable" },
+                { value: "JSON-LD", label: "schema layer" },
+                { value: "0", label: "schema drift" },
+                { value: "24/7", label: "kept in sync" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
@@ -148,57 +150,59 @@ export function BentoGrid() {
             </div>
           </motion.div>
 
-          {/* Process Automation */}
+          {/* Authority */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
           >
             <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <FileText className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+              <ShieldCheck className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Document summaries</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Trustworthy as a source</h3>
             <p className="text-zinc-400 text-sm">
-              The summary, not the stack. Long documents come back as the version your team actually needs to read. Key
-              points, risks, and numbers, pulled out and ready.
+              AI cites who it trusts. We build the authority — content, entity, freshness, third-party signals — that
+              turns structure into real citations.
             </p>
           </motion.div>
 
-          {/* Integrations */}
+          {/* Share of Model */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
           >
             <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <Inbox className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+              <ChartLine className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Intake &amp; approvals</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">A position we defend</h3>
             <p className="text-zinc-400 text-sm mb-4">
-              Requests in. Approvals out. No more chasing sign-offs across inboxes. Requests route themselves, approvals
-              happen on time, and nothing sits forgotten in someone&apos;s folder.
+              We measure how often AI names you vs your competitors, every month, and defend that position as the models
+              shift.
             </p>
             <AnimatedChart />
+            <div className="flex items-center gap-2 text-emerald-500 text-sm mt-2">
+              <span className="font-mono">monthly report</span>
+            </div>
           </motion.div>
 
-          {/* Phase 2 Development */}
+          {/* Agent-ready */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
           >
             <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <PenLine className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+              <Bot className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Clause &amp; document drafting</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Eligible for agents</h3>
             <p className="text-zinc-400 text-sm mb-4">
-              First drafts in minutes. Standard clauses, letters, and documents, drafted from your own templates and
-              language. Your team edits instead of starting from a blank page.
+              What&apos;s next is already coming: agents that don&apos;t just cite you, they act with you. We get your
+              data ready for an agent to query — and tomorrow, to buy.
             </p>
             <div className="flex items-center gap-2 text-emerald-500 text-sm">
-              <span className="font-mono">~2 min</span>
-              <span className="text-zinc-500">to first draft</span>
+              <span className="font-mono">agent-ready · MCP</span>
             </div>
           </motion.div>
 
-          {/* Compliance */}
+          {/* Engines covered */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
@@ -206,16 +210,16 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
               <Plug className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Integrations</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Where we make you visible</h3>
             <p className="text-zinc-400 text-sm mb-4">
-              Everything, where you already work. All of this lives inside the tools your team opens every morning. No
-              new platform, no migration, nothing to relearn.
+              We track and optimize across the engines your buyers actually ask.
             </p>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Microsoft 365</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Power BI</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">SharePoint</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Outlook</span>
+              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">ChatGPT</span>
+              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Perplexity</span>
+              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Gemini</span>
+              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Claude</span>
+              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Google AI Overviews</span>
             </div>
           </motion.div>
         </motion.div>

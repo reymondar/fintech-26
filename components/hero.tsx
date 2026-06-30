@@ -1,16 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, MessageSquare, Check, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const avatars = [
-  "/professional-headshot-1.png",
-  "/professional-headshot-2.png",
-  "/professional-headshot-3.png",
-  "/professional-headshot-4.png",
-  "/professional-headshot-5.png",
-]
 
 const textRevealVariants = {
   hidden: { y: "100%" },
@@ -42,7 +34,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500 pulse-glow" />
-          <span className="text-sm text-zinc-400">Now in Public Beta</span>
+          <span className="text-sm text-zinc-400">AI Visibility · 2026</span>
         </motion.div>
 
         {/* Headline with text mask animation */}
@@ -52,7 +44,7 @@ export function Hero() {
         >
           <span className="block overflow-hidden">
             <motion.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={0}>
-              Scale your operation.
+              When your client asks the AI,
             </motion.span>
           </span>
           <span className="block overflow-hidden">
@@ -63,7 +55,7 @@ export function Hero() {
               animate="visible"
               custom={1}
             >
-              Move faster.
+              do you show up or your competitor?
             </motion.span>
           </span>
         </h1>
@@ -75,53 +67,57 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Do more without hiring more. Even when your processes are scattered across a dozen tools and held together
-          by hand. We adapt to your operation, not the other way around.
+          Google stopped sending traffic. Now your buyers ask and the AI answers with a name. We make you readable,
+          trustworthy, and eligible for AI engines — so that name is yours.
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <Button
             size="lg"
             className="shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200 rounded-full px-8 h-12 text-base font-medium shadow-lg shadow-white/10"
           >
-            Start Building
+            Find out if AI sees you
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </motion.div>
 
-        {/* Social Proof */}
+        {/* Chatbot Response Card */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex flex-col items-center gap-4"
+          transition={{ duration: 0.7, delay: 0.8 }}
+          className="mx-auto max-w-[440px] rounded-2xl bg-zinc-900/80 border border-zinc-800 p-6 text-left"
         >
-          <div className="flex items-center -space-x-3">
-            {avatars.map((avatar, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.5, x: -20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
-                className="relative"
-              >
-                <img
-                  src={avatar || "/placeholder.svg"}
-                  alt=""
-                  className="w-10 h-10 rounded-full border-2 border-zinc-950 object-cover"
-                />
-              </motion.div>
-            ))}
+          {/* Query row */}
+          <div className="flex items-center gap-2 mb-5">
+            <MessageSquare className="w-4 h-4 text-zinc-500 shrink-0" strokeWidth={1.5} />
+            <span className="text-sm text-zinc-500">"Who is the best provider in [your industry]?"</span>
           </div>
-          <p className="text-sm text-zinc-500">
-            Trusted by <span className="text-zinc-300 font-medium">2,000+</span> teams worldwide
-          </p>
+
+          {/* Results */}
+          <div className="flex flex-col gap-3 mb-4">
+            <div className="flex items-center gap-3">
+              <Check className="w-4 h-4 text-emerald-500 shrink-0" strokeWidth={2} />
+              <span className="text-sm text-zinc-300">Competitor A</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Check className="w-4 h-4 text-emerald-500 shrink-0" strokeWidth={2} />
+              <span className="text-sm text-zinc-300">Competitor B</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <X className="w-4 h-4 text-red-500 shrink-0" strokeWidth={2} />
+              <span className="text-sm text-zinc-600 line-through">Your company</span>
+            </div>
+          </div>
+
+          {/* Microcopy */}
+          <p className="text-xs text-red-400/70">Today, you don't show up.</p>
         </motion.div>
       </div>
     </section>

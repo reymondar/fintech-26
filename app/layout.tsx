@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
         <div className="noise-overlay" aria-hidden="true" />
         {children}

@@ -17,9 +17,9 @@ const queries = [
 
 function QueryTile({ text }: { text: string }) {
   return (
-    <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/80 px-5 py-4 shadow-lg shadow-black/20">
-      <Search className="h-4 w-4 text-zinc-500 shrink-0" strokeWidth={1.5} />
-      <span className="text-sm text-zinc-300 whitespace-nowrap">&ldquo;{text}&rdquo;</span>
+    <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-zinc-200 bg-white px-5 py-4 shadow-sm">
+      <Search className="h-4 w-4 text-zinc-400 shrink-0" strokeWidth={1.5} />
+      <span className="text-sm text-zinc-700 whitespace-nowrap">&ldquo;{text}&rdquo;</span>
     </div>
   )
 }
@@ -55,8 +55,8 @@ export function Integrations() {
           className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           style={{ fontFamily: "var(--font-instrument-sans)" }}
         >
-          <span className="block text-white">~29,000 questions every second.</span>
-          <span className="block text-zinc-500">The only question is whether you&apos;re in them.</span>
+          <span className="block text-zinc-900">~29,000 questions every second.</span>
+          <span className="block text-zinc-400">The only question is whether you&apos;re in them.</span>
         </motion.h2>
       </div>
 
@@ -66,8 +66,8 @@ export function Integrations() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="relative"
       >
-        <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-24 bg-gradient-to-r from-zinc-950 to-transparent sm:w-40" />
-        <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-24 bg-gradient-to-l from-zinc-950 to-transparent sm:w-40" />
+        <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-24 bg-gradient-to-r from-zinc-50 to-transparent sm:w-40" />
+        <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-24 bg-gradient-to-l from-zinc-50 to-transparent sm:w-40" />
 
         <Marquee items={queries} />
       </motion.div>

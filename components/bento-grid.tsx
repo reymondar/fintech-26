@@ -40,7 +40,7 @@ function SystemStatus() {
       {dots.map((active, i) => (
         <motion.div
           key={i}
-          className={`w-2 h-2 rounded-full ${active ? "bg-emerald-500" : "bg-zinc-700"}`}
+          className={`w-2 h-2 rounded-full ${active ? "bg-emerald-500" : "bg-zinc-300"}`}
           animate={active ? { scale: [1, 1.2, 1] } : {}}
           transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, delay: i * 0.2 }}
         />
@@ -70,14 +70,14 @@ function AnimatedChart() {
     <svg ref={ref} viewBox="0 0 100 70" className="w-full h-24">
       <defs>
         <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="rgb(255,255,255)" stopOpacity="0.2" />
-          <stop offset="100%" stopColor="rgb(255,255,255)" stopOpacity="0" />
+          <stop offset="0%" stopColor="rgb(16,185,129)" stopOpacity="0.2" />
+          <stop offset="100%" stopColor="rgb(16,185,129)" stopOpacity="0" />
         </linearGradient>
       </defs>
       {isInView && (
         <>
           <path d={`${pathD} L 100 70 L 0 70 Z`} fill="url(#chartGradient)" className="opacity-50" />
-          <path d={pathD} fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" className="draw-line" />
+          <path d={pathD} fill="none" stroke="rgb(16,185,129)" strokeWidth="2" strokeLinecap="round" className="draw-line" />
         </>
       )}
     </svg>
@@ -98,13 +98,13 @@ export function BentoGrid() {
           className="text-center mb-16"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
             <span className="block">Readable. Trustworthy. Eligible.</span>
-            <span className="block text-zinc-500">The layers that make AI pick you.</span>
+            <span className="block text-zinc-400">The layers that make AI pick you.</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-500 max-w-2xl mx-auto">
             Not a prettier website. The data infrastructure and authority an AI engine needs to read you, trust you, and
             choose you.
           </p>
@@ -120,15 +120,15 @@ export function BentoGrid() {
           {/* Large card - Machine-readable */}
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300 overflow-hidden"
+            className="md:col-span-2 group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 overflow-hidden shadow-sm"
           >
             <div className="flex items-start justify-between mb-8">
               <div>
-                <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-                  <Code className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+                <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+                  <Code className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Readable for machines</h3>
-                <p className="text-zinc-400 text-sm max-w-md">
+                <h3 className="text-xl font-semibold text-zinc-900 mb-2">Readable for machines</h3>
+                <p className="text-zinc-500 text-sm max-w-md">
                   We structure your data — catalog, specs, capabilities — so engines read you without guessing. Schema,
                   entities and feeds, kept in sync.
                 </p>
@@ -143,8 +143,8 @@ export function BentoGrid() {
                 { value: "24/7", label: "kept in sync" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-xs text-zinc-500">{stat.label}</div>
+                  <div className="text-2xl font-bold text-zinc-900 mb-1">{stat.value}</div>
+                  <div className="text-xs text-zinc-400">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -153,13 +153,13 @@ export function BentoGrid() {
           {/* Authority */}
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
-            <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <ShieldCheck className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <ShieldCheck className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Trustworthy as a source</h3>
-            <p className="text-zinc-400 text-sm">
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Trustworthy as a source</h3>
+            <p className="text-zinc-500 text-sm">
               AI cites who it trusts. We build the authority — content, entity, freshness, third-party signals — that
               turns structure into real citations.
             </p>
@@ -168,18 +168,18 @@ export function BentoGrid() {
           {/* Share of Model */}
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
-            <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <ChartLine className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <ChartLine className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">A position we defend</h3>
-            <p className="text-zinc-400 text-sm mb-4">
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">A position we defend</h3>
+            <p className="text-zinc-500 text-sm mb-4">
               We measure how often AI names you vs your competitors, every month, and defend that position as the models
               shift.
             </p>
             <AnimatedChart />
-            <div className="flex items-center gap-2 text-emerald-500 text-sm mt-2">
+            <div className="flex items-center gap-2 text-emerald-600 text-sm mt-2">
               <span className="font-mono">monthly report</span>
             </div>
           </motion.div>
@@ -187,17 +187,17 @@ export function BentoGrid() {
           {/* Agent-ready */}
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
-            <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <Bot className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <Bot className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Eligible for agents</h3>
-            <p className="text-zinc-400 text-sm mb-4">
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Eligible for agents</h3>
+            <p className="text-zinc-500 text-sm mb-4">
               What&apos;s next is already coming: agents that don&apos;t just cite you, they act with you. We get your
               data ready for an agent to query — and tomorrow, to buy.
             </p>
-            <div className="flex items-center gap-2 text-emerald-500 text-sm">
+            <div className="flex items-center gap-2 text-emerald-600 text-sm">
               <span className="font-mono">agent-ready · MCP</span>
             </div>
           </motion.div>
@@ -205,21 +205,21 @@ export function BentoGrid() {
           {/* Engines covered */}
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
-            <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <Plug className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <Plug className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Where we make you visible</h3>
-            <p className="text-zinc-400 text-sm mb-4">
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Where we make you visible</h3>
+            <p className="text-zinc-500 text-sm mb-4">
               We track and optimize across the engines your buyers actually ask.
             </p>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">ChatGPT</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Perplexity</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Gemini</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Claude</span>
-              <span className="px-2 py-1 text-xs bg-zinc-800 rounded text-zinc-400">Google AI Overviews</span>
+              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">ChatGPT</span>
+              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Perplexity</span>
+              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Gemini</span>
+              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Claude</span>
+              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Google AI Overviews</span>
             </div>
           </motion.div>
         </motion.div>

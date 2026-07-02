@@ -44,13 +44,13 @@ export function Honesty() {
           className="text-center mb-16"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
             <span className="block">We&apos;ll tell you the truth.</span>
-            <span className="block text-zinc-500">Even the parts other agencies hide.</span>
+            <span className="block text-zinc-400">Even the parts other agencies hide.</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-500 max-w-2xl mx-auto">
             AI visibility is full of hype. Here&apos;s exactly what we will and won&apos;t promise — so you know what
             you&apos;re buying.
           </p>
@@ -62,19 +62,19 @@ export function Honesty() {
             variants={itemVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800"
+            className="p-6 rounded-2xl bg-white border border-zinc-200 shadow-sm"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-zinc-800">
+              <div className="p-2 rounded-lg bg-zinc-100">
                 <Check className="w-5 h-5 text-emerald-500" strokeWidth={2} />
               </div>
-              <h3 className="text-lg font-semibold text-white">What we promise</h3>
+              <h3 className="text-lg font-semibold text-zinc-900">What we promise</h3>
             </div>
             <ul className="flex flex-col gap-4">
               {promises.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" strokeWidth={2} />
-                  <span className="text-sm text-zinc-300">{item}</span>
+                  <span className="text-sm text-zinc-700">{item}</span>
                 </li>
               ))}
             </ul>
@@ -86,13 +86,13 @@ export function Honesty() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ delay: 0.1 }}
-            className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800"
+            className="p-6 rounded-2xl bg-white border border-zinc-200 shadow-sm"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-zinc-800">
+              <div className="p-2 rounded-lg bg-zinc-100">
                 <X className="w-5 h-5 text-red-400/60" strokeWidth={2} />
               </div>
-              <h3 className="text-lg font-semibold text-white">What we won&apos;t promise</h3>
+              <h3 className="text-lg font-semibold text-zinc-900">What we won&apos;t promise</h3>
             </div>
             <ul className="flex flex-col gap-4">
               {nopes.map((item) => (

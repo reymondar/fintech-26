@@ -31,13 +31,13 @@ export function WhyUs() {
           className="text-center mb-16"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
             <span className="block">Engineering meets authority.</span>
-            <span className="block text-zinc-500">The combination almost nobody offers.</span>
+            <span className="block text-zinc-400">The combination almost nobody offers.</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-500 max-w-2xl mx-auto">
             Most agencies just write content. Most dev shops just write code. Getting picked by AI takes both — under
             one roof.
           </p>
@@ -50,17 +50,17 @@ export function WhyUs() {
             variants={itemVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300 flex-1 max-w-md mx-auto md:mx-0"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 flex-1 max-w-md mx-auto md:mx-0 shadow-sm"
           >
-            <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <Settings className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <Settings className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Data engineering</h3>
-            <p className="text-zinc-400 text-sm mb-4">
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Data engineering</h3>
+            <p className="text-zinc-500 text-sm mb-4">
               We structure your data so machines can read it without guessing — schema, entities, feeds, and the path to
               agent-ready.
             </p>
-            <div className="flex items-center gap-2 text-emerald-500 text-sm">
+            <div className="flex items-center gap-2 text-emerald-600 text-sm">
               <span className="font-mono">structure</span>
             </div>
           </motion.div>
@@ -86,17 +86,17 @@ export function WhyUs() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ delay: 0.1 }}
-            className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300 flex-1 max-w-md mx-auto md:mx-0"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 flex-1 max-w-md mx-auto md:mx-0 shadow-sm"
           >
-            <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-              <Award className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <Award className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">SEO authority</h3>
-            <p className="text-zinc-400 text-sm mb-4">
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">SEO authority</h3>
+            <p className="text-zinc-500 text-sm mb-4">
               We build the trust signals — content, entity, freshness, third-party mentions — that turn structure into
               real citations.
             </p>
-            <div className="flex items-center gap-2 text-emerald-500 text-sm">
+            <div className="flex items-center gap-2 text-emerald-600 text-sm">
               <span className="font-mono">trust</span>
             </div>
           </motion.div>
@@ -110,8 +110,8 @@ export function WhyUs() {
           className="text-center text-2xl sm:text-3xl font-bold"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-white">Structure + trust = </span>
-          <span className="text-emerald-400">the name the AI picks is yours.</span>
+          <span className="text-zinc-900">Structure + trust = </span>
+          <span className="text-emerald-500">the name the AI picks is yours.</span>
         </motion.p>
       </div>
     </section>

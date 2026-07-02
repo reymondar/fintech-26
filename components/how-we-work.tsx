@@ -66,11 +66,11 @@ export function HowWeWork() {
           className="text-center mb-16"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
             <span className="block">Three steps.</span>
-            <span className="block text-zinc-500">From invisible to the name AI picks.</span>
+            <span className="block text-zinc-400">From invisible to the name AI picks.</span>
           </h2>
         </motion.div>
 
@@ -83,26 +83,26 @@ export function HowWeWork() {
         >
           {steps.map((step, i) => (
             <motion.div key={step.number} variants={itemVariants} className="contents">
-              <div className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300 flex flex-col">
+              <div className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 flex flex-col shadow-sm">
                 <span
-                  className="font-mono text-3xl font-bold text-emerald-400 mb-4"
+                  className="font-mono text-3xl font-bold text-emerald-500 mb-4"
                   style={{ fontFamily: "var(--font-cal-sans)" }}
                 >
                   {step.number}
                 </span>
-                <div className="p-2 rounded-lg bg-zinc-800 w-fit mb-4">
-                  <step.icon className="w-5 h-5 text-zinc-400" strokeWidth={1.5} />
+                <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+                  <step.icon className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-zinc-400 text-sm mb-4 flex-1">{step.description}</p>
-                <div className="flex items-center gap-2 text-emerald-500 text-sm">
+                <h3 className="text-lg font-semibold text-zinc-900 mb-2">{step.title}</h3>
+                <p className="text-zinc-500 text-sm mb-4 flex-1">{step.description}</p>
+                <div className="flex items-center gap-2 text-emerald-600 text-sm">
                   <span className="font-mono">{step.accent}</span>
                 </div>
               </div>
 
               {i < steps.length - 1 && (
                 <div className="hidden md:flex items-center justify-center">
-                  <ChevronRight className="w-5 h-5 text-zinc-700" strokeWidth={1.5} />
+                  <ChevronRight className="w-5 h-5 text-zinc-300" strokeWidth={1.5} />
                 </div>
               )}
             </motion.div>

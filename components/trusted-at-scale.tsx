@@ -1,13 +1,33 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { motion, useInView, AnimatePresence } from "framer-motion"
 import { useEffect, useMemo, useRef, useState } from "react"
 
-const stats = [
-  { value: "−33%", label: "Google search traffic to websites, last year" },
-  { value: "~60%", label: "Searches that end with zero clicks" },
-  { value: "<1%", label: "Of that lost traffic chatbots send back" },
-  { value: "−97%", label: "Traffic drop at some leading publishers" },
+const steps = [
+  {
+    number: "01",
+    title: "We learn your business & niche",
+    description:
+      "We study your business, your products, your customers and your competitors — and find out exactly what your buyers are searching for.",
+  },
+  {
+    number: "02",
+    title: "We map what your buyers search",
+    description:
+      "We identify the questions and searches that lead to real buyers, across Google and AI engines, so we build for demand that actually converts.",
+  },
+  {
+    number: "03",
+    title: "We rebuild your infrastructure",
+    description:
+      "We build the data layer and the pages that make you found and cited — on Google, ChatGPT, Perplexity, wherever your buyers look.",
+  },
+  {
+    number: "04",
+    title: "You start generating authority",
+    description:
+      "Authority transforms into leads. You show up when your buyers ask, that presence turns into inquiries and customers, and the asset keeps compounding month over month.",
+  },
 ]
 
 type Drop = {
@@ -22,8 +42,6 @@ type Drop = {
   dot: number
 }
 
-// Seeded PRNG (mulberry32) — deterministic output so server and client
-// markup match, while still producing organic, non-gridded distributions.
 function makeRng(seed: number) {
   let a = seed
   return () => {
@@ -39,8 +57,6 @@ function generateDrops(count: number, seed: number): Drop[] {
   const rng = makeRng(seed)
   const range = (min: number, max: number) => min + rng() * (max - min)
   return Array.from({ length: count }, () => ({
-    // Bias horizontal positions toward clustering: square the random value
-    // so gaps and clusters emerge instead of even spacing.
     left: Math.pow(rng(), 1.4) * 100,
     top: range(-5, 80),
     height: range(40, 170),
@@ -92,13 +108,14 @@ export function TrustedAtScale() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [mounted, setMounted] = useState(false)
+  const [openStep, setOpenStep] = useState(0)
   useEffect(() => setMounted(true), [])
 
   const columnDrops = useMemo(() => generateDrops(28, 1337), [])
   const ambientDrops = useMemo(() => generateDrops(22, 90210), [])
 
   return (
-    <section id="infrastructure" ref={ref} className="relative overflow-hidden px-4 py-24 sm:py-32">
+    <section id="how-it-works" ref={ref} className="relative overflow-hidden px-4 py-24 sm:py-32">
       {mounted && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -107,13 +124,12 @@ export function TrustedAtScale() {
           className="pointer-events-none absolute inset-0 z-0 lg:hidden"
         >
           <Rain drops={ambientDrops} className="opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/40 to-zinc-950/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-50/40 to-zinc-50/70" />
         </motion.div>
       )}
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-8">
-          {/* Left: copy */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -121,7 +137,7 @@ export function TrustedAtScale() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-center gap-2"
             >
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">The Shift</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">How It Works</span>
               <span className="h-2 w-2 rounded-full bg-emerald-500 pulse-glow" />
             </motion.div>
 
@@ -129,13 +145,21 @@ export function TrustedAtScale() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
+              className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-cal-sans)" }}
             >
-              The click is dying.{" "}
-              <span className="text-zinc-500">Google stopped sending traffic — and no one is getting it back.</span>
+              We create your content.{" "}
+              <span className="text-zinc-400">We build assets.</span>
             </motion.h2>
 
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-6 text-zinc-500 text-base sm:text-lg leading-relaxed max-w-lg"
+            >
+              Not a campaign that stops when you stop paying. An asset that keeps working — and grows every month.
+            </motion.p>
           </div>
 
           {mounted && (
@@ -150,25 +174,49 @@ export function TrustedAtScale() {
           )}
         </div>
 
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 gap-x-6 gap-y-10 lg:mt-28 lg:grid-cols-4">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.value}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <p
-                className="text-4xl font-bold tracking-tight text-emerald-400 sm:text-5xl"
-                style={{ fontFamily: "var(--font-cal-sans)" }}
+        {/* Steps accordion */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-20 lg:mt-28 flex flex-col gap-0"
+        >
+          {steps.map((step, i) => {
+            const isOpen = openStep === i
+            return (
+              <button
+                key={step.number}
+                onClick={() => setOpenStep(i)}
+                className="text-left border-t border-zinc-200 last:border-b py-6 flex items-start gap-6 group cursor-pointer"
               >
-                {stat.value}
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-base">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
+                <span
+                  className={`text-3xl font-bold tracking-tight transition-colors ${isOpen ? "text-emerald-500" : "text-zinc-300"}`}
+                  style={{ fontFamily: "var(--font-cal-sans)" }}
+                >
+                  {step.number}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <h3 className={`text-lg font-semibold transition-colors ${isOpen ? "text-zinc-900" : "text-zinc-500"}`}>
+                    {step.title}
+                  </h3>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.p
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                        className="text-zinc-500 text-sm leading-relaxed mt-2 overflow-hidden"
+                      >
+                        {step.description}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </button>
+            )
+          })}
+        </motion.div>
       </div>
     </section>
   )

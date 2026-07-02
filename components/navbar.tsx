@@ -38,12 +38,12 @@ export function Navbar() {
     >
       <nav
         ref={navRef}
-        className="relative flex items-center justify-between px-4 py-3 rounded-full bg-zinc-900/40 backdrop-blur-md border border-zinc-800"
+        className="relative flex items-center justify-between px-4 py-3 rounded-full bg-white/70 backdrop-blur-md border border-zinc-200 shadow-sm"
       >
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
-          <Anchor className="w-5 h-5 text-white" strokeWidth={1.5} />
-          <span className="font-semibold text-white hidden sm:block tracking-wide text-sm uppercase">Grounded</span>
+          <Anchor className="w-5 h-5 text-zinc-900" strokeWidth={1.5} />
+          <span className="font-semibold text-zinc-900 hidden sm:block tracking-wide text-sm uppercase">Grounded</span>
         </a>
 
         {/* Desktop Nav Items */}
@@ -53,14 +53,14 @@ export function Navbar() {
               key={item.label}
               href={item.href}
               onClick={(e) => handleNav(e, item.href)}
-              className="relative px-4 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
+              className="relative px-4 py-2 text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {hoveredIndex === index && (
                 <motion.div
                   layoutId="navbar-hover"
-                  className="absolute inset-0 bg-zinc-800 rounded-full"
+                  className="absolute inset-0 bg-zinc-100 rounded-full"
                   initial={false}
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
@@ -74,12 +74,12 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#audit"
-            className="hidden sm:inline-flex items-center px-5 py-1.5 rounded-full bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors"
+            className="hidden sm:inline-flex items-center px-5 py-1.5 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
           >
             Free Audit
           </a>
           <button
-            className="md:hidden p-2 text-zinc-400 hover:text-white"
+            className="md:hidden p-2 text-zinc-500 hover:text-zinc-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -94,14 +94,14 @@ export function Navbar() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="absolute top-full left-0 right-0 mt-2 p-4 rounded-2xl bg-zinc-900/95 backdrop-blur-md border border-zinc-800"
+          className="absolute top-full left-0 right-0 mt-2 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-zinc-200 shadow-lg"
         >
           <div className="flex flex-col gap-2">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                className="px-4 py-3 text-sm text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors"
                 onClick={(e) => handleNav(e, item.href)}
               >
                 {item.label}
@@ -109,7 +109,7 @@ export function Navbar() {
             ))}
             <a
               href="#audit"
-              className="mt-2 flex items-center justify-center px-5 py-3 rounded-full bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors"
+              className="mt-2 flex items-center justify-center px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
             >
               Free Audit
             </a>

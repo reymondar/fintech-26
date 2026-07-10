@@ -2,15 +2,13 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export function FinalCTA() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section className="py-24 px-4">
+    <section id="audit" className="py-24 px-4">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 40 }}
@@ -22,24 +20,21 @@ export function FinalCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-zinc-900">Descubre si la IA te ve.</span>{" "}
-          <span className="text-zinc-400">Solo toma una auditoría.</span>
+          <span className="text-zinc-900">Descubre en 20 minutos si la IA te ve.</span>{" "}
+          <span className="text-zinc-400">Gratis, sin tarjeta.</span>
         </h2>
-        <p className="text-lg sm:text-xl text-zinc-500 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl text-zinc-500 mb-12 max-w-2xl mx-auto">
           Prompts reales, motores reales, tus competidores reales. Mira exactamente dónde estás frente a los nombres que la IA recomienda hoy.
         </p>
 
-        <div className="flex items-center justify-center">
-          <Button
-            asChild
-            size="lg"
-            className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
-          >
-            <a href="#audit">
-              Obtén tu auditoría gratis
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </Button>
+        {/* Calendario embebido — reemplazar src con tu link de Cal.com / Calendly */}
+        <div className="max-w-xl mx-auto rounded-2xl overflow-hidden border border-zinc-200 shadow-sm bg-white">
+          <iframe
+            src="https://cal.com"
+            className="w-full border-0"
+            style={{ height: "600px" }}
+            title="Agenda tu auditoría gratis"
+          />
         </div>
 
         <p className="mt-8 text-sm text-zinc-500">Auditoría gratis · sin tarjeta de crédito · resultados en días.</p>

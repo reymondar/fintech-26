@@ -6,27 +6,21 @@ import { useEffect, useMemo, useRef, useState } from "react"
 const steps = [
   {
     number: "01",
-    title: "Aprendemos tu negocio y tu nicho",
+    title: "Auditamos",
     description:
-      "Estudiamos tu negocio, tus productos, tus clientes y tu competencia — y descubrimos exactamente qué buscan tus compradores.",
+      "Pasamos tu marca por ChatGPT, Perplexity, Gemini y Claude con las preguntas reales de tus compradores, y te mostramos exactamente dónde eres invisible.",
   },
   {
     number: "02",
-    title: "Mapeamos lo que buscan tus compradores",
+    title: "Construimos",
     description:
-      "Identificamos las preguntas y búsquedas que llevan a compradores reales, en Google y motores de IA, para construir sobre demanda que realmente convierte.",
+      "Ingeniería de datos legible por máquinas + la autoridad que genera citaciones reales. Estructura y confianza, bajo un mismo techo — la combinación que casi nadie ofrece.",
   },
   {
     number: "03",
-    title: "Reconstruimos tu infraestructura",
+    title: "Defendemos",
     description:
-      "Construimos la capa de datos y las páginas que te hacen encontrable y citable — en Google, ChatGPT, Perplexity, donde sea que busquen tus compradores.",
-  },
-  {
-    number: "04",
-    title: "Empiezas a generar autoridad",
-    description:
-      "La autoridad se transforma en leads. Apareces cuando tus compradores preguntan, esa presencia se convierte en consultas y clientes, y el activo sigue componiéndose mes tras mes.",
+      "La IA cambia constantemente. Medimos tu Share of Model cada mes y defendemos tu posición conforme los modelos cambian. Cuando algo se mueve, lo detectamos y lo corregimos.",
   },
 ]
 
@@ -148,8 +142,8 @@ export function TrustedAtScale() {
               className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-cal-sans)" }}
             >
-              Creamos tu contenido.{" "}
-              <span className="text-zinc-400">Construimos activos.</span>
+              Ingeniería + autoridad.{" "}
+              <span className="text-zinc-400">Tres pasos, un resultado.</span>
             </motion.h2>
 
             <motion.p
@@ -158,7 +152,7 @@ export function TrustedAtScale() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-zinc-500 text-base sm:text-lg leading-relaxed max-w-lg"
             >
-              No es una campaña que se apaga. Es un activo que se compone. Crecimiento exponencial, mes tras mes.
+              La mayoría solo escribe contenido o solo escribe código. Que la IA te elija requiere ambas cosas — y nosotros hacemos las dos, bajo un mismo techo.
             </motion.p>
           </div>
 

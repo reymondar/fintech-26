@@ -87,7 +87,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg sm:text-xl text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Tus compradores le preguntan a ChatGPT a quién contratar. Nosotros nos aseguramos de que responda con tu nombre, no el de tu competencia.
+          Tus compradores le preguntan a ChatGPT a quién contratar. Asegúrate de que responda con tu nombre — no el de tu competencia.
         </motion.p>
 
         {/* CTA */}
@@ -138,6 +138,16 @@ export function Hero() {
           {/* Microcopy */}
           <p className="text-xs text-red-400/70">Hoy, no apareces.</p>
         </motion.div>
+
+        {/* Urgency line */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="mt-6 text-sm text-zinc-400 max-w-md mx-auto"
+        >
+          Y cada mes que no apareces, el modelo aprende que la respuesta es tu competidor.
+        </motion.p>
       </div>
     </section>
   )

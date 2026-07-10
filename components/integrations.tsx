@@ -78,7 +78,7 @@ export function Integrations() {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="text-center text-sm text-zinc-500 mt-12"
       >
-        2,500 millones de prompts al día — y tus compradores están haciendo algunos de ellos ahora mismo.
+        2,500 millones de prompts al día. Alguien está siendo recomendado ahora mismo. La pregunta es quién.
       </motion.p>
     </section>
   )

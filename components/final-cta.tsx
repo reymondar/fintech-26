@@ -22,12 +22,11 @@ export function FinalCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-zinc-900">Find out if the AI sees you.</span>{" "}
-          <span className="text-zinc-400">It takes one audit.</span>
+          <span className="text-zinc-900">Descubre si la IA te ve.</span>{" "}
+          <span className="text-zinc-400">Solo toma una auditoría.</span>
         </h2>
         <p className="text-lg sm:text-xl text-zinc-500 mb-10 max-w-2xl mx-auto">
-          Real prompts, real engines, your real competitors. See exactly where you stand against the names AI recommends
-          today.
+          Prompts reales, motores reales, tus competidores reales. Mira exactamente dónde estás frente a los nombres que la IA recomienda hoy.
         </p>
 
         <div className="flex items-center justify-center">
@@ -37,13 +36,13 @@ export function FinalCTA() {
             className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
             <a href="#audit">
-              Get your free audit
+              Obtén tu auditoría gratis
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </Button>
         </div>
 
-        <p className="mt-8 text-sm text-zinc-500">Free audit · no credit card · results in days.</p>
+        <p className="mt-8 text-sm text-zinc-500">Auditoría gratis · sin tarjeta de crédito · resultados en días.</p>
       </motion.div>
     </section>
   )

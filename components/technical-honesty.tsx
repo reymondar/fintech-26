@@ -6,19 +6,19 @@ import { Lightbulb } from "lucide-react"
 
 const rows = [
   {
-    principle: "Schema isn't read at query-time.",
+    principle: "El schema no se lee en tiempo de consulta.",
     explanation:
-      "Structured data helps indirectly — it improves how crawlers index and classify you, which feeds the retrieval AI engines rely on. Necessary, not magic.",
+      "Los datos estructurados ayudan indirectamente — mejoran cómo los crawlers te indexan y clasifican, lo cual alimenta el retrieval del que dependen los motores de IA. Necesario, no mágico.",
   },
   {
-    principle: "The models are probabilistic, and they shift.",
+    principle: "Los modelos son probabilísticos, y cambian.",
     explanation:
-      "Roughly 70% of cited pages change every 2–3 months with nothing touched. That's why we measure and defend your position every month instead of promising fixed rankings.",
+      "La mayoría de las páginas citadas cambian cada pocos meses sin que nadie toque nada. Por eso medimos y defendemos tu posición cada mes en vez de prometer rankings fijos.",
   },
   {
-    principle: "Citations need engineering AND authority.",
+    principle: "Las citaciones necesitan ingeniería Y autoridad.",
     explanation:
-      "Structured data alone won't get you cited — it takes content, trust and freshness too. That's why we do both, under one roof. Most agencies only do half.",
+      "Los datos estructurados solos no te van a hacer citar — se necesita contenido, confianza y actualización también. Por eso hacemos ambas cosas, bajo un mismo techo. La mayoría de las agencias solo hace la mitad.",
   },
 ]
 
@@ -39,12 +39,11 @@ export function TechnicalHonesty() {
             className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block text-white">How this actually works.</span>
-            <span className="block text-zinc-500">The parts most agencies won&apos;t explain.</span>
+            <span className="block text-zinc-900">Cómo funciona realmente.</span>
+            <span className="block text-zinc-400">Lo que la mayoría de las agencias no explica.</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
-            AI visibility is full of hype. Here&apos;s the real mechanics — so you know exactly what you&apos;re paying
-            for, and what no one can honestly promise.
+          <p className="text-zinc-500 max-w-2xl mx-auto">
+            La visibilidad en IA está llena de hype. Aquí está la mecánica real — para que sepas exactamente por qué pagas, y qué nadie puede prometer honestamente.
           </p>
         </motion.div>
 
@@ -55,13 +54,13 @@ export function TechnicalHonesty() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-zinc-900 border border-zinc-800"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-zinc-200 shadow-sm"
             >
-              <div className="p-2 rounded-lg bg-zinc-800 shrink-0 mt-0.5">
+              <div className="p-2 rounded-lg bg-zinc-100 shrink-0 mt-0.5">
                 <Lightbulb className="w-4 h-4 text-emerald-400" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-base font-semibold text-white mb-1">{row.principle}</h3>
+                <h3 className="text-base font-semibold text-zinc-900 mb-1">{row.principle}</h3>
                 <p className="text-sm text-zinc-500 leading-relaxed">{row.explanation}</p>
               </div>
             </motion.div>

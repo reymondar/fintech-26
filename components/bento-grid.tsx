@@ -101,12 +101,12 @@ export function BentoGrid() {
             className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Readable. Trustworthy. Eligible.</span>
-            <span className="block text-zinc-400">The layers that make AI pick you.</span>
+            <span className="block">Legible. Confiable. Elegible.</span>
+            <span className="block text-zinc-400">Las capas que hacen que la IA te elija.</span>
           </h2>
           <p className="text-zinc-500 max-w-2xl mx-auto">
-            Not a prettier website. The data infrastructure and authority an AI engine needs to read you, trust you, and
-            choose you.
+            No es un sitio web más bonito. Es la infraestructura de datos y la autoridad que un motor de IA necesita para
+            leerte, confiar en ti y elegirte.
           </p>
         </motion.div>
 
@@ -127,27 +127,16 @@ export function BentoGrid() {
                 <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
                   <Code className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-semibold text-zinc-900 mb-2">Readable for machines</h3>
+                <h3 className="text-xl font-semibold text-zinc-900 mb-2">Las máquinas pueden leerte</h3>
                 <p className="text-zinc-500 text-sm max-w-md">
-                  We structure your data — catalog, specs, capabilities — so engines read you without guessing. Schema,
-                  entities and feeds, kept in sync.
+                  Estructuramos tu catálogo, especificaciones y capacidades para que los motores de IA entiendan exactamente qué vendes — sin adivinar, sin citar mal.
                 </p>
               </div>
               <SystemStatus />
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {[
-                { value: "100%", label: "machine-readable" },
-                { value: "JSON-LD", label: "schema layer" },
-                { value: "0", label: "schema drift" },
-                { value: "24/7", label: "kept in sync" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-2xl font-bold text-zinc-900 mb-1">{stat.value}</div>
-                  <div className="text-xs text-zinc-400">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm text-zinc-400 italic">
+              Si el motor tiene que adivinar, cita a otro.
+            </p>
           </motion.div>
 
           {/* Authority */}
@@ -158,33 +147,29 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <ShieldCheck className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Trustworthy as a source</h3>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">La IA confía en ti lo suficiente para citarte</h3>
             <p className="text-zinc-500 text-sm">
-              AI cites who it trusts. We build the authority — content, entity, freshness, third-party signals — that
-              turns structure into real citations.
+              La IA recomienda a quien confía. Nosotros construimos esa confianza — contenido, menciones de terceros, actualización — hasta que tu nombre sea la respuesta.
             </p>
           </motion.div>
 
-          {/* Share of Model */}
+          {/* Row 2: 3 cards */}
+          {/* Your position, measured */}
           <motion.div
             variants={itemVariants}
-            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
+            className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm overflow-hidden"
           >
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <ChartLine className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">A position we defend</h3>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Tu posición, medida</h3>
             <p className="text-zinc-500 text-sm mb-4">
-              We measure how often AI names you vs your competitors, every month, and defend that position as the models
-              shift.
+              Un reporte, la misma métrica, cada mes: con qué frecuencia la IA te nombra vs. tus competidores. Sube o baja, lo ves. Sin dashboards de vanidad.
             </p>
             <AnimatedChart />
-            <div className="flex items-center gap-2 text-emerald-600 text-sm mt-2">
-              <span className="font-mono">monthly report</span>
-            </div>
           </motion.div>
 
-          {/* Agent-ready */}
+          {/* We adjust as the models shift */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
@@ -192,17 +177,13 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Bot className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Eligible for agents</h3>
-            <p className="text-zinc-500 text-sm mb-4">
-              What&apos;s next is already coming: agents that don&apos;t just cite you, they act with you. We get your
-              data ready for an agent to query — and tomorrow, to buy.
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Nos ajustamos cuando los modelos cambian</h3>
+            <p className="text-zinc-500 text-sm">
+              ChatGPT cambia cada semana. Cuando tu posición se mueve, descubrimos por qué y lo corregimos — eso es lo que realmente compra la cuota mensual.
             </p>
-            <div className="flex items-center gap-2 text-emerald-600 text-sm">
-              <span className="font-mono">agent-ready · MCP</span>
-            </div>
           </motion.div>
 
-          {/* Engines covered */}
+          {/* Ready for what's next */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
@@ -210,17 +191,29 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Plug className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Where we make you visible</h3>
-            <p className="text-zinc-500 text-sm mb-4">
-              We track and optimize across the engines your buyers actually ask.
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Listo para lo que viene</h3>
+            <p className="text-zinc-500 text-sm">
+              Los agentes de IA pronto investigarán y comprarán en nombre de tus clientes. Nos aseguramos de que el tuyo sea un negocio con el que puedan operar.
             </p>
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">ChatGPT</span>
-              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Perplexity</span>
-              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Gemini</span>
-              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Claude</span>
-              <span className="px-2 py-1 text-xs bg-zinc-100 rounded text-zinc-600">Google AI Overviews</span>
+          </motion.div>
+
+          {/* You own everything — full width */}
+          <motion.div
+            variants={itemVariants}
+            className="lg:col-span-3 md:col-span-2 group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.01] transition-all duration-300 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-2 rounded-lg bg-zinc-100 shrink-0">
+                <ShieldCheck className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-zinc-900 mb-1">Todo lo que construimos es tuyo</h3>
+                <p className="text-zinc-500 text-sm">
+                  El contenido, la capa de datos, la autoridad — vive en tu dominio y es tuyo. Si algún día te vas, te lo llevas todo.
+                </p>
+              </div>
             </div>
+            <p className="text-xs text-emerald-600 font-medium whitespace-nowrap shrink-0">Sin contrato a largo plazo · cancela cuando quieras</p>
           </motion.div>
         </motion.div>
       </div>

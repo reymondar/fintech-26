@@ -22,8 +22,8 @@ const instrumentSans = Instrument_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "The Stack House — Scale your operation. Move faster.",
-  description: "Scale your operation and move faster. Do more without hiring more — even when your processes are scattered across tools, teams, and time zones.",
+  title: "Stack House — Que ChatGPT, Perplexity y Gemini te recomienden | Visibilidad en IA",
+  description: "Tus compradores le preguntan a la IA a quién contratar. Nosotros hacemos que responda con tu nombre. Auditoría gratis: descubre exactamente dónde apareces en ChatGPT, Perplexity y Gemini — en días.",
 }
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es" suppressHydrationWarning>
       <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
         <div className="noise-overlay" aria-hidden="true" />
         {children}

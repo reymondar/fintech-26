@@ -26,7 +26,7 @@ export function LogoMarquee() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <p className="text-sm text-zinc-500 uppercase tracking-wider font-medium">Trusted by industry leaders</p>
+        <p className="text-sm text-zinc-500 uppercase tracking-wider font-medium">La confianza de líderes de la industria</p>
       </motion.div>
 
       <div className="relative">

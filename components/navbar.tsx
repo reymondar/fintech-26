@@ -6,9 +6,9 @@ import { motion } from "framer-motion"
 import { Menu, X, Anchor } from "lucide-react"
 
 const navItems = [
-  { label: "How It Works", href: "/#how-it-works" },
-  { label: "Services", href: "/services" },
-  { label: "Cases", href: "/#cases" },
+  { label: "Cómo funciona", href: "/#how-it-works" },
+  { label: "Servicios", href: "/services" },
+  { label: "Casos", href: "/#cases" },
 ]
 
 export function Navbar() {
@@ -43,7 +43,7 @@ export function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <Anchor className="w-5 h-5 text-zinc-900" strokeWidth={1.5} />
-          <span className="font-semibold text-zinc-900 hidden sm:block tracking-wide text-sm uppercase">Grounded</span>
+          <span className="font-semibold text-zinc-900 hidden sm:block tracking-wide text-sm uppercase">The Stack House</span>
         </a>
 
         {/* Desktop Nav Items */}
@@ -76,7 +76,7 @@ export function Navbar() {
             href="#audit"
             className="hidden sm:inline-flex items-center px-5 py-1.5 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
           >
-            Free Audit
+            Auditoría gratis
           </a>
           <button
             className="md:hidden p-2 text-zinc-500 hover:text-zinc-900"
@@ -111,7 +111,7 @@ export function Navbar() {
               href="#audit"
               className="mt-2 flex items-center justify-center px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
             >
-              Free Audit
+              Auditoría gratis
             </a>
           </div>
         </motion.div>

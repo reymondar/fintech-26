@@ -6,27 +6,27 @@ import { useEffect, useMemo, useRef, useState } from "react"
 const steps = [
   {
     number: "01",
-    title: "We learn your business & niche",
+    title: "Aprendemos tu negocio y tu nicho",
     description:
-      "We study your business, your products, your customers and your competitors — and find out exactly what your buyers are searching for.",
+      "Estudiamos tu negocio, tus productos, tus clientes y tu competencia — y descubrimos exactamente qué buscan tus compradores.",
   },
   {
     number: "02",
-    title: "We map what your buyers search",
+    title: "Mapeamos lo que buscan tus compradores",
     description:
-      "We identify the questions and searches that lead to real buyers, across Google and AI engines, so we build for demand that actually converts.",
+      "Identificamos las preguntas y búsquedas que llevan a compradores reales, en Google y motores de IA, para construir sobre demanda que realmente convierte.",
   },
   {
     number: "03",
-    title: "We rebuild your infrastructure",
+    title: "Reconstruimos tu infraestructura",
     description:
-      "We build the data layer and the pages that make you found and cited — on Google, ChatGPT, Perplexity, wherever your buyers look.",
+      "Construimos la capa de datos y las páginas que te hacen encontrable y citable — en Google, ChatGPT, Perplexity, donde sea que busquen tus compradores.",
   },
   {
     number: "04",
-    title: "You start generating authority",
+    title: "Empiezas a generar autoridad",
     description:
-      "Authority transforms into leads. You show up when your buyers ask, that presence turns into inquiries and customers, and the asset keeps compounding month over month.",
+      "La autoridad se transforma en leads. Apareces cuando tus compradores preguntan, esa presencia se convierte en consultas y clientes, y el activo sigue componiéndose mes tras mes.",
   },
 ]
 
@@ -137,7 +137,7 @@ export function TrustedAtScale() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-center gap-2"
             >
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">How It Works</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">Cómo funciona</span>
               <span className="h-2 w-2 rounded-full bg-emerald-500 pulse-glow" />
             </motion.div>
 
@@ -148,8 +148,8 @@ export function TrustedAtScale() {
               className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-cal-sans)" }}
             >
-              We create your content.{" "}
-              <span className="text-zinc-400">We build assets.</span>
+              Creamos tu contenido.{" "}
+              <span className="text-zinc-400">Construimos activos.</span>
             </motion.h2>
 
             <motion.p
@@ -158,7 +158,7 @@ export function TrustedAtScale() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-zinc-500 text-base sm:text-lg leading-relaxed max-w-lg"
             >
-              Not a campaign that stops when you stop paying. An asset that keeps working — and grows every month.
+              No es una campaña que se apaga. Es un activo que se compone. Crecimiento exponencial, mes tras mes.
             </motion.p>
           </div>
 

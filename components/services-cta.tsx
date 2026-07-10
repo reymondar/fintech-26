@@ -22,28 +22,27 @@ export function ServicesCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-white">Start with the audit.</span>{" "}
-          <span className="text-zinc-500">See exactly where you stand.</span>
+          <span className="text-zinc-900">Empieza con la auditoría.</span>{" "}
+          <span className="text-zinc-400">Mira exactamente dónde estás.</span>
         </h2>
-        <p className="text-lg sm:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-          Real prompts, real engines, your real competitors. No commitment — just a clear picture of whether AI sees
-          you.
+        <p className="text-lg sm:text-xl text-zinc-500 mb-10 max-w-2xl mx-auto">
+          Prompts reales, motores reales, tus competidores reales. Sin compromiso — solo una imagen clara de si la IA te ve.
         </p>
 
         <div className="flex items-center justify-center">
           <Button
             asChild
             size="lg"
-            className="shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-white/20"
+            className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
-            <a href="#audit">
-              Get your free audit
+            <a href="/#audit">
+              Obtén tu auditoría gratis
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </Button>
         </div>
 
-        <p className="mt-8 text-sm text-zinc-500">Free · no credit card · results in days.</p>
+        <p className="mt-8 text-sm text-zinc-500">Gratis · sin tarjeta de crédito · resultados en días.</p>
       </motion.div>
     </section>
   )

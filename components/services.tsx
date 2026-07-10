@@ -28,23 +28,23 @@ const itemVariants = {
 const services = [
   {
     icon: Code,
-    title: "Readable by machines",
+    title: "Legible por máquinas",
     description:
-      "We structure your data — catalog, specs, capabilities — so AI can read it without guessing. Schema, entities, and feeds that engines understand on the first pass.",
+      "Estructuramos tus datos — catálogo, especificaciones, capacidades — para que la IA los lea sin adivinar. Schema, entidades y feeds que los motores entienden a la primera.",
     accent: "JSON-LD · schema · feeds",
   },
   {
     icon: ShieldCheck,
-    title: "Trustworthy as a source",
+    title: "Confiable como fuente",
     description:
-      "AI cites those it trusts. We build the authority — content, entity, freshness, third-party signals — that turns your infrastructure into real citations.",
-    accent: "authority · E-E-A-T · citability",
+      "La IA cita a quienes confía. Construimos la autoridad — contenido, entidad, actualización, señales de terceros — que convierte tu infraestructura en citaciones reales.",
+    accent: "autoridad · E-E-A-T · citabilidad",
   },
   {
     icon: Bot,
-    title: "Eligible for agents",
+    title: "Elegible para agentes",
     description:
-      "The next step is already here: agents that don't just cite you, but transact with you. We make your data ready so an agent can query you — and tomorrow, buy from you.",
+      "El siguiente paso ya está aquí: agentes que no solo te citan, sino que operan contigo. Preparamos tus datos para que un agente pueda consultarte — y mañana, comprarte.",
     accent: "agent-ready · MCP",
   },
 ]
@@ -66,12 +66,12 @@ export function Services() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Readable. Trustworthy. Eligible.</span>
-            <span className="block text-zinc-500">The three things AI needs to choose you.</span>
+            <span className="block">Legible. Confiable. Elegible.</span>
+            <span className="block text-zinc-500">Las tres cosas que la IA necesita para elegirte.</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            Having a great website isn&apos;t enough. AI has to be able to read you, trust you, and soon, transact with
-            you. We build all three layers.
+            Tener un gran sitio web no basta. La IA tiene que poder leerte, confiar en ti y pronto, operar contigo.
+            Nosotros construimos las tres capas.
           </p>
         </motion.div>
 

@@ -4,7 +4,6 @@ import { Hero } from "@/components/hero"
 import { BentoGrid } from "@/components/bento-grid"
 import { TrustedAtScale } from "@/components/trusted-at-scale"
 import { WhyUs } from "@/components/why-us"
-import { HowWeWork } from "@/components/how-we-work"
 import { Honesty } from "@/components/honesty"
 import { Integrations } from "@/components/integrations"
 import { FAQ } from "@/components/faq"
@@ -20,7 +19,6 @@ export default function Home() {
         <BentoGrid />
         <TrustedAtScale />
         <WhyUs />
-        <HowWeWork />
         <Honesty />
         <Integrations />
         <FAQ />

@@ -17,17 +17,17 @@ const itemVariants = {
 }
 
 const promises = [
-  "Make you readable, citable and agent-ready",
-  "Build and defend your position month over month",
-  "Give you a real Share of Model number, measured the same way every time",
-  "Tell you what's working — and what isn't",
+  "Hacerte legible, citable y agent-ready",
+  "Construir y defender tu posición mes a mes",
+  "Darte un número real de Share of Model, medido de la misma manera cada vez",
+  "Decirte qué funciona — y qué no",
 ]
 
 const nopes = [
-  "'Guaranteed citations' — the models are probabilistic and shift weekly",
-  "Overnight results — authority compounds over months",
-  "That schema or llms.txt alone is magic — necessary, not sufficient",
-  "To sell you MCP you don't need yet",
+  "'Citaciones garantizadas' — los modelos son probabilísticos y cambian cada semana",
+  "Resultados de la noche a la mañana — la autoridad se compone durante meses",
+  "Que el schema o llms.txt solo sean magia — necesarios, pero no suficientes",
+  "Venderte MCP que todavía no necesitas",
 ]
 
 export function Honesty() {
@@ -47,12 +47,11 @@ export function Honesty() {
             className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">We&apos;ll tell you the truth.</span>
-            <span className="block text-zinc-400">Even the parts other agencies hide.</span>
+            <span className="block">Te vamos a decir la verdad.</span>
+            <span className="block text-zinc-400">Incluso lo que otras agencias esconden.</span>
           </h2>
           <p className="text-zinc-500 max-w-2xl mx-auto">
-            AI visibility is full of hype. Here&apos;s exactly what we will and won&apos;t promise — so you know what
-            you&apos;re buying.
+            La visibilidad en IA está llena de hype. Esto es exactamente lo que prometemos y lo que no — para que sepas qué estás comprando.
           </p>
         </motion.div>
 
@@ -68,7 +67,7 @@ export function Honesty() {
               <div className="p-2 rounded-lg bg-zinc-100">
                 <Check className="w-5 h-5 text-emerald-500" strokeWidth={2} />
               </div>
-              <h3 className="text-lg font-semibold text-zinc-900">What we promise</h3>
+              <h3 className="text-lg font-semibold text-zinc-900">Lo que prometemos</h3>
             </div>
             <ul className="flex flex-col gap-4">
               {promises.map((item) => (
@@ -92,7 +91,7 @@ export function Honesty() {
               <div className="p-2 rounded-lg bg-zinc-100">
                 <X className="w-5 h-5 text-red-400/60" strokeWidth={2} />
               </div>
-              <h3 className="text-lg font-semibold text-zinc-900">What we won&apos;t promise</h3>
+              <h3 className="text-lg font-semibold text-zinc-900">Lo que no prometemos</h3>
             </div>
             <ul className="flex flex-col gap-4">
               {nopes.map((item) => (

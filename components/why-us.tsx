@@ -34,12 +34,11 @@ export function WhyUs() {
             className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Engineering meets authority.</span>
-            <span className="block text-zinc-400">The combination almost nobody offers.</span>
+            <span className="block">Ingeniería + autoridad.</span>
+            <span className="block text-zinc-400">La combinación que casi nadie ofrece.</span>
           </h2>
           <p className="text-zinc-500 max-w-2xl mx-auto">
-            Most agencies just write content. Most dev shops just write code. Getting picked by AI takes both — under
-            one roof.
+            La mayoría de las agencias solo escriben contenido. La mayoría de los dev shops solo escriben código. Que la IA te elija requiere ambas cosas — bajo un mismo techo.
           </p>
         </motion.div>
 
@@ -55,13 +54,12 @@ export function WhyUs() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Settings className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Data engineering</h3>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Ingeniería de datos</h3>
             <p className="text-zinc-500 text-sm mb-4">
-              We structure your data so machines can read it without guessing — schema, entities, feeds, and the path to
-              agent-ready.
+              Estructuramos tus datos para que las máquinas los lean sin adivinar — schema, entidades, feeds, y el camino hacia agent-ready.
             </p>
             <div className="flex items-center gap-2 text-emerald-600 text-sm">
-              <span className="font-mono">structure</span>
+              <span className="font-mono">estructura</span>
             </div>
           </motion.div>
 
@@ -91,13 +89,12 @@ export function WhyUs() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Award className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">SEO authority</h3>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Autoridad SEO</h3>
             <p className="text-zinc-500 text-sm mb-4">
-              We build the trust signals — content, entity, freshness, third-party mentions — that turn structure into
-              real citations.
+              Construimos las señales de confianza — contenido, entidad, actualización, menciones de terceros — que convierten la estructura en citaciones reales.
             </p>
             <div className="flex items-center gap-2 text-emerald-600 text-sm">
-              <span className="font-mono">trust</span>
+              <span className="font-mono">confianza</span>
             </div>
           </motion.div>
         </div>
@@ -110,8 +107,8 @@ export function WhyUs() {
           className="text-center text-2xl sm:text-3xl font-bold"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-zinc-900">Structure + trust = </span>
-          <span className="text-emerald-500">the name the AI picks is yours.</span>
+          <span className="text-zinc-900">Estructura + confianza = </span>
+          <span className="text-emerald-500">el nombre que la IA elige es el tuyo.</span>
         </motion.p>
       </div>
     </section>

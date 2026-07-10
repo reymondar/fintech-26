@@ -21,35 +21,35 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
               <Anchor className="w-5 h-5 text-zinc-900" strokeWidth={1.5} />
-              <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">Grounded</span>
+              <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">The Stack House</span>
             </a>
             <p className="text-sm text-zinc-500">
-              We make your business readable, trustworthy and eligible for AI.
+              Hacemos tu negocio legible, confiable y elegible para la IA.
             </p>
           </div>
 
-          {/* Site */}
+          {/* Sitio */}
           <div>
-            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Site</h4>
+            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Sitio</h4>
             <ul className="space-y-3">
               <li>
                 <a href="/#how-it-works" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  How It Works
+                  Cómo funciona
                 </a>
               </li>
               <li>
                 <a href="/services" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Services
+                  Servicios
                 </a>
               </li>
               <li>
                 <a href="/#cases" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Cases
+                  Casos
                 </a>
               </li>
               <li>
                 <a href="#audit" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Free Audit
+                  Auditoría gratis
                 </a>
               </li>
             </ul>
@@ -61,20 +61,20 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Privacy
+                  Privacidad
                 </a>
               </li>
               <li>
                 <a href="#" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Terms
+                  Términos
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contacto */}
           <div>
-            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Contact</h4>
+            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Contacto</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -95,7 +95,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 pt-8 border-t border-zinc-200 flex items-center justify-center"
         >
-          <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} GROUNDED. All rights reserved.</p>
+          <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} The Stack House. Todos los derechos reservados.</p>
         </motion.div>
       </div>
     </footer>

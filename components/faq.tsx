@@ -6,44 +6,44 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "What exactly does GROUNDED do?",
+    question: "¿Qué hace exactamente The Stack House?",
     answer:
-      "We're a dev studio that makes AI choose you: we build the data infrastructure and authority that make ChatGPT, Perplexity, Gemini and Google AI Overviews read you, trust you and recommend you. We don't just write blogs. We structure your data so machines understand it, build the trust signals that earn citations, and get your business ready for what's next: AI agents that don't just mention you — they transact with you. GEO is the door; engineering is what makes us better at it.",
+      "Somos un estudio de desarrollo que hace que la IA te elija: construimos la infraestructura de datos y la autoridad que hacen que ChatGPT, Perplexity, Gemini y Google AI Overviews te lean, confíen en ti y te recomienden. No solo escribimos blogs. Estructuramos tus datos para que las máquinas los entiendan, construimos las señales de confianza que generan citaciones, y preparamos tu negocio para lo que viene: agentes de IA que no solo te mencionan — operan contigo. GEO es la puerta; la ingeniería es lo que nos hace mejores.",
   },
   {
-    question: "Why a dev studio and not an SEO agency?",
+    question: "¿Por qué un estudio de desarrollo y no una agencia SEO?",
     answer:
-      "Because most of the market only writes content; we build. A tool shows you you're invisible. A content agency writes articles. We do both halves that almost nobody combines under one roof: machine-readable data engineering and the authority that turns it into real citations. The fact that we can actually build — not just recommend — is what separates us from the hundreds doing the same thing. And yes: once you're in, we build whatever you need, from automations to internal systems.",
+      "Porque la mayoría del mercado solo escribe contenido; nosotros construimos. Una herramienta te muestra que eres invisible. Una agencia de contenido escribe artículos. Nosotros hacemos las dos mitades que casi nadie combina bajo un mismo techo: ingeniería de datos legible por máquinas y la autoridad que convierte eso en citaciones reales. El hecho de que podamos construir — no solo recomendar — es lo que nos separa de los cientos que hacen lo mismo. Y sí: una vez que entras, construimos lo que necesites, desde automatizaciones hasta sistemas internos.",
   },
   {
-    question: "What is GEO and why should I care now?",
+    question: "¿Qué es GEO y por qué debería importarme ahora?",
     answer:
-      "GEO (Generative Engine Optimization) is structuring your business so AI cites you as a source when someone asks — and it matters now because the click is dying. Google stopped distributing traffic: it's down roughly a third year-over-year, and most searches end with zero clicks. Your buyers don't browse ten links anymore; they ask, and the AI answers with a name. GEO decides whether that name is yours or your competitor's. The window to arrive early is now; in two years it'll be table stakes.",
+      "GEO (Generative Engine Optimization) es estructurar tu negocio para que la IA te cite como fuente cuando alguien pregunta — y es importante ahora porque el clic está muriendo. Google dejó de distribuir tráfico: bajó aproximadamente un tercio año con año, y la mayoría de búsquedas terminan sin ningún clic. Tus compradores ya no revisan diez enlaces; preguntan, y la IA responde con un nombre. GEO decide si ese nombre es el tuyo o el de tu competencia. La ventana para llegar temprano es ahora; en dos años será lo mínimo esperado.",
   },
   {
-    question: "I already invest in SEO. Isn't this the same thing paid twice?",
+    question: "Ya invierto en SEO. ¿No es pagar lo mismo dos veces?",
     answer:
-      "No: your SEO works to rank on Google; GEO works to get you cited in AI responses — two distinct surfaces where your buyer searches. They share foundations, so we don't duplicate effort — we build on top of what you already have instead of redoing it. Think of it this way: SEO gets you the click Google still sends; GEO gets you the mention in the conversation that's eating that click. Ignoring either one means ceding half the field.",
+      "No: tu SEO trabaja para posicionarte en Google; GEO trabaja para que te citen en respuestas de IA — dos superficies distintas donde buscan tus compradores. Comparten bases, así que no duplicamos esfuerzo — construimos sobre lo que ya tienes en lugar de rehacerlo. Piénsalo así: SEO te da el clic que Google todavía envía; GEO te da la mención en la conversación que se está comiendo ese clic. Ignorar cualquiera de los dos es ceder la mitad del terreno.",
   },
   {
-    question: "How do I know this works if I can't see a \"ranking\"?",
+    question: "¿Cómo sé que funciona si no puedo ver un \"ranking\"?",
     answer:
-      "We measure it with your Share of Model: how often AI names you versus your competitors, using the same set of questions every month. There's no classic \"ranking\" because models don't order links — they synthesize answers. So instead of a position, we give you a real number and its trend, plus the queries where you appear and where you don't. Honesty first: there is no \"Search Console for AI\" yet, so this is measured with our own methodology, not an official metric. But what isn't measured can't be defended.",
+      "Lo medimos con tu Share of Model: con qué frecuencia la IA te nombra versus a tus competidores, usando el mismo set de preguntas cada mes. No hay un \"ranking\" clásico porque los modelos no ordenan enlaces — sintetizan respuestas. Entonces, en lugar de una posición, te damos un número real y su tendencia, más las consultas donde apareces y donde no. Honestidad primero: todavía no existe un \"Search Console para IA\", así que esto se mide con nuestra propia metodología, no una métrica oficial. Pero lo que no se mide no se puede defender.",
   },
   {
-    question: "Do you guarantee the AI will recommend me?",
+    question: "¿Garantizan que la IA me va a recomendar?",
     answer:
-      "No, and be wary of anyone who does: models are probabilistic, and roughly 70% of cited pages rotate every 2–3 months without anyone touching anything. What we do is build your position and defend it month over month as the models shift. Promising \"guaranteed citations\" in a system that fluctuates by design is smoke — we'd rather tell you the technical truth than sell you one we can't deliver. That honesty is precisely why our clients stay.",
+      "No, y desconfía de quien lo haga: los modelos son probabilísticos, y la mayoría de las páginas citadas cambian cada pocos meses sin que nadie toque nada. Lo que hacemos es construir tu posición y defenderla mes a mes conforme los modelos cambian. Prometer \"citaciones garantizadas\" en un sistema que fluctúa por diseño es humo — preferimos decirte la verdad técnica que venderte una que no podemos cumplir. Esa honestidad es precisamente por la que nuestros clientes se quedan.",
   },
   {
-    question: "We're a \"boring\" business (industrial, B2B, niche). Is this for us?",
+    question: "Somos un negocio \"aburrido\" (industrial, B2B, nicho). ¿Esto es para nosotros?",
     answer:
-      "Especially for you: the more technical and specialized your sector, the less GEO competition you have and the more direct the results. When an industrial buyer asks AI \"who manufactures X with Y certification,\" they're not looking for a brand — they're looking for capability. If your capability sheet isn't structured for a machine to read, that order goes to someone else. \"Boring\" businesses are usually invisible online and have real budgets: the perfect combination for this to actually move the needle.",
+      "Especialmente para ustedes: entre más técnico y especializado sea tu sector, menos competencia en GEO tienes y más directos son los resultados. Cuando un comprador industrial le pregunta a la IA \"quién fabrica X con certificación Y\", no busca una marca — busca capacidad. Si tu hoja de capacidades no está estructurada para que una máquina la lea, esa orden se va con otro. Los negocios \"aburridos\" suelen ser invisibles online y tienen presupuestos reales: la combinación perfecta para que esto realmente mueva la aguja.",
   },
   {
-    question: "Do you have to rebuild my website?",
+    question: "¿Tienen que reconstruir mi sitio web?",
     answer:
-      "No: we build the machine-readable data layer on top of your current site, with no migration or redesign. We structure and expose your information so AI understands it without guessing, respecting your design and your stack. And since we're developers, if something custom worth building comes up, we can do it — but it's never a requirement to start. You begin with an audit, not a construction project.",
+      "No: construimos la capa de datos legible por máquinas sobre tu sitio actual, sin migración ni rediseño. Estructuramos y exponemos tu información para que la IA la entienda sin adivinar, respetando tu diseño y tu stack. Y como somos desarrolladores, si surge algo custom que valga la pena construir, lo hacemos — pero nunca es un requisito para empezar. Empiezas con una auditoría, no con un proyecto de construcción.",
   },
 ]
 
@@ -64,8 +64,8 @@ export function FAQ() {
             className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Frequently asked questions.</span>
-            <span className="block text-zinc-400">The honest answers.</span>
+            <span className="block">Preguntas frecuentes.</span>
+            <span className="block text-zinc-400">Las respuestas honestas.</span>
           </h2>
         </motion.div>
 

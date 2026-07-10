@@ -29,26 +29,26 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    title: "We audit",
+    title: "Auditamos",
     description:
-      "We run your brand through ChatGPT, Perplexity, Gemini and Claude with your buyers' real questions, and show you exactly where you're invisible.",
-    accent: "free · 5-min aha",
+      "Pasamos tu marca por ChatGPT, Perplexity, Gemini y Claude con las preguntas reales de tus compradores, y te mostramos exactamente dónde eres invisible.",
+    accent: "gratis · 5 min de revelación",
   },
   {
     number: "02",
     icon: Wrench,
-    title: "We build",
+    title: "Construimos",
     description:
-      "We engineer your machine-readable layer and build the authority that makes citations possible. Structure and trust, together.",
-    accent: "structure + authority",
+      "Diseñamos tu capa legible por máquinas y construimos la autoridad que hace posibles las citaciones. Estructura y confianza, juntas.",
+    accent: "estructura + autoridad",
   },
   {
     number: "03",
     icon: Shield,
-    title: "We defend",
+    title: "Defendemos",
     description:
-      "AI shifts constantly. We track your Share of Model every month and defend your position as the models change.",
-    accent: "Share of Model · monthly",
+      "La IA cambia constantemente. Medimos tu Share of Model cada mes y defendemos tu posición conforme los modelos cambian.",
+    accent: "Share of Model · mensual",
   },
 ]
 
@@ -69,8 +69,8 @@ export function HowWeWork() {
             className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Three steps.</span>
-            <span className="block text-zinc-400">From invisible to the name AI picks.</span>
+            <span className="block">Tres pasos.</span>
+            <span className="block text-zinc-400">De invisible al nombre que la IA elige.</span>
           </h2>
         </motion.div>
 

@@ -5,14 +5,14 @@ import { useRef } from "react"
 import { Search } from "lucide-react"
 
 const queries = [
-  "who's the best provider for [your category]?",
-  "top alternatives to [competitor]",
-  "which company offers [service] with [certification]?",
-  "recommend a supplier for [need]",
-  "is [competitor] actually any good?",
-  "best [industry] companies in [region]",
-  "who can handle [specific requirement]?",
-  "compare [competitor A] vs [competitor B]",
+  "¿quién es el mejor proveedor de [tu categoría]?",
+  "mejores alternativas a [competidor]",
+  "¿qué empresa ofrece [servicio] con [certificación]?",
+  "recomiéndame un proveedor para [necesidad]",
+  "¿[competidor] es realmente bueno?",
+  "mejores empresas de [industria] en [región]",
+  "¿quién puede manejar [requisito específico]?",
+  "compara [competidor A] vs [competidor B]",
 ]
 
 function QueryTile({ text }: { text: string }) {
@@ -55,8 +55,8 @@ export function Integrations() {
           className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
           style={{ fontFamily: "var(--font-instrument-sans)" }}
         >
-          <span className="block text-zinc-900">~29,000 questions every second.</span>
-          <span className="block text-zinc-400">The only question is whether you&apos;re in them.</span>
+          <span className="block text-zinc-900">~29,000 preguntas cada segundo.</span>
+          <span className="block text-zinc-400">La única pregunta es si tú estás en ellas.</span>
         </motion.h2>
       </div>
 
@@ -78,7 +78,7 @@ export function Integrations() {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="text-center text-sm text-zinc-500 mt-12"
       >
-        2.5 billion prompts a day — and your buyers are asking some of them right now.
+        2,500 millones de prompts al día — y tus compradores están haciendo algunos de ellos ahora mismo.
       </motion.p>
     </section>
   )

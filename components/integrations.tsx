@@ -5,14 +5,14 @@ import { useRef } from "react"
 import { Search } from "lucide-react"
 
 const queries = [
-  "¿quién es el mejor proveedor de [tu categoría]?",
-  "mejores alternativas a [competidor]",
-  "¿qué empresa ofrece [servicio] con [certificación]?",
-  "recomiéndame un proveedor para [necesidad]",
-  "¿[competidor] es realmente bueno?",
-  "mejores empresas de [industria] en [región]",
-  "¿quién puede manejar [requisito específico]?",
-  "compara [competidor A] vs [competidor B]",
+  "Cuáles son los mejores hoteles para quedarse en Murcia por menos de 200 euros?",
+  "Necesito una cuerda y pies de gato para iniciarme en escalada, dónde compro online que no sea Decathlon?",
+  "Cuáles son las tostadoras de café mejor puntuadas para casa?",
+  "Alternativas profesionales a HubSpot con soporte nativo en español",
+  "Cuánto puede salir hacerse una rinoplastia en Murcia? Dime clínicas",
+  "Precio real de un implante dental en Valencia? Ordéname clínicas de mejor a peor",
+  "Dónde comprar suplementos deportivos online que no sea Amazon?",
+  "Merece la pena pagar 180 la noche en ese hotel de Jávea? Dame alternativas cerca",
 ]
 
 function QueryTile({ text }: { text: string }) {
@@ -46,16 +46,16 @@ export function Integrations() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="overflow-hidden py-24 px-4">
+    <section ref={ref} className="overflow-hidden py-12 px-4">
       <div className="mx-auto max-w-3xl text-center mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-3xl sm:text-4xl font-bold tracking-tight mb-4"
+          className="text-3xl sm:text-4xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-instrument-sans)" }}
         >
-          <span className="block text-zinc-900">~29,000 preguntas cada segundo.</span>
+          <span className="block text-zinc-900">~29.000 preguntas cada segundo.</span>
           <span className="block text-zinc-400">La única pregunta es si tú estás en ellas.</span>
         </motion.h2>
       </div>
@@ -76,9 +76,9 @@ export function Integrations() {
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="text-center text-sm text-zinc-500 mt-12"
+        className="text-center text-lg text-zinc-500 mt-12 max-w-2xl mx-auto leading-relaxed"
       >
-        2,500 millones de prompts al día. Alguien está siendo recomendado ahora mismo. La pregunta es quién.
+        Entra en la conversación. Deja que tus clientes te encuentren.
       </motion.p>
     </section>
   )

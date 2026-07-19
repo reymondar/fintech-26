@@ -89,7 +89,7 @@ export function BentoGrid() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="features" className="py-24 px-4">
+    <section id="features" className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,14 +98,11 @@ export function BentoGrid() {
           className="text-center mb-16"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
+            className="text-xl sm:text-2xl font-semibold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Construimos lo que la IA necesita para elegirte.</span>
+            Medimos con exactitud cómo la IA está afectando a tu negocio, y te entregamos un plan priorizado para convertirte en una de las empresas que la IA recomienda.
           </h2>
-          <p className="text-zinc-500 max-w-2xl mx-auto">
-            Datos que puede leer. Señales en las que confía. Un nombre que repite.
-          </p>
         </motion.div>
 
         {/* Sustancia — lo que te hace elegible */}

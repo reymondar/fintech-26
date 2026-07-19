@@ -6,21 +6,21 @@ import { useEffect, useMemo, useRef, useState } from "react"
 const steps = [
   {
     number: "01",
-    title: "Auditamos",
+    title: "Diagnóstico en vivo · gratis · 20 min",
     description:
-      "Pasamos tu marca por ChatGPT, Perplexity, Gemini y Claude con las preguntas reales de tus compradores, y te mostramos exactamente dónde eres invisible.",
+      "Ejecutamos delante de ti las preguntas que tus compradores le hacen a la IA, contra tus competidores reales. Sales de la llamada sabiendo si la IA te ve y si tiene sentido ir más allá. Si no lo tiene, te lo decimos y ahí acaba.",
   },
   {
     number: "02",
-    title: "Construimos",
+    title: "Auditoría completa · 7–10 días",
     description:
-      "Ingeniería de datos legible por máquinas + la autoridad que genera citaciones reales. Estructura y confianza, bajo un mismo techo — la combinación que casi nadie ofrece.",
+      "Tu visibilidad medida con método, la atribución de tu caída de tráfico y un plan de 30 días con las acciones que de verdad mueven la aguja. Precio cerrado antes de empezar.",
   },
   {
     number: "03",
-    title: "Defendemos",
+    title: "Sesión de entrega · 45 min",
     description:
-      "La IA cambia constantemente. Medimos tu Share of Model cada mes y defendemos tu posición conforme los modelos cambian. Cuando algo se mueve, lo detectamos y lo corregimos.",
+      "Repasamos el informe contigo y acordamos por dónde empezar. Sin letra pequeña: la auditoría no incluye implementación — por eso el diagnóstico es imparcial.",
   },
 ]
 
@@ -109,7 +109,7 @@ export function TrustedAtScale() {
   const ambientDrops = useMemo(() => generateDrops(22, 90210), [])
 
   return (
-    <section id="how-it-works" ref={ref} className="relative overflow-hidden px-4 py-24 sm:py-32">
+    <section id="how-it-works" ref={ref} className="relative overflow-hidden px-4 py-12">
       {mounted && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -142,8 +142,8 @@ export function TrustedAtScale() {
               className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-cal-sans)" }}
             >
-              Ingeniería + autoridad.{" "}
-              <span className="text-zinc-400">Tres pasos, un resultado.</span>
+              De &quot;no sé qué está pasando&quot;{" "}
+              <span className="text-zinc-400">a plan de acción, en tres pasos.</span>
             </motion.h2>
 
             <motion.p
@@ -151,9 +151,7 @@ export function TrustedAtScale() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-zinc-500 text-base sm:text-lg leading-relaxed max-w-lg"
-            >
-              La mayoría solo escribe contenido o solo escribe código. Que la IA te elija requiere ambas cosas — y nosotros hacemos las dos, bajo un mismo techo.
-            </motion.p>
+            />
           </div>
 
           {mounted && (

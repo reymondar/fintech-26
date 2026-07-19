@@ -22,8 +22,8 @@ const instrumentSans = Instrument_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Stack House — Que ChatGPT, Perplexity y Gemini te recomienden | Visibilidad en IA",
-  description: "Tus compradores le preguntan a la IA a quién contratar. Nosotros hacemos que responda con tu nombre. Auditoría gratis: descubre exactamente dónde apareces en ChatGPT, Perplexity y Gemini — en días.",
+  title: "The Stack House — Visibilidad en IA | Sé la empresa que ChatGPT recomienda",
+  description: "The Stack House hace visible tu empresa en ChatGPT, Gemini, Perplexity y Claude. Diagnóstico honesto de por qué cae tu tráfico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Diagnóstico en vivo gratis de 20 minutos.",
 }
 
 export default function RootLayout({

@@ -80,7 +80,7 @@ export function FAQ() {
                 <AccordionTrigger className="text-left text-zinc-900 hover:text-zinc-700 text-base font-medium">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent forceMount className="text-zinc-500 text-sm leading-relaxed">
+                <AccordionContent className="text-zinc-500 text-sm leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

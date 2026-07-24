@@ -78,10 +78,10 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@grounded.so"
+                  href="mailto:hello@thestackhouse.com"
                   className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
                 >
-                  hello@grounded.so
+                  hello@thestackhouse.com
                 </a>
               </li>
             </ul>

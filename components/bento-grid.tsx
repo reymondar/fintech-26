@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
-import { Code, ShieldCheck, ChartLine, Bot, Plug } from "lucide-react"
+import { Code, ShieldCheck, ChartLine, Bot, Plug, Target } from "lucide-react"
 
 const containerVariants = {
   hidden: {},
@@ -195,21 +195,18 @@ export function BentoGrid() {
             </p>
           </motion.div>
 
-          {/* Tuyo */}
+          {/* Elegible */}
           <motion.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
-            <div className="flex items-start gap-4">
-              <div className="p-2 rounded-lg bg-zinc-100 shrink-0">
-                <ShieldCheck className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
-              </div>
+            <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
+              <Target className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mt-4 mb-2">Todo lo que construimos es tuyo</h3>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Lo que te hace elegible</h3>
             <p className="text-zinc-500 text-sm">
-              El contenido, la capa de datos, la autoridad — vive en tu dominio. Si algún día te vas, te lo llevas todo.
+              Convertimos el diagnóstico en posición: contenido que los modelos pueden citar, señales de autoridad en las fuentes que consultan y una base técnica que pueden leer y en la que pueden confiar.
             </p>
-            <p className="text-xs text-emerald-600 font-medium mt-4">Sin contrato a largo plazo · cancela cuando quieras</p>
           </motion.div>
         </motion.div>
       </div>

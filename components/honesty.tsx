@@ -69,6 +69,91 @@ export function Honesty() {
           </p>
         </motion.div>
 
+        {/* Cobertura + Avance cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex flex-col md:flex-row gap-5 justify-center items-stretch max-w-2xl mx-auto mb-20"
+        >
+          {/* Cobertura de fuentes */}
+          <div
+            style={{
+              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+              flex: 1,
+              boxSizing: 'border-box',
+              background: 'linear-gradient(180deg, #10152f 0%, #0a0e20 100%)',
+              border: '1px solid rgba(148,163,255,.10)',
+              borderRadius: 20,
+              padding: 22,
+              color: '#eaeefc',
+              WebkitFontSmoothing: 'antialiased',
+            }}
+          >
+            <h3 style={{ fontSize: 16.5, fontWeight: 700, letterSpacing: 0.1, margin: 0 }}>Cobertura de fuentes</h3>
+            <div style={{ fontSize: 12, color: '#8b93b9', marginTop: 3 }}>Presencia en el top 20 del sector</div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16 }}>
+              <svg viewBox="0 0 160 160" width={140} height={140} xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="shcCov" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#00cf8d" />
+                    <stop offset="100%" stopColor="#009967" />
+                  </linearGradient>
+                </defs>
+                <g transform="rotate(-90 80 80)" strokeLinecap="round" fill="none" strokeWidth={13}>
+                  <circle cx={80} cy={80} r={62} stroke="#1b2242" />
+                  <circle cx={80} cy={80} r={62} stroke="url(#shcCov)" strokeDasharray="175 214"
+                    style={{ filter: 'drop-shadow(0 0 6px rgba(0,207,141,.55))' }} />
+                </g>
+                <text x={80} y={78} textAnchor="middle" fill="#eaeefc" fontSize={24} fontWeight={800} fontFamily="Inter, sans-serif">9/20</text>
+                <text x={80} y={96} textAnchor="middle" fill="#8b93b9" fontSize={9.5} fontFamily="Inter, sans-serif">fuentes cubiertas</text>
+              </svg>
+            </div>
+            <p style={{ fontSize: 11, color: '#6b7299', marginTop: 14, lineHeight: 1.5, textAlign: 'center' }}>
+              Objetivo Q3: presencia en 14 de las 20 fuentes más citadas.
+            </p>
+          </div>
+
+          {/* Avance del plan */}
+          <div
+            style={{
+              fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+              flex: 1,
+              boxSizing: 'border-box',
+              background: 'linear-gradient(180deg, #10152f 0%, #0a0e20 100%)',
+              border: '1px solid rgba(148,163,255,.10)',
+              borderRadius: 20,
+              padding: 22,
+              color: '#eaeefc',
+              WebkitFontSmoothing: 'antialiased',
+            }}
+          >
+            <h3 style={{ fontSize: 16.5, fontWeight: 700, letterSpacing: 0.1, margin: 0 }}>Avance del plan</h3>
+            <div style={{ fontSize: 12, color: '#8b93b9', marginTop: 3 }}>Estrategia Q3 · 24 acciones</div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 14 }}>
+              <svg viewBox="0 0 200 120" width={200} height={120} xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="shpPg" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stopColor="#4f7dff" />
+                    <stop offset="100%" stopColor="#00cf8d" />
+                  </linearGradient>
+                </defs>
+                <path d="M20 110 A 80 80 0 0 1 180 110" fill="none" stroke="#1b2242" strokeWidth={15} strokeLinecap="round" />
+                <path d="M20 110 A 80 80 0 0 1 180 110" fill="none" stroke="url(#shpPg)" strokeWidth={15} strokeLinecap="round"
+                  strokeDasharray={251} strokeDashoffset={105}
+                  style={{ filter: 'drop-shadow(0 0 7px rgba(0,207,141,.5))' }} />
+                <text x={100} y={92} textAnchor="middle" fill="#eaeefc" fontSize={27} fontWeight={800} fontFamily="Inter, sans-serif">58%</text>
+                <text x={100} y={110} textAnchor="middle" fill="#8b93b9" fontSize={10.5} fontFamily="Inter, sans-serif">completado</text>
+              </svg>
+            </div>
+            <div style={{ display: 'flex', gap: 14, fontSize: 12, color: '#8b93b9', justifyContent: 'center', marginTop: 18, flexWrap: 'wrap' as const }}>
+              <span><i style={{ width: 8, height: 8, borderRadius: '50%', display: 'inline-block', marginRight: 6, background: '#00cf8d' }} />14 hechas</span>
+              <span><i style={{ width: 8, height: 8, borderRadius: '50%', display: 'inline-block', marginRight: 6, background: '#7ea2ff' }} />6 en curso</span>
+              <span><i style={{ width: 8, height: 8, borderRadius: '50%', display: 'inline-block', marginRight: 6, background: '#3a4470' }} />4 pendientes</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* 2. Cambio de perspectiva */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

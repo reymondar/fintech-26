@@ -3,7 +3,6 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Integrations } from "@/components/integrations"
 import { BentoGrid } from "@/components/bento-grid"
-import { QueHacemos } from "@/components/que-hacemos"
 import { TrustedAtScale } from "@/components/trusted-at-scale"
 import { Honesty } from "@/components/honesty"
 import { FAQ } from "@/components/faq"
@@ -94,7 +93,6 @@ export default function Home() {
         <Hero />
         <Integrations />
         <BentoGrid />
-        <QueHacemos />
         <TrustedAtScale />
         <Honesty />
         <QueRecibes />

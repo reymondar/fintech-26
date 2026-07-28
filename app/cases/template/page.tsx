@@ -349,7 +349,7 @@ export default function CaseStudyTemplate() {
                 size="lg"
                 className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
               >
-                <a href="/#audit">
+                <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer">
                   Obtén tu auditoría gratis
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>

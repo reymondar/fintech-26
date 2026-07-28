@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Anchor } from "lucide-react"
 
 export function Footer() {
   const ref = useRef(null)
@@ -15,12 +14,12 @@ export function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 gap-8"
         >
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
-              <Anchor className="w-5 h-5 text-zinc-900" strokeWidth={1.5} />
+              <img src="/logo-stackhouse.png" alt="The Stack House" className="w-6 h-6 object-contain" />
               <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">The Stack House</span>
             </a>
             <p className="text-sm text-zinc-500">
@@ -43,36 +42,14 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#cases" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Casos
-                </a>
-              </li>
-              <li>
-                <a href="#audit" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Auditoría gratis
+                <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
+                  Agenda tu diagnóstico
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Legal</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Privacidad
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Términos
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contacto */}
+{/* Contacto */}
           <div>
             <h4 className="text-sm font-semibold text-zinc-900 mb-4">Contacto</h4>
             <ul className="space-y-3">

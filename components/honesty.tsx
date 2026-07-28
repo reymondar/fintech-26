@@ -16,32 +16,34 @@ const itemVariants = {
   },
 }
 
-const majoriaChecks = [
-  "Te dicen si apareces en ChatGPT.",
-  "Te muestran dashboards y listas de menciones.",
-  "Te dan recomendaciones genéricas.",
+const comparisonRows = [
+  {
+    category: "Diagnóstico",
+    mayoria: "Te dicen si apareces en ChatGPT.",
+    nosotros: "Analizamos tus propios datos y separamos las causas reales.",
+  },
+  {
+    category: "Medición",
+    mayoria: "Dashboards genéricos y listas de menciones.",
+    nosotros: "Medimos cuánto de tu caída es atribuible a la IA y cuánto no.",
+  },
+  {
+    category: "Acciones",
+    mayoria: "Recomendaciones genéricas sin priorizar.",
+    nosotros: "Priorizamos únicamente las tres acciones con mayor impacto.",
+  },
+  {
+    category: "Honestidad",
+    mayoria: "Nunca te dirán que la IA no es el problema.",
+    nosotros: "Si la IA no es el problema, lo dejamos por escrito.",
+  },
+  {
+    category: "Criterio",
+    mayoria: "No separan el impacto de la IA del resto de factores.",
+    nosotros: "Solo recomendamos más trabajo cuando los datos lo justifican.",
+  },
 ]
 
-const majoriaCrosses = [
-  "No pueden decirte por qué está cayendo tu tráfico.",
-  "No pueden separar el impacto de la IA del resto de factores.",
-  "Nunca te dirán que la IA no es el problema.",
-]
-
-const nosotrosChecks = [
-  "Analizamos tus propios datos.",
-  "Medimos cuánto de tu caída es atribuible a la IA y cuánto no.",
-  "Priorizamos únicamente las tres acciones con mayor impacto.",
-  "Si la IA no es el problema, lo dejamos por escrito.",
-  "Solo recomendamos más trabajo cuando los datos lo justifican.",
-]
-
-const neverPromise = [
-  "Citaciones garantizadas.",
-  "Resultados de la noche a la mañana.",
-  "Soluciones mágicas.",
-  "Venderte tecnología que todavía no necesitas.",
-]
 
 export function Honesty() {
   const ref = useRef(null)
@@ -55,7 +57,7 @@ export function Honesty() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-8"
         >
           <h2
             className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-5"
@@ -74,10 +76,12 @@ export function Honesty() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-col md:flex-row gap-5 justify-center items-stretch max-w-2xl mx-auto mb-20"
+          className="relative flex flex-col md:flex-row gap-5 justify-center items-stretch max-w-2xl mx-auto mb-20"
         >
+          <div className="absolute inset-0 -inset-x-16 -inset-y-8 bg-emerald-100/30 rounded-full blur-3xl pointer-events-none z-0" />
           {/* Cobertura de fuentes */}
           <div
+            className="relative z-10"
             style={{
               fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
               flex: 1,
@@ -116,6 +120,7 @@ export function Honesty() {
 
           {/* Avance del plan */}
           <div
+            className="relative z-10"
             style={{
               fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
               flex: 1,
@@ -177,93 +182,69 @@ export function Honesty() {
             ¿La IA está afectando realmente a tu negocio?
           </p>
           <p className="text-zinc-500 mt-4 leading-relaxed">
-            Porque si la respuesta es no, preferimos decirlo antes que venderte un servicio que no necesitas.
+            Porque si la respuesta es no, te lo diremos antes de asesorarte incorrectamente.
           </p>
         </motion.div>
 
-        {/* 3. Comparativa — dos tarjetas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-20">
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            className="p-7 rounded-2xl bg-white border border-zinc-200 shadow-sm"
-          >
-            <h3
-              className="text-lg font-semibold text-zinc-900 mb-6"
-              style={{ fontFamily: "var(--font-instrument-sans)" }}
-            >
-              Lo que hace la mayoría
-            </h3>
-            <ul className="flex flex-col gap-3.5 mb-5">
-              {majoriaChecks.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" strokeWidth={2} />
-                  <span className="text-sm text-zinc-600">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="border-t border-zinc-100 pt-5">
-              <ul className="flex flex-col gap-3.5">
-                {majoriaCrosses.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <X className="w-4 h-4 text-red-400/70 shrink-0 mt-0.5" strokeWidth={2} />
-                    <span className="text-sm text-zinc-500">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            transition={{ delay: 0.1 }}
-            className="p-7 rounded-2xl bg-white border border-emerald-200 shadow-sm"
-          >
-            <h3
-              className="text-lg font-semibold text-zinc-900 mb-6"
-              style={{ fontFamily: "var(--font-instrument-sans)" }}
-            >
-              Lo que hacemos nosotros
-            </h3>
-            <ul className="flex flex-col gap-3.5">
-              {nosotrosChecks.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" strokeWidth={2} />
-                  <span className="text-sm text-zinc-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-
-        {/* 4. Lo que nunca prometeremos */}
+        {/* 3. Comparativa — tabla */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto mb-20"
+          variants={itemVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="rounded-2xl border border-zinc-200 overflow-hidden shadow-sm mb-20"
         >
-          <h3
-            className="text-lg font-semibold text-zinc-900 mb-5 text-center"
-            style={{ fontFamily: "var(--font-instrument-sans)" }}
-          >
-            Lo que nunca prometeremos
-          </h3>
-          <ul className="flex flex-col gap-3 mb-5">
-            {neverPromise.map((item) => (
-              <li key={item} className="flex items-center gap-3 justify-center">
-                <X className="w-4 h-4 text-red-400/60 shrink-0" strokeWidth={2} />
-                <span className="text-sm text-zinc-500">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-sm text-zinc-400 text-center leading-relaxed">
-            Los modelos cambian constantemente. Cualquiera que garantice resultados fijos sobre un sistema que se actualiza cada semana está vendiendo humo.
-          </p>
+          {/* Header */}
+          <div className="grid grid-cols-[1fr_1fr] md:grid-cols-[140px_1fr_1fr] bg-zinc-100">
+            <div className="hidden md:block px-5 py-4" />
+            <div className="px-5 py-4 text-sm font-semibold text-zinc-500 uppercase tracking-wider">
+              La mayoría
+            </div>
+            <div className="px-5 py-4 text-sm font-semibold text-emerald-700 uppercase tracking-wider bg-emerald-50/80">
+              The Stack House
+            </div>
+          </div>
+
+          {/* Rows */}
+          {comparisonRows.map((row, i) => (
+            <div
+              key={row.category}
+              className={`grid grid-cols-[1fr_1fr] md:grid-cols-[140px_1fr_1fr] ${
+                i < comparisonRows.length - 1 ? "border-b border-zinc-100" : ""
+              }`}
+            >
+              <div className="hidden md:flex items-start px-5 py-5">
+                <span
+                  className="text-xs font-bold text-zinc-400 uppercase tracking-widest"
+                  style={{ fontFamily: "var(--font-instrument-sans)" }}
+                >
+                  {row.category}
+                </span>
+              </div>
+
+              <div className="px-5 py-5 flex flex-col gap-3">
+                <div className="md:hidden text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">
+                  {row.category}
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <X className="w-4 h-4 text-red-500" strokeWidth={2.5} />
+                  </div>
+                  <span className="text-sm text-zinc-500 leading-relaxed">{row.mayoria}</span>
+                </div>
+              </div>
+
+              <div className="px-5 py-5 bg-emerald-50/40">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-emerald-600" strokeWidth={2.5} />
+                  </div>
+                  <span className="text-sm text-zinc-800 font-medium leading-relaxed">{row.nosotros}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </motion.div>
+
 
       </div>
     </section>

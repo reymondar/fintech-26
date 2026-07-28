@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, MessageSquare, Check, X } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const textRevealVariants = {
@@ -31,7 +31,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-32 pb-16 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 via-zinc-50 to-zinc-100 pointer-events-none" />
+      <div className="absolute inset-0 bg-zinc-50 pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -104,52 +104,34 @@ export function Hero() {
             size="lg"
             className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
-            <a href="#audit">
+            <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer">
               Agenda tu llamada de diagnóstico
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
         </motion.div>
 
-        {/* Widget de simulación */}
+        {/* Dashboard preview */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="mx-auto max-w-[440px] rounded-2xl bg-white border border-zinc-200 p-6 text-left shadow-lg shadow-zinc-200/50"
+          className="relative mx-auto max-w-4xl mt-4 -mb-16"
         >
-          <div className="flex items-center gap-2 mb-5">
-            <MessageSquare className="w-4 h-4 text-zinc-400 shrink-0" strokeWidth={1.5} />
-            <span className="text-sm text-zinc-400">&quot;¿Quién es el mejor proveedor en [tu industria]?&quot;</span>
+          <div className="relative rounded-t-2xl overflow-hidden">
+            <img
+              src="/dashboard-preview.png"
+              alt="Panel de monitorización de The Stack House"
+              className="w-full block"
+            />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: 'linear-gradient(to bottom, transparent 30%, rgba(250,250,250,0.7) 55%, rgb(250,250,250) 80%)',
+              }}
+            />
           </div>
-
-          <div className="flex flex-col gap-3 mb-4">
-            <div className="flex items-center gap-3">
-              <Check className="w-4 h-4 text-emerald-500 shrink-0" strokeWidth={2} />
-              <span className="text-sm text-zinc-700">Competidor A</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Check className="w-4 h-4 text-emerald-500 shrink-0" strokeWidth={2} />
-              <span className="text-sm text-zinc-700">Competidor B</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <X className="w-4 h-4 text-red-500 shrink-0" strokeWidth={2} />
-              <span className="text-sm text-zinc-400 line-through">Tu empresa</span>
-            </div>
-          </div>
-
-          <p className="text-xs text-red-400/70">Hoy, no apareces.</p>
         </motion.div>
-
-        {/* Cierre del widget */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-6 text-sm text-zinc-400 max-w-lg mx-auto leading-relaxed"
-        >
-          Cada respuesta en la que no estás refuerza que la recomendación es otro. La visibilidad en IA se acumula — a tu favor o en tu contra.
-        </motion.p>
       </div>
     </section>
   )

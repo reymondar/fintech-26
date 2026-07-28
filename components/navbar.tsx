@@ -3,12 +3,11 @@
 import { useState, useRef, useCallback } from "react"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
-import { Menu, X, Anchor } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 const navItems = [
   { label: "Cómo funciona", href: "/#how-it-works" },
   { label: "Servicios", href: "/services" },
-  { label: "Casos", href: "/#cases" },
 ]
 
 export function Navbar() {
@@ -42,7 +41,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
-          <Anchor className="w-5 h-5 text-zinc-900" strokeWidth={1.5} />
+          <img src="/logo-stackhouse.png" alt="The Stack House" className="w-6 h-6 object-contain" />
           <span className="font-semibold text-zinc-900 hidden sm:block tracking-wide text-sm uppercase">The Stack House</span>
         </a>
 
@@ -73,10 +72,10 @@ export function Navbar() {
         {/* CTA + Mobile Menu */}
         <div className="flex items-center gap-2">
           <a
-            href="#audit"
+            href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center px-5 py-1.5 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
           >
-            Auditoría gratis
+            Agenda tu diagnóstico
           </a>
           <button
             className="md:hidden p-2 text-zinc-500 hover:text-zinc-900"
@@ -108,10 +107,10 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#audit"
+              href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer"
               className="mt-2 flex items-center justify-center px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
             >
-              Auditoría gratis
+              Agenda tu diagnóstico
             </a>
           </div>
         </motion.div>

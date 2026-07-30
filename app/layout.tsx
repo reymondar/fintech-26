@@ -33,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <script src="https://llmometrics.b-cdn.net/metric.js" data-token="a30d724c-4b4f-476a-af6a-43311f3cef84" async />
+      </head>
       <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
         <div className="noise-overlay" aria-hidden="true" />
         {children}

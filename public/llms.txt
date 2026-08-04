@@ -1,0 +1,23 @@
+# The Stack House
+
+> Consultoría de visibilidad en IA (GEO/AEO) con base en España. Hacemos que las empresas aparezcan cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude. Auditamos el Share of Model de cada cliente, identificamos por qué cae el tráfico orgánico y ejecutamos las acciones técnicas y de contenido que aumentan la probabilidad de citación en IA — independiente del SEO tradicional.
+
+## Inicio
+
+- [The Stack House — Visibilidad en IA](https://thestackhouse.io): Página principal. Explica por qué el ranking en Google ya no predice la visibilidad en IA, y cómo The Stack House mide y recupera esa posición.
+
+## Servicios
+
+- [Servicios — Auditoría, Construir, Defender, Expandir](https://thestackhouse.io/services): Cuatro niveles de servicio que se desbloquean en secuencia. Empieza con auditoría gratuita (Share of Model baseline) y escala hasta automatizaciones de citación y agentes de IA con catálogo propio.
+
+## Casos
+
+- [Casos de uso](https://thestackhouse.io/cases): Ejemplos de diagnósticos de visibilidad en IA aplicados a empresas reales.
+
+## Contacto y diagnóstico
+
+- [Diagnóstico en vivo gratuito (20 min)](https://calendar.app.google/aGDRM9XzkQFEndG77): Sesión donde se analiza la marca del prospecto en los motores de IA en tiempo real, con las preguntas reales de compra de su sector.
+
+## Optional
+
+- [Engagement Ladder — precios y estructura](https://thestackhouse.io/services#engagement): Auditoría gratis · Construir desde $1,500/proyecto · Defender desde $500/mes · Expandir (custom).

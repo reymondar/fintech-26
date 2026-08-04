@@ -120,7 +120,7 @@ export function Hero() {
         >
           <div className="relative rounded-t-2xl overflow-hidden">
             <img
-              src="/dashboard-preview.png"
+              src="/dashboard-preview.webp"
               alt="Panel de monitorización de The Stack House"
               className="w-full block"
             />

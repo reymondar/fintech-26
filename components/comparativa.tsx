@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Check, Minus } from "lucide-react"
 
@@ -34,7 +34,7 @@ export function Comparativa() {
   return (
     <section ref={ref} className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -46,9 +46,9 @@ export function Comparativa() {
           >
             Monitorizar no es resolver.
           </h2>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -86,16 +86,16 @@ export function Comparativa() {
               ))}
             </tbody>
           </table>
-        </motion.div>
+        </m.div>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 1, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center text-sm text-zinc-500 mt-8"
         >
           Los datos son el punto de partida. El valor está en el diagnóstico — y en lo que haces con él.
-        </motion.p>
+        </m.p>
       </div>
     </section>
   )

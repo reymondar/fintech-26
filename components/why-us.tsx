@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Settings, Award } from "lucide-react"
 
@@ -24,7 +24,7 @@ export function WhyUs() {
     <section id="why-us" ref={ref} className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -40,12 +40,12 @@ export function WhyUs() {
           <p className="text-zinc-500 max-w-2xl mx-auto">
             La mayoría de las agencias solo escriben contenido. La mayoría de los dev shops solo escriben código. Que la IA te elija requiere ambas cosas — bajo un mismo techo.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Two cards with + between them */}
         <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-0 mb-16">
           {/* Card A — Engineering */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -61,10 +61,10 @@ export function WhyUs() {
             <div className="flex items-center gap-2 text-emerald-600 text-sm">
               <span className="font-mono">estructura</span>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Plus sign */}
-          <motion.div
+          <m.div
             initial={{ opacity: 1, scale: 0.5 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.4, delay: 0.3 }}
@@ -76,10 +76,10 @@ export function WhyUs() {
             >
               +
             </span>
-          </motion.div>
+          </m.div>
 
           {/* Card B — Authority */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -96,11 +96,11 @@ export function WhyUs() {
             <div className="flex items-center gap-2 text-emerald-600 text-sm">
               <span className="font-mono">confianza</span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Closing line */}
-        <motion.p
+        <m.p
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -109,7 +109,7 @@ export function WhyUs() {
         >
           <span className="text-zinc-900">Estructura + confianza = </span>
           <span className="text-emerald-500">el nombre que la IA elige es el tuyo.</span>
-        </motion.p>
+        </m.p>
       </div>
     </section>
   )

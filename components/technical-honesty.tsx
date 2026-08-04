@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Lightbulb } from "lucide-react"
 
@@ -29,7 +29,7 @@ export function TechnicalHonesty() {
   return (
     <section ref={ref} className="px-4 py-24">
       <div className="max-w-4xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -45,11 +45,11 @@ export function TechnicalHonesty() {
           <p className="text-zinc-500 max-w-2xl mx-auto">
             La visibilidad en IA está llena de hype. Aquí está la mecánica real — para que sepas exactamente por qué pagas, y qué nadie puede prometer honestamente.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="flex flex-col gap-4">
           {rows.map((row, i) => (
-            <motion.div
+            <m.div
               key={i}
               initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -63,7 +63,7 @@ export function TechnicalHonesty() {
                 <h3 className="text-base font-semibold text-zinc-900 mb-1">{row.principle}</h3>
                 <p className="text-sm text-zinc-500 leading-relaxed">{row.explanation}</p>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

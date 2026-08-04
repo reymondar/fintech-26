@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Search, Wrench, Shield, ChevronRight } from "lucide-react"
 
@@ -59,7 +59,7 @@ export function HowWeWork() {
   return (
     <section id="how-it-works" ref={ref} className="px-4 py-24">
       <div className="mx-auto max-w-6xl">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -72,9 +72,9 @@ export function HowWeWork() {
             <span className="block">Tres pasos.</span>
             <span className="block text-zinc-400">De invisible al nombre que la IA elige.</span>
           </h2>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
@@ -82,7 +82,7 @@ export function HowWeWork() {
           className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch gap-4"
         >
           {steps.map((step, i) => (
-            <motion.div key={step.number} variants={itemVariants} className="contents">
+            <m.div key={step.number} variants={itemVariants} className="contents">
               <div className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 flex flex-col shadow-sm">
                 <span
                   className="font-mono text-3xl font-bold text-emerald-500 mb-4"
@@ -105,9 +105,9 @@ export function HowWeWork() {
                   <ChevronRight className="w-5 h-5 text-zinc-300" strokeWidth={1.5} />
                 </div>
               )}
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

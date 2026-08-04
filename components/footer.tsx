@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 
 export function Footer() {
@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer ref={ref} className="border-t border-zinc-200 bg-zinc-100">
       <div className="max-w-6xl mx-auto px-4 py-16">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -49,7 +49,7 @@ export function Footer() {
             </ul>
           </div>
 
-{/* Contacto */}
+          {/* Contacto */}
           <div>
             <h4 className="text-sm font-semibold text-zinc-900 mb-4">Contacto</h4>
             <ul className="space-y-3">
@@ -63,17 +63,17 @@ export function Footer() {
               </li>
             </ul>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Bottom */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 pt-8 border-t border-zinc-200 flex items-center justify-center"
         >
           <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} The Stack House. Todos los derechos reservados.</p>
-        </motion.div>
+        </m.div>
       </div>
     </footer>
   )

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { m, AnimatePresence } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -36,7 +36,7 @@ export function Hero() {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Eyebrow */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,7 +44,7 @@ export function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500 pulse-glow" />
           <span className="text-sm text-zinc-500">Visibilidad en IA · España</span>
-        </motion.div>
+        </m.div>
 
         {/* H1 */}
         <h1
@@ -52,16 +52,16 @@ export function Hero() {
           style={{ fontFamily: "var(--font-instrument-sans), sans-serif" }}
         >
           <span className="block overflow-hidden">
-            <motion.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={0}>
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={0}>
               Tu próximo cliente ya no busca:
-            </motion.span>
+            </m.span>
           </span>
           <span className="block overflow-hidden">
-            <motion.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={1}>
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={1}>
               Le pregunta a{" "}
               <span className="inline-block relative align-bottom overflow-hidden" style={{ minWidth: "4ch" }}>
                 <AnimatePresence mode="wait">
-                  <motion.span
+                  <m.span
                     key={platforms[platformIndex]}
                     initial={{ opacity: 1, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -70,30 +70,30 @@ export function Hero() {
                     className="inline-block text-emerald-600"
                   >
                     {platforms[platformIndex]}.
-                  </motion.span>
+                  </m.span>
                 </AnimatePresence>
               </span>
-            </motion.span>
+            </m.span>
           </span>
           <span className="block overflow-hidden">
-            <motion.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={2}>
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={2}>
               Conviértete en la respuesta.
-            </motion.span>
+            </m.span>
           </span>
         </h1>
 
         {/* Subhead */}
-        <motion.p
+        <m.p
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-base sm:text-lg text-zinc-500 max-w-2xl mx-auto mb-14 leading-relaxed"
         >
           The Stack House hace visible tu empresa en los motores de IA. Empezamos por lo que nadie más responde: cuánta de tu caída es culpa de la IA, cuánto negocio te está costando — y qué hacer para recuperarlo.
-        </motion.p>
+        </m.p>
 
         {/* CTA */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -109,10 +109,10 @@ export function Hero() {
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
-        </motion.div>
+        </m.div>
 
         {/* Dashboard preview */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
@@ -131,7 +131,7 @@ export function Hero() {
               }}
             />
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

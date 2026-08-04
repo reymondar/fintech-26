@@ -3,11 +3,13 @@ import type { Metadata } from "next"
 import { Manrope, Bricolage_Grotesque, Instrument_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
+import { MotionProvider } from "@/components/motion-provider"
 import "./globals.css"
 
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
+  display: "swap",
 })
 
 const calSans = Bricolage_Grotesque({
@@ -41,7 +43,7 @@ export default function RootLayout({
       <head>
         <Script
           id="gtm-script"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -61,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
 <div className="noise-overlay" aria-hidden="true" />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
         <Analytics />
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Check, X } from "lucide-react"
 
@@ -53,7 +53,7 @@ export function Honesty() {
     <section id="honesty" ref={ref} className="py-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* 1. Hero */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -69,10 +69,10 @@ export function Honesty() {
           <p className="text-zinc-500 max-w-2xl mx-auto leading-relaxed">
             El sector está lleno de promesas vacías. Nosotros solo prometemos aquello que podemos demostrar.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Cobertura + Avance cards */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -157,10 +157,10 @@ export function Honesty() {
               <span><i style={{ width: 8, height: 8, borderRadius: '50%', display: 'inline-block', marginRight: 6, background: '#3a4470' }} />4 pendientes</span>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* 2. Cambio de perspectiva */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -184,10 +184,10 @@ export function Honesty() {
           <p className="text-zinc-500 mt-4 leading-relaxed">
             Porque si la respuesta es no, te lo diremos antes de asesorarte incorrectamente.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* 3. Comparativa — tabla */}
-        <motion.div
+        <m.div
           variants={itemVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -243,9 +243,7 @@ export function Honesty() {
               </div>
             </div>
           ))}
-        </motion.div>
-
-
+        </m.div>
       </div>
     </section>
   )

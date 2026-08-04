@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView, AnimatePresence } from "framer-motion"
+import { m, useInView, AnimatePresence } from "framer-motion"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 const steps = [
@@ -67,7 +67,7 @@ function Rain({ drops, className = "" }: { drops: Drop[]; className?: string }) 
   return (
     <div className={`absolute inset-0 ${className}`} aria-hidden="true">
       {drops.map((d, i) => (
-        <motion.div
+        <m.div
           key={i}
           className="absolute flex flex-col items-center"
           style={{ left: `${d.left}%`, top: `${d.top}%`, opacity: d.opacity }}
@@ -92,7 +92,7 @@ function Rain({ drops, className = "" }: { drops: Drop[]; className?: string }) 
             className="-mt-px rounded-full bg-emerald-500"
             style={{ height: d.dot, width: d.dot }}
           />
-        </motion.div>
+        </m.div>
       ))}
     </div>
   )
@@ -111,7 +111,7 @@ export function TrustedAtScale() {
   return (
     <section id="how-it-works" ref={ref} className="relative overflow-hidden px-4 py-12">
       {mounted && (
-        <motion.div
+        <m.div
           initial={{ opacity: 1 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1.2 }}
@@ -119,13 +119,13 @@ export function TrustedAtScale() {
         >
           <Rain drops={ambientDrops} className="opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-50/40 to-zinc-50/70" />
-        </motion.div>
+        </m.div>
       )}
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-8">
           <div>
-            <motion.div
+            <m.div
               initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -133,9 +133,9 @@ export function TrustedAtScale() {
             >
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">Cómo funciona</span>
               <span className="h-2 w-2 rounded-full bg-emerald-500 pulse-glow" />
-            </motion.div>
+            </m.div>
 
-            <motion.h2
+            <m.h2
               initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -144,9 +144,9 @@ export function TrustedAtScale() {
             >
               De &quot;no sé qué está pasando&quot;{" "}
               <span className="text-zinc-400">a plan de acción, en tres pasos.</span>
-            </motion.h2>
+            </m.h2>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -155,19 +155,19 @@ export function TrustedAtScale() {
           </div>
 
           {mounted && (
-            <motion.div
+            <m.div
               initial={{ opacity: 1 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 1, delay: 0.3 }}
               className="relative hidden h-[28rem] lg:block"
             >
               <Rain drops={columnDrops} />
-            </motion.div>
+            </m.div>
           )}
         </div>
 
         {/* Steps accordion */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -193,7 +193,7 @@ export function TrustedAtScale() {
                   </h3>
                   <AnimatePresence initial={false}>
                     {isOpen && (
-                      <motion.p
+                      <m.p
                         initial={{ height: 0, opacity: 1 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -201,14 +201,14 @@ export function TrustedAtScale() {
                         className="text-zinc-500 text-sm leading-relaxed mt-2 overflow-hidden"
                       >
                         {step.description}
-                      </motion.p>
+                      </m.p>
                     )}
                   </AnimatePresence>
                 </div>
               </button>
             )
           })}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

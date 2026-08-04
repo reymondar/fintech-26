@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
 import { Code, ShieldCheck, ChartLine, Bot, Plug, Target } from "lucide-react"
 
@@ -38,7 +38,7 @@ function SystemStatus() {
   return (
     <div className="flex items-center gap-2">
       {dots.map((active, i) => (
-        <motion.div
+        <m.div
           key={i}
           className={`w-2 h-2 rounded-full ${active ? "bg-emerald-500" : "bg-zinc-300"}`}
           animate={active ? { scale: [1, 1.2, 1] } : {}}
@@ -91,7 +91,7 @@ export function BentoGrid() {
   return (
     <section id="features" className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -103,10 +103,10 @@ export function BentoGrid() {
           >
             Medimos con exactitud cómo la IA está afectando a tu negocio, y te entregamos un plan priorizado para convertirte en una de las empresas que la IA recomienda.
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* Sustancia — lo que te hace elegible */}
-        <motion.div
+        <m.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
@@ -114,7 +114,7 @@ export function BentoGrid() {
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4"
         >
           {/* Legible */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 overflow-hidden shadow-sm"
           >
@@ -128,10 +128,10 @@ export function BentoGrid() {
             <p className="text-zinc-500 text-sm">
               Estructuramos tu catálogo, especificaciones y capacidades para que los motores de IA entiendan exactamente qué vendes — sin adivinar, sin citar mal.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Confiable */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
@@ -142,10 +142,10 @@ export function BentoGrid() {
             <p className="text-zinc-500 text-sm">
               Construimos esa confianza — contenido, menciones de terceros, actualización — hasta que tu nombre sea la respuesta.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Elegible */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
@@ -156,18 +156,18 @@ export function BentoGrid() {
             <p className="text-zinc-500 text-sm">
               Los agentes de IA pronto investigarán y comprarán en nombre de tus clientes. Nos aseguramos de que el tuyo sea un negocio con el que puedan operar.
             </p>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
 
         {/* Seguridad — lo que te protege */}
-        <motion.div
+        <m.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-3 gap-4"
         >
           {/* Medido */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm overflow-hidden"
           >
@@ -179,10 +179,10 @@ export function BentoGrid() {
               Un reporte, la misma métrica, cada mes: con qué frecuencia la IA te nombra vs. tus competidores. Sin dashboards de vanidad.
             </p>
             <AnimatedChart />
-          </motion.div>
+          </m.div>
 
           {/* Defendido */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
@@ -193,10 +193,10 @@ export function BentoGrid() {
             <p className="text-zinc-500 text-sm">
               ChatGPT cambia cada semana. Cuando tu posición se mueve, descubrimos por qué y lo corregimos — eso es lo que realmente compra la cuota mensual.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Elegible */}
-          <motion.div
+          <m.div
             variants={itemVariants}
             className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 hover:scale-[1.02] transition-all duration-300 shadow-sm"
           >
@@ -207,8 +207,8 @@ export function BentoGrid() {
             <p className="text-zinc-500 text-sm">
               Convertimos el diagnóstico en posición: contenido que los modelos pueden citar, señales de autoridad en las fuentes que consultan y una base técnica que pueden leer y en la que pueden confiar.
             </p>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   )

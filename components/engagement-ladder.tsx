@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { ChevronRight } from "lucide-react"
 
@@ -55,7 +55,7 @@ export function EngagementLadder() {
   return (
     <section ref={ref} className="px-4 py-24">
       <div className="max-w-6xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -70,9 +70,9 @@ export function EngagementLadder() {
           <p className="text-zinc-500 max-w-2xl mx-auto">
             Empieza con una auditoría gratis. Cada paso desbloquea el siguiente.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
@@ -80,7 +80,7 @@ export function EngagementLadder() {
           className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] items-stretch gap-4"
         >
           {steps.map((step, i) => (
-            <motion.div key={step.title} variants={itemVariants} className="contents">
+            <m.div key={step.title} variants={itemVariants} className="contents">
               <div className="group relative p-6 rounded-2xl bg-white border border-zinc-200 hover:border-zinc-300 shadow-sm transition-all duration-300 flex flex-col">
                 <h3 className="text-lg font-semibold text-zinc-900 mb-2">{step.title}</h3>
                 <p className="text-zinc-500 text-sm mb-4 flex-1">{step.descriptor}</p>
@@ -92,9 +92,9 @@ export function EngagementLadder() {
                   <ChevronRight className="w-5 h-5 text-zinc-300" strokeWidth={1.5} />
                 </div>
               )}
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

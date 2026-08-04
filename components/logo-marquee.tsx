@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 
 const logos = [
@@ -20,14 +20,14 @@ export function LogoMarquee() {
 
   return (
     <section ref={ref} className="py-16 overflow-hidden">
-      <motion.div
+      <m.div
         initial={{ opacity: 1 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
         <p className="text-sm text-zinc-500 uppercase tracking-wider font-medium">La confianza de líderes de la industria</p>
-      </motion.div>
+      </m.div>
 
       <div className="relative">
         {/* Fade masks */}

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,7 +11,7 @@ export function FinalCTA() {
 
   return (
     <section id="audit" className="py-12 px-4">
-      <motion.div
+      <m.div
         ref={ref}
         initial={{ opacity: 1, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -41,7 +41,7 @@ export function FinalCTA() {
         </Button>
 
         <p className="mt-8 text-sm text-zinc-500">20 minutos · sin tarjeta · sin compromiso</p>
-      </motion.div>
+      </m.div>
     </section>
   )
 }

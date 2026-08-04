@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { TrendingDown, Eye, Target, ShieldCheck } from "lucide-react"
 
@@ -51,7 +51,7 @@ export function QueHacemos() {
   return (
     <section ref={ref} className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -67,11 +67,11 @@ export function QueHacemos() {
           <p className="text-zinc-500 max-w-2xl mx-auto">
             La mayoría del sector mide menciones. Nosotros respondemos la pregunta anterior — la que decide todo lo demás:
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {blocks.map((block, i) => (
-            <motion.div
+            <m.div
               key={block.title}
               variants={itemVariants}
               initial="hidden"
@@ -93,7 +93,7 @@ export function QueHacemos() {
                 {block.title}
               </h3>
               <p className="text-sm text-zinc-500 leading-relaxed">{block.description}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

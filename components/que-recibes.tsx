@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 import { Check } from "lucide-react"
 
@@ -99,7 +99,7 @@ export function QueRecibes() {
   return (
     <section id="que-recibes" ref={ref} className="py-12 px-4">
       <div className="max-w-5xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -114,21 +114,21 @@ export function QueRecibes() {
           <p className="text-zinc-500 max-w-2xl mx-auto">
             Un documento de trabajo, no un informe para archivar.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Mockup */}
-          <motion.div
+          <m.div
             initial={{ opacity: 1, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex justify-center"
           >
             <ReportMockup />
-          </motion.div>
+          </m.div>
 
           {/* Lista de entregables */}
-          <motion.div
+          <m.div
             initial={{ opacity: 1, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -148,7 +148,7 @@ export function QueRecibes() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

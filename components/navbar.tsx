@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react"
 import { usePathname } from "next/navigation"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
@@ -29,7 +29,7 @@ export function Navbar() {
   }, [pathname])
 
   return (
-    <motion.header
+    <m.header
       initial={{ y: -100, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -57,7 +57,7 @@ export function Navbar() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {hoveredIndex === index && (
-                <motion.div
+                <m.div
                   layoutId="navbar-hover"
                   className="absolute inset-0 bg-zinc-100 rounded-full"
                   initial={false}
@@ -89,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -113,8 +113,8 @@ export function Navbar() {
               Agenda tu diagnóstico
             </a>
           </div>
-        </motion.div>
+        </m.div>
       )}
-    </motion.header>
+    </m.header>
   )
 }

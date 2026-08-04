@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navbar } from "@/components/navbar"
@@ -32,7 +32,7 @@ export default function CaseStudyTemplate() {
         {/* Hero */}
         <section className="relative px-4 pt-36 pb-16">
           <div className="max-w-3xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -51,9 +51,9 @@ export default function CaseStudyTemplate() {
                 </span>
                 <span className="text-xs text-zinc-400">Proyecto de 6 meses</span>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.h1
+            <m.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -61,9 +61,9 @@ export default function CaseStudyTemplate() {
               style={{ fontFamily: "var(--font-cal-sans)" }}
             >
               De invisible a la marca que la IA recomienda en manufactura de precisión.
-            </motion.h1>
+            </m.h1>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -71,12 +71,12 @@ export default function CaseStudyTemplate() {
             >
               Un fabricante de piezas de precisión estaba perdiendo cotizaciones frente a competidores que aparecían en las respuestas de IA.
               En seis meses, los convertimos en la marca que ChatGPT, Perplexity y Gemini recomiendan primero.
-            </motion.p>
+            </m.p>
           </div>
         </section>
 
         {/* Hero image */}
-        <motion.section
+        <m.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -92,7 +92,7 @@ export default function CaseStudyTemplate() {
               />
             </div>
           </div>
-        </motion.section>
+        </m.section>
 
         {/* Metrics bar */}
         <section className="px-4 pb-20">

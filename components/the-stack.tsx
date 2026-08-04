@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Search, Code, Trophy, Shield, Bot, Layers3 } from "lucide-react"
 
@@ -65,7 +65,7 @@ export function TheStack() {
     <section ref={ref} className="px-4 py-24">
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -81,7 +81,7 @@ export function TheStack() {
           <p className="text-zinc-500 max-w-2xl mx-auto">
             Cada capa es algo que diseñamos. Juntas te hacen legible, confiable y elegible — y son la base sobre la que se construye todo lo demás.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Stack */}
         <div className="relative">
@@ -90,7 +90,7 @@ export function TheStack() {
 
           <div className="flex flex-col gap-3">
             {layers.map((layer, i) => (
-              <motion.div
+              <m.div
                 key={layer.number}
                 initial={{ opacity: 1, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -146,20 +146,20 @@ export function TheStack() {
                 >
                   {layer.chip}
                 </span>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
 
         {/* Closing line */}
-        <motion.p
+        <m.p
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-sm text-zinc-500 mt-16"
         >
           La visibilidad en IA es la base. El desarrollo es lo que construyes encima.
-        </motion.p>
+        </m.p>
       </div>
     </section>
   )

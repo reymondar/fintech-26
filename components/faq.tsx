@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -54,7 +54,7 @@ export function FAQ() {
   return (
     <section id="faq" ref={ref} className="py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -67,9 +67,9 @@ export function FAQ() {
             <span className="block">Preguntas frecuentes.</span>
             <span className="block text-zinc-400">Las respuestas honestas.</span>
           </h2>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -86,7 +86,7 @@ export function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

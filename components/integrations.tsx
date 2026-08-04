@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Search } from "lucide-react"
 
@@ -48,7 +48,7 @@ export function Integrations() {
   return (
     <section ref={ref} className="overflow-hidden py-12 px-4">
       <div className="mx-auto max-w-3xl text-center mb-16">
-        <motion.h2
+        <m.h2
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -57,10 +57,10 @@ export function Integrations() {
         >
           <span className="block text-zinc-900">~29.000 preguntas cada segundo.</span>
           <span className="block text-zinc-400">La única pregunta es si tú estás en ellas.</span>
-        </motion.h2>
+        </m.h2>
       </div>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 1 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -70,16 +70,16 @@ export function Integrations() {
         <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-24 bg-gradient-to-l from-zinc-50 to-transparent sm:w-40" />
 
         <Marquee items={queries} />
-      </motion.div>
+      </m.div>
 
-      <motion.p
+      <m.p
         initial={{ opacity: 1, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.5 }}
         className="text-center text-lg text-zinc-500 mt-12 max-w-2xl mx-auto leading-relaxed"
       >
         Entra en la conversación. Deja que tus clientes te encuentren.
-      </motion.p>
+      </m.p>
     </section>
   )
 }

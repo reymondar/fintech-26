@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Code, ShieldCheck, Bot } from "lucide-react"
 
@@ -56,7 +56,7 @@ export function Services() {
   return (
     <section id="services" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -73,9 +73,9 @@ export function Services() {
             Tener un gran sitio web no basta. La IA tiene que poder leerte, confiar en ti y pronto, operar contigo.
             Nosotros construimos las tres capas.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           ref={ref}
           variants={containerVariants}
           initial="hidden"
@@ -83,7 +83,7 @@ export function Services() {
           className="grid grid-cols-1 md:grid-cols-3 gap-4"
         >
           {services.map((service) => (
-            <motion.div
+            <m.div
               key={service.title}
               variants={itemVariants}
               className="group relative p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 hover:scale-[1.02] transition-all duration-300"
@@ -96,9 +96,9 @@ export function Services() {
               <div className="flex items-center gap-2 text-emerald-500 text-sm">
                 <span className="font-mono">{service.accent}</span>
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

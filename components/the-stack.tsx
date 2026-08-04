@@ -66,7 +66,7 @@ export function TheStack() {
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
@@ -92,7 +92,7 @@ export function TheStack() {
             {layers.map((layer, i) => (
               <motion.div
                 key={layer.number}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className={`relative flex items-center gap-4 sm:gap-6 p-5 sm:pl-16 rounded-2xl shadow-sm transition-all duration-300 ${
@@ -153,7 +153,7 @@ export function TheStack() {
 
         {/* Closing line */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-sm text-zinc-500 mt-16"

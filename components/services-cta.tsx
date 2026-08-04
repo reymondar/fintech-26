@@ -13,7 +13,7 @@ export function ServicesCTA() {
     <section className="py-24 px-4">
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 1, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="max-w-4xl mx-auto text-center"

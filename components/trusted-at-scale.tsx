@@ -71,7 +71,7 @@ function Rain({ drops, className = "" }: { drops: Drop[]; className?: string }) 
           key={i}
           className="absolute flex flex-col items-center"
           style={{ left: `${d.left}%`, top: `${d.top}%`, opacity: d.opacity }}
-          initial={{ opacity: 0, y: -24 }}
+          initial={{ opacity: 1, y: -24 }}
           animate={{
             opacity: [0, d.opacity, d.opacity, d.opacity * 0.35],
             y: [-24, 0, 0, d.fall],
@@ -112,7 +112,7 @@ export function TrustedAtScale() {
     <section id="how-it-works" ref={ref} className="relative overflow-hidden px-4 py-12">
       {mounted && (
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1.2 }}
           className="pointer-events-none absolute inset-0 z-0 lg:hidden"
@@ -126,7 +126,7 @@ export function TrustedAtScale() {
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-8">
           <div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-center gap-2"
@@ -136,7 +136,7 @@ export function TrustedAtScale() {
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl"
@@ -147,7 +147,7 @@ export function TrustedAtScale() {
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-zinc-500 text-base sm:text-lg leading-relaxed max-w-lg"
@@ -156,7 +156,7 @@ export function TrustedAtScale() {
 
           {mounted && (
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 1 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 1, delay: 0.3 }}
               className="relative hidden h-[28rem] lg:block"
@@ -168,7 +168,7 @@ export function TrustedAtScale() {
 
         {/* Steps accordion */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-20 lg:mt-28 flex flex-col gap-0"
@@ -194,7 +194,7 @@ export function TrustedAtScale() {
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.p
-                        initial={{ height: 0, opacity: 0 }}
+                        initial={{ height: 0, opacity: 1 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}

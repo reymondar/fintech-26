@@ -30,7 +30,7 @@ export function TechnicalHonesty() {
     <section ref={ref} className="px-4 py-24">
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -51,7 +51,7 @@ export function TechnicalHonesty() {
           {rows.map((row, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-zinc-200 shadow-sm"

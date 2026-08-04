@@ -35,7 +35,7 @@ export function Comparativa() {
     <section ref={ref} className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -49,7 +49,7 @@ export function Comparativa() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="rounded-2xl border border-zinc-200 overflow-hidden shadow-sm"
@@ -89,7 +89,7 @@ export function Comparativa() {
         </motion.div>
 
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 1, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center text-sm text-zinc-500 mt-8"

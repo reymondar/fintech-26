@@ -49,7 +49,7 @@ export function Integrations() {
     <section ref={ref} className="overflow-hidden py-12 px-4">
       <div className="mx-auto max-w-3xl text-center mb-16">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-3xl sm:text-4xl font-bold tracking-tight mb-6"
@@ -61,7 +61,7 @@ export function Integrations() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="relative"
@@ -73,7 +73,7 @@ export function Integrations() {
       </motion.div>
 
       <motion.p
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 1, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.5 }}
         className="text-center text-lg text-zinc-500 mt-12 max-w-2xl mx-auto leading-relaxed"

@@ -30,7 +30,7 @@ export function Navbar() {
 
   return (
     <motion.header
-      initial={{ y: -100, opacity: 0 }}
+      initial={{ y: -100, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-3xl"
@@ -90,7 +90,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 1, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           className="absolute top-full left-0 right-0 mt-2 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-zinc-200 shadow-lg"

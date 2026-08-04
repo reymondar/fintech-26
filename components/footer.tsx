@@ -11,7 +11,7 @@ export function Footer() {
     <footer ref={ref} className="border-t border-zinc-200 bg-zinc-100">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-3 gap-8"
@@ -67,7 +67,7 @@ export function Footer() {
 
         {/* Bottom */}
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 pt-8 border-t border-zinc-200 flex items-center justify-center"

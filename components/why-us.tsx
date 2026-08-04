@@ -25,7 +25,7 @@ export function WhyUs() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -65,7 +65,7 @@ export function WhyUs() {
 
           {/* Plus sign */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 1, scale: 0.5 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.4, delay: 0.3 }}
             className="flex items-center justify-center md:px-6 py-4 md:py-0"
@@ -101,7 +101,7 @@ export function WhyUs() {
 
         {/* Closing line */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center text-2xl sm:text-3xl font-bold"

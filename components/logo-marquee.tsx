@@ -21,7 +21,7 @@ export function LogoMarquee() {
   return (
     <section ref={ref} className="py-16 overflow-hidden">
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6 }}
         className="text-center mb-10"

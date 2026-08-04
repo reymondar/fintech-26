@@ -25,6 +25,10 @@ const instrumentSans = Instrument_Sans({
 export const metadata: Metadata = {
   title: "The Stack House — Visibilidad en IA | Sé la empresa que ChatGPT recomienda",
   description: "The Stack House hace visible tu empresa en ChatGPT, Gemini, Perplexity y Claude. Diagnóstico honesto de por qué cae tu tráfico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Diagnóstico en vivo gratis de 20 minutos.",
+  icons: {
+    icon: "/logo-stackhouse.png",
+    apple: "/logo-stackhouse.png",
+  },
 }
 
 export default function RootLayout({

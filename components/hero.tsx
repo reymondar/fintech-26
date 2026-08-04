@@ -37,7 +37,7 @@ export function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Eyebrow */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 mb-12 shadow-sm"
@@ -63,7 +63,7 @@ export function Hero() {
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={platforms[platformIndex]}
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 1, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -84,7 +84,7 @@ export function Hero() {
 
         {/* Subhead */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-base sm:text-lg text-zinc-500 max-w-2xl mx-auto mb-14 leading-relaxed"
@@ -94,7 +94,7 @@ export function Hero() {
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col items-center gap-3 mb-12"
@@ -113,7 +113,7 @@ export function Hero() {
 
         {/* Dashboard preview */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
           className="relative mx-auto max-w-4xl mt-4 -mb-16"

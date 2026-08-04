@@ -54,7 +54,7 @@ export function Honesty() {
       <div className="max-w-5xl mx-auto">
         {/* 1. Hero */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
@@ -73,7 +73,7 @@ export function Honesty() {
 
         {/* Cobertura + Avance cards */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative flex flex-col md:flex-row gap-5 justify-center items-stretch max-w-2xl mx-auto mb-20"
@@ -161,7 +161,7 @@ export function Honesty() {
 
         {/* 2. Cambio de perspectiva */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-3xl mx-auto text-center mb-20"

@@ -100,7 +100,7 @@ export function QueRecibes() {
     <section id="que-recibes" ref={ref} className="py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -119,7 +119,7 @@ export function QueRecibes() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Mockup */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex justify-center"
@@ -129,7 +129,7 @@ export function QueRecibes() {
 
           {/* Lista de entregables */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >

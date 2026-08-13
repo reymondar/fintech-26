@@ -42,6 +42,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
                 <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
                   Agenda tu diagnóstico
                 </a>

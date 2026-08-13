@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { getAllPosts } from "@/lib/posts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -7,26 +8,16 @@ export const metadata: Metadata = {
   description: "Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital.",
 }
 
-const posts = [
-  {
-    slug: "por-que-chatgpt-no-menciona-tu-empresa",
-    category: "GEO",
-    title: "Por qué ChatGPT no menciona tu empresa (y qué hacer al respecto)",
-    description:
-      "Los motores de IA no eligen marcas por popularidad. Eligen las que tienen evidencia estructurada, fuentes confiables y responden preguntas concretas. Aquí explicamos el mecanismo.",
-    author: "The Stack House",
-    date: "13 de agosto, 2026",
-    readTime: "8 min",
-  },
-]
-
 export default function BlogPage() {
+  const posts = getAllPosts()
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
       <main className="pt-32 pb-24 px-4">
         <div className="max-w-3xl mx-auto">
+
           {/* Header */}
           <div className="mb-14">
             <p className="text-xs font-medium tracking-widest text-zinc-400 uppercase mb-3">The Stack House</p>
@@ -36,7 +27,6 @@ export default function BlogPage() {
             </p>
           </div>
 
-          {/* Divider */}
           <div className="border-t border-zinc-200 mb-10" />
 
           {/* Posts */}
@@ -60,7 +50,9 @@ export default function BlogPage() {
                     </div>
                     <span className="text-xs text-zinc-400">{post.author}</span>
                     <span className="text-zinc-300">·</span>
-                    <span className="text-xs text-zinc-400">{post.date}</span>
+                    <span className="text-xs text-zinc-400">
+                      {new Date(post.date).toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" })}
+                    </span>
                   </div>
                 </a>
               </article>

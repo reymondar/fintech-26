@@ -1,0 +1,264 @@
+---
+title: "Por qué tu ranking en Google ya no predice si la IA te menciona"
+description: "En julio de 2025, el 76% de las fuentes citadas por AI Overviews venían del top-10 de Google. En marzo de 2026, ese número bajó al 37,9%. Los datos de cinco estudios independientes y lo que implican para tu estrategia."
+date: "2026-08-08"
+category: "GEO"
+author: "Ramón Arana"
+readTime: "5 min"
+keywords: ["ranking Google IA", "visibilidad en IA", "AI Overviews citaciones", "query fan-out", "GEO vs SEO", "ranking vs citas IA", "AI Mode"]
+---
+
+_Actualizado el 17 de agosto de 2026._
+
+En julio de 2025, el 76% de las fuentes que Google citaba en AI Overviews aparecían en sus primeros resultados.
+
+En marzo de 2026: **37,9%**.
+
+Más interesante todavía: cuando Ahrefs miró únicamente los enlaces orgánicos clásicos, **31% de las páginas citadas por AI Overviews ni siquiera aparecían en el top-100**.
+
+Mismo Google. Misma web. Bastante menos relación entre "rankear arriba" y "ser la fuente de la respuesta".
+
+> **Lo esencial**
+>
+> - Solo el **37,9%** de las URLs citadas por AI Overviews aparecen actualmente entre los primeros resultados de Google.
+> - En ChatGPT, Ahrefs encontró apenas **6,82% de coincidencia** con el top-10 de Google para las búsquedas que el propio ChatGPT genera.
+> - AI Mode y AI Overviews comparten solo **13,7% de sus citas**, aunque llegan a respuestas semánticamente muy parecidas.
+> - Rankear sigue importando. Usarlo como proxy de visibilidad en IA ya no alcanza.
+
+## ¿Qué cambió?
+
+Durante años tuvimos una métrica bastante cómoda.
+
+Buscas una keyword. Miras tu posición. Más arriba, más visibilidad.
+
+Las respuestas generadas rompieron esa relación.
+
+[Ahrefs analizó 863.000 keywords en marzo de 2026](https://ahrefs.com/blog/ai-overview-citations-top-10/). Solo el 37,9% de las URLs citadas en AI Overviews aparecían en los primeros diez bloques de resultados.
+
+BrightEdge llegó por otro camino a una conclusión todavía más agresiva: alrededor del **17% de las fuentes de AI Overviews coincidían con el top-10 orgánico** en su dataset de febrero.
+
+Los porcentajes no son comparables uno a uno. Cambian las queries, la muestra y la forma de contar.
+
+La dirección es bastante difícil de ignorar.
+
+<figure className="my-8" style={{overflowX: 'auto'}}>
+  <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de solape entre top-10 de Google y fuentes citadas por IA, por estudio">
+    <title>Solape Google top-10 vs. citación en IA por estudio (2025-2026)</title>
+    {/* Background */}
+    <rect width="560" height="300" fill="#fafafa" rx="8"/>
+    {/* Grid lines */}
+    <line x1="160" y1="20" x2="160" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
+    <line x1="240" y1="20" x2="240" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
+    <line x1="320" y1="20" x2="320" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
+    <line x1="400" y1="20" x2="400" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
+    <line x1="480" y1="20" x2="480" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
+    {/* X-axis labels */}
+    <text x="160" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">20%</text>
+    <text x="240" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">40%</text>
+    <text x="320" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">60%</text>
+    <text x="400" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">80%</text>
+    {/* Bars - each row: label, bar, value */}
+    {/* Ahrefs Jul 2025: 76% → 76% of (480-160)=320 = 243.2 → x=160, w=243 */}
+    <text x="8" y="55" fontSize="10" fill="#52525b" dominantBaseline="middle">Ahrefs jul. 2025</text>
+    <text x="8" y="67" fontSize="9" fill="#a1a1aa" dominantBaseline="middle">AIO · 1,9M citas</text>
+    <rect x="160" y="44" width="243" height="18" fill="#18181b" rx="3"/>
+    <text x="408" y="54" fontSize="10" fontWeight="600" fill="#18181b" dominantBaseline="middle">76%</text>
+    {/* Ahrefs Mar 2026: 37.9% → 37.9% of 320 = 121.3 */}
+    <text x="8" y="103" fontSize="10" fill="#52525b" dominantBaseline="middle">Ahrefs mar. 2026</text>
+    <text x="8" y="115" fontSize="9" fill="#a1a1aa" dominantBaseline="middle">AIO · 863K keywords</text>
+    <rect x="160" y="92" width="121" height="18" fill="#18181b" rx="3"/>
+    <text x="286" y="102" fontSize="10" fontWeight="600" fill="#18181b" dominantBaseline="middle">37,9%</text>
+    {/* BrightEdge Feb 2026: 17% → 17% of 320 = 54.4 */}
+    <text x="8" y="151" fontSize="10" fill="#52525b" dominantBaseline="middle">BrightEdge feb. 2026</text>
+    <text x="8" y="163" fontSize="9" fill="#a1a1aa" dominantBaseline="middle">AIO · 5,47M queries</text>
+    <rect x="160" y="140" width="54" height="18" fill="#3f3f46" rx="3"/>
+    <text x="219" y="150" fontSize="10" fontWeight="600" fill="#3f3f46" dominantBaseline="middle">17%</text>
+    {/* Profound 2025-26: 20% (inverse 80% not in top-10) */}
+    <text x="8" y="199" fontSize="10" fill="#52525b" dominantBaseline="middle">Profound 2025-26</text>
+    <text x="8" y="211" fontSize="9" fill="#a1a1aa" dominantBaseline="middle">Multi-motor · 680M citas</text>
+    <rect x="160" y="188" width="64" height="18" fill="#3f3f46" rx="3"/>
+    <text x="229" y="198" fontSize="10" fontWeight="600" fill="#3f3f46" dominantBaseline="middle">20%</text>
+    {/* Ahrefs ChatGPT: 6.82% → 6.82% of 320 = 21.8 */}
+    <text x="8" y="247" fontSize="10" fill="#52525b" dominantBaseline="middle">Ahrefs (ChatGPT)</text>
+    <text x="8" y="259" fontSize="9" fill="#a1a1aa" dominantBaseline="middle">Solo ChatGPT</text>
+    <rect x="160" y="236" width="22" height="18" fill="#71717a" rx="3"/>
+    <text x="187" y="246" fontSize="10" fontWeight="600" fill="#71717a" dominantBaseline="middle">6,82%</text>
+  </svg>
+  <figcaption style={{textAlign: 'center', fontSize: '12px', color: '#a1a1aa', marginTop: '8px'}}>
+    Solape entre Google top-10 orgánico y fuentes citadas por IA. Fuentes: Ahrefs (jul. 2025, mar. 2026), BrightEdge (feb. 2026), Profound (2025-26).
+  </figcaption>
+</figure>
+
+Y ChatGPT lleva la diferencia bastante más lejos.
+
+Ahrefs estudió las búsquedas adicionales que ChatGPT ejecuta para responder prompts. Solo el **6,82% de los resultados recuperados por ChatGPT estaban también en el top-10 de Google** para esas mismas búsquedas.
+
+Eso no significa que el SEO haya muerto. Significa algo bastante menos dramático y más útil:
+
+**la posición de una URL para la consulta original ya no te dice qué fuentes terminará utilizando una IA.**
+
+## El responsable tiene nombre bastante feo: query fan-out
+
+Google ya explica públicamente parte del mecanismo.
+
+Cuando responden AI Overviews o AI Mode, sus modelos pueden hacer [query fan-out](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide): generan varias búsquedas relacionadas con la pregunta original y recuperan información desde todas ellas.
+
+Si alguien pregunta:
+
+*"¿Cuál es la mejor plataforma de ecommerce para una marca pequeña?"*
+
+el sistema no tiene por qué limitarse a esa búsqueda.
+
+Puede investigar precios, facilidad de uso, pagos, migraciones, opiniones o cualquier subtema que considere necesario para construir la respuesta.
+
+Tu página puede estar primera para la query original y no aparecer en ninguna de esas ramificaciones.
+
+Otra puede estar en posición 34 para la query inicial y ser exactamente lo que el modelo necesitaba para una de ellas.
+
+Ahí empieza a romperse la obsesión por mirar una keyword y sacar conclusiones sobre visibilidad en IA.
+
+## Google ni siquiera coincide consigo mismo
+
+Este es el dato que más me interesa.
+
+Ahrefs comparó **730.000 respuestas de AI Mode y AI Overviews**.
+
+Ambos sistemas llegaron a conclusiones muy parecidas: **86% de similitud semántica**.
+
+Las fuentes utilizadas coincidieron apenas un **13,7%**.
+
+La misma empresa.
+
+El mismo índice de Search como base.
+
+La misma pregunta.
+
+Prácticamente la misma respuesta.
+
+Bibliografía distinta.
+
+Google confirma además que AI Mode y AI Overviews pueden utilizar **modelos y técnicas diferentes**, por lo que los enlaces mostrados también pueden cambiar.
+
+Para mí, este dato explica mejor el cambio que cualquier discusión sobre si GEO es SEO con otro nombre.
+
+Incluso dentro de Google ya existen varias superficies de visibilidad.
+
+Estar presente en una no garantiza estar presente en la otra.
+
+## Entonces, ¿el SEO sigue importando?
+
+Sí.
+
+Google exige que una página esté **indexada y sea elegible para mostrarse en Search** para poder utilizarla como enlace de apoyo en AI Overviews o AI Mode.
+
+También insiste en que las prácticas fundamentales de SEO siguen aplicando y que no existe un requisito técnico secreto para entrar en sus respuestas generativas.
+
+Hasta ahí, perfecto.
+
+El problema aparece cuando convertimos eso en:
+
+> "Si rankeo bien, la IA me va a citar."
+
+Los datos no sostienen esa conclusión.
+
+SEO sigue siendo parte de la infraestructura que permite que Google encuentre, entienda y considere tu contenido.
+
+La selección final de fuentes ocurre dentro de un sistema bastante más amplio que una SERP ordenada del uno al diez.
+
+## La peor reacción posible: crear una página para cada fan-out
+
+Ya puedo imaginar hacia dónde va a ir una parte del SEO.
+
+Encontrar las preguntas derivadas.
+
+Generar 400 páginas.
+
+Cambiar tres palabras.
+
+Publicar.
+
+Google también se lo imaginó.
+
+En su guía de optimización para IA advierte específicamente contra crear contenido separado para cada variante posible de una consulta o fan-out con el objetivo de manipular la búsqueda generativa.
+
+Además de ser bastante miserable de leer, puede entrar dentro de su [política contra *scaled content abuse*](https://developers.google.com/search/docs/essentials/spam-policies).
+
+La oportunidad está en otro sitio.
+
+Cubrir suficientemente bien un tema para que una página pueda resolver varias de esas preguntas aunque no contenga exactamente las mismas palabras.
+
+Menos páginas. Más superficie semántica útil.
+
+Qué concepto revolucionario.
+
+## Mi lectura: llevamos demasiado tiempo usando el ranking como proxy
+
+El ranking era cómodo porque condensaba todo en un número.
+
+Posición 3.
+
+Posición 8.
+
+Posición 27.
+
+Ahora puedes tener una página muy bien posicionada y poca presencia en respuestas generativas. Puedes aparecer en AI Mode y desaparecer en AI Overviews. Y fuera de Google, ChatGPT o Perplexity vuelven a cambiar el tablero.
+
+La consecuencia práctica es bastante aburrida:
+
+**hay que medirlo.**
+
+De hecho, Google empezó en junio de 2026 a [probar en Search Console un reporte específico de rendimiento para sus funciones de IA generativa](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports), con vistas separadas para impresiones procedentes de AI Overviews y AI Mode.
+
+Ese movimiento me parece bastante más relevante que toda la discusión terminológica alrededor de GEO.
+
+Google sostiene que los fundamentos de SEO siguen siendo los mismos.
+
+Al mismo tiempo, empieza a darte una pantalla distinta para medir dónde apareces dentro de sus respuestas generativas.
+
+Perfecto.
+
+Nosotros también deberíamos dejar de meter las dos cosas en la misma métrica.
+
+## ¿Qué medir entonces?
+
+Mantendría tres vistas separadas.
+
+**Ranking orgánico**, porque Search sigue existiendo y sigue enviando tráfico.
+
+**Visibilidad en cada motor o superficie de IA**, midiendo menciones, citas y [Share of Model](/blog/que-es-share-of-model-som) por separado.
+
+Y **familias de preguntas**, en lugar de obsesionarse con una keyword exacta. Una respuesta generativa puede investigar cinco, diez o veinte variaciones antes de decidir qué fuente utilizar.
+
+La posición orgánica sigue diciendo algo útil.
+
+Simplemente dejó de decirlo todo.
+
+Y probablemente nunca debimos pedirle tanto.
+
+## Preguntas frecuentes
+
+### ¿Puedo rankear primero en Google y no aparecer en AI Overviews?
+
+Sí. Los estudios actuales muestran que una parte mayoritaria de las fuentes citadas por AI Overviews no procede del top-10 de la búsqueda orgánica para la misma consulta.
+
+### ¿Necesito hacer SEO diferente para aparecer en Google AI Mode?
+
+Google dice que no existen requisitos técnicos adicionales: la página debe estar indexada, poder mostrarse en Search y cumplir las prácticas habituales de calidad y SEO. La diferencia aparece en cómo el sistema recupera y selecciona fuentes para construir cada respuesta.
+
+### ¿Entonces GEO reemplaza al SEO?
+
+No.
+
+SEO sigue siendo parte de la base de descubrimiento y elegibilidad. GEO añade otra pregunta: una vez que los motores pueden encontrarte, **¿te utilizan cuando construyen la respuesta?**
+
+Son métricas relacionadas.
+
+Ya no son intercambiables.
+
+## Fuentes
+
+- [Ahrefs — AI Overview citations vs. Google top-10 (863K keywords, mar. 2026)](https://ahrefs.com/blog/ai-overview-citations-top-10/)
+- BrightEdge — AI Overviews citation study (5,47M queries, feb. 2026)
+- [Google Search Central — Search Generative AI performance reports en Search Console (jun. 2026)](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)
+- [Google Search Central — Guía de optimización para funciones de IA generativa (query fan-out)](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+- [Google Search — Políticas de spam (scaled content abuse)](https://developers.google.com/search/docs/essentials/spam-policies)

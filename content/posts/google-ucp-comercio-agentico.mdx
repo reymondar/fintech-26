@@ -1,0 +1,143 @@
+---
+title: "Google quiere quedarse con toda la compra: qué es el UCP y por qué tu feed decide si entras"
+description: "Google está acortando el camino entre descubrir un producto y pagarlo con Universal Cart y el Universal Commerce Protocol. Qué cambia para un ecommerce y por qué Merchant Center empieza a parecerse bastante más a infraestructura de venta que a un feed de marketing."
+date: "2026-08-17"
+category: "GEO"
+author: "Ramón Arana"
+readTime: "6 min"
+keywords: ["UCP Google", "Universal Commerce Protocol", "Universal Cart", "comercio agéntico", "checkout agéntico", "checkout Google", "Merchant Center feed", "vender en Google AI Mode", "ecommerce SEO IA"]
+---
+
+![Las tres pantallas del checkout con UCP en Google: la ficha de producto con los botones Buy y Visit site, la revisión del pedido con Pay with Google Pay, y la confirmación de compra.](/blog/ucp-checkout-google.jpg)
+
+_Ejemplo del checkout con UCP dentro de Google, paso a paso. Fuente: [Ayuda de Google Merchant Center](https://support.google.com/merchants/answer/16837055?hl=es)._
+
+_Actualizado el 17 de agosto de 2026._
+
+Google está intentando acortar la compra entera: descubrir un producto, guardarlo, volver cuando baje de precio y, en algunos casos, pagar sin salir de sus superficies. La pieza técnica detrás se llama Universal Commerce Protocol, o UCP. Y hay una parte bastante menos glamorosa que decide si tu catálogo está preparado: Merchant Center.
+
+## ¿Qué está cambiando exactamente?
+
+Hasta ahora, una ficha de producto en Google terminaba casi siempre igual: veías el producto y Google te mandaba a la tienda.
+
+Aquí los caminos se bifurcan. Google ya ofrece enlaces de checkout que pueden llevar a una persona directamente al carrito o al checkout de la tienda. Con UCP aparece una segunda experiencia: un botón de compra que puede completar el checkout dentro de las superficies de Google, mientras la marca sigue siendo el merchant of record (el vendedor oficial, quien factura y responde por la venta).
+
+Si has visto capturas con "Visit site", "Add to cart" y "Buy", esa es la idea que conviene entender. El texto exacto y la interfaz pueden cambiar. La diferencia importante está debajo: una ruta te entrega al usuario; la otra le cede a Google buena parte de la transacción.
+
+Hay un interruptor que decide quién entra: solo los productos marcados como elegibles para checkout agéntico participan en la experiencia UCP; si esa marca no está encendida, el producto queda fuera. En la práctica no lo tocas tú a mano —lo activa tu plataforma o tu desarrollador con un [atributo del feed](https://support.google.com/merchants/answer/16837055?hl=en) (el `native_commerce`, dato para tu técnico)—; a ti te basta saber que existe y que hay que encenderlo.
+
+## ¿Dónde entra el Universal Cart?
+
+En Google I/O 2026 llegó la pieza más visible: [Universal Cart](https://blog.google/products-and-platforms/products/shopping/google-shopping-cart/).
+
+Google lo plantea como un carrito que vive entre tiendas y entre sus propios servicios. Puedes añadir algo mientras buscas en Search, seguir mirando productos en Gemini y, más adelante, sumar otra cosa desde YouTube o Gmail. El carrito conserva la intención y trabaja en segundo plano.
+
+También vigila bajadas de precio, historial de precios, ofertas y reposiciones. Google dice que está construido sobre Wallet, así que puede tener en cuenta métodos de pago, beneficios y programas de fidelidad.
+
+Debajo hay una escala bastante absurda: el Shopping Graph ya supera los 60.000 millones de fichas de producto.
+
+Cuando llega el momento de pagar, Google puede cerrar el checkout con Google Pay en pocos pasos o transferir los productos al sitio de la tienda. Dicho de otro modo, Google quiere quedarse con cada vez más tramo del recorrido. No significa que cada compra vaya a morir dentro de Google mañana.
+
+## ¿Qué hace realmente el UCP?
+
+[UCP es un estándar abierto para comercio agéntico](https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/). La idea es que la superficie donde compra el usuario, el ecommerce y el proveedor de pagos puedan intercambiar información con una estructura común en vez de inventar una integración distinta para cada agente.
+
+Google lo desarrolló junto con empresas como Shopify, Wayfair, Target y Walmart. El protocolo cubre el recorrido completo: descubrimiento, consideración, carrito, checkout y gestión del pedido.
+
+[En marzo Google amplió UCP](https://blog.google/products-and-platforms/products/shopping/ucp-updates/) con tres capacidades bastante concretas: carrito para varios productos de una misma tienda, acceso a catálogo en tiempo real para precio, stock y variantes, e Identity Linking para conservar ventajas como precios de miembro o envío gratis.
+
+La parte del carrito siguió avanzando: ya hay una [vía para armar el carrito](https://developers.google.com/merchant/ucp/guides/overview/cart-overview) dentro de Search o Gemini y pasarlo montado al sitio de la tienda. Eso no incluye el cobro; el pago va por una pieza aparte. Detalles distintos, misma dirección.
+
+## ¿Por qué esto cambia la conversación para un ecommerce?
+
+Durante años optimizamos ecommerce pensando en conseguir el clic. Posicionar el producto, ganar la visita y después convertir en nuestra web.
+
+Si una parte creciente del descubrimiento, la comparación, el carrito y el pago ocurre dentro de Google, el clic deja de explicar todo el recorrido. **Relacionado:** [Por qué el ranking de Google ya no predice tu visibilidad en IA](/blog/ranking-google-no-predice-visibilidad-ia).
+
+Empieza a importar otra pregunta: ¿mi producto puede participar en esa experiencia?
+
+Ahí Merchant Center deja de ser ese sitio que alguien configuró hace tres años, conectó a Shopify y decidió no volver a mirar mientras "siguiera funcionando".
+
+Google dice explícitamente que Merchant Center seguirá siendo el centro para preparar los datos que alimentan anuncios y fichas de producto. Para UCP [exige una cuenta en regla](https://developers.google.com/merchant/ucp/guides/merchant-center), productos aprobados para free listings, políticas de devolución, información de soporte y datos específicos para marcar qué productos pueden usar checkout agéntico.
+
+El feed no hace toda la integración. Pero un catálogo roto tampoco se arregla porque tu API sea preciosa.
+
+## ¿Quién puede entrar hoy?
+
+Aquí conviene separar anuncio, documentación y disponibilidad real. El estado, superficie por superficie:
+
+| Dónde | Estado (agosto 2026) |
+| --- | --- |
+| Universal Cart — Search y Gemini (EE.UU.) | En despliegue desde el verano de 2026 |
+| Universal Cart — YouTube y Gmail | Anunciado, llega después |
+| Checkout UCP — EE.UU. | Disponible para tiendas participantes |
+| Checkout UCP — Canadá y Australia | [Anunciado, en los próximos meses](https://searchengineland.com/google-search-universal-cart-expands-ucp-and-ap2-477989) |
+| Checkout UCP — Reino Unido | Más adelante |
+| Integración directa en Merchant Center | Piloto limitado (solo tiendas piloto de EE.UU.) |
+| España | Preparación; sin activación general |
+
+Para una marca en España, por ahora esto es preparación. No una feature que puedas activar esta tarde.
+
+## Mi lectura: la deuda técnica se paga cuando cambian las reglas
+
+Durante años, el feed fue una de esas piezas que funcionan hasta que dejan de funcionar.
+
+Título medio bien. Descripción heredada. Stock que sincroniza casi siempre. GTINs incompletos. Una integración que nadie quiere tocar porque "vende igual". Todo muy estable hasta que la plataforma mueve la portería.
+
+Ahora Google está convirtiendo esos datos en materia prima para agentes que tienen que decidir qué producto mostrar, cuánto cuesta, si existe stock y si se puede comprar.
+
+La deuda técnica se cobra justo ahí.
+
+La tienda que ya tiene catálogo, políticas, identificadores, precios y disponibilidad bajo control está más cerca de probar el canal nuevo. La que lleva años acumulando parches empieza por limpiar la cocina.
+
+Es aburrido. Pero así suele ser donde todo el trabajo importante está escondido.
+
+## ¿Qué haría hoy si vendes online?
+
+1. Trata Merchant Center como infraestructura de venta
+
+Revisa productos rechazados, identificadores, precios, disponibilidad, variantes, envío, devoluciones y consistencia con la web. Google recomienda que los datos del feed sean lo más completos y actuales posible. Ahora hay una razón adicional para hacerlo.
+
+2. Revisa qué tan preparado está tu checkout
+
+UCP no se activa marcando una casilla. El checkout nativo pide integración técnica con Google, conexiones entre sistemas, pruebas y una configuración específica del catálogo. Si dependes de Shopify, Salesforce u otra plataforma, revisa qué soporte están construyendo antes de desarrollar medio internet por tu cuenta.
+
+3. Prepara el feed para que una máquina pueda decidir
+
+Precio, stock, variantes e identificadores dejaron de ser únicamente información para una tarjeta de Shopping. Son datos que un agente puede necesitar para comparar, construir un carrito y calcular una compra.
+
+Google incluso está empujando atributos más conversacionales en Merchant Center para ayudar a que las marcas aparezcan mejor en búsquedas con IA. La tendencia es bastante clara: menos catálogo decorativo, más datos utilizables.
+
+![El camino de compra en Google se bifurca en tres rutas: Visit site te manda a tu tienda, Add to cart es el free listing de siempre, y Buy es el checkout UCP que puede cerrarse dentro de Google.](/blog/ucp-camino-compra.svg)
+
+## Preguntas frecuentes
+
+### ¿Qué es el Universal Commerce Protocol de Google?
+
+UCP es un estándar abierto para comercio agéntico. Permite que agentes, tiendas y proveedores de pagos intercambien información para cubrir etapas como descubrimiento, carrito, checkout y posventa.
+
+### ¿Google va a quedarse con todo el checkout?
+
+En algunos flujos, el checkout puede completarse dentro de superficies de Google con Google Pay. En otros, Google transfiere el carrito al sitio de la tienda. La marca sigue siendo el merchant of record.
+
+### ¿Qué diferencia hay entre el checkout link de siempre y UCP?
+
+El checkout link existente envía al usuario a tu carrito o checkout. Con UCP, determinados productos pueden mostrar una experiencia de compra donde el checkout ocurre en Google. Son rutas distintas.
+
+### ¿Está disponible UCP en España?
+
+Todavía no como integración general. Google está desplegando primero Estados Unidos y ha anunciado expansión a Canadá, Australia y después Reino Unido. Para España, hoy tiene más sentido preparar Merchant Center y seguir el rollout.
+
+### ¿Qué necesito para estar preparado?
+
+Una cuenta de Merchant Center en regla, productos aprobados para free listings, datos de producto sólidos, políticas de devolución y soporte configuradas. Para activar checkout UCP además hace falta la integración técnica correspondiente; un feed limpio es necesario, no suficiente.
+
+## Fuentes
+
+- [Google — Introducing the Universal Cart and more ways to help you shop (19 mayo 2026)](https://blog.google/products-and-platforms/products/shopping/google-shopping-cart/)
+- [Google Developers — Under the Hood: Universal Commerce Protocol (11 enero 2026)](https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/)
+- [Google — AI shopping gets simpler with Universal Commerce Protocol updates (19 marzo 2026)](https://blog.google/products-and-platforms/products/shopping/ucp-updates/)
+- [Google Merchant Center Help — About UCP and UCP-powered checkout](https://support.google.com/merchants/answer/16837055?hl=en)
+- [Google for Developers — Prepare your Merchant Center account for UCP](https://developers.google.com/merchant/ucp/guides/merchant-center)
+- [Google for Developers — Cart API](https://developers.google.com/merchant/ucp/guides/overview/cart-overview)
+- [Search Engine Land — Google Search Universal Cart, expands UCP and AP2 (19 mayo 2026)](https://searchengineland.com/google-search-universal-cart-expands-ucp-and-ap2-477989)

@@ -1,9 +1,12 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { ReadingProgress } from "@/components/reading-progress"
 import { getPost, getAllPosts } from "@/lib/posts"
 import { MDXRemote } from "next-mdx-remote/rsc"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
+import remarkGfm from "remark-gfm"
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }))
@@ -20,6 +23,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} — The Stack House`,
     description: post.description,
+    keywords: post.keywords,
   }
 }
 
@@ -52,6 +56,41 @@ const mdxComponents = {
     <blockquote className="border-l-2 border-zinc-300 pl-4 text-zinc-500 italic text-[15px]" {...props} />
   ),
   hr: () => <hr className="border-zinc-200 my-8" />,
+  a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+    const href = props.href ?? ""
+    const cls = "text-zinc-900 underline underline-offset-2 decoration-zinc-300 hover:decoration-zinc-900 transition-colors"
+    if (href.startsWith("/")) {
+      return <Link href={href} className={cls}>{props.children}</Link>
+    }
+    return <a {...props} target="_blank" rel="noopener noreferrer" className={cls} />
+  },
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img {...props} alt={props.alt ?? ""} className="w-full rounded-xl border border-zinc-200 my-2" />
+  ),
+  figure: (props: React.HTMLAttributes<HTMLElement>) => (
+    <figure className="my-8" {...props} />
+  ),
+  figcaption: (props: React.HTMLAttributes<HTMLElement>) => (
+    <figcaption className="text-xs text-zinc-400 text-center mt-3" {...props} />
+  ),
+  table: (props: React.HTMLAttributes<HTMLTableElement>) => (
+    <div className="overflow-x-auto my-6">
+      <table className="w-full text-[13px] border-collapse" {...props} />
+    </div>
+  ),
+  thead: (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
+    <thead className="bg-zinc-50" {...props} />
+  ),
+  th: (props: React.HTMLAttributes<HTMLTableCellElement>) => (
+    <th className="text-left text-xs font-semibold text-zinc-500 uppercase tracking-wide px-4 py-2.5 border-b border-zinc-200" {...props} />
+  ),
+  td: (props: React.HTMLAttributes<HTMLTableCellElement>) => (
+    <td className="px-4 py-2.5 text-zinc-700 border-b border-zinc-100 leading-relaxed" {...props} />
+  ),
+  tr: (props: React.HTMLAttributes<HTMLTableRowElement>) => (
+    <tr className="hover:bg-zinc-50/50 transition-colors" {...props} />
+  ),
 }
 
 export default async function BlogPostPage({
@@ -65,6 +104,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="min-h-screen bg-background">
+      <ReadingProgress />
       <Navbar />
 
       <main className="pt-28 pb-24 px-4">
@@ -113,7 +153,11 @@ export default async function BlogPostPage({
 
           {/* MDX Content */}
           <div className="space-y-6">
-            <MDXRemote source={post.content} components={mdxComponents} />
+            <MDXRemote
+              source={post.content}
+              components={mdxComponents}
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            />
           </div>
 
           {/* End CTA */}

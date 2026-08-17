@@ -37,13 +37,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Servicios
+                <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
+                  Blog
                 </a>
               </li>
               <li>
-                <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Blog
+                <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
+                  Contacto
                 </a>
               </li>
               <li>

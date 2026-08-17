@@ -53,13 +53,13 @@ export function Hero() {
         >
           <span className="block overflow-hidden">
             <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={0}>
-              Tu próximo cliente ya no busca:
+              Tu próximo cliente está
             </m.span>
           </span>
           <span className="block overflow-hidden">
             <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={1}>
-              Le pregunta a{" "}
-              <span className="inline-block relative align-bottom overflow-hidden" style={{ minWidth: "4ch" }}>
+              buscándote en{" "}
+              <span className="inline-block relative align-bottom overflow-hidden" style={{ minWidth: "6ch" }}>
                 <AnimatePresence mode="wait">
                   <m.span
                     key={platforms[platformIndex]}

@@ -12,6 +12,7 @@ export type PostMeta = {
   category: string
   author: string
   readTime: string
+  keywords?: string[]
 }
 
 export type Post = PostMeta & {

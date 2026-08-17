@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="1" y="1" width="1198" height="638" rx="24" fill="#ffffff" stroke="#e4e4e7"/>
+
+  <!-- eyebrow -->
+  <text x="600" y="52" text-anchor="middle" fill="#a1a1aa" font-size="13" font-weight="600" letter-spacing="3">EL CAMINO DE COMPRA EN GOOGLE</text>
+
+  <!-- product card (top) -->
+  <rect x="470" y="72" width="260" height="112" rx="14" fill="#fafafa" stroke="#e4e4e7"/>
+  <rect x="488" y="90" width="64" height="64" rx="10" fill="#e4e4e7"/>
+  <text x="568" y="112" fill="#18181b" font-size="17" font-weight="700">Tu producto</text>
+  <text x="568" y="138" fill="#71717a" font-size="15">aparece en la ficha</text>
+
+  <!-- connectors -->
+  <g stroke="#d4d4d8" stroke-width="2" fill="none">
+    <path d="M600 184 L600 250"/>
+    <path d="M250 250 L950 250"/>
+    <path d="M250 250 L250 296"/>
+    <path d="M600 250 L600 296"/>
+    <path d="M950 250 L950 296"/>
+  </g>
+
+  <!-- pills (button labels) -->
+  <g font-size="14" font-weight="600">
+    <rect x="188" y="298" width="124" height="32" rx="16" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="250" y="319" text-anchor="middle" fill="#52525b">Visit site</text>
+
+    <rect x="530" y="298" width="140" height="32" rx="16" fill="#ffffff" stroke="#e4e4e7"/>
+    <text x="600" y="319" text-anchor="middle" fill="#52525b">Add to cart</text>
+
+    <rect x="906" y="298" width="88" height="32" rx="16" fill="#18181b"/>
+    <text x="950" y="319" text-anchor="middle" fill="#ffffff">Buy</text>
+  </g>
+
+  <!-- nodes -->
+  <!-- col 1 -->
+  <rect x="120" y="348" width="260" height="150" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+  <rect x="144" y="372" width="26" height="26" rx="7" fill="#f4f4f5" stroke="#e4e4e7"/>
+  <text x="184" y="391" fill="#18181b" font-size="19" font-weight="700">Tu tienda</text>
+  <text x="144" y="428" fill="#71717a" font-size="14">El enlace de siempre:</text>
+  <text x="144" y="450" fill="#71717a" font-size="14">Google te manda a tu web.</text>
+  <text x="144" y="480" fill="#a1a1aa" font-size="12" font-weight="600" letter-spacing="1">FREE LISTING</text>
+
+  <!-- col 2 -->
+  <rect x="470" y="348" width="260" height="150" rx="14" fill="#ffffff" stroke="#e4e4e7"/>
+  <rect x="494" y="372" width="26" height="26" rx="7" fill="#f4f4f5" stroke="#e4e4e7"/>
+  <text x="534" y="391" fill="#18181b" font-size="19" font-weight="700">El carrito</text>
+  <text x="494" y="428" fill="#71717a" font-size="14">Añade el producto al</text>
+  <text x="494" y="450" fill="#71717a" font-size="14">carrito, aún sin pagar.</text>
+  <text x="494" y="480" fill="#a1a1aa" font-size="12" font-weight="600" letter-spacing="1">FREE LISTING</text>
+
+  <!-- col 3 (highlight) -->
+  <rect x="820" y="346" width="260" height="154" rx="14" fill="#ffffff" stroke="#18181b" stroke-width="2"/>
+  <rect x="844" y="372" width="26" height="26" rx="7" fill="#18181b"/>
+  <text x="884" y="391" fill="#18181b" font-size="19" font-weight="700">Compra en Google</text>
+  <text x="844" y="428" fill="#52525b" font-size="14">El checkout puede cerrarse</text>
+  <text x="844" y="450" fill="#52525b" font-size="14">dentro de Google (UCP).</text>
+  <rect x="844" y="466" width="66" height="22" rx="11" fill="#18181b"/>
+  <text x="877" y="481" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700" letter-spacing="1">NUEVO</text>
+
+  <!-- footer caption -->
+  <text x="600" y="570" text-anchor="middle" fill="#3f3f46" font-size="16" font-weight="500">El camino de compra se bifurca &#8212; y con UCP una parte se queda dentro de Google.</text>
+  <text x="600" y="602" text-anchor="middle" fill="#a1a1aa" font-size="13">The Stack House</text>
+</svg>

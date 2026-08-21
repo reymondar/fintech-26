@@ -59,3 +59,10 @@ Sitemap: https://thestackhouse.io/sitemap.xml
 # https://llmstxt.org
 LLMs: https://thestackhouse.io/llms.txt
 LLMs-full: https://thestackhouse.io/llms-full.txt
+
+# Señales de contenido para IA (TDMRep + permisos de entrenamiento)
+# TDM-Reservation: 0 = sin reserva, contenido disponible para minería de datos
+TDM-Reservation: 0
+AI-Training: allowed
+AI-Summary: allowed
+AI-Citation: allowed

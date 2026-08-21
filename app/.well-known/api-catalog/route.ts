@@ -30,6 +30,16 @@ export async function GET() {
             type: "text/markdown",
             title: "Markdown API — devuelve cualquier página en formato Markdown",
           },
+          {
+            href: `${SITE_URL}/.well-known/mcp.json`,
+            type: "application/json",
+            title: "MCP server card — herramientas accesibles para modelos de lenguaje",
+          },
+          {
+            href: `${SITE_URL}/.well-known/ai-plugin.json`,
+            type: "application/json",
+            title: "AI plugin declaration — declaración de capacidades para agentes de IA",
+          },
         ],
       },
     ],

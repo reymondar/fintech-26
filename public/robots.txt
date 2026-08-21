@@ -45,12 +45,17 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# Common Crawl — scraping masivo sin beneficio de citación
+# Common Crawl — corpus de entrenamiento para modelos de IA (GPT, Llama, Mistral, etc.)
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 # Todos los demás
 User-agent: *
 Allow: /
 
 Sitemap: https://thestackhouse.io/sitemap.xml
+
+# Índice para modelos de lenguaje
+# https://llmstxt.org
+LLMs: https://thestackhouse.io/llms.txt
+LLMs-full: https://thestackhouse.io/llms-full.txt

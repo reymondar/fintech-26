@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Servicios — Stack House | Visibilidad en IA e Ingeniería GEO",
   description:
     "De auditoría a agent-ready: la capa de datos, la autoridad y los sistemas que hacen que la IA te lea, confíe en ti y te elija.",
+  alternates: { canonical: "https://thestackhouse.io/services" },
+  openGraph: {
+    type: "website",
+    url: "https://thestackhouse.io/services",
+    title: "Servicios — The Stack House | Visibilidad en IA",
+    description: "De auditoría a agent-ready: la capa de datos, la autoridad y los sistemas que hacen que la IA te lea, confíe en ti y te elija. Auditoría gratis · Construir · Defender · Expandir.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
 }
 import { Navbar } from "@/components/navbar"
 import { ServicesHero } from "@/components/services-hero"

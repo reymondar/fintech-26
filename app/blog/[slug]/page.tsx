@@ -12,6 +12,8 @@ export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }))
 }
 
+const SITE_URL = "https://thestackhouse.io"
+
 export async function generateMetadata({
   params,
 }: {
@@ -20,10 +22,35 @@ export async function generateMetadata({
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return {}
+  const postUrl = `${SITE_URL}/blog/${slug}`
   return {
-    title: `${post.title} — The Stack House`,
+    title: post.title,
     description: post.description,
     keywords: post.keywords,
+    authors: [{ name: post.author, url: SITE_URL }],
+    alternates: { canonical: postUrl },
+    openGraph: {
+      type: "article",
+      url: postUrl,
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [
+        {
+          url: "/og-default.png",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: ["/og-default.png"],
+    },
   }
 }
 
@@ -102,8 +129,47 @@ export default async function BlogPostPage({
   const post = getPost(slug)
   if (!post) notFound()
 
+  const postUrl = `${SITE_URL}/blog/${slug}`
+
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": postUrl,
+    url: postUrl,
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#ramon-arana`,
+      name: post.author,
+      jobTitle: "Fundador",
+      worksFor: { "@id": `${SITE_URL}/#organization` },
+      url: SITE_URL,
+    },
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+    inLanguage: "es",
+    keywords: post.keywords?.join(", "),
+  }
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "The Stack House", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <ReadingProgress />
       <Navbar />
 
@@ -139,7 +205,7 @@ export default async function BlogPostPage({
               <div className="w-7 h-7 rounded-full bg-zinc-900 flex items-center justify-center flex-shrink-0">
                 <span className="text-[9px] font-bold text-white">SH</span>
               </div>
-              <p className="text-xs font-medium text-zinc-700">{post.author}</p>
+              <a rel="author" href={SITE_URL} className="text-xs font-medium text-zinc-700">{post.author}</a>
             </div>
             <span className="text-zinc-200">|</span>
             <span className="text-xs text-zinc-400">

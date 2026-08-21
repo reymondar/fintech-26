@@ -1,0 +1,103 @@
+# The Stack House — Documentación completa para modelos de lenguaje
+
+> Consultoría de visibilidad en IA (GEO/AEO) con base en España. Hacemos que las empresas aparezcan cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude.
+
+---
+
+## ¿Qué es The Stack House?
+
+The Stack House es una consultora especializada en Generative Engine Optimization (GEO) y Answer Engine Optimization (AEO). Nuestra misión es hacer visible a las empresas en los motores de IA generativa: ChatGPT, Gemini, Perplexity, Claude y AI Overviews de Google.
+
+A diferencia de una herramienta de monitorización, The Stack House diagnostica por qué cae el tráfico orgánico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Los datos son el punto de partida; el valor está en el diagnóstico y la ejecución.
+
+---
+
+## Servicios
+
+### 1. Auditoría (Gratis — el punto de partida)
+Diagnóstico en vivo de 20 minutos sin costo. Se analiza la marca del cliente en los motores de IA en tiempo real con las preguntas reales de compra de su sector. Incluye baseline de Share of Model.
+
+### 2. Construir (desde $1,500/proyecto)
+Construcción de presencia en IA: optimización técnica de contenido para que los modelos puedan leerlo y citarlo, corrección de bloqueos técnicos, y posicionamiento en las fuentes que la IA consulta en el sector del cliente.
+
+### 3. Defender (desde $500/mes)
+Monitorización continua del Share of Model, alertas ante cambios en las respuestas de los motores de IA y ajustes tácticos para mantener la posición ganada.
+
+### 4. Expandir (precio custom)
+Automatizaciones de citación, agentes de IA con catálogo propio y estrategias avanzadas de presencia en ecosistemas de IA emergentes.
+
+---
+
+## Conceptos clave
+
+**Share of Model (SoM):** La cantidad de menciones a una marca dividido por el total de menciones en su categoría en las respuestas de los motores de IA. Es la métrica central del GEO.
+
+**GEO (Generative Engine Optimization):** Disciplina de optimización para que un modelo de lenguaje sintetice una marca en su respuesta y la cite. Distinto del SEO tradicional: el GEO mide Share of Model, no posición en el ranking.
+
+**AEO (Answer Engine Optimization):** Optimización para motores de respuesta directa (como Perplexity, Claude, ChatGPT). Subconjunto del GEO.
+
+**Decoupling:** El desacople entre ranking en Google y citación en IA. En julio de 2025, el 76% de las fuentes citadas por AI Overviews venían del top-10 orgánico. En marzo de 2026, ese número bajó al 37,9%.
+
+---
+
+## Artículos del blog
+
+### GEO vs. SEO: qué es diferente en 2026 (y qué sigue igual)
+URL: https://thestackhouse.io/blog/geo-vs-seo-diferencias-2026
+Fecha: 2026-08-01 | Lectura: 7 min
+
+Rankear en Google ya no garantiza que los motores de IA te mencionen. El solape cayó de 76% a 38% en ocho meses (Ahrefs, mar. 2026). En ChatGPT, el solape con el top-10 orgánico es apenas del 6,82%. El GEO no reemplaza el SEO: se monta sobre él. Las menciones de marca (correlación r = 0,664) vuelven una empresa hasta tres veces más citable que los backlinks (r = 0,218).
+
+---
+
+### Share of Model (SoM): la métrica de visibilidad en IA que todavía medimos bastante mal
+URL: https://thestackhouse.io/blog/que-es-share-of-model-som
+Fecha: 2026-08-11 | Lectura: 5 min
+
+Share of Model intenta medir cuánto aparece una marca en las respuestas de IA. El problema: no existe una definición universal y pequeños cambios en los prompts (reformulación mínima, modo de razonamiento, país) pueden cambiar qué marcas aparecen. Los dashboards convierten incertidumbre en un decimal que parece preciso. Lo relevante es la dirección de tendencia, no el número exacto.
+
+---
+
+### Por qué ChatGPT no menciona tu empresa (y qué hacer al respecto)
+URL: https://thestackhouse.io/blog/por-que-chatgpt-no-menciona-tu-empresa
+Fecha: 2026-08-04 | Lectura: 8 min
+
+Los motores de IA no eligen marcas por popularidad ni antigüedad. Eligen las que tienen evidencia estructurada, fuentes confiables que las respaldan y contenido que responde preguntas concretas de compra. Las causas más frecuentes de invisibilidad: bloqueos técnicos (robots.txt, JS que los crawlers no pueden procesar), ausencia en fuentes de autoridad del sector, y contenido que no responde preguntas que los compradores hacen.
+
+---
+
+### Por qué tu ranking en Google ya no predice si la IA te menciona
+URL: https://thestackhouse.io/blog/ranking-google-no-predice-visibilidad-ia
+Fecha: 2026-08-08 | Lectura: 5 min
+
+Cinco estudios independientes confirman el decoupling. Google AI Overviews pasó de citar el top-10 orgánico en un 76% de los casos (julio 2025) a solo un 37,9% (marzo 2026). ChatGPT cita el top-10 de Google en un 6,82% de las respuestas. El query fan-out (los modelos expanden la consulta del usuario en múltiples sub-preguntas) explica por qué fuentes de nicho con autoridad temática superan a sitios de alto ranking genérico.
+
+---
+
+### Cómo usar YouTube para ganar visibilidad en Google y las búsquedas con IA
+URL: https://thestackhouse.io/blog/youtube-visibilidad-ia
+Fecha: 2026-08-14 | Lectura: 5 min
+
+YouTube es una de las fuentes que más aparecen en respuestas generadas por IA, porque Google es propietario de ambas plataformas y los modelos confían en contenido con señales de engagement verificables. Claves: transcripciones completas y estructuradas, capítulos con timestamps descriptivos, descripciones que respondan preguntas de compra, y coherencia temática del canal como señal de autoridad.
+
+---
+
+### Google quiere quedarse con toda la compra: qué es el UCP y por qué tu feed decide si entras
+URL: https://thestackhouse.io/blog/google-ucp-comercio-agentico
+Fecha: 2026-08-17 | Lectura: 6 min
+
+Google Universal Cart y el Universal Commerce Protocol (UCP) acortan el camino entre descubrir un producto y pagarlo, sin salir del ecosistema de Google. Para un ecommerce, Merchant Center empieza a parecerse a infraestructura de venta más que a un feed de marketing. La calidad y completitud del feed de productos —títulos, precios, disponibilidad, imágenes, reseñas— pasa a ser un factor de elegibilidad para el comercio agéntico.
+
+---
+
+## Contacto
+
+- Web: https://thestackhouse.io
+- Diagnóstico gratuito (20 min): https://calendar.app.google/aGDRM9XzkQFEndG77
+- Formulario: https://thestackhouse.io/contacto
+
+---
+
+## Política de acceso para modelos de IA
+
+The Stack House permite explícitamente el acceso y la indexación de todo su contenido a todos los motores de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Bingbot, etc.). Ver robots.txt completo en: https://thestackhouse.io/robots.txt

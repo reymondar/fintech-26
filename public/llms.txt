@@ -14,10 +14,22 @@
 
 - [Casos de uso](https://thestackhouse.io/cases): Ejemplos de diagnósticos de visibilidad en IA aplicados a empresas reales.
 
+## Blog
+
+- [Blog — The Stack House](https://thestackhouse.io/blog): Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital.
+- [GEO vs. SEO: qué es diferente en 2026 (y qué sigue igual)](https://thestackhouse.io/blog/geo-vs-seo-diferencias-2026): Rankear en Google ya no garantiza que los motores de IA te mencionen. El solape cayó de 76% a 38% en ocho meses. Qué mide cada disciplina y por qué necesitas las dos.
+- [Share of Model (SoM): la métrica de visibilidad en IA que todavía medimos bastante mal](https://thestackhouse.io/blog/que-es-share-of-model-som): Share of Model intenta medir cuánto aparece una marca en las respuestas de IA. El problema: todavía no existe una definición universal y pequeños cambios en los prompts pueden mover muchísimo el resultado.
+- [Por qué ChatGPT no menciona tu empresa (y qué hacer al respecto)](https://thestackhouse.io/blog/por-que-chatgpt-no-menciona-tu-empresa): Los motores de IA no eligen marcas por popularidad. Eligen las que tienen evidencia estructurada, fuentes confiables y responden preguntas concretas.
+- [Por qué tu ranking en Google ya no predice si la IA te menciona](https://thestackhouse.io/blog/ranking-google-no-predice-visibilidad-ia): En julio de 2025, el 76% de las fuentes citadas por AI Overviews venían del top-10 de Google. En marzo de 2026, ese número bajó al 37,9%.
+- [Cómo usar YouTube para ganar visibilidad en Google y las búsquedas con IA](https://thestackhouse.io/blog/youtube-visibilidad-ia): YouTube ya es una de las fuentes que más aparecen en respuestas generadas por IA. Qué publicar, cómo estructurarlo y cómo convertir el canal en una biblioteca de autoridad para tu marca.
+- [Google quiere quedarse con toda la compra: qué es el UCP y por qué tu feed decide si entras](https://thestackhouse.io/blog/google-ucp-comercio-agentico): Google está acortando el camino entre descubrir un producto y pagarlo con Universal Cart y el Universal Commerce Protocol. Qué cambia para un ecommerce.
+
 ## Contacto y diagnóstico
 
 - [Diagnóstico en vivo gratuito (20 min)](https://calendar.app.google/aGDRM9XzkQFEndG77): Sesión donde se analiza la marca del prospecto en los motores de IA en tiempo real, con las preguntas reales de compra de su sector.
+- [Formulario de contacto](https://thestackhouse.io/contacto): Contacto directo con el equipo de The Stack House.
 
 ## Optional
 
 - [Engagement Ladder — precios y estructura](https://thestackhouse.io/services#engagement): Auditoría gratis · Construir desde $1,500/proyecto · Defender desde $500/mes · Expandir (custom).
+- [Sitemap](https://thestackhouse.io/sitemap.xml): Mapa completo del sitio con todas las URLs y fechas de actualización.

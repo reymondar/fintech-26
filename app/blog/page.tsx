@@ -4,8 +4,16 @@ import { getAllPosts } from "@/lib/posts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Blog — The Stack House",
-  description: "Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital.",
+  title: "Blog — Visibilidad en IA, GEO y marketing digital",
+  description: "Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital. Escrito por el equipo de The Stack House.",
+  alternates: { canonical: "https://thestackhouse.io/blog" },
+  openGraph: {
+    type: "website",
+    url: "https://thestackhouse.io/blog",
+    title: "Blog — The Stack House",
+    description: "Guías y análisis sobre visibilidad en IA, Share of Model, GEO y cómo las marcas se posicionan en la nueva búsqueda.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
 }
 
 export default function BlogPage() {

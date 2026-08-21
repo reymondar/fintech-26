@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     template: "%s — The Stack House",
   },
   description: "The Stack House hace visible tu empresa en ChatGPT, Gemini, Perplexity y Claude. Diagnóstico honesto de por qué cae tu tráfico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Diagnóstico en vivo gratis de 20 minutos.",
+  authors: [{ name: "Ramón Arana", url: SITE_URL }],
   icons: {
     icon: "/logo-stackhouse.png",
     apple: "/logo-stackhouse.png",
@@ -146,6 +147,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 name: "The Stack House",
                 publisher: { "@id": `${SITE_URL}/#organization` },
                 inLanguage: "es",
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "@id": `${SITE_URL}/#ramon-arana`,
+                name: "Ramón Arana",
+                jobTitle: "Fundador",
+                url: SITE_URL,
+                worksFor: { "@id": `${SITE_URL}/#organization` },
               },
             ]),
           }}

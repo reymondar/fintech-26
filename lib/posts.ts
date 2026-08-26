@@ -7,6 +7,7 @@ const POSTS_DIR = path.join(process.cwd(), "content/posts")
 export type PostMeta = {
   slug: string
   title: string
+  h1?: string
   description: string
   date: string
   category: string

@@ -196,7 +196,7 @@ export default async function BlogPostPage({
 
           {/* Title */}
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight tracking-tight mb-6">
-            {post.title}
+            {post.h1 ?? post.title}
           </h1>
 
           {/* Meta */}

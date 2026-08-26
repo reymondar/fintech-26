@@ -35,8 +35,9 @@ No requiere cambios por artículo. El JSON-LD de BlogPosting y BreadcrumbList se
 Asegurarse de que cada artículo en `content/posts/` tenga estos campos completos:
 ```yaml
 ---
-title: ""
-description: ""
+title: ""         # SEO: ≤60 chars, entidad primero, sin nombre de marca (el layout lo añade vía template)
+h1: ""            # Opcional. H1 editorial visible en la página. Usar cuando el título editorial supera 60 chars o tiene más fuerza que el title SEO. Si se omite, la página muestra `title` como H1.
+description: ""   # ≤155 chars: entidad + acción + beneficio concreto
 date: "YYYY-MM-DD"
 category: ""
 author: "Ramón Arana"

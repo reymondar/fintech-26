@@ -1,6 +1,7 @@
 ---
-title: "Google quiere quedarse con toda la compra: qué es el UCP y por qué tu feed decide si entras"
-description: "Google está acortando el camino entre descubrir un producto y pagarlo con Universal Cart y el Universal Commerce Protocol. Qué cambia para un ecommerce y por qué Merchant Center empieza a parecerse bastante más a infraestructura de venta que a un feed de marketing."
+title: "Qué es Google UCP y cómo preparar tu ecommerce"
+h1: "Google UCP: qué cambia en el comercio agéntico y cómo preparar tu ecommerce"
+description: "Descubre qué es Google UCP, cómo funciona el checkout agéntico y qué debes optimizar en Merchant Center para preparar tu ecommerce."
 date: "2026-08-17"
 category: "GEO"
 author: "Ramón Arana"
@@ -16,6 +17,8 @@ _Actualizado el 17 de agosto de 2026._
 
 Google está intentando acortar la compra entera: descubrir un producto, guardarlo, volver cuando baje de precio y, en algunos casos, pagar sin salir de sus superficies. La pieza técnica detrás se llama Universal Commerce Protocol, o UCP. Y hay una parte bastante menos glamorosa que decide si tu catálogo está preparado: Merchant Center.
 
+> **En pocas palabras:** UCP es un estándar abierto que permite que agentes de IA, comercios y proveedores de pago intercambien información durante la compra. En Google, se utiliza para habilitar experiencias de carrito y checkout en AI Mode y Gemini. Para participar, un ecommerce necesita datos completos en Merchant Center y una integración técnica específica.
+
 ## ¿Qué está cambiando exactamente?
 
 Hasta ahora, una ficha de producto en Google terminaba casi siempre igual: veías el producto y Google te mandaba a la tienda.
@@ -24,7 +27,7 @@ Aquí los caminos se bifurcan. Google ya ofrece enlaces de checkout que pueden l
 
 Si has visto capturas con "Visit site", "Add to cart" y "Buy", esa es la idea que conviene entender. El texto exacto y la interfaz pueden cambiar. La diferencia importante está debajo: una ruta te entrega al usuario; la otra le cede a Google buena parte de la transacción.
 
-Hay un interruptor que decide quién entra: solo los productos marcados como elegibles para checkout agéntico participan en la experiencia UCP; si esa marca no está encendida, el producto queda fuera. En la práctica no lo tocas tú a mano —lo activa tu plataforma o tu desarrollador con un [atributo del feed](https://support.google.com/merchants/answer/16837055?hl=en) (el `native_commerce`, dato para tu técnico)—; a ti te basta saber que existe y que hay que encenderlo.
+La elegibilidad se señala en el feed mediante [`native_commerce(checkout_eligibility)`](https://support.google.com/merchants/answer/16837055?hl=en). Debe configurarse como `TRUE` para los productos compatibles, aunque esto no sustituye la integración técnica ni la aprobación del comercio.
 
 ## ¿Dónde entra el Universal Cart?
 
@@ -112,25 +115,25 @@ Google incluso está empujando atributos más conversacionales en Merchant Cente
 
 ## Preguntas frecuentes
 
-### ¿Qué es el Universal Commerce Protocol de Google?
+### ¿UCP sustituye los datos estructurados de producto en la web?
 
-UCP es un estándar abierto para comercio agéntico. Permite que agentes, tiendas y proveedores de pagos intercambien información para cubrir etapas como descubrimiento, carrito, checkout y posventa.
+No. UCP gestiona la comunicación entre agentes y comercios durante procesos como carrito, checkout y pedidos. Los datos estructurados Product y Offer ayudan a Google a entender los productos y habilitar experiencias enriquecidas en Search. Son capas distintas y complementarias.
 
-### ¿Google va a quedarse con todo el checkout?
+### ¿Es necesario usar Google Pay?
 
-En algunos flujos, el checkout puede completarse dentro de superficies de Google con Google Pay. En otros, Google transfiere el carrito al sitio de la tienda. La marca sigue siendo el merchant of record.
+No para UCP como estándar. UCP admite distintos procesadores y métodos de pago. En la implementación de Google, Google Pay puede utilizarse como método de pago para completar compras dentro de sus superficies de IA.
 
-### ¿Qué diferencia hay entre el checkout link de siempre y UCP?
+### ¿Shopify implementa UCP automáticamente para mis productos?
 
-El checkout link existente envía al usuario a tu carrito o checkout. Con UCP, determinados productos pueden mostrar una experiencia de compra donde el checkout ocurre en Google. Son rutas distintas.
+Sí. Shopify habilita UCP por defecto para sus comercios y los productos elegibles pueden incorporarse automáticamente a Shopify Catalog. Esto no significa que todos los productos aparezcan automáticamente en todas las superficies de IA: cada canal mantiene sus propios requisitos y disponibilidad.
 
-### ¿Está disponible UCP en España?
+### ¿UCP aplica a servicios o solo a productos físicos?
 
-Todavía no como integración general. Google está desplegando primero Estados Unidos y ha anunciado expansión a Canadá, Australia y después Reino Unido. Para España, hoy tiene más sentido preparar Merchant Center y seguir el rollout.
+UCP no está limitado conceptualmente a productos físicos. Sin embargo, la implementación actual de Google para AI Mode y Gemini se centra en productos elegibles de Merchant Center. El soporte para servicios y otras verticales todavía no está documentado como parte de ese checkout.
 
-### ¿Qué necesito para estar preparado?
+### ¿Cómo se atribuye una venta iniciada desde Gemini o AI Mode?
 
-Una cuenta de Merchant Center en regla, productos aprobados para free listings, datos de producto sólidos, políticas de devolución y soporte configuradas. Para activar checkout UCP además hace falta la integración técnica correspondiente; un feed limpio es necesario, no suficiente.
+La atribución depende de la plataforma y de la integración del comercio. UCP estandariza la transacción, pero no define por sí solo un modelo universal de atribución. En Shopify, por ejemplo, los pedidos pueden identificar qué canal de IA originó la venta.
 
 ## Fuentes
 

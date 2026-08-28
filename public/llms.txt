@@ -23,6 +23,7 @@
 - [Por qué tu ranking en Google ya no predice si la IA te menciona](https://thestackhouse.io/blog/ranking-google-no-predice-visibilidad-ia): En julio de 2025, el 76% de las fuentes citadas por AI Overviews venían del top-10 de Google. En marzo de 2026, ese número bajó al 37,9%.
 - [Cómo usar YouTube para ganar visibilidad en Google y las búsquedas con IA](https://thestackhouse.io/blog/youtube-visibilidad-ia): YouTube ya es una de las fuentes que más aparecen en respuestas generadas por IA. Qué publicar, cómo estructurarlo y cómo convertir el canal en una biblioteca de autoridad para tu marca.
 - [Google quiere quedarse con toda la compra: qué es el UCP y por qué tu feed decide si entras](https://thestackhouse.io/blog/google-ucp-comercio-agentico): Google está acortando el camino entre descubrir un producto y pagarlo con Universal Cart y el Universal Commerce Protocol. Qué cambia para un ecommerce.
+- [Atribución de tráfico en la era de los agentes de IA](https://thestackhouse.io/blog/atribucion-trafico-era-agentes-ia): Cómo separar una caída de medición, de mercado o de rendimiento cruzando GA4, Search Console, logs y resultados comerciales.
 
 ## Contacto y diagnóstico
 

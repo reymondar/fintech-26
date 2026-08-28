@@ -90,6 +90,14 @@ Google Universal Cart y el Universal Commerce Protocol (UCP) acortan el camino e
 
 ---
 
+### Atribución de tráfico en la era de los agentes de IA
+URL: https://thestackhouse.io/blog/atribucion-trafico-era-agentes-ia
+Fecha: 2026-08-28 | Lectura: 7 min
+
+Una caída de tráfico demuestra que una herramienta registró menos actividad, no que haya caído la demanda. La atribución pierde señales cuando una respuesta de IA evita el clic, una visita llega sin referente o una compra se completa dentro de otra interfaz. El diagnóstico separa medición, mercado y rendimiento propio cruzando GA4, Search Console, logs, presencia en respuestas de IA y resultados comerciales. Caso propio: una fintech vio caer el tráfico mientras altas, uso y actividad comercial permanecían estables; el gráfico aislado no describía el negocio ni permitía adjudicar una causa única.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

@@ -98,6 +98,22 @@ Una caída de tráfico demuestra que una herramienta registró menos actividad, 
 
 ---
 
+### Hiperpersonalización en ecommerce B2B
+URL: https://thestackhouse.io/blog/roi-ia-generativa-retail
+Fecha: 2026-08-31 | Lectura: 6 min
+
+La hiperpersonalización en ecommerce B2B reduce decisiones mediante datos de catálogo, comportamiento y CRM. El artículo distingue contexto anónimo, identidad de cuenta y señales del comité de compra; compara reglas simples con modelos; y concentra la implementación en selección, evidencia, continuidad y CTA. El retorno se mide con control y seguimiento hasta demos calificadas, oportunidades y ventas.
+
+---
+
+### Search Console ya mide la visibilidad en IA
+URL: https://thestackhouse.io/blog/search-console-visibilidad-ia
+Fecha: 2026-09-07 | Lectura: 5 min
+
+El informe de IA generativa de Search Console muestra impresiones, páginas, países, dispositivos y fechas dentro de AI Overviews y Modo IA. El artículo explica cómo leer esa señal, cómo completarla con un panel estable de preguntas en otros asistentes y cómo validar una mejora mediante indexación, aparición y presencia sostenida.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

@@ -24,6 +24,8 @@
 - [Cómo usar YouTube para ganar visibilidad en Google y las búsquedas con IA](https://thestackhouse.io/blog/youtube-visibilidad-ia): YouTube ya es una de las fuentes que más aparecen en respuestas generadas por IA. Qué publicar, cómo estructurarlo y cómo convertir el canal en una biblioteca de autoridad para tu marca.
 - [Google quiere quedarse con toda la compra: qué es el UCP y por qué tu feed decide si entras](https://thestackhouse.io/blog/google-ucp-comercio-agentico): Google está acortando el camino entre descubrir un producto y pagarlo con Universal Cart y el Universal Commerce Protocol. Qué cambia para un ecommerce.
 - [Atribución de tráfico en la era de los agentes de IA](https://thestackhouse.io/blog/atribucion-trafico-era-agentes-ia): Cómo separar una caída de medición, de mercado o de rendimiento cruzando GA4, Search Console, logs y resultados comerciales.
+- [Hiperpersonalización en ecommerce B2B](https://thestackhouse.io/blog/roi-ia-generativa-retail): Cómo adaptar mensaje, selección, evidencia y CTA según la intención del comprador para generar mejores demos y oportunidades.
+- [Search Console ya mide la visibilidad en IA](https://thestackhouse.io/blog/search-console-visibilidad-ia): Cómo leer las impresiones de AI Overviews y Modo IA y completar la medición con un panel estable de preguntas en otros asistentes.
 
 ## Contacto y diagnóstico
 

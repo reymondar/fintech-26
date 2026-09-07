@@ -62,7 +62,7 @@ const mdxComponents = {
     <h3 className="font-display text-lg font-semibold text-zinc-900 mt-8 mb-3" {...props} />
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="text-[15px] leading-[1.75] text-zinc-700 mb-0" {...props} />
+    <p className="text-[15px] leading-[1.75] text-zinc-700 mb-6" {...props} />
   ),
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className="space-y-2 pl-5 list-disc marker:text-zinc-300 text-[15px] leading-[1.75] text-zinc-700" {...props} />
@@ -80,7 +80,7 @@ const mdxComponents = {
     <code className="text-[13px] bg-zinc-100 px-1.5 py-0.5 rounded text-zinc-600 font-mono" {...props} />
   ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
-    <blockquote className="border-l-2 border-zinc-300 pl-4 text-zinc-500 italic text-[15px]" {...props} />
+    <blockquote className="border-l-2 border-zinc-300 pl-4 text-zinc-500 italic text-[15px] [&>p]:mb-0" {...props} />
   ),
   hr: () => <hr className="border-zinc-200 my-8" />,
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
@@ -218,7 +218,7 @@ export default async function BlogPostPage({
           <div className="border-t border-zinc-200 mb-10" />
 
           {/* MDX Content */}
-          <div className="space-y-6">
+          <div>
             <MDXRemote
               source={post.content}
               components={mdxComponents}

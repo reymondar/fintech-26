@@ -26,6 +26,7 @@
 - [Atribución de tráfico en la era de los agentes de IA](https://thestackhouse.io/blog/atribucion-trafico-era-agentes-ia): Cómo separar una caída de medición, de mercado o de rendimiento cruzando GA4, Search Console, logs y resultados comerciales.
 - [Hiperpersonalización en ecommerce B2B](https://thestackhouse.io/blog/roi-ia-generativa-retail): Cómo adaptar mensaje, selección, evidencia y CTA según la intención del comprador para generar mejores demos y oportunidades.
 - [Search Console ya mide la visibilidad en IA](https://thestackhouse.io/blog/search-console-visibilidad-ia): Cómo leer las impresiones de AI Overviews y Modo IA y completar la medición con un panel estable de preguntas en otros asistentes.
+- [Formularios B2B: conversión y atribución de leads](https://thestackhouse.io/blog/formularios-b2b-conversion-atribucion): Cómo pedir menos datos visibles, capturar intención y conservar fuente, campaña y contexto hasta el CRM.
 
 ## Contacto y diagnóstico
 

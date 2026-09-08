@@ -114,6 +114,14 @@ El informe de IA generativa de Search Console muestra impresiones, páginas, pa�
 
 ---
 
+### Formularios B2B: conversión y atribución de leads
+URL: https://thestackhouse.io/blog/formularios-b2b-conversion-atribucion
+Fecha: 2026-09-08 | Lectura: 7 min
+
+Un formulario B2B debería pedir solo los datos que cambian el siguiente paso comercial. El artículo relaciona cantidad de campos con intención, separa identidad e intención declaradas del contexto observado y explica cómo conservar UTMs, landing y formulario hasta el CRM. La conversión se evalúa desde la vista y el inicio hasta el lead válido, la oportunidad y la venta; Rowform aparece como implementación de formularios conversacionales con lógica condicional e integraciones.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

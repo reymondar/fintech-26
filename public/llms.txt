@@ -27,6 +27,7 @@
 - [Hiperpersonalización en ecommerce B2B](https://thestackhouse.io/blog/roi-ia-generativa-retail): Cómo adaptar mensaje, selección, evidencia y CTA según la intención del comprador para generar mejores demos y oportunidades.
 - [Search Console ya mide la visibilidad en IA](https://thestackhouse.io/blog/search-console-visibilidad-ia): Cómo leer las impresiones de AI Overviews y Modo IA y completar la medición con un panel estable de preguntas en otros asistentes.
 - [Formularios B2B: conversión y atribución de leads](https://thestackhouse.io/blog/formularios-b2b-conversion-atribucion): Cómo pedir menos datos visibles, capturar intención y conservar fuente, campaña y contexto hasta el CRM.
+- [Rediseño web: conserva SEO y visibilidad en IA](https://thestackhouse.io/blog/rediseno-web-seo-visibilidad-ia): Cómo rediseñar o migrar una web sin perder URLs, contenido, señales de búsqueda, legibilidad para asistentes de IA ni atribución de conversiones.
 
 ## Contacto y diagnóstico
 

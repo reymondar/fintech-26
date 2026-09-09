@@ -122,6 +122,14 @@ Un formulario B2B debería pedir solo los datos que cambian el siguiente paso co
 
 ---
 
+### Rediseño web: conserva SEO y visibilidad en IA
+URL: https://thestackhouse.io/blog/rediseno-web-seo-visibilidad-ia
+Fecha: 2026-09-08 | Lectura: 7 min
+
+Un rediseño puede mejorar la interfaz mientras elimina URLs, contenido, enlaces, metadatos y medición que Google y los asistentes ya entendían. El artículo explica qué señales deben sobrevivir, cómo mapear redirecciones permanentes, qué exige una web legible por IA y cómo comparar búsqueda, menciones, formularios y oportunidades después del lanzamiento. Incluye las capacidades técnicas de Framer y presenta a ReNative Studio como partner de diseño UI y desarrollo.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

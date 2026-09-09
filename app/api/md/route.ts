@@ -21,6 +21,10 @@ Medimos tu **Share of Model**: cuántas veces te menciona la IA cuando tus compr
 
 Una herramienta de monitorización te dice si la IA te menciona. Nosotros te decimos **por qué perdés tráfico**, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Si el problema no es la IA, te lo decimos por escrito.
 
+## Herramientas
+
+- **[UCP Checker](https://ucp-checker.thestackhouse.io/)** — Auditoría técnica gratuita que comprueba datos de producto, descubribilidad por máquinas, perfil UCP y preparación del checkout para agentes de IA.
+
 ## Contacto
 
 - Web: https://thestackhouse.io

@@ -14,6 +14,10 @@
 
 - [Casos de uso](https://thestackhouse.io/cases): Ejemplos de diagnósticos de visibilidad en IA aplicados a empresas reales.
 
+## Herramientas
+
+- [UCP Checker — Agentic Commerce Readiness](https://ucp-checker.thestackhouse.io/): Auditoría técnica gratuita para ecommerce. Comprueba datos de producto, descubribilidad por máquinas, perfil UCP y preparación del checkout para agentes de IA mediante más de 40 verificaciones sobre información pública.
+
 ## Blog
 
 - [Blog — The Stack House](https://thestackhouse.io/blog): Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital.
@@ -26,8 +30,10 @@
 - [Atribución de tráfico en la era de los agentes de IA](https://thestackhouse.io/blog/atribucion-trafico-era-agentes-ia): Cómo separar una caída de medición, de mercado o de rendimiento cruzando GA4, Search Console, logs y resultados comerciales.
 - [Hiperpersonalización en ecommerce B2B](https://thestackhouse.io/blog/roi-ia-generativa-retail): Cómo adaptar mensaje, selección, evidencia y CTA según la intención del comprador para generar mejores demos y oportunidades.
 - [Search Console ya mide la visibilidad en IA](https://thestackhouse.io/blog/search-console-visibilidad-ia): Cómo leer las impresiones de AI Overviews y Modo IA y completar la medición con un panel estable de preguntas en otros asistentes.
+- [Herramientas de visibilidad en IA: qué no te dicen](https://thestackhouse.io/blog/herramientas-visibilidad-ia-que-no-dicen): El mercado está lleno de dashboards que miden menciones, pero ninguno responde la atribución causal. Los motores casi no coinciden: solo 11% de dominios comunes entre ChatGPT y Perplexity.
 - [Formularios B2B: conversión y atribución de leads](https://thestackhouse.io/blog/formularios-b2b-conversion-atribucion): Cómo pedir menos datos visibles, capturar intención y conservar fuente, campaña y contexto hasta el CRM.
 - [Rediseño web: conserva SEO y visibilidad en IA](https://thestackhouse.io/blog/rediseno-web-seo-visibilidad-ia): Cómo rediseñar o migrar una web sin perder URLs, contenido, señales de búsqueda, legibilidad para asistentes de IA ni atribución de conversiones.
+- [Portfolio de programador legible para IA y recruiters](https://thestackhouse.io/blog/portfolio-programador-legible-ia-recruiters): Cómo estructurar identidad, proyectos, decisiones y evidencia para que recruiters, buscadores y sistemas de IA entiendan un perfil técnico.
 
 ## Contacto y diagnóstico
 

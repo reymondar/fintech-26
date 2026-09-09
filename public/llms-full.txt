@@ -28,6 +28,15 @@ Automatizaciones de citación, agentes de IA con catálogo propio y estrategias 
 
 ---
 
+## Herramientas
+
+### UCP Checker — Agentic Commerce Readiness
+URL: https://ucp-checker.thestackhouse.io/
+
+Herramienta gratuita de The Stack House para comprobar si un ecommerce está técnicamente preparado para vender mediante agentes de IA. Analiza más de 40 señales públicas agrupadas en datos de producto, descubribilidad por máquinas, perfil Universal Commerce Protocol (UCP), checkout agéntico y preparación para las superficies comerciales de Google. Cada resultado incluye la evidencia detectada, el motivo y una recomendación; las comprobaciones que exigen acceso a Merchant Center se marcan para verificación y no se califican como fallos.
+
+---
+
 ## Conceptos clave
 
 **Share of Model (SoM):** La cantidad de menciones a una marca dividido por el total de menciones en su categoría en las respuestas de los motores de IA. Es la métrica central del GEO.
@@ -112,6 +121,12 @@ Fecha: 2026-09-07 | Lectura: 5 min
 
 El informe de IA generativa de Search Console muestra impresiones, páginas, países, dispositivos y fechas dentro de AI Overviews y Modo IA. El artículo explica cómo leer esa señal, cómo completarla con un panel estable de preguntas en otros asistentes y cómo validar una mejora mediante indexación, aparición y presencia sostenida.
 
+### Herramientas de visibilidad en IA: qué no te dicen
+URL: https://thestackhouse.io/blog/herramientas-visibilidad-ia-que-no-dicen
+Fecha: 2026-09-08 | Lectura: 5 min
+
+El mercado de la visibilidad en IA se ha llenado de herramientas (Semrush consolidó la suya en septiembre de 2026) que miden menciones y Share of Model, pero eso es monitorización, no diagnóstico. Un solo número engaña porque los motores casi no comparten fuentes: un estudio de 2026 sobre 118.000 respuestas halló que solo el 11% de los dominios citados coincide entre ChatGPT y Perplexity, y el solape entre las citas de IA y el top-10 de Google cayó del 76% (julio 2025) al 37,9% (marzo 2026). La pregunta que ningún dashboard responde es la atribución causal: de tu caída de tráfico, cuánto es la IA, cuánto el mercado y cuánto tu propia web. Responderla exige cruzar Search Console, GA4, logs de servidor y respuestas reales de los modelos. La herramienta es el punto de partida; el diagnóstico es el valor.
+
 ---
 
 ### Formularios B2B: conversión y atribución de leads
@@ -127,6 +142,14 @@ URL: https://thestackhouse.io/blog/rediseno-web-seo-visibilidad-ia
 Fecha: 2026-09-08 | Lectura: 7 min
 
 Un rediseño puede mejorar la interfaz mientras elimina URLs, contenido, enlaces, metadatos y medición que Google y los asistentes ya entendían. El artículo explica qué señales deben sobrevivir, cómo mapear redirecciones permanentes, qué exige una web legible por IA y cómo comparar búsqueda, menciones, formularios y oportunidades después del lanzamiento. Incluye las capacidades técnicas de Framer y presenta a ReNative Studio como partner de diseño UI y desarrollo.
+
+---
+
+### Portfolio de programador legible para IA y recruiters
+URL: https://thestackhouse.io/blog/portfolio-programador-legible-ia-recruiters
+Fecha: 2026-09-08 | Lectura: 8 min
+
+Un portfolio técnico legible por máquinas conecta identidad, rol, proyectos, decisiones y evidencia mediante texto accesible y enlaces rastreables. El artículo distingue lo que procesan un ATS, LinkedIn Recruiter, GitHub, la web pública y una entrevista; propone una estructura para explicar proyectos sin inventar métricas y muestra cómo relacionar portfolio, perfiles y datos estructurados. CodePrepped aparece como herramienta para preparar esas señales y convertirlas en práctica de entrevistas.
 
 ---
 

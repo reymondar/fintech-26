@@ -9,6 +9,7 @@
 ## Cómo trabajamos
 
 - [Implementación para ecommerce](https://thestackhouse.io/#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
+- [Servicios — The Stack House](https://thestackhouse.io/servicios): Capa de IA a medida sobre tu negocio: recomendación en modelos, captación y conversión, y una capa de optimización con automatización y agentes conectada a tus ventas.
 
 ## Herramientas
 
@@ -33,7 +34,7 @@
 
 ## Contacto y diagnóstico
 
-- [Diagnóstico en vivo gratuito (20 min)](https://calendar.app.google/aGDRM9XzkQFEndG77): Primera revisión del ecommerce y una muestra de preguntas de compra para identificar oportunidades y valorar el encaje.
+- [Diagnóstico en vivo gratuito (20 min)](https://thestackhouse.io/auditoria): Primera revisión del ecommerce y una muestra de preguntas de compra para identificar oportunidades y valorar el encaje.
 - [Formulario de contacto](https://thestackhouse.io/contacto): Contacto directo con el equipo de The Stack House.
 
 ## Optional

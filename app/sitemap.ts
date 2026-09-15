@@ -29,7 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${SITE_URL}/services`,
+      url: `${SITE_URL}/servicios`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/auditoria`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,

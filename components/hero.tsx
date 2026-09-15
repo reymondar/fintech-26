@@ -102,7 +102,7 @@ export function Hero() {
             size="lg"
             className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
-            <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer"> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-4 h-4" />
+            <a href="/auditoria"> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
         </m.div>

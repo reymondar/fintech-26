@@ -233,9 +233,7 @@ export default async function BlogPostPage({
               Hacemos un diagnóstico en vivo de 20 minutos, sin costo.
             </h3>
             <a
-              href="https://calendar.app.google/aGDRM9XzkQFEndG77"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/auditoria"
               className="inline-flex items-center px-5 py-2.5 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-700 transition-colors"
             >
               Agenda tu diagnóstico →

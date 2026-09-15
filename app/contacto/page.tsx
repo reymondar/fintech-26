@@ -44,9 +44,7 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-1">Diagnóstico rápido</p>
                   <a
-                    href="https://calendar.app.google/aGDRM9XzkQFEndG77"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/auditoria"
                     className="text-sm text-zinc-900 hover:text-zinc-500 transition-colors"
                   >
                     Agenda 20 minutos →

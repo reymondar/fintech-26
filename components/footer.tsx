@@ -37,13 +37,16 @@ export function Footer() {
                 <a href={localizeHref("/#how-it-works")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Cómo funciona")} </a>
               </li>
               <li>
+                <a href="/servicios" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Servicios")} </a>
+              </li>
+              <li>
                 <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Blog")} </a>
               </li>
               <li>
                 <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Contacto")}{locale === "en" ? " (ES)" : ""} </a>
               </li>
               <li>
-                <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Revisemos tu ecommerce")} </a>
+                <a href="/auditoria" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Revisemos tu ecommerce")} </a>
               </li>
             </ul>
           </div>

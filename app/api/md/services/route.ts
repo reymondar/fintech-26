@@ -2,56 +2,52 @@ import { NextResponse } from "next/server"
 
 const markdown = `# Servicios — The Stack House
 
-> De auditoría a agent-ready: la capa de datos, la autoridad y los sistemas que hacen que la IA te lea, confíe en ti y te elija.
+> Una capa de datos sobre tu tienda y la IA para convertir las recomendaciones en ventas directas. No es una web más bonita: es la cadena completa, del diagnóstico a la venta. Cada pieza sostiene a la siguiente.
 
-Los cuatro servicios se desbloquean en secuencia. Cada nivel construye sobre el anterior.
+## Diagnóstico de tu tienda y de cómo te ve la IA
 
-## 1. Auditoría (Gratis)
+Revisamos tu tienda y probamos las preguntas reales de compra de tu sector en los asistentes de IA. Te mostramos dónde apareces, dónde no y por qué. Si tu problema no es la IA, te lo decimos.
 
-Diagnóstico en vivo de 20 minutos sin costo. Analizamos tu marca en ChatGPT, Gemini, Perplexity y Claude en tiempo real, con las preguntas reales de compra de tu sector. Entregamos un baseline de Share of Model y las causas principales de invisibilidad.
+## Preparar tu catálogo para que la IA lo entienda
 
-**[Agendar diagnóstico gratuito](https://calendar.app.google/aGDRM9XzkQFEndG77)**
+Ordenamos y estructuramos los datos de tu catálogo para que las máquinas los lean sin adivinar, con la información que decide la compra a la vista.
 
-## 2. Construir (desde $1,500/proyecto)
+## Contenido y autoridad para entrar en las recomendaciones
 
-Construimos tu presencia en IA:
+Creamos el contenido y la presencia externa que hacen que los modelos te tengan en cuenta.
 
-- Optimización técnica del contenido para que los modelos puedan leerlo y citarlo
-- Corrección de bloqueos técnicos (robots.txt, JavaScript no indexable, falta de datos estructurados)
-- Posicionamiento en las fuentes de autoridad que la IA consulta en tu sector
-- Creación de contenido estructurado orientado a responder preguntas de compra
+## Captar la demanda que llega decidida
 
-## 3. Defender (desde $500/mes)
+Montamos la captación y la atención en tu tienda para que cada consulta llegue a tu equipo con su contexto, sin caer en el vacío.
 
-Mantenemos y monitorizamos tu posición:
+## Convertir y personalizar la experiencia
 
-- Medición continua del Share of Model (cuántas veces te menciona la IA)
-- Alertas ante cambios en las respuestas de los motores de IA
-- Ajustes tácticos para sostener la posición ganada
+Ajustamos las páginas donde se decide la compra y adaptamos la experiencia a cada visitante.
 
-## 4. Expandir (precio custom)
+## Conectar todo con tus herramientas de venta
 
-Estrategias avanzadas para marcas con presencia establecida en IA:
+Conectamos la capa de datos con tus herramientas comerciales para que cada oportunidad y venta quede enlazada con su origen, sin trabajo manual.
 
-- Automatizaciones de citación a escala
-- Agentes de IA con catálogo propio del cliente
-- Presencia en ecosistemas de IA emergentes
+## Medir, seguir y mejorar mes a mes
+
+Relacionamos lo que hacemos con lo que vendes y ajustamos la prioridad cada mes.
 
 ---
 
 ## Preguntas frecuentes
 
 **¿Garantizan que la IA me va a recomendar?**
-No, y desconfía de quien lo garantice. Los modelos son probabilísticos. Lo que garantizamos: medición rigurosa, diagnóstico honesto y acciones que aumentan tu probabilidad de aparecer.
+No, y desconfía de quien lo garantice. Los modelos son probabilísticos. Lo que hacemos: trabajo con método, medición rigurosa y diagnóstico honesto.
 
 **¿Tienen que reconstruir mi sitio web?**
-No. La mayoría de acciones son ajustes sobre lo que ya tenés. Si algo requiere desarrollo, lo ves en el plan y decidís vos.
+No. La mayoría de acciones son ajustes sobre lo que ya tienes. Si algo requiere desarrollo, lo ves en el plan y lo decides tú.
 
 **¿Y si el problema no es la IA?**
-Te lo decimos por escrito, con el desglose de causas reales.
+Te lo decimos, con el desglose de causas reales.
 
 ---
 
+Empieza por saber dónde estás: https://thestackhouse.io/auditoria
 Contacto: https://thestackhouse.io/contacto
 `
 

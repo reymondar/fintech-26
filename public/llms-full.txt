@@ -161,7 +161,7 @@ Un portfolio técnico legible por máquinas conecta identidad, rol, proyectos, d
 ## Contacto
 
 - Web: https://thestackhouse.io
-- Diagnóstico gratuito (20 min): https://calendar.app.google/aGDRM9XzkQFEndG77
+- Diagnóstico gratuito (20 min): https://thestackhouse.io/auditoria
 - Formulario: https://thestackhouse.io/contacto
 
 ---

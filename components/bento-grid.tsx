@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslation } from "@/components/locale-provider"
+
 import { m, useInView } from "framer-motion"
 import { useRef, useEffect, useState } from "react"
 import { Code, ShieldCheck, ChartLine, Bot, Plug, Target } from "lucide-react"
@@ -20,12 +22,14 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 }
 
 function SystemStatus() {
+  const { t, locale, localizeHref } = useTranslation()
+
   const [dots, setDots] = useState([true, true, true, false, true])
 
   useEffect(() => {
@@ -49,42 +53,9 @@ function SystemStatus() {
   )
 }
 
-function AnimatedChart() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-
-  const points = [
-    { x: 0, y: 60 },
-    { x: 20, y: 45 },
-    { x: 40, y: 55 },
-    { x: 60, y: 30 },
-    { x: 80, y: 40 },
-    { x: 100, y: 15 },
-  ]
-
-  const pathD = points.reduce((acc, point, i) => {
-    return i === 0 ? `M ${point.x} ${point.y}` : `${acc} L ${point.x} ${point.y}`
-  }, "")
-
-  return (
-    <svg ref={ref} viewBox="0 0 100 70" className="w-full h-24">
-      <defs>
-        <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="rgb(16,185,129)" stopOpacity="0.2" />
-          <stop offset="100%" stopColor="rgb(16,185,129)" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      {isInView && (
-        <>
-          <path d={`${pathD} L 100 70 L 0 70 Z`} fill="url(#chartGradient)" className="opacity-50" />
-          <path d={pathD} fill="none" stroke="rgb(16,185,129)" strokeWidth="2" strokeLinecap="round" className="draw-line" />
-        </>
-      )}
-    </svg>
-  )
-}
-
 export function BentoGrid() {
+  const { t, locale, localizeHref } = useTranslation()
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -100,9 +71,7 @@ export function BentoGrid() {
           <h2
             className="text-xl sm:text-2xl font-semibold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
-          >
-            Medimos con exactitud cómo la IA está afectando a tu negocio, y te entregamos un plan priorizado para convertirte en una de las empresas que la IA recomienda.
-          </h2>
+          > {t("Un motor de captación que trabaja alrededor de tu infraestructura")} </h2>
         </m.div>
 
         {/* Sustancia — lo que te hace elegible */}
@@ -124,10 +93,8 @@ export function BentoGrid() {
               </div>
               <SystemStatus />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Las máquinas pueden leerte</h3>
-            <p className="text-zinc-500 text-sm">
-              Estructuramos tu catálogo, especificaciones y capacidades para que los motores de IA entiendan exactamente qué vendes — sin adivinar, sin citar mal.
-            </p>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">{t("Un catálogo que se entienda")}</h3>
+            <p className="text-zinc-500 text-sm"> {t("Completamos atributos, compatibilidades, usos y condiciones de compra. Corregimos el acceso a tus páginas para que buscadores y asistentes puedan encontrar e interpretar lo que vendes.")} </p>
           </m.div>
 
           {/* Confiable */}
@@ -138,10 +105,8 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <ShieldCheck className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">La IA confía en ti para citarte</h3>
-            <p className="text-zinc-500 text-sm">
-              Construimos esa confianza — contenido, menciones de terceros, actualización — hasta que tu nombre sea la respuesta.
-            </p>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">{t("Respuestas que ayudan a elegir")}</h3>
+            <p className="text-zinc-500 text-sm"> {t("Creamos y actualizamos comparativas, guías y páginas de producto sobre las dudas de tus compradores. Información concreta que la IA pueda citar y que ayude a decidir una compra.")} </p>
           </m.div>
 
           {/* Elegible */}
@@ -152,10 +117,8 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Plug className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Listo para lo que viene</h3>
-            <p className="text-zinc-500 text-sm">
-              Los agentes de IA pronto investigarán y comprarán en nombre de tus clientes. Nos aseguramos de que el tuyo sea un negocio con el que puedan operar.
-            </p>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">{t("Referencias fuera de tu tienda")}</h3>
+            <p className="text-zinc-500 text-sm"> {t("Identificamos los medios, listados y publicaciones que aparecen en las respuestas de tu categoría. Trabajamos con esas fuentes para construir presencia y respaldo para tu marca.")} </p>
           </m.div>
         </m.div>
 
@@ -174,11 +137,9 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <ChartLine className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Tu posición, medida</h3>
-            <p className="text-zinc-500 text-sm mb-4">
-              Un reporte, la misma métrica, cada mes: con qué frecuencia la IA te nombra vs. tus competidores. Sin dashboards de vanidad.
-            </p>
-            <AnimatedChart />
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">{t("Saber quién aparece y por qué")}</h3>
+            <p className="text-zinc-500 text-sm mb-4"> {t("Probamos preguntas de compra en distintos motores. Registramos qué marcas recomiendan y qué fuentes citan para elegir dónde intervenir y comparar la evolución.")} </p>
+            <p className="text-xs text-emerald-700">{t("Preguntas de compra → fuentes citadas → acciones")}</p>
           </m.div>
 
           {/* Defendido */}
@@ -189,10 +150,8 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Bot className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Nos ajustamos cuando los modelos cambian</h3>
-            <p className="text-zinc-500 text-sm">
-              ChatGPT cambia cada semana. Cuando tu posición se mueve, descubrimos por qué y lo corregimos — eso es lo que realmente compra la cuota mensual.
-            </p>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">{t("Trabajar con el SEO que ya tienes")}</h3>
+            <p className="text-zinc-500 text-sm"> {t("Partimos del trabajo existente y coordinamos las mejoras con tu equipo o agencia. Sumamos el análisis de respuestas de IA para detectar oportunidades que el ranking de Google, por sí solo, no muestra.")} </p>
           </m.div>
 
           {/* Elegible */}
@@ -203,10 +162,8 @@ export function BentoGrid() {
             <div className="p-2 rounded-lg bg-zinc-100 w-fit mb-4">
               <Target className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">Lo que te hace elegible</h3>
-            <p className="text-zinc-500 text-sm">
-              Convertimos el diagnóstico en posición: contenido que los modelos pueden citar, señales de autoridad en las fuentes que consultan y una base técnica que pueden leer y en la que pueden confiar.
-            </p>
+            <h3 className="text-lg font-semibold text-zinc-900 mb-2">{t("Mantener la información al día")}</h3>
+            <p className="text-zinc-500 text-sm"> {t("Revisamos qué cambia en las recomendaciones, qué productos se mencionan y si la información es correcta. Actualizamos los activos y las fuentes que podemos gestionar para sostener el trabajo.")} </p>
           </m.div>
         </m.div>
       </div>

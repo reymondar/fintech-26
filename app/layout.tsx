@@ -1,3 +1,4 @@
+import { headers } from "next/headers"
 import type React from "react"
 import type { Metadata } from "next"
 import { Manrope, Bricolage_Grotesque, Instrument_Sans } from "next/font/google"
@@ -29,10 +30,10 @@ const SITE_URL = "https://thestackhouse.io"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "The Stack House — Visibilidad en IA | Sé la empresa que ChatGPT recomienda",
+    default: "Visibilidad en IA para ecommerce | The Stack House",
     template: "%s — The Stack House",
   },
-  description: "The Stack House hace visible tu empresa en ChatGPT, Gemini, Perplexity y Claude. Diagnóstico honesto de por qué cae tu tráfico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Diagnóstico en vivo gratis de 20 minutos.",
+  description: "Ayudamos a tu ecommerce a aparecer en recomendaciones de IA y convertir ese interés en ventas. Catálogo, contenido, autoridad y conversión.",
   authors: [{ name: "Ramón Arana", url: SITE_URL }],
   icons: {
     icon: "/logo-stackhouse.png",
@@ -43,21 +44,21 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: SITE_URL,
     siteName: "The Stack House",
-    title: "The Stack House — Visibilidad en IA",
-    description: "Hacemos que tu empresa aparezca cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude. Diagnóstico en vivo gratuito de 20 minutos.",
+    title: "The Stack House — IA y conversión para ecommerce",
+    description: "Trabajamos tu catálogo, contenido y autoridad para ganar presencia en la IA, y mejoramos tu tienda para convertir ese interés en ventas.",
     images: [
       {
         url: "/og-default.png",
         width: 1200,
         height: 630,
-        alt: "The Stack House — Visibilidad en IA",
+        alt: "The Stack House — IA y conversión para ecommerce",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Stack House — Visibilidad en IA",
-    description: "Hacemos que tu empresa aparezca cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude.",
+    title: "The Stack House — IA y conversión para ecommerce",
+    description: "Ayudamos a tu ecommerce a ganar presencia en la IA y convertir ese interés en ventas.",
     images: ["/og-default.png"],
   },
   alternates: {
@@ -65,13 +66,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = (await headers()).get("x-sh-locale") === "en" ? "en" : "es"
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <Script
           id="gtm-script"
@@ -126,7 +128,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   availableLanguage: ["Spanish", "English"],
                 },
                 description:
-                  "Consultoría de visibilidad en IA (GEO/AEO). Hacemos que las empresas aparezcan cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude.",
+                  locale === "en" ? "The Stack House helps online stores gain visibility in AI recommendations and turn interest into sales through catalog, content, authority, conversion and sales tracking." : "The Stack House ayuda a ecommerce a ganar presencia en recomendaciones de IA y convertir ese interés en ventas mediante catálogo, contenido, autoridad, conversión y seguimiento comercial.",
                 knowsAbout: [
                   "Generative Engine Optimization",
                   "AI visibility",
@@ -146,14 +148,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 url: SITE_URL,
                 name: "The Stack House",
                 publisher: { "@id": `${SITE_URL}/#organization` },
-                inLanguage: "es",
+                inLanguage: ["es", "en"],
               },
               {
                 "@context": "https://schema.org",
                 "@type": "Person",
                 "@id": `${SITE_URL}/#ramon-arana`,
                 name: "Ramón Arana",
-                jobTitle: "Fundador",
+                jobTitle: locale === "en" ? "Founder" : "Fundador",
                 url: SITE_URL,
                 worksFor: { "@id": `${SITE_URL}/#organization` },
               },

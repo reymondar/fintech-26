@@ -1,9 +1,13 @@
 "use client"
 
+import { useTranslation } from "@/components/locale-provider"
+
 import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 
 export function Footer() {
+  const { t, locale, localizeHref } = useTranslation()
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-50px" })
 
@@ -18,53 +22,41 @@ export function Footer() {
         >
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
-              <img src="/logo-stackhouse.png" alt="The Stack House" className="w-6 h-6 object-contain" />
-              <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">The Stack House</span>
+            <a href={localizeHref("/")} className="flex items-center gap-2 mb-4">
+              <img src="/logo-stackhouse.png" alt={t("The Stack House")} className="w-6 h-6 object-contain" />
+              <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">{t("The Stack House")}</span>
             </a>
-            <p className="text-sm text-zinc-500">
-              Hacemos tu negocio legible, confiable y elegible para la IA.
-            </p>
+            <p className="text-sm text-zinc-500"> {t("Ayudamos a tu ecommerce a aparecer en la IA y convertir ese interés en ventas.")} </p>
           </div>
 
           {/* Sitio */}
           <div>
-            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Sitio</h4>
+            <h4 className="text-sm font-semibold text-zinc-900 mb-4">{t("Sitio")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/#how-it-works" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Cómo funciona
-                </a>
+                <a href={localizeHref("/#how-it-works")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Cómo funciona")} </a>
               </li>
               <li>
-                <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Blog
-                </a>
+                <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Blog")} </a>
               </li>
               <li>
-                <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Contacto
-                </a>
+                <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Contacto")}{locale === "en" ? " (ES)" : ""} </a>
               </li>
               <li>
-                <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
-                  Agenda tu diagnóstico
-                </a>
+                <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Revisemos tu ecommerce")} </a>
               </li>
             </ul>
           </div>
 
           {/* Contacto */}
           <div>
-            <h4 className="text-sm font-semibold text-zinc-900 mb-4">Contacto</h4>
+            <h4 className="text-sm font-semibold text-zinc-900 mb-4">{t("Contacto")}</h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="mailto:hello@thestackhouse.com"
                   className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
-                >
-                  hello@thestackhouse.com
-                </a>
+                > {t("hello@thestackhouse.com")} </a>
               </li>
             </ul>
           </div>
@@ -77,7 +69,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 pt-8 border-t border-zinc-200 flex items-center justify-center"
         >
-          <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} The Stack House. Todos los derechos reservados.</p>
+          <p className="text-sm text-zinc-500">{t("©")} {new Date().getFullYear()} {t("The Stack House. Todos los derechos reservados.")}</p>
         </m.div>
       </div>
     </footer>

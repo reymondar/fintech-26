@@ -1,30 +1,36 @@
 "use client"
 
+import { useTranslation } from "@/components/locale-provider"
+
 import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Search } from "lucide-react"
 
 const queries = [
-  "Cuáles son los mejores hoteles para quedarse en Murcia por menos de 200 euros?",
-  "Necesito una cuerda y pies de gato para iniciarme en escalada, dónde compro online que no sea Decathlon?",
-  "Cuáles son las tostadoras de café mejor puntuadas para casa?",
-  "Alternativas profesionales a HubSpot con soporte nativo en español",
-  "Cuánto puede salir hacerse una rinoplastia en Murcia? Dime clínicas",
-  "Precio real de un implante dental en Valencia? Ordéname clínicas de mejor a peor",
-  "Dónde comprar suplementos deportivos online que no sea Amazon?",
-  "Merece la pena pagar 180 la noche en ese hotel de Jávea? Dame alternativas cerca",
+  "¿Qué cafetera profesional me conviene para abrir una cafetería?",
+  "¿Dónde comprar equipamiento de gimnasio con instalación y garantía?",
+  "¿Qué diferencia hay entre estos dos equipos de depilación láser?",
+  "¿Qué proveedor de herramientas industriales tiene servicio técnico?",
+  "¿Qué portátil elegir para editar vídeo sin gastar de más?",
+  "¿Dónde comprar una silla ergonómica con envío a mi ciudad?",
+  "¿Qué cámara me recomiendas para fotografiar productos?",
+  "¿Qué tienda ofrece repuestos compatibles con esta máquina?"
 ]
 
 function QueryTile({ text }: { text: string }) {
+  const { t, locale, localizeHref } = useTranslation()
+
   return (
     <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-zinc-200 bg-white px-5 py-4 shadow-sm">
       <Search className="h-4 w-4 text-zinc-400 shrink-0" strokeWidth={1.5} />
-      <span className="text-sm text-zinc-700 whitespace-nowrap">&ldquo;{text}&rdquo;</span>
+      <span className="text-sm text-zinc-700 whitespace-nowrap">{t("“")}{t(text)}{t("”")}</span>
     </div>
   )
 }
 
 function Marquee({ items }: { items: string[] }) {
+  const { t, locale, localizeHref } = useTranslation()
+
   return (
     <div className="flex overflow-hidden">
       <div className="flex shrink-0 gap-5 pr-5 animate-marquee">
@@ -42,11 +48,13 @@ function Marquee({ items }: { items: string[] }) {
 }
 
 export function Integrations() {
+  const { t, locale, localizeHref } = useTranslation()
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="overflow-hidden py-12 px-4">
+    <section ref={ref} className="overflow-hidden py-8 sm:py-10 px-4">
       <div className="mx-auto max-w-3xl text-center mb-16">
         <m.h2
           initial={{ opacity: 1, y: 20 }}
@@ -55,8 +63,8 @@ export function Integrations() {
           className="text-3xl sm:text-4xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-instrument-sans)" }}
         >
-          <span className="block text-zinc-900">~29.000 preguntas cada segundo.</span>
-          <span className="block text-zinc-400">La única pregunta es si tú estás en ellas.</span>
+          <span className="block text-zinc-900">{t("~29.000 preguntas cada segundo.")}</span>
+          <span className="block text-zinc-400">{t("La única pregunta es si tú estás en ellas.")}</span>
         </m.h2>
       </div>
 
@@ -77,9 +85,7 @@ export function Integrations() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.5 }}
         className="text-center text-lg text-zinc-500 mt-12 max-w-2xl mx-auto leading-relaxed"
-      >
-        Entra en la conversación. Deja que tus clientes te encuentren.
-      </m.p>
+      > {t("Entra en la conversación. Deja que tus clientes te encuentren.")} </m.p>
     </section>
   )
 }

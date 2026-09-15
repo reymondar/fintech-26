@@ -1,72 +1,37 @@
 "use client"
 
+import { useTranslation } from "@/components/locale-provider"
+
 import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-const faqs = [
-  {
-    question: "¿Qué hace exactamente The Stack House?",
-    answer:
-      "The Stack House hace visible a tu empresa en motores de IA como ChatGPT, Gemini, Perplexity y Claude. Diagnosticamos cómo te ven los modelos cuando tus compradores preguntan por tu categoría, atribuimos tu caída de tráfico a sus causas reales y construimos la posición para que la IA te recomiende.",
-  },
-  {
-    question: "¿En qué se diferencia de una herramienta de monitorización?",
-    answer:
-      "Una herramienta de monitorización te dice si la IA te menciona. Nosotros te decimos por qué pierdes tráfico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Los datos son el punto de partida; el valor está en el diagnóstico y la ejecución.",
-  },
-  {
-    question: "Ya invierto en SEO. ¿No es pagar lo mismo dos veces?",
-    answer:
-      "No. El SEO trabaja tu posición en una lista de enlaces; la visibilidad en IA decide si el modelo te nombra en su respuesta. Comparten base técnica, pero se miden y se trabajan distinto. De hecho, nuestro diagnóstico le dice a tu SEO dónde enfocar: separa lo que es problema de buscadores de lo que es problema de IA.",
-  },
-  {
-    question: "¿Garantizan que la IA me va a recomendar?",
-    answer:
-      "No, y desconfía de quien lo garantice. Los modelos son probabilísticos: la misma pregunta puede dar respuestas distintas el mismo día. Lo que sí garantizamos: medición rigurosa y comparable, un diagnóstico honesto de tus causas de caída y acciones que aumentan tu probabilidad de aparecer.",
-  },
-  {
-    question: "¿Cuánto cuesta?",
-    answer:
-      "El diagnóstico en vivo de 20 minutos es gratis. La auditoría completa tiene precio cerrado antes de empezar, en función del tamaño de tu presencia digital y tu competencia. Sin permanencia y sin letra pequeña.",
-  },
-  {
-    question: "Mi negocio es \"aburrido\" (industrial, B2B, nicho). ¿Esto aplica?",
-    answer:
-      "Sí — y suele ser donde más rápido se gana. En sectores nicho los modelos se apoyan en muy pocas fuentes de autoridad: estar en las correctas cuesta menos y mueve más que en mercados saturados. El diagnóstico en vivo te lo confirma en 20 minutos con tus propias preguntas de compra.",
-  },
-  {
-    question: "¿Tienen que reconstruir mi sitio web?",
-    answer:
-      "No. La mayoría de acciones son ajustes sobre lo que ya tienes: hacer tu contenido legible y citable para los modelos, corregir bloqueos técnicos que ni sabías que existían y ganar presencia en las fuentes que la IA consulta en tu sector. Si algo requiere desarrollo, lo verás en el plan y decides tú.",
-  },
-  {
-    question: "¿Y si la auditoría concluye que mi problema no es la IA?",
-    answer:
-      "Te lo decimos por escrito, con el desglose de causas reales. Pagas un diagnóstico verdadero, no una excusa para vendernos. Esta regla no es marketing: es cómo trabajamos.",
-  },
-]
+import { landingFaqs as faqs } from "@/lib/landing-copy"
 
 export function FAQ() {
+  const { t, locale } = useTranslation()
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="faq" ref={ref} className="py-12 px-4">
-      <div className="max-w-3xl mx-auto">
+    <section id="faq" ref={ref} className="py-10 sm:py-14 px-4 scroll-mt-28">
+      <div className="max-w-6xl mx-auto grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <m.div
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="lg:sticky lg:top-32"
         >
+          <span className="mb-6 inline-flex rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm text-zinc-500 shadow-sm">FAQs</span>
           <h2
-            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] text-zinc-900 mb-6"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            <span className="block">Preguntas frecuentes.</span>
-            <span className="block text-zinc-400">Las respuestas honestas.</span>
+            <span className="block">{t("Lo que necesitas saber")}</span>
+            <span className="block text-zinc-400">{t("antes de empezar.")}</span>
           </h2>
+          <p className="text-sm leading-relaxed text-zinc-500">{locale === "es" ? "¿Tienes otra pregunta?" : "Have another question?"}{" "}<a href="mailto:hello@thestackhouse.com" className="font-medium text-emerald-700 underline-offset-4 hover:underline">{locale === "es" ? "Escríbenos" : "Get in touch"}</a></p>
         </m.div>
 
         <m.div
@@ -74,14 +39,14 @@ export function FAQ() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-3">
             {faqs.map((faq, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-zinc-200">
-                <AccordionTrigger className="text-left text-zinc-900 hover:text-zinc-700 text-base font-medium">
-                  {faq.question}
+              <AccordionItem key={i} value={`item-${i}`} className="rounded-2xl border border-zinc-200 last:border-b bg-gradient-to-br from-white to-zinc-100/60 shadow-sm transition-colors data-[state=open]:border-emerald-200 data-[state=open]:bg-emerald-50/40">
+                <AccordionTrigger className="rounded-2xl px-5 py-6 sm:px-6 text-left text-zinc-900 hover:text-emerald-700 hover:no-underline text-base font-medium focus-visible:ring-emerald-500/40 [&>svg]:text-zinc-400 [&[data-state=open]>svg]:text-emerald-600">
+                  {t(faq.question)}
                 </AccordionTrigger>
-                <AccordionContent className="text-zinc-500 text-sm leading-relaxed">
-                  {faq.answer}
+                <AccordionContent className="px-5 pb-6 sm:px-6 text-zinc-500 text-sm leading-relaxed">
+                  {t(faq.answer)}
                 </AccordionContent>
               </AccordionItem>
             ))}

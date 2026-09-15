@@ -13,7 +13,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const landingEntries: MetadataRoute.Sitemap = (["es", "en"] as const).map(locale => ({
+    url: `${SITE_URL}/${locale}`,
+    changeFrequency: "weekly",
+    priority: 1,
+    alternates: { languages: { es: `${SITE_URL}/es`, en: `${SITE_URL}/en`, "x-default": SITE_URL } },
+  }))
+
   return [
+    ...landingEntries,
     {
       url: SITE_URL,
       lastModified: new Date(),

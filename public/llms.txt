@@ -1,18 +1,14 @@
 # The Stack House
 
-> Consultoría de visibilidad en IA (GEO/AEO) con base en España. Hacemos que las empresas aparezcan cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude. Auditamos el Share of Model de cada cliente, identificamos por qué cae el tráfico orgánico y ejecutamos las acciones técnicas y de contenido que aumentan la probabilidad de citación en IA — independiente del SEO tradicional.
+> The Stack House ayuda a ecommerce a ganar presencia en recomendaciones de IA y convertir ese interés en ventas. Trabaja catálogo, contenido, autoridad, conversión y seguimiento comercial.
 
 ## Inicio
 
-- [The Stack House — Visibilidad en IA](https://thestackhouse.io): Página principal. Explica por qué el ranking en Google ya no predice la visibilidad en IA, y cómo The Stack House mide y recupera esa posición.
+- [The Stack House — Ecommerce, IA y conversión](https://thestackhouse.io): Cómo trabajamos catálogo, contenido, autoridad y conversión para ganar presencia en IA y generar oportunidades comerciales.
 
-## Servicios
+## Cómo trabajamos
 
-- [Servicios — Auditoría, Construir, Defender, Expandir](https://thestackhouse.io/services): Cuatro niveles de servicio que se desbloquean en secuencia. Empieza con auditoría gratuita (Share of Model baseline) y escala hasta automatizaciones de citación y agentes de IA con catálogo propio.
-
-## Casos
-
-- [Casos de uso](https://thestackhouse.io/cases): Ejemplos de diagnósticos de visibilidad en IA aplicados a empresas reales.
+- [Implementación para ecommerce](https://thestackhouse.io/#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
 
 ## Herramientas
 
@@ -37,10 +33,17 @@
 
 ## Contacto y diagnóstico
 
-- [Diagnóstico en vivo gratuito (20 min)](https://calendar.app.google/aGDRM9XzkQFEndG77): Sesión donde se analiza la marca del prospecto en los motores de IA en tiempo real, con las preguntas reales de compra de su sector.
+- [Diagnóstico en vivo gratuito (20 min)](https://calendar.app.google/aGDRM9XzkQFEndG77): Primera revisión del ecommerce y una muestra de preguntas de compra para identificar oportunidades y valorar el encaje.
 - [Formulario de contacto](https://thestackhouse.io/contacto): Contacto directo con el equipo de The Stack House.
 
 ## Optional
 
-- [Engagement Ladder — precios y estructura](https://thestackhouse.io/services#engagement): Auditoría gratis · Construir desde $1,500/proyecto · Defender desde $500/mes · Expandir (custom).
 - [Sitemap](https://thestackhouse.io/sitemap.xml): Mapa completo del sitio con todas las URLs y fechas de actualización.
+
+
+## Idiomas de la landing / Landing languages
+
+- [Español](https://thestackhouse.io/es): Versión española de la landing de ecommerce.
+- [English](https://thestackhouse.io/en): AI visibility and conversion for ecommerce. Catalog, content, external authority and sales tracking.
+
+La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y /en conservan el idioma solicitado. El blog mantiene sus artículos en español.

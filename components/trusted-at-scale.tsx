@@ -1,214 +1,87 @@
 "use client"
 
-import { m, useInView, AnimatePresence } from "framer-motion"
-import { useEffect, useMemo, useRef, useState } from "react"
+import { AILayerFunnel } from "@/components/ai-layer-funnel"
+import { useTranslation } from "@/components/locale-provider"
+import { m, useInView, useReducedMotion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
 const steps = [
   {
-    number: "01",
-    title: "Diagnóstico en vivo · gratis · 20 min",
-    description:
-      "Ejecutamos delante de ti las preguntas que tus compradores le hacen a la IA, contra tus competidores reales. Sales de la llamada sabiendo si la IA te ve y si tiene sentido ir más allá. Si no lo tiene, te lo decimos y ahí acaba.",
+    "number": "01",
+    "title": "Analizamos tu tienda con agentes de IA",
+    "description": "Evaluamos cómo la IA interpreta tu catálogo y responde a las preguntas de tus compradores."
   },
   {
-    number: "02",
-    title: "Auditoría completa · 7–10 días",
-    description:
-      "Tu visibilidad medida con método, la atribución de tu caída de tráfico y un plan de 30 días con las acciones que de verdad mueven la aguja. Precio cerrado antes de empezar.",
+    "number": "02",
+    "title": "Construimos tu motor de captación",
+    "description": "Anticipa lo que busca cada comprador y adapta la experiencia para convertir su interés en ventas."
   },
   {
-    number: "03",
-    title: "Sesión de entrega · 45 min",
-    description:
-      "Repasamos el informe contigo y acordamos por dónde empezar. Sin letra pequeña: la auditoría no incluye implementación — por eso el diagnóstico es imparcial.",
-  },
+    "number": "03",
+    "title": "Personalizamos experiencias y te posicionamos",
+    "description": "Adaptamos tu tienda a cada comprador y trabajamos tu presencia en las recomendaciones de IA."
+  }
 ]
 
-type Drop = {
-  left: number
-  top: number
-  height: number
-  width: number
-  opacity: number
-  duration: number
-  delay: number
-  fall: number
-  dot: number
-}
-
-function makeRng(seed: number) {
-  let a = seed
-  return () => {
-    a |= 0
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
-
-function generateDrops(count: number, seed: number): Drop[] {
-  const rng = makeRng(seed)
-  const range = (min: number, max: number) => min + rng() * (max - min)
-  return Array.from({ length: count }, () => ({
-    left: Math.pow(rng(), 1.4) * 100,
-    top: range(-5, 80),
-    height: range(40, 170),
-    width: rng() > 0.8 ? 1.5 : 1,
-    opacity: range(0.25, 0.85),
-    duration: range(3, 7),
-    delay: range(0, 4),
-    fall: range(6, 22),
-    dot: range(4, 8),
-  }))
-}
-
-function Rain({ drops, className = "" }: { drops: Drop[]; className?: string }) {
-  return (
-    <div className={`absolute inset-0 ${className}`} aria-hidden="true">
-      {drops.map((d, i) => (
-        <m.div
-          key={i}
-          className="absolute flex flex-col items-center"
-          style={{ left: `${d.left}%`, top: `${d.top}%`, opacity: d.opacity }}
-          initial={{ opacity: 1, y: -24 }}
-          animate={{
-            opacity: [0, d.opacity, d.opacity, d.opacity * 0.35],
-            y: [-24, 0, 0, d.fall],
-          }}
-          transition={{
-            duration: d.duration,
-            delay: d.delay,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "reverse",
-            ease: "easeInOut",
-          }}
-        >
-          <div
-            className="bg-gradient-to-b from-transparent to-emerald-500/70"
-            style={{ height: d.height, width: d.width }}
-          />
-          <span
-            className="-mt-px rounded-full bg-emerald-500"
-            style={{ height: d.dot, width: d.dot }}
-          />
-        </m.div>
-      ))}
-    </div>
-  )
-}
+const duration = 9000
 
 export function TrustedAtScale() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [mounted, setMounted] = useState(false)
-  const [openStep, setOpenStep] = useState(0)
-  useEffect(() => setMounted(true), [])
-
-  const columnDrops = useMemo(() => generateDrops(28, 1337), [])
-  const ambientDrops = useMemo(() => generateDrops(22, 90210), [])
+  const { t, locale } = useTranslation()
+  const ref = useRef<HTMLElement>(null)
+  const visible = useInView(ref, { amount: 0.25 })
+  const reducedMotion = useReducedMotion()
+  const [active, setActive] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [hovered, setHovered] = useState(false)
+  const [focused, setFocused] = useState(false)
+  const [pageVisible, setPageVisible] = useState(true)
+  const running = visible && !reducedMotion && !paused && !hovered && !focused && pageVisible
+  useEffect(() => {
+    const update = () => setPageVisible(!document.hidden)
+    update()
+    document.addEventListener("visibilitychange", update)
+    return () => document.removeEventListener("visibilitychange", update)
+  }, [])
+  useEffect(() => {
+    if (!running) return
+    const timer = window.setTimeout(() => setActive(index => (index + 1) % steps.length), duration)
+    return () => window.clearTimeout(timer)
+  }, [active, running])
 
   return (
-    <section id="how-it-works" ref={ref} className="relative overflow-hidden px-4 py-12">
-      {mounted && (
-        <m.div
-          initial={{ opacity: 1 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 1.2 }}
-          className="pointer-events-none absolute inset-0 z-0 lg:hidden"
-        >
-          <Rain drops={ambientDrops} className="opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-50/40 to-zinc-50/70" />
-        </m.div>
-      )}
-
-      <div className="relative z-10 mx-auto max-w-6xl">
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-8">
+    <section id="how-it-works" ref={ref} className="px-4 py-10 sm:py-14 scroll-mt-28">
+      <div id="features" className="mx-auto max-w-6xl">
+        <header className="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{t("Cómo funciona")}</p>
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{t("Un motor de captación que trabaja alrededor de tu infraestructura")}</h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-500">{t("Tu tienda y tus herramientas. Nosotros nos encargamos de hacerlo funcionar.")}</p>
+        </header>
+        <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.2fr] lg:gap-12"
+          onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
+          onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false) }}>
           <div>
-            <m.div
-              initial={{ opacity: 1, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="flex items-center gap-2"
-            >
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">Cómo funciona</span>
-              <span className="h-2 w-2 rounded-full bg-emerald-500 pulse-glow" />
-            </m.div>
-
-            <m.h2
-              initial={{ opacity: 1, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 text-balance text-4xl font-bold leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl"
-              style={{ fontFamily: "var(--font-cal-sans)" }}
-            >
-              De &quot;no sé qué está pasando&quot;{" "}
-              <span className="text-zinc-400">a plan de acción, en tres pasos.</span>
-            </m.h2>
-
-            <m.p
-              initial={{ opacity: 1, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 text-zinc-500 text-base sm:text-lg leading-relaxed max-w-lg"
-            />
+            {steps.map((step, index) => (
+              <div key={step.number} className="relative border-t border-zinc-200 last:border-b">
+                <h3>
+                  <button type="button" id={`process-step-${index}`} aria-expanded={active === index} aria-controls={`process-description-${index}`}
+                    onClick={() => setActive(index)} className="flex w-full items-start gap-4 py-6 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
+                    <span className={`pt-1 font-mono text-sm ${active === index ? "text-emerald-600" : "text-zinc-400"}`}>{step.number}</span>
+                    <span className={`text-lg font-semibold leading-snug sm:text-xl ${active === index ? "text-zinc-900" : "text-zinc-400"}`}>{t(step.title)}</span>
+                  </button>
+                </h3>
+                <div id={`process-description-${index}`} hidden={active !== index} className="pb-7 pl-9 text-sm leading-relaxed text-zinc-500">{t(step.description)}</div>
+                {active === index && <m.div key={`${active}-${running}`} className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-emerald-500" initial={{ scaleX: running ? 0 : 1 }} animate={{ scaleX: 1 }} transition={{ duration: running ? duration / 1000 : 0, ease: "linear" }} />}
+              </div>
+            ))}
           </div>
-
-          {mounted && (
-            <m.div
-              initial={{ opacity: 1 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="relative hidden h-[28rem] lg:block"
-            >
-              <Rain drops={columnDrops} />
-            </m.div>
-          )}
+          <figure className="min-w-0">
+            <AILayerFunnel active={active} running={running} locale={locale} />
+            <figcaption className="mt-4 flex items-center justify-between gap-3 text-xs text-zinc-400">
+              <span>{locale === "es" ? "Ilustración del proceso" : "Process illustration"} · {steps[active].number} / 03</span>
+              {!reducedMotion && <button type="button" onClick={() => setPaused(value => !value)} className="rounded-full border border-zinc-200 px-3 py-2 text-zinc-500 hover:text-zinc-900">{locale === "es" ? (paused ? "Reanudar" : "Pausar") : (paused ? "Resume" : "Pause")}</button>}
+            </figcaption>
+          </figure>
         </div>
-
-        {/* Steps accordion */}
-        <m.div
-          initial={{ opacity: 1, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20 lg:mt-28 flex flex-col gap-0"
-        >
-          {steps.map((step, i) => {
-            const isOpen = openStep === i
-            return (
-              <button
-                key={step.number}
-                onClick={() => setOpenStep(i)}
-                className="text-left border-t border-zinc-200 last:border-b py-6 flex items-start gap-6 group cursor-pointer"
-              >
-                <span
-                  className={`text-3xl font-bold tracking-tight transition-colors ${isOpen ? "text-emerald-500" : "text-zinc-300"}`}
-                  style={{ fontFamily: "var(--font-cal-sans)" }}
-                >
-                  {step.number}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`text-lg font-semibold transition-colors ${isOpen ? "text-zinc-900" : "text-zinc-500"}`}>
-                    {step.title}
-                  </h3>
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <m.p
-                        initial={{ height: 0, opacity: 1 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                        className="text-zinc-500 text-sm leading-relaxed mt-2 overflow-hidden"
-                      >
-                        {step.description}
-                      </m.p>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </button>
-            )
-          })}
-        </m.div>
       </div>
     </section>
   )

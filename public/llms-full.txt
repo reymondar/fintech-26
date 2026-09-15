@@ -1,30 +1,35 @@
 # The Stack House — Documentación completa para modelos de lenguaje
 
-> Consultoría de visibilidad en IA (GEO/AEO) con base en España. Hacemos que las empresas aparezcan cuando sus compradores preguntan a ChatGPT, Gemini, Perplexity o Claude.
+> The Stack House ayuda a ecommerce a ganar presencia en recomendaciones de IA y convertir ese interés en ventas. Trabaja catálogo, contenido, autoridad, conversión y seguimiento comercial.
 
 ---
 
 ## ¿Qué es The Stack House?
 
-The Stack House es una consultora especializada en Generative Engine Optimization (GEO) y Answer Engine Optimization (AEO). Nuestra misión es hacer visible a las empresas en los motores de IA generativa: ChatGPT, Gemini, Perplexity, Claude y AI Overviews de Google.
+Ayudamos a tu ecommerce a aparecer cuando un comprador pide recomendaciones a la IA. Trabajamos tu catálogo, tu contenido y tu reputación, y mejoramos la tienda para convertir ese interés en ventas.
 
-A diferencia de una herramienta de monitorización, The Stack House diagnostica por qué cae el tráfico orgánico, cuánto es atribuible a la IA y qué hacer para recuperar la posición. Los datos son el punto de partida; el valor está en el diagnóstico y la ejecución.
+## Cómo ayudamos a que aparezcan tus productos
 
----
+- Completamos atributos, compatibilidades, usos y condiciones del catálogo y corregimos el acceso a las páginas.
+- Creamos y actualizamos comparativas, guías y páginas de producto que responden preguntas de compra.
+- Identificamos fuentes externas relevantes y trabajamos para construir presencia y respaldo para la marca.
+- Medimos recomendaciones y fuentes citadas en consultas de compra, con una configuración comparable.
+- Coordinamos las mejoras con el SEO y el equipo existentes, y mantenemos la información actualizada.
 
-## Servicios
+## Cómo trabajamos la conversión
 
-### 1. Auditoría (Gratis — el punto de partida)
-Diagnóstico en vivo de 20 minutos sin costo. Se analiza la marca del cliente en los motores de IA en tiempo real con las preguntas reales de compra de su sector. Incluye baseline de Share of Model.
+Mejoramos páginas de producto, comparaciones, garantías, condiciones, formularios y llamadas a la acción. Adaptamos la experiencia según las señales disponibles y conectamos consultas, agenda y CRM para conservar el contexto y dar seguimiento. Trabajamos con compra directa y venta asistida por consulta, presupuesto o demo.
 
-### 2. Construir (desde $1,500/proyecto)
-Construcción de presencia en IA: optimización técnica de contenido para que los modelos puedan leerlo y citarlo, corrección de bloqueos técnicos, y posicionamiento en las fuentes que la IA consulta en el sector del cliente.
+## Cómo trabajamos contigo
 
-### 3. Defender (desde $500/mes)
-Monitorización continua del Share of Model, alertas ante cambios en las respuestas de los motores de IA y ajustes tácticos para mantener la posición ganada.
+1. Revisamos tienda, catálogo, preguntas de compra y recorrido comercial. Acordamos alcance, inversión y medición.
+2. Implementamos sobre la plataforma y las herramientas existentes. El cliente aporta accesos y valida información; The Stack House coordina y ejecuta.
+3. Medimos recomendaciones, visitas, compras y oportunidades para decidir las siguientes mejoras.
 
-### 4. Expandir (precio custom)
-Automatizaciones de citación, agentes de IA con catálogo propio y estrategias avanzadas de presencia en ecosistemas de IA emergentes.
+## Medición
+
+Conectamos presencia en IA, visitas identificables, compras, contactos y resultados registrados en el CRM. Distinguimos el origen rastreable de la influencia declarada por el comprador y señalamos lo que no se puede atribuir. No garantizamos recomendaciones ni un aumento de ventas.
+
 
 ---
 
@@ -164,3 +169,11 @@ Un portfolio técnico legible por máquinas conecta identidad, rol, proyectos, d
 ## Política de acceso para modelos de IA
 
 The Stack House permite explícitamente el acceso y la indexación de todo su contenido a todos los motores de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Bingbot, etc.). Ver robots.txt completo en: https://thestackhouse.io/robots.txt
+
+
+## Idiomas de la landing / Landing languages
+
+- [Español](https://thestackhouse.io/es): Versión española de la landing de ecommerce.
+- [English](https://thestackhouse.io/en): AI visibility and conversion for ecommerce. Catalog, content, external authority and sales tracking.
+
+La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y /en conservan el idioma solicitado. El blog mantiene sus artículos en español.

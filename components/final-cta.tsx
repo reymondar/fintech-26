@@ -1,16 +1,20 @@
 "use client"
 
+import { useTranslation } from "@/components/locale-provider"
+
 import { m, useInView } from "framer-motion"
 import { useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function FinalCTA() {
+  const { t, locale, localizeHref } = useTranslation()
+
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="audit" className="py-12 px-4">
+    <section id="audit" className="py-8 sm:py-10 px-4">
       <m.div
         ref={ref}
         initial={{ opacity: 1, y: 40 }}
@@ -22,25 +26,21 @@ export function FinalCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          <span className="text-zinc-900">Deja de especular:</span>{" "}
-          <span className="text-zinc-400">descubre si la IA te está quitando clientes.</span>
+          <span className="text-zinc-900">{t("Veamos qué oportunidades")}</span>{" "}
+          <span className="text-zinc-400">{t("tiene tu ecommerce.")}</span>
         </h2>
-        <p className="text-lg sm:text-xl text-zinc-500 mb-12 max-w-2xl mx-auto">
-          Reserva la llamada. Ejecutamos delante de ti las preguntas que tus compradores le hacen a la IA, contra tus competidores reales. Si ya te recomienda, te lo diremos y no necesitas nada más. Si no — sabrás exactamente qué te está costando y cuál es el primer paso.
-        </p>
+        <p className="text-lg sm:text-xl text-zinc-500 mb-12 max-w-2xl mx-auto"> {t("Descubre dónde mejorar tu presencia en IA y convertir más visitas en ventas.")} </p>
 
         <Button
           asChild
           size="lg"
           className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
         >
-          <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer">
-            Reservar diagnóstico gratis
-            <ArrowRight className="ml-2 w-5 h-5" />
+          <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer"> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </Button>
 
-        <p className="mt-8 text-sm text-zinc-500">20 minutos · sin tarjeta · sin compromiso</p>
+        <p className="mt-8 text-sm text-zinc-500">{t("20 minutos · sin costo · sin compromiso")}</p>
       </m.div>
     </section>
   )

@@ -1,8 +1,11 @@
 "use client"
 
+import { useTranslation } from "@/components/locale-provider"
+
 import { useState, useEffect } from "react"
 import { m, AnimatePresence } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { HeroBuyerJourney } from "@/components/hero-buyer-journey"
 import { Button } from "@/components/ui/button"
 
 const textRevealVariants = {
@@ -11,7 +14,7 @@ const textRevealVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
       delay: i * 0.1,
     },
   }),
@@ -20,6 +23,8 @@ const textRevealVariants = {
 const platforms = ["ChatGPT", "Perplexity", "Claude", "Gemini"]
 
 export function Hero() {
+  const { t, locale, localizeHref } = useTranslation()
+
   const [platformIndex, setPlatformIndex] = useState(0)
 
   useEffect(() => {
@@ -40,10 +45,10 @@ export function Hero() {
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 mb-12 shadow-sm"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 mb-5 sm:mb-6 shadow-sm"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500 pulse-glow" />
-          <span className="text-sm text-zinc-500">Visibilidad en IA · España</span>
+          <span className="text-sm text-zinc-500">{t("Vende a través de la IA sin esfuerzo")}</span>
         </m.div>
 
         {/* H1 */}
@@ -52,13 +57,10 @@ export function Hero() {
           style={{ fontFamily: "var(--font-instrument-sans), sans-serif" }}
         >
           <span className="block overflow-hidden">
-            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={0}>
-              Tu próximo cliente está
-            </m.span>
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={0}> {t("Tu próximo cliente está")} </m.span>
           </span>
           <span className="block overflow-hidden">
-            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={1}>
-              buscándote en{" "}
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={1}> {t("buscándote en")}{" "}
               <span className="inline-block relative align-bottom overflow-hidden" style={{ minWidth: "6ch" }}>
                 <AnimatePresence mode="wait">
                   <m.span
@@ -76,21 +78,17 @@ export function Hero() {
             </m.span>
           </span>
           <span className="block overflow-hidden">
-            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={2}>
-              Conviértete en la respuesta.
-            </m.span>
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={2}> {t("Conviértete en la respuesta.")} </m.span>
           </span>
         </h1>
 
         {/* Subhead */}
-        <m.p
+        <m.h2
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-base sm:text-lg text-zinc-500 max-w-2xl mx-auto mb-14 leading-relaxed"
-        >
-          The Stack House hace visible tu empresa en los motores de IA. Empezamos por lo que nadie más responde: cuánta de tu caída es culpa de la IA, cuánto negocio te está costando — y qué hacer para recuperarlo.
-        </m.p>
+          className="text-[11.2px] sm:text-[12.6px] font-normal text-zinc-500 max-w-3xl mx-auto mb-10 leading-relaxed"
+        > {t("The Stack House posiciona tu ecommerce en las respuestas de IA y optimiza tu tienda para convertir ese interés en ventas. Trabajamos tu catálogo, contenido y experiencia de compra, y medimos su impacto comercial.")} </m.h2>
 
         {/* CTA */}
         <m.div
@@ -104,12 +102,14 @@ export function Hero() {
             size="lg"
             className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
-            <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer">
-              Agenda tu llamada de diagnóstico
-              <ArrowRight className="ml-2 w-4 h-4" />
+            <a href="https://calendar.app.google/aGDRM9XzkQFEndG77" target="_blank" rel="noopener noreferrer"> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
         </m.div>
+
+        <p className="text-xs text-zinc-400 mb-4">{t("20 minutos · primera revisión sin costo")}</p>
+
+        <HeroBuyerJourney />
 
         {/* Dashboard preview */}
         <m.div
@@ -118,10 +118,11 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.8 }}
           className="relative mx-auto max-w-4xl mt-4 -mb-16"
         >
+          <p className="text-xs text-zinc-400 mb-3">{t("Seguimiento de visibilidad")}</p>
           <div className="relative rounded-t-2xl overflow-hidden">
             <img
               src="/dashboard-preview.webp"
-              alt="Panel de monitorización de The Stack House"
+              alt={t("Vista de la herramienta de seguimiento de visibilidad en IA")}
               className="w-full block"
             />
             <div

@@ -23,7 +23,7 @@ const textRevealVariants = {
 const platforms = ["ChatGPT", "Perplexity", "Claude", "Gemini"]
 
 export function Hero() {
-  const { t, locale, localizeHref } = useTranslation()
+  const { t, localizeHref } = useTranslation()
 
   const [platformIndex, setPlatformIndex] = useState(0)
 
@@ -107,32 +107,8 @@ export function Hero() {
           </Button>
         </m.div>
 
-        <p className="text-xs text-zinc-400 mb-4">{t("primera revisión sin costo")}</p>
-
         <HeroBuyerJourney />
 
-        {/* Dashboard preview */}
-        <m.div
-          initial={{ opacity: 1, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-          className="relative mx-auto max-w-4xl mt-4 -mb-16"
-        >
-          <p className="text-xs text-zinc-400 mb-3">{t("Seguimiento de visibilidad")}</p>
-          <div className="relative rounded-t-2xl overflow-hidden">
-            <img
-              src="/dashboard-preview.webp"
-              alt={t("Vista de la herramienta de seguimiento de visibilidad en IA")}
-              className="w-full block"
-            />
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: 'linear-gradient(to bottom, transparent 30%, rgba(250,250,250,0.7) 55%, rgb(250,250,250) 80%)',
-              }}
-            />
-          </div>
-        </m.div>
       </div>
     </section>
   )

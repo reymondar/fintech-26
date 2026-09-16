@@ -1,68 +1,11 @@
-# The Stack House — robots.txt
-# Política: exposición máxima a todos los motores de IA
-
-# OpenAI — entrenamiento
-User-agent: GPTBot
-Allow: /
-
-# OpenAI — ChatGPT Search (citaciones en tiempo real)
-User-agent: OAI-SearchBot
-Allow: /
-
-# OpenAI — fetch directo desde el chat del usuario
-User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic — entrenamiento
-User-agent: ClaudeBot
-Allow: /
-
-# Anthropic — índice de búsqueda de Claude
-User-agent: Claude-SearchBot
-Allow: /
-
-# Anthropic — fetch directo desde el chat del usuario
-User-agent: Claude-User
-Allow: /
-
-# Perplexity — indexación y búsqueda
-User-agent: PerplexityBot
-Allow: /
-
-# Google — entrenamiento de Gemini
-User-agent: Google-Extended
-Allow: /
-
-# Google — búsqueda orgánica y AI Mode
-User-agent: Googlebot
-Allow: /
-
-# Microsoft — Bing y Copilot
-User-agent: Bingbot
-Allow: /
-
-# Meta AI
-User-agent: meta-externalagent
-Allow: /
-
-# Common Crawl — corpus de entrenamiento para modelos de IA (GPT, Llama, Mistral, etc.)
-User-agent: CCBot
-Allow: /
-
-# Todos los demás
+# Public content is available to search and AI crawlers.
 User-agent: *
 Allow: /
+Disallow: /api/audit
+Disallow: /api/contact
+Disallow: /cases/template
+Disallow: /*?preview=
+Disallow: /*&preview=
 
 Sitemap: https://thestackhouse.io/sitemap.xml
-
-# Índice para modelos de lenguaje
-# https://llmstxt.org
-LLMs: https://thestackhouse.io/llms.txt
-LLMs-full: https://thestackhouse.io/llms-full.txt
-
-# Señales de contenido para IA (TDMRep + permisos de entrenamiento)
-# TDM-Reservation: 0 = sin reserva, contenido disponible para minería de datos
-TDM-Reservation: 0
-AI-Training: allowed
-AI-Summary: allowed
-AI-Citation: allowed
+# Content indexes: /llms.txt and /llms-full.txt

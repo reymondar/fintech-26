@@ -31,7 +31,7 @@ export function FAQ() {
             <span className="block">{t("Lo que necesitas saber")}</span>
             <span className="block text-zinc-400">{t("antes de empezar.")}</span>
           </h2>
-          <p className="text-sm leading-relaxed text-zinc-500">{locale === "es" ? "¿Tienes otra pregunta?" : "Have another question?"}{" "}<a href="mailto:hello@thestackhouse.com" className="font-medium text-emerald-700 underline-offset-4 hover:underline">{locale === "es" ? "Escríbenos" : "Get in touch"}</a></p>
+          <p className="text-sm leading-relaxed text-zinc-500">{locale === "es" ? "¿Tienes otra pregunta?" : "Have another question?"}{" "}<a href="mailto:contact@thestackhouse.io" className="font-medium text-emerald-700 underline-offset-4 hover:underline">{locale === "es" ? "Escríbenos" : "Get in touch"}</a></p>
         </m.div>
 
         <m.div

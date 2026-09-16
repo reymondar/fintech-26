@@ -37,7 +37,7 @@ export function Footer() {
                 <a href={localizeHref("/#how-it-works")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Cómo funciona")} </a>
               </li>
               <li>
-                <a href="/servicios" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Servicios")} </a>
+                <a href={localizeHref("/servicios")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Servicios")} </a>
               </li>
               <li>
                 <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Blog")} </a>
@@ -46,7 +46,7 @@ export function Footer() {
                 <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Contacto")}{locale === "en" ? " (ES)" : ""} </a>
               </li>
               <li>
-                <a href="/auditoria" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Revisemos tu ecommerce")} </a>
+                <a href={localizeHref("/auditoria")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Revisemos tu ecommerce")} </a>
               </li>
             </ul>
           </div>
@@ -57,9 +57,9 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@thestackhouse.com"
+                  href="mailto:contact@thestackhouse.io"
                   className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"
-                > {t("hello@thestackhouse.com")} </a>
+                > {t("contact@thestackhouse.io")} </a>
               </li>
             </ul>
           </div>

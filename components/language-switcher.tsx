@@ -7,20 +7,22 @@ import { useTranslation } from "@/components/locale-provider"
 export function LanguageSwitcher() {
   const pathname = usePathname()
   const { locale } = useTranslation()
-  if (!["/", "/es", "/en"].includes(pathname)) return null
+  const flowPage = ["/auditoria", "/servicios"].includes(pathname)
+  if (!["/", "/es", "/en"].includes(pathname) && !flowPage) return null
 
   function remember(next: Locale) {
     const secure = window.location.protocol === "https:" ? "; Secure" : ""
     document.cookie = `${LOCALE_COOKIE}=${next}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`
     const target = new URL(window.location.href)
-    target.pathname = `/${next}`
+    if (flowPage) target.searchParams.set("lang", next)
+    else target.pathname = `/${next}`
     window.location.assign(target.toString())
   }
 
   return (
     <div role="group" aria-label={locale === "es" ? "Idioma" : "Language"} className="inline-flex shrink-0 rounded-full border border-zinc-200 bg-white/80 p-1">
       {(["es", "en"] as const).map(next => (
-        <a key={next} href={`/${next}`} lang={next} hrefLang={next}
+        <a key={next} href={flowPage ? `${pathname}?lang=${next}` : `/${next}`} lang={next} hrefLang={next}
           aria-label={next === "es" ? "Español" : "English"}
           aria-current={locale === next ? "page" : undefined}
           onClick={event => { if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); remember(next) } }}

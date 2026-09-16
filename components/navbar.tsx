@@ -106,7 +106,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
           <a
-            href="/auditoria"
+            href={localizeHref("/auditoria")}
             className="hidden sm:inline-flex items-center px-5 py-1.5 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
           > {t("Audita tu tienda")} </a>
           <button
@@ -156,7 +156,7 @@ export function Navbar() {
               </a>
             </div>
             <a
-              href="/auditoria"
+              href={localizeHref("/auditoria")}
               className="mt-2 flex items-center justify-center px-5 py-3 rounded-full bg-zinc-900 text-white text-sm font-medium hover:bg-zinc-800 transition-colors"
             > {t("Audita tu tienda")} </a>
           </div>

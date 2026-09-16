@@ -34,10 +34,10 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-1">Email</p>
                   <a
-                    href="mailto:hello@thestackhouse.com"
+                    href="mailto:contact@thestackhouse.io"
                     className="text-sm text-zinc-900 hover:text-zinc-500 transition-colors"
                   >
-                    hello@thestackhouse.com
+                    contact@thestackhouse.io
                   </a>
                 </div>
 

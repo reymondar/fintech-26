@@ -110,7 +110,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="text-xs text-red-500">Algo salió mal. Escribinos directamente a hello@thestackhouse.com</p>
+        <p className="text-xs text-red-500">Algo salió mal. Escribinos directamente a contact@thestackhouse.io</p>
       )}
 
       <button

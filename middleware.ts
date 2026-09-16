@@ -20,18 +20,20 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  const locale = explicit ?? (pathname === "/" ? detected : "es")
+  const flowPage = ["/auditoria", "/servicios"].includes(pathname)
+  const queryLocale = request.nextUrl.searchParams.get("lang")
+  const locale = explicit ?? (flowPage ? (isLocale(queryLocale) ? queryLocale : detected) : pathname === "/" ? detected : "es")
   const requestHeaders = new Headers(request.headers)
   // Always overwrite the internal language header supplied by the client.
   requestHeaders.set("x-sh-locale", locale)
-  const hasMarkdown = pathname === "/" || explicit || pathname === "/services" || pathname === "/blog" || pathname.startsWith("/blog/")
+  const hasMarkdown = pathname === "/" || explicit || pathname === "/services" || pathname === "/servicios" || pathname === "/blog" || pathname.startsWith("/blog/")
   if (accept.includes("text/markdown") && hasMarkdown) {
     const url = request.nextUrl.clone()
-    url.pathname = explicit || pathname === "/" ? "/api/md" : `/api/md${pathname}`
+    url.pathname = explicit || pathname === "/" ? "/api/md" : pathname === "/servicios" ? "/api/md/services" : `/api/md${pathname}`
     if (explicit || pathname === "/") url.searchParams.set("lang", locale)
     const response = NextResponse.rewrite(url, { request: { headers: requestHeaders } })
     response.headers.set("Link", LINK_HEADER)
-    response.headers.set("Content-Language", locale)
+    response.headers.set("Content-Language", pathname === "/servicios" || pathname === "/services" ? "es" : locale)
     if (pathname === "/") {
       response.headers.set("Cache-Control", "private, no-store")
       response.headers.set("Vary", "Cookie, Accept-Language, X-Vercel-IP-Country")
@@ -41,7 +43,7 @@ export function middleware(request: NextRequest) {
 
   const response = NextResponse.next({ request: { headers: requestHeaders } })
   response.headers.set("Link", LINK_HEADER)
-  if (explicit) response.headers.set("Content-Language", locale)
+  if (explicit) response.headers.set("Content-Language", pathname === "/servicios" || pathname === "/services" ? "es" : locale)
   return response
 }
 

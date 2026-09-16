@@ -7,7 +7,7 @@ export async function GET() {
     schema_version: "v1",
     name: "The Stack House",
     description:
-      "Consultoría de visibilidad en IA (GEO/AEO). Contenido accesible como Markdown estructurado para modelos de lenguaje.",
+      "Posicionamiento en IA, personalización y automatización comercial para ecommerce. Contenido accesible como Markdown estructurado para modelos de lenguaje.",
     server_url: SITE_URL,
     tools: [
       {
@@ -30,7 +30,7 @@ export async function GET() {
       },
       {
         name: "get_services",
-        description: "Detalle de los cuatro niveles de servicio: Auditoría, Construir, Defender y Expandir.",
+        description: "Posicionamiento, personalización y automatización comercial para ecommerce.",
         endpoint: "/api/md/services",
         method: "GET",
       },
@@ -53,7 +53,7 @@ export async function GET() {
       },
     ],
     content_negotiation: {
-      markdown: "Cualquier página del sitio devuelve Markdown con el header Accept: text/markdown",
+      markdown: "Inicio, servicios y blog admiten Accept: text/markdown; servicios y blog se ofrecen en español.",
     },
   }
 

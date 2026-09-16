@@ -8,9 +8,9 @@ export async function GET() {
     name_for_human: "The Stack House",
     name_for_model: "the_stack_house",
     description_for_human:
-      "Consultoría de visibilidad en IA (GEO/AEO). Información sobre cómo aparecer en ChatGPT, Gemini, Perplexity y Claude.",
+      "Posicionamiento en IA, personalización y automatización comercial para ecommerce. Información sobre cómo aparecer en ChatGPT, Gemini, Perplexity y Claude.",
     description_for_model:
-      "Use this to access information about AI visibility (GEO/AEO), Share of Model metrics, and how companies can appear in AI-generated responses. Provides blog articles, service descriptions, and contact information for The Stack House, a GEO/AEO consultancy based in Spain. Content available as clean Markdown via the /api/md/* endpoints or by requesting any page with Accept: text/markdown.",
+      "Use this to access information about AI visibility (GEO/AEO), Share of Model metrics, and how companies can appear in AI-generated responses. Provides blog articles, service descriptions, and contact information for The Stack House, a GEO/AEO consultancy based in Spain. Content available as clean Markdown via the /api/md/* endpoints or via Accept: text/markdown on the homepage, services and blog pages.",
     auth: {
       type: "none",
     },
@@ -19,7 +19,7 @@ export async function GET() {
       url: `${SITE_URL}/api/md`,
     },
     logo_url: `${SITE_URL}/logo-stackhouse.png`,
-    contact_email: "aranaramon1@gmail.com",
+    contact_email: "contact@thestackhouse.io",
     legal_info_url: SITE_URL,
   }
 

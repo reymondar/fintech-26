@@ -22,33 +22,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...landingEntries,
-    {
-      url: SITE_URL,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${SITE_URL}/servicios`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+    ...["servicios", "auditoria"].flatMap(page => (["es", "en"] as const).map(locale => ({
+      url: `${SITE_URL}/${page}?lang=${locale}`,
+      lastModified: new Date("2026-09-16"),
+      changeFrequency: "monthly" as const,
       priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/auditoria`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+      alternates: { languages: { es: `${SITE_URL}/${page}?lang=es`, en: `${SITE_URL}/${page}?lang=en`, "x-default": `${SITE_URL}/${page}` } },
+    }))),
     {
       url: `${SITE_URL}/blog`,
-      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/contacto`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },

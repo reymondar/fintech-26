@@ -8,8 +8,8 @@
 
 ## Cómo trabajamos
 
-- [Implementación para ecommerce](https://thestackhouse.io/#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
-- [Servicios — The Stack House](https://thestackhouse.io/servicios): Capa de IA a medida sobre tu negocio: recomendación en modelos, captación y conversión, y una capa de optimización con automatización y agentes conectada a tus ventas.
+- [Implementación para ecommerce](https://thestackhouse.io/es#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
+- [Servicios — The Stack House](https://thestackhouse.io/servicios): Posicionamiento de productos, personalización de la tienda y automatización comercial. Entregables concretos y medición sobre tus herramientas existentes.
 
 ## Herramientas
 
@@ -34,7 +34,7 @@
 
 ## Contacto y diagnóstico
 
-- [Diagnóstico en vivo gratuito (20 min)](https://thestackhouse.io/auditoria): Primera revisión del ecommerce y una muestra de preguntas de compra para identificar oportunidades y valorar el encaje.
+- [Diagnóstico en vivo gratuito](https://thestackhouse.io/auditoria): Primera revisión del ecommerce y una muestra de preguntas de compra para identificar oportunidades y valorar el encaje.
 - [Formulario de contacto](https://thestackhouse.io/contacto): Contacto directo con el equipo de The Stack House.
 
 ## Optional
@@ -48,3 +48,11 @@
 - [English](https://thestackhouse.io/en): AI visibility and conversion for ecommerce. Catalog, content, external authority and sales tracking.
 
 La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y /en conservan el idioma solicitado. El blog mantiene sus artículos en español.
+
+## Servicios y auditoría por idioma
+
+- [Servicios ES](https://thestackhouse.io/servicios?lang=es)
+- [Services EN](https://thestackhouse.io/servicios?lang=en)
+- [Auditoría ES](https://thestackhouse.io/auditoria?lang=es)
+- [Store audit EN](https://thestackhouse.io/auditoria?lang=en)
+- [Servicios en Markdown, español](https://thestackhouse.io/api/md/services)

@@ -33,6 +33,32 @@ Conectamos presencia en IA, visitas identificables, compras, contactos y resulta
 
 ---
 
+## Servicios actuales
+
+El motor de captación de tu ecommerce: posicionamiento de productos, personalización y automatización comercial sobre tus herramientas existentes.
+
+## Posicionamiento
+Diagnosticamos catálogo y presencia frente a competidores. Mejoramos fichas, creamos contenido que resuelve dudas de compra y trabajamos referencias en fuentes relevantes.
+Entregamos un plan priorizado y mejoras implementadas en productos y contenido.
+
+## Personalización y conversión
+Adaptamos mensajes, productos y llamadas a la acción según las señales disponibles de cada visitante. Implementamos experiencias y pruebas para medir qué funciona.
+
+## Automatización comercial
+Conectamos consultas, datos del cliente, CRM y seguimiento para que tu equipo reciba oportunidades con contexto.
+
+## Medición
+Relacionamos recomendaciones, visitas y resultados comerciales. Distinguimos el origen rastreable de la influencia declarada y señalamos lo que no se puede atribuir.
+
+## Auditoría inicial
+Comparte la URL .com de tu tienda, categoría, mercados y contacto. Después eliges una cita en el calendario. Enviar el formulario no reserva una reunión. La revisión inicial no tiene costo ni compromiso.
+
+- Servicios: https://thestackhouse.io/servicios?lang=es
+- Auditoría: https://thestackhouse.io/auditoria?lang=es
+- Contacto: contact@thestackhouse.io
+
+---
+
 ## Herramientas
 
 ### UCP Checker — Agentic Commerce Readiness
@@ -161,7 +187,7 @@ Un portfolio técnico legible por máquinas conecta identidad, rol, proyectos, d
 ## Contacto
 
 - Web: https://thestackhouse.io
-- Diagnóstico gratuito (20 min): https://thestackhouse.io/auditoria
+- Diagnóstico gratuito: https://thestackhouse.io/auditoria
 - Formulario: https://thestackhouse.io/contacto
 
 ---
@@ -177,3 +203,11 @@ The Stack House permite explícitamente el acceso y la indexación de todo su co
 - [English](https://thestackhouse.io/en): AI visibility and conversion for ecommerce. Catalog, content, external authority and sales tracking.
 
 La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y /en conservan el idioma solicitado. El blog mantiene sus artículos en español.
+
+## Servicios y auditoría por idioma
+
+- [Servicios ES](https://thestackhouse.io/servicios?lang=es)
+- [Services EN](https://thestackhouse.io/servicios?lang=en)
+- [Auditoría ES](https://thestackhouse.io/auditoria?lang=es)
+- [Store audit EN](https://thestackhouse.io/auditoria?lang=en)
+- [Servicios en Markdown, español](https://thestackhouse.io/api/md/services)

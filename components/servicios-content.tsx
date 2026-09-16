@@ -1,205 +1,66 @@
 "use client"
 
-// NOTA: página en BORRADOR. Copy pendiente de pulido final.
-// 3 bloques de resultado + banda de posicionamiento tecnológico.
-// No expone la metodología interna ni herramientas; sin cifras ni garantías.
-
-import { m, useInView } from "framer-motion"
-import { useRef } from "react"
-import { Sparkles, ShoppingBag, Gauge, Check, ArrowRight } from "lucide-react"
 import { useTranslation } from "@/components/locale-provider"
-
-const blocks = [
-  {
-    num: "01",
-    icon: Sparkles,
-    title: "Que la IA te recomiende",
-    outcome: "Entramos en las respuestas donde hoy recomiendan a tu competencia.",
-    points: [
-      "Diagnóstico de cómo te ve la IA en las preguntas de compra de tu categoría.",
-      "Catálogo y contenido preparados para que los modelos te entiendan y te citen.",
-      "Autoridad y presencia en las fuentes que la IA consulta.",
-    ],
-  },
-  {
-    num: "02",
-    icon: ShoppingBag,
-    title: "Que la demanda termine en venta",
-    outcome: "Cuidamos al comprador que llega decidido para que no se pierda en el camino.",
-    points: [
-      "Captación y atención para que ninguna consulta caiga en el vacío.",
-      "Páginas y experiencia adaptadas a cada visitante para convertir.",
-      "Conexión con tu equipo comercial y tu CRM, con el origen trazado.",
-    ],
-  },
-  {
-    num: "03",
-    icon: Gauge,
-    title: "Tu capa de optimización, siempre encendida",
-    outcome: "Una capa de IA sobre tu negocio que mide, aprende y mejora sola.",
-    points: [
-      "Automatizaciones y agentes de IA que trabajan alrededor de tu operación.",
-      "Medición que conecta lo que hacemos con lo que vendes.",
-      "Mejora continua: qué mantener, qué probar y qué sigue.",
-    ],
-  },
-]
-
-const capabilities = [
-  "IA aplicada",
-  "Automatización",
-  "Agentes de IA",
-  "Integración de datos",
-  "Conversión",
-  "Analítica",
-]
-
-function Block({ b, i }: { b: (typeof blocks)[number]; i: number }) {
-  const { t } = useTranslation()
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
-  const Icon = b.icon
-  return (
-    <m.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: 0.05 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className="flex flex-col rounded-2xl bg-white border border-zinc-200 shadow-sm p-6 sm:p-7"
-    >
-      <div className="flex items-center gap-3 mb-4">
-        <span className="font-mono text-sm text-zinc-400 w-6 shrink-0">{b.num}</span>
-        <div className="p-2 rounded-lg bg-zinc-100 shrink-0">
-          <Icon className="w-5 h-5 text-emerald-600" strokeWidth={1.5} />
-        </div>
-      </div>
-      <h3 className="text-lg font-semibold text-zinc-900 leading-snug mb-2">{t(b.title)}</h3>
-      <p className="text-[15px] text-zinc-600 leading-relaxed mb-5">{t(b.outcome)}</p>
-      <ul className="mt-auto flex flex-col gap-3">
-        {b.points.map(p => (
-          <li key={p} className="flex items-start gap-2.5">
-            <Check className="w-4 h-4 shrink-0 mt-0.5 text-emerald-600" strokeWidth={2} />
-            <span className="text-sm text-zinc-500 leading-relaxed">{t(p)}</span>
-          </li>
-        ))}
-      </ul>
-    </m.div>
-  )
-}
+import { ArrowRight, ArrowUpRight, Check, Search, Sparkles, MousePointer2, BarChart3, MessageSquare, Package, Workflow, ShieldCheck } from "lucide-react"
 
 export function ServiciosContent() {
-  const { t } = useTranslation()
-  const heroRef = useRef(null)
-  const heroInView = useInView(heroRef, { once: true, margin: "-100px" })
-  const bandRef = useRef(null)
-  const bandInView = useInView(bandRef, { once: true, margin: "-80px" })
-
-  return (
-    <main className="min-h-screen bg-zinc-50">
-      {/* Hero */}
-      <section className="relative px-4 pt-36 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 via-zinc-50 to-zinc-100 pointer-events-none" />
-        <div className="relative z-10 max-w-4xl mx-auto" ref={heroRef}>
-          <m.span
-            initial={{ opacity: 0, y: 12 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-            className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-600 mb-6 block"
-          >
-            {t("Servicios")}
-          </m.span>
-          <m.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6"
-            style={{ fontFamily: "var(--font-cal-sans)" }}
-          >
-            <span className="text-zinc-900">{t("Tu socio de tecnología e IA.")}</span>{" "}
-            <span className="text-zinc-400">{t("Para que tu negocio venda más.")}</span>
-          </m.h1>
-          <m.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-zinc-500 max-w-2xl leading-relaxed"
-          >
-            {t("Construimos una capa de IA a medida alrededor de tu negocio — de la recomendación en los modelos hasta la venta — y la mantenemos aprendiendo mientras tu equipo se dedica a vender.")}
-          </m.p>
+  const {locale,localizeHref}=useTranslation()
+  const c=(es:string,en:string)=>locale==='en'?en:es
+  const audit=localizeHref('/auditoria')
+  const services=[
+    {id:'posicionamiento',label:c('Posicionamiento','Visibility'),title:c('Que tus productos entren en la conversación.','Get your products into the conversation.'),body:c('Trabajamos las preguntas, páginas y fuentes que influyen en la elección de tus compradores.','We work on the questions, pages and sources that influence your buyers’ choices.'),items:[c('Diagnosticamos tu catálogo y tu presencia frente a competidores.','Assess your catalog and visibility against competitors.'),c('Mejoramos fichas y creamos contenido que resuelve dudas de compra.','Improve product pages and create content that answers buying questions.'),c('Trabajamos referencias en fuentes relevantes de tu categoría.','Build references in sources relevant to your category.')],deliver:c('Un plan priorizado y mejoras implementadas en tus productos y contenido.','A prioritized plan and implemented improvements to your products and content.')},
+    {id:'personalizacion',label:c('Personalización y conversión','Personalization & conversion'),title:c('Una tienda que entiende a quien llega.','A store that understands each visitor.'),body:c('Adaptamos la experiencia a las señales disponibles para que elegir y comprar resulte más fácil.','We adapt the experience to available signals to make choosing and buying easier.'),items:[c('Conectamos datos de navegación, productos y mercados.','Connect browsing, product and market data.'),c('Personalizamos mensajes, recomendaciones y llamadas a la acción.','Personalize messages, recommendations and calls to action.'),c('Probamos variantes y medimos su efecto en la conversión.','Test variations and measure their effect on conversion.')],deliver:c('Experiencias publicadas en tu tienda y pruebas para decidir qué funciona.','Live experiences in your store and tests to identify what works.')},
+    {id:'seguimiento',label:c('Automatización comercial','Sales automation'),title:c('Cada consulta, con un siguiente paso.','Every inquiry has a next step.'),body:c('Conectamos la atención y el seguimiento para que tu equipo reciba oportunidades con contexto.','Connect customer support and follow-up so your team receives opportunities with context.'),items:[c('Configuramos respuestas con información validada de tu negocio.','Set up responses using verified business information.'),c('Llevamos consultas, productos de interés y origen identificable a tu CRM.','Send inquiries, product interests and identifiable sources to your CRM.'),c('Automatizamos avisos, asignaciones y seguimientos acordados.','Automate agreed notifications, assignments and follow-ups.')],deliver:c('Un recorrido conectado: desde la consulta hasta la atención de tu equipo.','A connected journey from the first inquiry to your team’s response.')},
+  ]
+  return <main className="min-h-screen bg-zinc-50 text-zinc-900">
+    <section className="relative overflow-hidden px-4 pb-12 pt-36 sm:pb-16">
+      <div className="pointer-events-none absolute right-0 top-20 h-80 w-96 rounded-full bg-emerald-100/40 blur-3xl"/>
+      <div className="relative mx-auto max-w-6xl">
+        <p className="mb-6 font-mono text-xs uppercase tracking-[.2em] text-emerald-600">{c('Qué hacemos','What we do')}</p>
+        <div className="grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+          <h1 className="max-w-3xl text-4xl font-medium leading-[1.06] tracking-tight sm:text-5xl lg:text-6xl" style={{fontFamily:'var(--font-instrument-sans)'}}>{c('El motor de captación','Your customer acquisition engine,')}<br/><span className="text-emerald-600">{c('de tu ecommerce.','built for ecommerce.')}</span></h1>
+          <div className="max-w-md"><p className="text-base leading-relaxed text-zinc-500">{c('Posicionamos tus productos, personalizamos tu tienda y conectamos el seguimiento comercial. Nosotros implementamos; tu equipo sigue vendiendo.','We build product visibility, personalize your store and connect sales follow-up. We implement it; your team keeps selling.')}</p><a href={audit} className="mt-6 inline-flex items-center gap-3 rounded-full bg-zinc-900 px-6 py-3.5 text-sm font-medium text-white hover:bg-emerald-700">{c('Audita tu tienda','Audit your store')}<ArrowUpRight size={17}/></a></div>
         </div>
-      </section>
-
-      {/* 3 outcome blocks */}
-      <section className="px-4 py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-          {blocks.map((b, i) => (
-            <Block key={b.title} b={b} i={i} />
-          ))}
+        <nav aria-label={c('Servicios de ecommerce','Ecommerce services')} className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-zinc-200 pt-5">{services.map((s,i)=><a key={s.id} href={`#${s.id}`} className="flex items-center gap-3 text-sm text-zinc-500 hover:text-emerald-700"><span className="font-mono text-xs text-emerald-600">0{i+1}</span>{s.label}<ArrowRight size={13}/></a>)}</nav>
+      </div>
+    </section>
+    <div className="mx-auto max-w-6xl px-4 xl:px-0">
+      {services.map((s,i)=><section key={s.id} id={s.id} className="grid scroll-mt-24 gap-10 border-t border-zinc-200 py-12 sm:py-16 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className={i===1?'lg:order-2':''}>
+          <p className="mb-4 flex items-center gap-3 text-xs font-medium uppercase tracking-widest text-emerald-600"><span className="font-mono text-zinc-400">0{i+1}</span>{s.label}</p>
+          <h2 className="max-w-lg text-3xl font-medium leading-tight tracking-tight sm:text-4xl" style={{fontFamily:'var(--font-instrument-sans)'}}>{s.title}</h2>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-zinc-500">{s.body}</p>
+          <ul className="my-7 space-y-4">{s.items.map(v=><li key={v} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-600"><Check size={16} className="mt-0.5 shrink-0 text-emerald-600"/>{v}</li>)}</ul>
+          <div className="border-l-2 border-emerald-300 pl-4"><p className="mb-1 text-[10px] font-semibold uppercase tracking-widest text-zinc-400">{c('Qué recibes','What you get')}</p><p className="text-sm leading-relaxed text-zinc-800">{s.deliver}</p></div>
         </div>
+        <figure className={`min-w-0 ${i===1?'lg:order-1':''}`}>
+          <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_60px_-40px_rgba(5,150,105,.35)] sm:p-8">
+            {i===0&&<>
+              <div className="mb-6 flex items-center justify-between text-xs text-zinc-400"><span className="flex items-center gap-2"><Search size={14}/>{c('Una pregunta de compra','A purchase question')}</span><span className="font-mono text-emerald-600">01</span></div>
+              <div className="rounded-2xl bg-zinc-50 p-5 text-lg leading-snug tracking-tight">{c('«¿Qué equipo necesito para abrir mi cafetería?»','“What equipment do I need to open my café?”')}</div>
+              <div className="mx-auto h-6 w-px bg-emerald-200"/>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5"><p className="mb-4 flex items-center gap-2 text-xs font-medium text-emerald-700"><Sparkles size={14}/>{c('Tu producto, con contexto','Your product, with context')}</p><div className="flex items-center gap-4"><div className="rounded-xl bg-white p-4 text-emerald-700"><Package size={32} strokeWidth={1.2}/></div><div><p className="text-lg font-medium">{c('Equipamiento profesional','Professional equipment')}</p><p className="mt-1 text-xs text-zinc-500">{c('Capacidad · instalación · soporte','Capacity · installation · support')}</p></div></div></div>
+              <p className="mb-3 mt-6 text-[10px] uppercase tracking-widest text-zinc-400">{c('Fuentes que respaldan la elección','Sources that support the choice')}</p><div className="grid grid-cols-3 gap-2">{[c('Ficha técnica','Product specs'),c('Comparativa','Comparison'),c('Referencia externa','External source')].map(x=><div key={x} className="rounded-xl border border-zinc-100 p-3 text-center text-[11px] text-zinc-500">{x}</div>)}</div></>}
+            {i===1&&<>
+              <div className="mb-6 flex items-center justify-between text-xs text-zinc-400"><span className="flex items-center gap-2"><MousePointer2 size={14}/>{c('Una misma tienda','One store')}</span><span className="font-mono text-emerald-600">02</span></div>
+              <div className="rounded-2xl bg-zinc-900 p-5 text-white"><p className="text-[10px] uppercase tracking-widest text-zinc-400">{c('Señales disponibles','Available signals')}</p><p className="mt-3 text-sm leading-relaxed">{c('Qué busca · qué compara · desde dónde compra','What they need · what they compare · where they buy')}</p></div>
+              <div className="flex justify-around px-10"><span className="h-6 w-px bg-emerald-200"/><span className="h-6 w-px bg-emerald-200"/></div>
+              <div className="grid grid-cols-2 gap-3">{[{title:c('Primera visita','First visit'),body:c('Encuentra el equipo para tu negocio.','Find equipment for your business.'),cta:c('Comparar opciones','Compare options')},{title:c('Vuelve a comparar','Returning shopper'),body:c('Todo lo que incluye tu equipo.','Everything included with your equipment.'),cta:c('Ver instalación y garantía','View setup & warranty')}].map((v,j)=><div key={v.title} className={`flex flex-col rounded-2xl border p-4 ${j?'border-emerald-200 bg-emerald-50/50':'border-zinc-200 bg-zinc-50/50'}`}><p className="text-[10px] font-medium uppercase tracking-wider text-emerald-700">{v.title}</p><div className="my-5 flex justify-center"><Package size={44} strokeWidth={1} className="text-zinc-400"/></div><p className="mb-5 text-sm font-medium leading-snug">{v.body}</p><span className="mt-auto rounded-full bg-white px-2 py-2 text-center text-[10px] text-zinc-600 shadow-sm">{v.cta}</span></div>)}</div>
+            </>}
+            {i===2&&<>
+              <div className="mb-6 flex items-center justify-between text-xs text-zinc-400"><span className="flex items-center gap-2"><Workflow size={14}/>{c('Una consulta que avanza','An inquiry that moves forward')}</span><span className="font-mono text-emerald-600">03</span></div>
+              <div className="rounded-2xl bg-zinc-50 p-5"><MessageSquare size={18} className="mb-3 text-emerald-600"/><p className="text-lg leading-snug">{c('«¿Incluye instalación en mi ciudad?»','“Does it include installation in my city?”')}</p></div>
+              <div className="ml-8 h-6 w-px bg-emerald-200"/>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5"><div className="mb-4 flex items-center justify-between"><p className="text-sm font-medium">{c('Oportunidad en tu CRM','Opportunity in your CRM')}</p><span className="h-2 w-2 rounded-full bg-emerald-500"/></div><div className="space-y-3 text-xs">{[[c('Interés','Interest'),c('Equipo + instalación','Equipment + installation')],[c('Contexto','Context'),c('Producto, consulta y origen','Product, inquiry and source')],[c('Siguiente paso','Next step'),c('Asignar al equipo comercial','Assign to sales')]].map(([k,v])=><div key={k} className="flex justify-between gap-4 border-b border-emerald-100 pb-2 last:border-0"><span className="text-zinc-400">{k}</span><span className="text-right text-zinc-700">{v}</span></div>)}</div></div>
+              <div className="mt-5 flex items-center gap-2 text-xs text-zinc-500"><Check size={14} className="text-emerald-600"/>{c('Aviso al equipo y seguimiento acordado','Team notification and agreed follow-up')}</div>
+            </>}
+          </div><figcaption className="mt-3 text-right text-[10px] text-zinc-400">{c('Ejemplo de implementación','Implementation example')}</figcaption>
+        </figure>
+      </section>)}
+      <section className="mb-12 grid gap-6 rounded-3xl bg-emerald-950 p-7 text-white sm:p-10 md:grid-cols-[.8fr_1.2fr] md:items-center">
+        <div><BarChart3 size={24} className="mb-4 text-emerald-300"/><h2 className="text-2xl font-medium tracking-tight">{c('Medimos para decidir.','Measure to decide.')}</h2></div><div><p className="text-sm leading-relaxed text-emerald-50/80">{c('Seguimos recomendaciones, visitas, consultas y ventas para elegir la siguiente mejora. Distinguimos lo rastreable de lo que declara el comprador.','We track recommendations, visits, inquiries and sales to choose the next improvement. We distinguish trackable sources from buyer-reported influence.')}</p><p className="mt-4 flex items-center gap-2 text-xs text-emerald-300"><ShieldCheck size={14}/>{c('Sobre tu tienda, tu analítica y tu CRM.','Built on your store, analytics and CRM.')}</p></div>
       </section>
-
-      {/* Tech positioning band */}
-      <section className="px-4 py-12">
-        <m.div
-          ref={bandRef}
-          initial={{ opacity: 0, y: 24 }}
-          animate={bandInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-6xl mx-auto rounded-3xl bg-zinc-900 p-8 sm:p-12"
-        >
-          <div className="max-w-3xl">
-            <h2
-              className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-4"
-              style={{ fontFamily: "var(--font-instrument-sans)" }}
-            >
-              {t("El equipo de tecnología e IA que tu negocio no tiene dentro.")}
-            </h2>
-            <p className="text-[15px] sm:text-base text-zinc-400 leading-relaxed mb-8">
-              {t("Montamos los sistemas que hacen que te encuentren, te elijan y te compren: IA aplicada, automatización y datos, conectados a tu operación comercial. Todo a medida, todo medido contra ventas.")}
-            </p>
-            <div className="flex flex-wrap gap-2.5">
-              {capabilities.map(c => (
-                <span
-                  key={c}
-                  className="px-3.5 py-1.5 rounded-full border border-zinc-700 bg-zinc-800/60 text-xs font-medium text-zinc-300"
-                >
-                  {t(c)}
-                </span>
-              ))}
-            </div>
-          </div>
-        </m.div>
-      </section>
-
-      {/* Honesty */}
-      <section className="px-4 py-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-[15px] text-zinc-500 leading-relaxed">
-            {t("Trabajamos con método y medimos cada paso. Lo que no hacemos es prometerte una posición fija en la IA ni un número de ventas: los modelos cambian, y quien te garantice eso te está mintiendo.")}
-          </p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
-            style={{ fontFamily: "var(--font-cal-sans)" }}
-          >
-            <span className="text-zinc-900">{t("Empieza por saber dónde estás.")}</span>
-          </h2>
-          <p className="text-lg text-zinc-500 mb-10 max-w-2xl mx-auto">
-            {t("La revisión de 20 minutos es gratis: vemos tu tienda y qué recomienda la IA en tu categoría. De ahí sale el resto.")}
-          </p>
-          <a
-            href="/auditoria"
-            className="inline-flex items-center justify-center px-8 h-14 rounded-full bg-zinc-900 text-white text-base font-medium hover:bg-zinc-800 shadow-lg shadow-zinc-900/10 transition-colors"
-          >
-            {t("Audita tu tienda")} <ArrowRight className="ml-2 w-5 h-5" />
-          </a>
-        </div>
-      </section>
-    </main>
-  )
+      <section className="pb-20 pt-8 text-center"><p className="mb-4 text-xs text-emerald-600">{c('El primer paso','The first step')}</p><h2 className="text-3xl font-medium tracking-tight sm:text-4xl">{c('Veamos por dónde empezar.','Let’s find where to start.')}</h2><p className="mx-auto mb-7 mt-4 max-w-md text-sm leading-relaxed text-zinc-500">{c('Revisamos tu tienda y tu categoría para definir qué tiene sentido implementar.','We review your store and category to define what is worth implementing.')}</p><a href={audit} className="inline-flex items-center gap-3 rounded-full bg-zinc-900 px-7 py-3.5 text-sm font-medium text-white hover:bg-emerald-700">{c('Audita tu tienda','Audit your store')}<ArrowRight size={16}/></a><p className="mt-4 text-xs text-zinc-400">{c('Sin costo · sin compromiso','Free · no commitment')}</p></section>
+    </div>
+  </main>
 }

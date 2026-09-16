@@ -124,6 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 contactPoint: {
                   "@type": "ContactPoint",
                   contactType: "sales",
+                  email: "contact@thestackhouse.io",
                   url: `${SITE_URL}/contacto`,
                   availableLanguage: ["Spanish", "English"],
                 },
@@ -136,6 +137,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "GEO",
                   "AEO",
                   "SEO",
+                  "Ecommerce personalization",
+                  "Sales automation",
                   "ChatGPT brand mentions",
                   "Perplexity citations",
                 ],

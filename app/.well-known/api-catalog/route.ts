@@ -28,12 +28,12 @@ export async function GET() {
           {
             href: `${SITE_URL}/api/md`,
             type: "text/markdown",
-            title: "Markdown API — devuelve cualquier página en formato Markdown",
+            title: "Markdown API — inicio, servicios y blog",
           },
           {
             href: `${SITE_URL}/.well-known/mcp.json`,
             type: "application/json",
-            title: "MCP server card — herramientas accesibles para modelos de lenguaje",
+            title: "Catálogo informativo de endpoints HTTP; no es un servidor MCP",
           },
           {
             href: `${SITE_URL}/.well-known/ai-plugin.json`,

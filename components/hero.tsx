@@ -102,12 +102,12 @@ export function Hero() {
             size="lg"
             className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
-            <a href="/auditoria"> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-4 h-4" />
+            <a href={localizeHref("/auditoria")}> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
         </m.div>
 
-        <p className="text-xs text-zinc-400 mb-4">{t("20 minutos · primera revisión sin costo")}</p>
+        <p className="text-xs text-zinc-400 mb-4">{t("primera revisión sin costo")}</p>
 
         <HeroBuyerJourney />
 

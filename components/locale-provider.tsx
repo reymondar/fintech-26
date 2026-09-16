@@ -15,6 +15,6 @@ export function useTranslation() {
   return {
     locale,
     t: (text: string) => translate(locale, text),
-    localizeHref: (path: string) => path === "/" || path.startsWith("/#") ? `/${locale}${path.slice(1)}` : path,
+    localizeHref: (path: string) => path === "/" || path.startsWith("/#") ? `/${locale}${path.slice(1)}` : ["/auditoria", "/servicios"].includes(path) ? `${path}?lang=${locale}` : path,
   }
 }

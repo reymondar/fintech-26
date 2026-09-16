@@ -38,6 +38,6 @@ export const landingFaqs = [
   },
   {
     "question": "¿Cómo definen el precio y qué revisamos en la primera llamada?",
-    "answer": "La revisión inicial de 20 minutos es gratis: vemos tu tienda y las recomendaciones de tu categoría. Con eso, definimos si encaja y qué alcance e inversión tendría el trabajo."
+    "answer": "La revisión inicial es gratis: vemos tu tienda y las recomendaciones de tu categoría. Con eso, definimos si encaja y qué alcance e inversión tendría el trabajo."
   }
 ]

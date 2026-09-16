@@ -36,11 +36,11 @@ export function FinalCTA() {
           size="lg"
           className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
         >
-          <a href="/auditoria"> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-5 h-5" />
+          <a href={localizeHref("/auditoria")}> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </Button>
 
-        <p className="mt-8 text-sm text-zinc-500">{t("20 minutos · sin costo · sin compromiso")}</p>
+        <p className="mt-8 text-sm text-zinc-500">{t("sin costo · sin compromiso")}</p>
       </m.div>
     </section>
   )

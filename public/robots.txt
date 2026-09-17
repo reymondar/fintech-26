@@ -1,6 +1,8 @@
 # Public content is available to search and AI crawlers.
 User-agent: *
 Allow: /
+Disallow: /mailing
+Disallow: /api/mailing
 Disallow: /api/audit
 Disallow: /api/contact
 Disallow: /cases/template

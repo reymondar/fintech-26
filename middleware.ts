@@ -5,6 +5,16 @@ const LINK_HEADER = '</.well-known/api-catalog>; rel="api-catalog"'
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+  if (pathname === "/mailing" || pathname.startsWith("/mailing/")) {
+    const h = new Headers(request.headers)
+    h.set("x-sh-private", "1")
+    const res = NextResponse.next({ request: { headers: h } })
+    res.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive")
+    res.headers.set("Cache-Control", "private, no-store")
+    res.headers.set("Referrer-Policy", "no-referrer")
+    res.headers.set("Content-Security-Policy", "frame-ancestors 'none'")
+    return res
+  }
   const accept = request.headers.get("accept") ?? ""
   const explicit = pathname === "/es" ? "es" : pathname === "/en" ? "en" : null
   const detected = detectLocale(request.headers.get("x-vercel-ip-country"), request.cookies.get(LOCALE_COOKIE)?.value, request.headers.get("accept-language") ?? "")
@@ -26,6 +36,7 @@ export function middleware(request: NextRequest) {
   const requestHeaders = new Headers(request.headers)
   // Always overwrite the internal language header supplied by the client.
   requestHeaders.set("x-sh-locale", locale)
+  requestHeaders.delete("x-sh-private")
   const hasMarkdown = pathname === "/" || explicit || pathname === "/services" || pathname === "/servicios" || pathname === "/blog" || pathname.startsWith("/blog/")
   if (accept.includes("text/markdown") && hasMarkdown) {
     const url = request.nextUrl.clone()

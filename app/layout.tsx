@@ -71,11 +71,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const privatePage = (await headers()).get("x-sh-private") === "1"
   const locale = (await headers()).get("x-sh-locale") === "en" ? "en" : "es"
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <Script
+        {!privatePage && <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -85,8 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NSRBC7Q5');`,
           }}
-        />
-        <Script
+        />}
+        {!privatePage && <Script
           id="clarity-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -96,17 +97,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "y1a1pnj417");`,
           }}
-        />
+        />}
       </head>
       <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
-        <noscript>
+        {!privatePage && <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NSRBC7Q5"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
-        </noscript>
+        </noscript>}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -167,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         <div className="noise-overlay" aria-hidden="true" />
         <MotionProvider>{children}</MotionProvider>
-        <Analytics />
+        {!privatePage && <Analytics />}
       </body>
     </html>
   )

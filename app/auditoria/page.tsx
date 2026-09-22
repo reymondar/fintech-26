@@ -48,7 +48,6 @@ export default async function AuditoriaPage({ searchParams }: { searchParams: Pr
             <p className="text-[15px] leading-relaxed text-zinc-500">
               {t("Cuéntanos sobre tu tienda y elige cuándo revisarla juntos.")}
             </p>
-            <p className="mt-4 text-sm text-zinc-400">{t("Sin costo · sin compromiso")}</p>
           </div>
 
           <div className="max-w-xl mx-auto rounded-3xl border border-zinc-200 bg-white/60 p-6 sm:p-8 shadow-sm">

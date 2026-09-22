@@ -40,7 +40,6 @@ export function FinalCTA() {
           </a>
         </Button>
 
-        <p className="mt-8 text-sm text-zinc-500">{t("sin costo · sin compromiso")}</p>
       </m.div>
     </section>
   )

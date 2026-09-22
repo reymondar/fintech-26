@@ -3,7 +3,7 @@ export const english: Record<string, string> = {
   "Más oportunidades para tu ecommerce": "More opportunities for your online store",
   "Tu próximo cliente está": "Your next customer is",
   "buscándote en": "looking for you on",
-  "Conviértete en la respuesta.": "Become the answer.",
+  "Te convertimos en la respuesta.": "We make you the answer.",
   "Audita tu tienda": "Audit your store",
   "primera revisión sin costo": "free first review",
   "Seguimiento de visibilidad · vista ilustrativa": "Visibility tracking · illustrative preview",

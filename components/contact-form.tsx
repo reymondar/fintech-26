@@ -109,6 +109,8 @@ export function ContactForm() {
         />
       </div>
 
+      <p className="text-xs text-zinc-500">Usamos tus datos para atender tu consulta. <a href="/privacidad" className="underline">Política de privacidad</a>.</p>
+
       {status === "error" && (
         <p className="text-xs text-red-500">Algo salió mal. Escribinos directamente a contact@thestackhouse.io</p>
       )}

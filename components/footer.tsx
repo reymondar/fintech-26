@@ -55,6 +55,7 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-zinc-900 mb-4">{t("Contacto")}</h4>
             <ul className="space-y-3">
+              <li><a href="https://www.linkedin.com/company/the-stack-house/" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-500 transition-colors hover:text-zinc-900">LinkedIn · The Stack House</a></li>
               <li>
                 <a
                   href="mailto:contact@thestackhouse.io"
@@ -65,6 +66,10 @@ export function Footer() {
           </div>
         </m.div>
 
+        <nav aria-label={locale === "en" ? "Legal information" : "Información legal"} className="mt-8 flex flex-wrap gap-5 text-sm text-zinc-500">
+          <a href="/aviso-legal" className="transition-colors hover:text-zinc-900">{locale === "en" ? "Legal notice (ES)" : "Aviso legal"}</a>
+          <a href="/privacidad" className="transition-colors hover:text-zinc-900">{locale === "en" ? "Privacy policy (ES)" : "Política de privacidad"}</a>
+        </nav>
         {/* Bottom */}
         <m.div
           initial={{ opacity: 1 }}

@@ -184,6 +184,14 @@ Un portfolio técnico legible por máquinas conecta identidad, rol, proyectos, d
 
 ---
 
+### Agentes de IA: cómo eligen software para recomendar
+URL: https://thestackhouse.io/blog/agentes-ia-como-eligen-software
+Fecha: 2026-09-16 | Lectura: 7 min
+
+Los agentes ya participan en el descubrimiento, la comparación y la compra, pero no existe una fórmula universal publicada para recomendar software independiente. El artículo separa descubrimiento, recomendación y checkout; explica cómo problema, precio, compatibilidad, instalación, privacidad y evidencia permiten comparar herramientas; y presenta los marketplaces especializados como una capa de categoría, contexto externo y distribución. The Solo Market aparece como ejemplo de catálogo para software self-hosted creado por desarrolladores independientes.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

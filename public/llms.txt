@@ -31,6 +31,7 @@
 - [Formularios B2B: conversión y atribución de leads](https://thestackhouse.io/blog/formularios-b2b-conversion-atribucion): Cómo pedir menos datos visibles, capturar intención y conservar fuente, campaña y contexto hasta el CRM.
 - [Rediseño web: conserva SEO y visibilidad en IA](https://thestackhouse.io/blog/rediseno-web-seo-visibilidad-ia): Cómo rediseñar o migrar una web sin perder URLs, contenido, señales de búsqueda, legibilidad para asistentes de IA ni atribución de conversiones.
 - [Portfolio de programador legible para IA y recruiters](https://thestackhouse.io/blog/portfolio-programador-legible-ia-recruiters): Cómo estructurar identidad, proyectos, decisiones y evidencia para que recruiters, buscadores y sistemas de IA entiendan un perfil técnico.
+- [Agentes de IA: cómo eligen software para recomendar](https://thestackhouse.io/blog/agentes-ia-como-eligen-software): Cómo los agentes descubren y comparan software mediante problema, precio, compatibilidad y evidencia, y qué aportan los marketplaces especializados.
 
 ## Contacto y diagnóstico
 

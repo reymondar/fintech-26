@@ -78,7 +78,7 @@ export function Hero() {
             </m.span>
           </span>
           <span className="block overflow-hidden">
-            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={2}> {t("Conviértete en la respuesta.")} </m.span>
+            <m.span className="block" variants={textRevealVariants} initial="hidden" animate="visible" custom={2}> {t("Te convertimos en la respuesta.")} </m.span>
           </span>
         </h1>
 

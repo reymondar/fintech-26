@@ -20,7 +20,7 @@ export function PrivacyControls({locale}:{locale:'es'|'en'}){
   const add=(id:string,src:string)=>{if(document.getElementById(id))return;const s=document.createElement('script');s.id=id;s.src=src;s.async=true;document.head.appendChild(s)}
   w.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'})
   add('sh-gtm','https://www.googletagmanager.com/gtm.js?id=GTM-NSRBC7Q5')
-  add('sh-clarity','https://www.clarity.ms/tag/y1a1pnj417')
+  add('sh-clarity','https://www.clarity.ms/tag/ypccecgjb2')
  },[choice])
  function choose(value:'accepted'|'rejected'){
   try{localStorage.setItem(KEY,JSON.stringify({value,expires:Date.now()+MAX_AGE}))}catch{setChoice(null);setOpen(true);return}

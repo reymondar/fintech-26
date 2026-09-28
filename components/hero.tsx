@@ -5,6 +5,7 @@ import { useTranslation } from "@/components/locale-provider"
 import { useState, useEffect } from "react"
 import { m, AnimatePresence } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { IndustryMetrics } from "@/components/industry-metrics"
 import { HeroBuyerJourney } from "@/components/hero-buyer-journey"
 import { Button } from "@/components/ui/button"
 
@@ -23,7 +24,7 @@ const textRevealVariants = {
 const platforms = ["ChatGPT", "Perplexity", "Claude", "Gemini"]
 
 export function Hero() {
-  const { t, localizeHref } = useTranslation()
+  const { t, localizeHref, locale } = useTranslation()
 
   const [platformIndex, setPlatformIndex] = useState(0)
 
@@ -95,7 +96,7 @@ export function Hero() {
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col items-center gap-3 mb-12"
+          className="flex flex-col items-center gap-3 mb-7"
         >
           <Button
             asChild
@@ -106,6 +107,8 @@ export function Hero() {
             </a>
           </Button>
         </m.div>
+
+        <IndustryMetrics locale={locale} />
 
         <HeroBuyerJourney />
 

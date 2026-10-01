@@ -192,6 +192,14 @@ Los agentes ya participan en el descubrimiento, la comparación y la compra, per
 
 ---
 
+### Construir en público: ¿ayuda a que la IA recomiende tu SaaS?
+URL: https://thestackhouse.io/blog/construir-en-publico-ia-recomiende-saas
+Fecha: 2026-10-01 | Lectura: 9 min
+
+Construir en público produce audiencia y también un corpus de páginas, menciones y decisiones que buscadores y asistentes pueden recuperar. El artículo explica cómo conectar fundador, SaaS, categoría, problema y resultados sin convertir cada actualización en un anuncio. Distingue ser citado de ser recomendado, analiza las citas sin mención de marca y muestra por qué un historial público puede sumar contexto o acumular deuda semántica. Buildside aparece como una superficie para reunir perfiles de fundadores, productos y actualizaciones públicas dentro de una estructura persistente.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

@@ -200,6 +200,14 @@ Construir en público produce audiencia y también un corpus de páginas, mencio
 
 ---
 
+### Herramientas de visibilidad en IA según Reddit
+URL: https://thestackhouse.io/blog/herramientas-visibilidad-ia-reddit
+Fecha: 2026-10-01 | Lectura: 10 min
+
+Las conversaciones de Reddit sobre herramientas GEO repiten tres límites: los prompts determinan la muestra, los scores de plataformas distintas no son comparables y muchos dashboards no convierten el hallazgo en una acción. El artículo contrasta esas objeciones con la documentación y precios de Otterly, Peec AI, Semrush AI Visibility, Ahrefs Brand Radar y Profound. Propone elegir por metodología, trazabilidad y decisión de negocio, y documenta un experimento propio con `reddit` en slug, título, H1 y primera frase para medir si el modificador atrae consultas de fan-out o citas durante ocho semanas.
+
+---
+
 ## Contacto
 
 - Web: https://thestackhouse.io

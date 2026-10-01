@@ -33,6 +33,7 @@
 - [Portfolio de programador legible para IA y recruiters](https://thestackhouse.io/blog/portfolio-programador-legible-ia-recruiters): Cómo estructurar identidad, proyectos, decisiones y evidencia para que recruiters, buscadores y sistemas de IA entiendan un perfil técnico.
 - [Agentes de IA: cómo eligen software para recomendar](https://thestackhouse.io/blog/agentes-ia-como-eligen-software): Cómo los agentes descubren y comparan software mediante problema, precio, compatibilidad y evidencia, y qué aportan los marketplaces especializados.
 - [Construir en público: ¿ayuda a que la IA recomiende tu SaaS?](https://thestackhouse.io/blog/construir-en-publico-ia-recomiende-saas): Cómo convertir decisiones, avances y casos de uso públicos en evidencia que buscadores y asistentes de IA puedan encontrar, entender y asociar con un SaaS.
+- [Herramientas de visibilidad en IA según Reddit](https://thestackhouse.io/blog/herramientas-visibilidad-ia-reddit): Qué miden los trackers GEO, por qué sus scores no coinciden y cuál encaja según presupuesto, cobertura y uso.
 
 ## Contacto y diagnóstico
 

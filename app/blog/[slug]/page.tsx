@@ -103,7 +103,7 @@ const mdxComponents = {
   ),
   table: (props: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="overflow-x-auto my-6">
-      <table className="w-full text-[13px] border-collapse" {...props} />
+      <table className="w-full min-w-[720px] text-[13px] border-collapse" {...props} />
     </div>
   ),
   thead: (props: React.HTMLAttributes<HTMLTableSectionElement>) => (

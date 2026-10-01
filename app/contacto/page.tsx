@@ -6,6 +6,9 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Contacto — The Stack House",
   description: "Hablemos. Contanos qué está pasando con tu visibilidad en IA y te decimos cómo podemos ayudar.",
+  alternates: {
+    canonical: "https://thestackhouse.io/contacto",
+  },
 }
 
 export default function ContactPage() {

@@ -2,25 +2,26 @@
 title: "Por qué tu ranking en Google ya no predice si la IA te menciona"
 description: "En julio de 2025, el 76% de las fuentes citadas por AI Overviews venían del top-10 de Google. En marzo de 2026, ese número bajó al 37,9%. Los datos de cinco estudios independientes y lo que implican para tu estrategia."
 date: "2026-08-08"
+updated: "2026-10-06"
 category: "GEO"
 author: "Ramón Arana"
 readTime: "5 min"
 keywords: ["ranking Google IA", "visibilidad en IA", "AI Overviews citaciones", "query fan-out", "GEO vs SEO", "ranking vs citas IA", "AI Mode"]
 ---
 
-_Actualizado el 17 de agosto de 2026._
+_Actualizado el 6 de octubre de 2026: corregidos el dato de enlaces orgánicos, la escala del gráfico y la distinción entre muestras._
 
 En julio de 2025, el 76% de las fuentes que Google citaba en AI Overviews aparecían en sus primeros resultados.
 
 En marzo de 2026: **37,9%**.
 
-Más interesante todavía: cuando Ahrefs miró únicamente los enlaces orgánicos clásicos, **31% de las páginas citadas por AI Overviews ni siquiera aparecían en el top-100**.
+Más interesante todavía: cuando Ahrefs miró únicamente los enlaces orgánicos clásicos, **36,7% de las páginas citadas por AI Overviews ni siquiera aparecían en el top-100**.
 
 Mismo Google. Misma web. Bastante menos relación entre "rankear arriba" y "ser la fuente de la respuesta".
 
 > **Lo esencial**
 >
-> - Solo el **37,9%** de las URLs citadas por AI Overviews aparecen actualmente entre los primeros resultados de Google.
+> - En la muestra de Ahrefs de marzo de 2026, el **37,9%** de las URLs citadas aparecía en los primeros diez bloques de resultados; contando solo enlaces orgánicos clásicos, el **37,1%**.
 > - En ChatGPT, Ahrefs encontró apenas **6,82% de coincidencia** con el top-10 de Google para las búsquedas que el propio ChatGPT genera.
 > - AI Mode y AI Overviews comparten solo **13,7% de sus citas**, aunque llegan a respuestas semánticamente muy parecidas.
 > - Rankear sigue importando. Usarlo como proxy de visibilidad en IA ya no alcanza.
@@ -34,6 +35,8 @@ Buscas una keyword. Miras tu posición. Más arriba, más visibilidad.
 Las respuestas generadas rompieron esa relación.
 
 [Ahrefs analizó 863.000 keywords en marzo de 2026](https://ahrefs.com/blog/ai-overview-citations-top-10/). Solo el 37,9% de las URLs citadas en AI Overviews aparecían en los primeros diez bloques de resultados.
+
+Ahrefs separa bloques de resultados de enlaces orgánicos clásicos: fuera del top-100 encontró un 31,0% en la primera medición y un 36,7% en la segunda. También mejoró su metodología de extracción respecto a julio de 2025. La diferencia entre fechas no aísla un efecto del buscador bajo condiciones idénticas.
 
 BrightEdge llegó por otro camino a una conclusión todavía más agresiva: alrededor del **17% de las fuentes de AI Overviews coincidían con el top-10 orgánico** en su dataset de febrero.
 
@@ -53,11 +56,12 @@ La dirección es bastante difícil de ignorar.
     <line x1="400" y1="20" x2="400" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
     <line x1="480" y1="20" x2="480" y2="260" stroke="#e4e4e7" strokeWidth="1"/>
     {/* X-axis labels */}
-    <text x="160" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">20%</text>
-    <text x="240" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">40%</text>
-    <text x="320" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">60%</text>
-    <text x="400" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">80%</text>
-    {/* Bars - each row: label, bar, value */}
+    <text x="160" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">0%</text>
+    <text x="240" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">25%</text>
+    <text x="320" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">50%</text>
+    <text x="400" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">75%</text>
+    <text x="480" y="275" textAnchor="middle" fontSize="10" fill="#a1a1aa">100%</text>
+    {/* Bars - scale: 0% at x=160; 100% at x=480 */}
     {/* Ahrefs Jul 2025: 76% → 76% of (480-160)=320 = 243.2 → x=160, w=243 */}
     <text x="8" y="55" fontSize="10" fill="#52525b" dominantBaseline="middle">Ahrefs jul. 2025</text>
     <text x="8" y="67" fontSize="9" fill="#a1a1aa" dominantBaseline="middle">AIO · 1,9M citas</text>
@@ -85,7 +89,7 @@ La dirección es bastante difícil de ignorar.
     <text x="187" y="246" fontSize="10" fontWeight="600" fill="#71717a" dominantBaseline="middle">6,82%</text>
   </svg>
   <figcaption style={{textAlign: 'center', fontSize: '12px', color: '#a1a1aa', marginTop: '8px'}}>
-    Solape entre Google top-10 orgánico y fuentes citadas por IA. Fuentes: Ahrefs (jul. 2025, mar. 2026), BrightEdge (feb. 2026), Profound (2025-26).
+    Solapamiento reportado por cada estudio. Muestras y definiciones distintas: el 37,9% de Ahrefs cuenta bloques de resultados, no solo enlaces orgánicos. La comparación no es una serie temporal homogénea. Fuentes: Ahrefs (jul. 2025, mar. 2026), BrightEdge (feb. 2026), Profound (2025-26).
   </figcaption>
 </figure>
 

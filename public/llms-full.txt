@@ -72,11 +72,11 @@ Herramienta gratuita de The Stack House para comprobar si un ecommerce está té
 
 **Share of Model (SoM):** La cantidad de menciones a una marca dividido por el total de menciones en su categoría en las respuestas de los motores de IA. Es la métrica central del GEO.
 
-**GEO (Generative Engine Optimization):** Disciplina de optimización para que un modelo de lenguaje sintetice una marca en su respuesta y la cite. Distinto del SEO tradicional: el GEO mide Share of Model, no posición en el ranking.
+**GEO (Generative Engine Optimization):** Trabajo sobre presencia en respuestas generativas: menciones, citas y resultados comerciales. Comparte fundamentos con SEO; Google considera sus funciones generativas parte de Search.
 
-**AEO (Answer Engine Optimization):** Optimización para motores de respuesta directa (como Perplexity, Claude, ChatGPT). Subconjunto del GEO.
+**AEO (Answer Engine Optimization):** Término sectorial para optimización de respuestas directas; su frontera con GEO varía según el uso. Definir superficies y métricas antes de comparar servicios.
 
-**Decoupling:** El desacople entre ranking en Google y citación en IA. En julio de 2025, el 76% de las fuentes citadas por AI Overviews venían del top-10 orgánico. En marzo de 2026, ese número bajó al 37,9%.
+**Decoupling:** Diferencia entre ranking y citación. Ahrefs (marzo de 2026): 37,9% de las URLs citadas en los diez primeros bloques; 37,1% contando solo enlaces orgánicos. La comparación con julio de 2025 incluye cambios de metodología.
 
 ---
 
@@ -86,7 +86,7 @@ Herramienta gratuita de The Stack House para comprobar si un ecommerce está té
 URL: https://thestackhouse.io/blog/geo-vs-seo-diferencias-2026
 Fecha: 2026-08-01 | Lectura: 7 min
 
-Rankear en Google ya no garantiza que los motores de IA te mencionen. El solape cayó de 76% a 38% en ocho meses (Ahrefs, mar. 2026). En ChatGPT, el solape con el top-10 orgánico es apenas del 6,82%. El GEO no reemplaza el SEO: se monta sobre él. Las menciones de marca (correlación r = 0,664) vuelven una empresa hasta tres veces más citable que los backlinks (r = 0,218).
+GEO y SEO comparten fundamentos. El artículo distingue rankings, menciones, citas y resultados comerciales. Interpreta los estudios de Ahrefs y Writesonic con su muestra y metodología, sin convertir correlaciones en multiplicadores causales ni prometer plazos universales. Incluye una clasificación práctica propia de prompts por intención con ejemplos de ecommerce. Actualización sustancial: 2026-10-07.
 
 ---
 
@@ -110,7 +110,7 @@ Los motores de IA no eligen marcas por popularidad ni antigüedad. Eligen las qu
 URL: https://thestackhouse.io/blog/ranking-google-no-predice-visibilidad-ia
 Fecha: 2026-08-08 | Lectura: 5 min
 
-Cinco estudios independientes confirman el decoupling. Google AI Overviews pasó de citar el top-10 orgánico en un 76% de los casos (julio 2025) a solo un 37,9% (marzo 2026). ChatGPT cita el top-10 de Google en un 6,82% de las respuestas. El query fan-out (los modelos expanden la consulta del usuario en múltiples sub-preguntas) explica por qué fuentes de nicho con autoridad temática superan a sitios de alto ranking genérico.
+La posición para una consulta no basta para saber qué fuentes citará una respuesta. Ahrefs (marzo de 2026) registra 37,9% de coincidencia con los diez primeros bloques y 37,1% con enlaces orgánicos clásicos; fuera del top-100 orgánico, 36,7%. Distingue las muestras y el cambio de metodología respecto a julio de 2025. Actualización de cifras y gráfico: 2026-10-06.
 
 ---
 

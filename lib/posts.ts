@@ -10,6 +10,7 @@ export type PostMeta = {
   h1?: string
   description: string
   date: string
+  updated?: string
   category: string
   author: string
   readTime: string

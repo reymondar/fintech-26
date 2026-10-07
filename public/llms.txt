@@ -18,7 +18,7 @@
 ## Blog
 
 - [Blog — The Stack House](https://thestackhouse.io/blog): Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital.
-- [GEO vs. SEO: qué es diferente en 2026 (y qué sigue igual)](https://thestackhouse.io/blog/geo-vs-seo-diferencias-2026): Fundamentos compartidos, prompts por intención para ecommerce y estudios de solapamiento con metodología y límites.
+- [GEO vs. SEO: qué es diferente en 2026 (y qué sigue igual)](https://thestackhouse.io/blog/geo-vs-seo-diferencias-2026): Fundamentos compartidos, observaciones propias, E-E-A-T y prompts por intención para ecommerce; estudios de solapamiento con metodología y límites.
 - [Share of Model (SoM): la métrica de visibilidad en IA que todavía medimos bastante mal](https://thestackhouse.io/blog/que-es-share-of-model-som): Share of Model intenta medir cuánto aparece una marca en las respuestas de IA. El problema: todavía no existe una definición universal y pequeños cambios en los prompts pueden mover muchísimo el resultado.
 - [Por qué ChatGPT no menciona tu empresa (y qué hacer al respecto)](https://thestackhouse.io/blog/por-que-chatgpt-no-menciona-tu-empresa): Los motores de IA no eligen marcas por popularidad. Eligen las que tienen evidencia estructurada, fuentes confiables y responden preguntas concretas.
 - [Por qué tu ranking en Google ya no predice si la IA te menciona](https://thestackhouse.io/blog/ranking-google-no-predice-visibilidad-ia): Ahrefs: 37,9% de coincidencia con los diez primeros bloques y 37,1% con enlaces orgánicos clásicos; fuera del top-100 orgánico, 36,7%.

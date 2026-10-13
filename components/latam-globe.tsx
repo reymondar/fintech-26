@@ -181,11 +181,6 @@ export function LatamGlobe() {
 
   return <div aria-hidden="true" className="latam-globe pointer-events-none absolute">
     <canvas ref={canvasRef} className="h-full w-full" />
-    <style jsx>{`
-      .latam-globe { width: 850px; height: 850px; top: -35px; right: -190px; opacity: .95; }
-      @media (min-width: 1536px) { .latam-globe { right: calc((100vw - 1440px) / 2 - 180px); } }
-      @media (max-width: 1023px) { .latam-globe { width: 740px; height: 740px; right: -290px; top: -30px; opacity: .35; } }
-      @media (max-width: 639px) { .latam-globe { width: 570px; height: 570px; left: calc(50% - 350px); right: auto; top: 5px; opacity: .24; } }
-    `}</style>
+
   </div>
 }

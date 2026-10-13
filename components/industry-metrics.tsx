@@ -12,7 +12,7 @@ export function IndustryMetrics({ locale }: { locale: Locale }) {
   ]
 
   return (
-    <section aria-label={en ? "Our reach and AI commerce data" : "Nuestro alcance y datos de comercio con IA"} className="mx-auto mt-6 w-full max-w-md lg:mx-0">
+    <section aria-label={en ? "Our reach and AI commerce data" : "Nuestro alcance y datos de comercio con IA"} className="mx-auto mt-6 w-full max-w-md md:mx-0">
       <div className="grid grid-cols-3 gap-4 sm:gap-6">
         {metrics.map((metric) => (
           <div key={metric.label} className="flex min-w-0 flex-col gap-1 text-left">

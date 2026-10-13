@@ -24,8 +24,8 @@ export function Honesty() {
         <div id="comparison" className="relative max-w-5xl mx-auto scroll-mt-28">
           <div role="table" aria-label={locale === "en" ? "Ecommerce challenges and our services" : "Desafíos de ecommerce y nuestros servicios"} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white sm:rounded-[2rem]">
             <div role="row" className="grid grid-cols-2 border-b border-zinc-200">
-              <h3 role="columnheader" className="flex items-center gap-2 bg-zinc-50 px-4 py-4 text-xs font-semibold text-zinc-500 sm:px-7 sm:text-lg"><Hourglass className="hidden h-5 w-5 shrink-0 sm:block" aria-hidden="true"/>{locale === "en" ? "What holds you back" : "Qué frena tu crecimiento"}</h3>
-              <h3 role="columnheader" className="flex items-center gap-2 border-l border-emerald-100 bg-emerald-50 px-4 py-4 text-xs font-semibold text-emerald-700 sm:px-7 sm:text-lg"><Zap className="hidden h-5 w-5 shrink-0 sm:block" aria-hidden="true"/>{t("Qué hacemos")}</h3>
+              <div role="columnheader" className="flex items-center gap-2 bg-zinc-50 px-4 py-4 text-xs font-semibold text-zinc-500 sm:px-7 sm:text-lg"><Hourglass className="hidden h-5 w-5 shrink-0 sm:block" aria-hidden="true"/>{locale === "en" ? "What holds you back" : "Qué frena tu crecimiento"}</div>
+              <div role="columnheader" className="flex items-center gap-2 border-l border-emerald-100 bg-emerald-50 px-4 py-4 text-xs font-semibold text-emerald-700 sm:px-7 sm:text-lg"><Zap className="hidden h-5 w-5 shrink-0 sm:block" aria-hidden="true"/>{t("Qué hacemos")}</div>
             </div>
             {comparisonRows.map(row => {
               const language = locale === "en" ? 1 : 0

@@ -42,10 +42,10 @@ export function Hero() {
       <LatamGlobe />
       <div className="absolute inset-0 hidden sm:block pointer-events-none bg-[linear-gradient(90deg,#fafafa_0%,rgba(250,250,250,.92)_28%,rgba(250,250,250,0)_64%)]" />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto text-center lg:text-left">
+      <div className="relative z-10 w-full max-w-6xl mx-auto text-center md:text-left">
         {/* H1 */}
         <h1
-          className="text-[clamp(1.35rem,6.3vw,1.625rem)] sm:text-4xl lg:text-5xl font-normal tracking-tight text-zinc-900 mb-8 lg:mb-10 leading-[1.18] lg:max-w-[720px]"
+          className="text-[clamp(1.35rem,6.3vw,1.625rem)] sm:text-4xl lg:text-5xl font-normal tracking-tight text-zinc-900 mb-8 lg:mb-10 leading-[1.18] md:max-w-[65%] lg:max-w-[720px]"
           style={{ fontFamily: "var(--font-instrument-sans), sans-serif" }}
         >
           <span className="block overflow-hidden">
@@ -79,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-xs sm:text-sm font-medium text-zinc-700 max-w-3xl mx-auto mb-12 lg:mb-14 leading-relaxed lg:mx-0 lg:max-w-xl"
+          className="text-xs sm:text-sm font-medium text-zinc-700 max-w-3xl mx-auto mb-12 lg:mb-14 leading-relaxed md:mx-0 md:max-w-[55%] lg:max-w-xl"
         > {t("The Stack House posiciona tu ecommerce en las respuestas de IA y optimiza tu tienda para convertir ese interés en ventas. Trabajamos tu catálogo, contenido y experiencia de compra, y medimos su impacto comercial.")} </m.h2>
 
         {/* CTA */}
@@ -87,7 +87,7 @@ export function Hero() {
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col items-center lg:items-start gap-3"
+          className="flex flex-col items-center md:items-start gap-3"
         >
           <Button
             asChild

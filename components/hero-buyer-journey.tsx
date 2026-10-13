@@ -59,8 +59,8 @@ export function HeroBuyerJourney() {
   }, [step, visible, pageVisible, reduced, cycle])
   const active = reduced ? 3 : step
   const labels = [c("Pregunta", "Ask"), c("Te descubre", "Discover"), c("Visita tu tienda", "Visit your store"), c("Cierra la venta", "Make the sale")]
-  return <div ref={ref} id="buyer-journey" className="relative mx-auto mt-10 mb-16 w-full max-w-5xl scroll-mt-28 text-left">
-    <div className="pointer-events-none absolute inset-x-16 top-20 bottom-0 rounded-full bg-emerald-100/60 blur-3xl" />
+  return <div ref={ref} id="buyer-journey" className="relative mx-auto w-full max-w-5xl scroll-mt-28 text-left">
+    <div className="pointer-events-none absolute inset-x-16 top-20 bottom-0 rounded-full bg-emerald-100/10 blur-3xl" />
     <div className="relative grid items-start gap-5 md:grid-cols-[1fr_1.08fr] md:gap-0">
       <div className="relative z-10 overflow-hidden rounded-3xl border border-zinc-200/80 bg-white/95 shadow-[0_16px_60px_-35px_rgba(0,0,0,.3)] md:mr-[-24px]">
         <div className="border-b border-zinc-100 px-5 py-4 transition-colors duration-[350ms]" style={{ backgroundColor: assistant.background }}>

@@ -49,7 +49,7 @@ export function TrustedAtScale() {
   }, [active, running])
 
   return (
-    <section id="how-it-works" ref={ref} className="px-4 py-10 sm:py-14 scroll-mt-28">
+    <section id="how-it-works" ref={ref} className="py-6 sm:py-8 px-4 scroll-mt-28">
       <div id="features" className="mx-auto max-w-6xl">
         <header className="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{t("Cómo funciona")}</p>

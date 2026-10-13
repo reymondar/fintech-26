@@ -4,8 +4,10 @@ import { LocaleProvider } from "@/components/locale-provider"
 import { landingFaqs } from "@/lib/landing-copy"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navbar } from "@/components/navbar"
+import { ServicesOverview } from "@/components/services-overview"
 import { Hero } from "@/components/hero"
 import { Integrations } from "@/components/integrations"
+import { TechnologyLogos } from "@/components/technology-logos"
 import { TrustedAtScale } from "@/components/trusted-at-scale"
 import { Personalization } from "@/components/personalization"
 import { Honesty } from "@/components/honesty"
@@ -36,7 +38,9 @@ const faqJsonLd = {
         />
         <Navbar />
         <Hero />
+        <ServicesOverview />
         <Integrations />
+        <TechnologyLogos locale={locale} />
         <TrustedAtScale />
         <Personalization />
         <Honesty />

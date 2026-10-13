@@ -54,7 +54,7 @@ export function Integrations() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="overflow-hidden py-8 sm:py-10 px-4">
+    <section ref={ref} className="py-6 sm:py-8 overflow-hidden px-4">
       <div className="mx-auto max-w-3xl text-center mb-16">
         <m.h2
           initial={{ opacity: 1, y: 20 }}

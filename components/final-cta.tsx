@@ -14,7 +14,7 @@ export function FinalCTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="audit" className="py-8 sm:py-10 px-4">
+    <section id="audit" className="py-6 sm:py-8 px-4">
       <m.div
         ref={ref}
         initial={{ opacity: 1, y: 40 }}

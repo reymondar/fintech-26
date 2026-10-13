@@ -29,10 +29,10 @@ const SITE_URL = "https://thestackhouse.io"
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Visibilidad en IA para ecommerce | The Stack House",
+    default: "AEO/SEO, datos y ecommerce | The Stack House",
     template: "%s — The Stack House",
   },
-  description: "Ayudamos a tu ecommerce a aparecer en recomendaciones de IA y convertir ese interés en ventas. Catálogo, contenido, autoridad y conversión.",
+  description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
   authors: [{ name: "Ramón Arana", url: SITE_URL }],
   icons: {
     icon: "/logo-stackhouse.png",
@@ -43,21 +43,21 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: SITE_URL,
     siteName: "The Stack House",
-    title: "The Stack House — IA y conversión para ecommerce",
-    description: "Trabajamos tu catálogo, contenido y autoridad para ganar presencia en la IA, y mejoramos tu tienda para convertir ese interés en ventas.",
+    title: "The Stack House — AEO/SEO, datos y personalización",
+    description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
     images: [
       {
         url: "/og-default.png",
         width: 1200,
         height: 630,
-        alt: "The Stack House — IA y conversión para ecommerce",
+        alt: "The Stack House — AEO/SEO, datos y personalización",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Stack House — IA y conversión para ecommerce",
-    description: "Ayudamos a tu ecommerce a ganar presencia en la IA y convertir ese interés en ventas.",
+    title: "The Stack House — AEO/SEO, datos y personalización",
+    description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
     images: ["/og-default.png"],
   },
   alternates: {
@@ -97,7 +97,7 @@ export default async function RootLayout({
                   availableLanguage: ["Spanish", "English"],
                 },
                 description:
-                  locale === "en" ? "The Stack House helps online stores gain visibility in AI recommendations and turn interest into sales through catalog, content, authority, conversion and sales tracking." : "The Stack House ayuda a ecommerce a ganar presencia en recomendaciones de IA y convertir ese interés en ventas mediante catálogo, contenido, autoridad, conversión y seguimiento comercial.",
+                  locale === "en" ? "AEO/SEO, data analysis and ecommerce personalization. We connect your data, improve your visibility and test your store to turn more visits into sales." : "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
                 knowsAbout: [
                   "Generative Engine Optimization",
                   "AI visibility",
@@ -106,7 +106,9 @@ export default async function RootLayout({
                   "AEO",
                   "SEO",
                   "Ecommerce personalization",
-                  "Sales automation",
+                  "Ecommerce data analysis",
+                  "Segmented personalization",
+                  "Ecommerce testing",
                   "ChatGPT brand mentions",
                   "Perplexity citations",
                 ],

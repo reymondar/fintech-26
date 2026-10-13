@@ -126,7 +126,7 @@ export function QueRecibes() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="que-recibes" ref={ref} className="py-8 sm:py-10 px-4">
+    <section id="que-recibes" ref={ref} className="py-6 sm:py-8 px-4">
       <div className="max-w-5xl mx-auto">
         <m.div
           initial={{ opacity: 1, y: 20 }}

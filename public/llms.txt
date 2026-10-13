@@ -1,15 +1,15 @@
 # The Stack House
 
-> The Stack House ayuda a ecommerce a ganar presencia en recomendaciones de IA y convertir ese interés en ventas. Trabaja catálogo, contenido, autoridad, conversión y seguimiento comercial.
+> AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.
 
 ## Inicio
 
-- [The Stack House — Ecommerce, IA y conversión](https://thestackhouse.io): Cómo trabajamos catálogo, contenido, autoridad y conversión para ganar presencia en IA y generar oportunidades comerciales.
+- [The Stack House — Ecommerce, IA y conversión](https://thestackhouse.io): AEO/SEO, análisis de datos y personalización segmentada para mejorar la visibilidad y conversión de tu tienda.
 
 ## Cómo trabajamos
 
 - [Implementación para ecommerce](https://thestackhouse.io/es#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
-- [Servicios — The Stack House](https://thestackhouse.io/servicios): Posicionamiento de productos, personalización de la tienda y automatización comercial. Entregables concretos y medición sobre tus herramientas existentes.
+- [Servicios — The Stack House](https://thestackhouse.io/servicios): AEO/SEO, análisis de datos y personalización segmentada con testing de tiendas. Entregables concretos y medición sobre tus herramientas existentes.
 
 ## Herramientas
 
@@ -48,7 +48,7 @@
 ## Idiomas de la landing / Landing languages
 
 - [Español](https://thestackhouse.io/es): Versión española de la landing de ecommerce.
-- [English](https://thestackhouse.io/en): AI visibility and conversion for ecommerce. Catalog, content, external authority and sales tracking.
+- [English](https://thestackhouse.io/en): AEO/SEO, data analysis and ecommerce personalization, including store testing and segmented experiences.
 
 La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y /en conservan el idioma solicitado. El blog mantiene sus artículos en español.
 

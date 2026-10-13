@@ -71,7 +71,7 @@ export function Personalization() {
   }, [running])
   const market = markets[blocks.commerce]
   return (
-    <section id="personalization" className="px-4 py-10 sm:py-14 scroll-mt-28" aria-labelledby="personalization-title">
+    <section id="personalization" className="py-6 sm:py-8 px-4 scroll-mt-28" aria-labelledby="personalization-title">
       <div className="mx-auto max-w-6xl">
         <header className="mx-auto mb-12 max-w-3xl text-center">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{copy("Personalización de tu tienda", "Store personalization")}</p>

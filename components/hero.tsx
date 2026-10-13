@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { m, AnimatePresence } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { IndustryMetrics } from "@/components/industry-metrics"
+import { LatamGlobe } from "@/components/latam-globe"
 import { HeroBuyerJourney } from "@/components/hero-buyer-journey"
 import { Button } from "@/components/ui/button"
 
@@ -36,25 +37,15 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-32 pb-16 overflow-hidden">
+    <section className="pb-6 sm:pb-8 relative min-h-screen flex flex-col items-center justify-center px-4 pt-40 sm:px-6 lg:pt-48 overflow-hidden">
       <div className="absolute inset-0 bg-zinc-50 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none" />
+      <LatamGlobe />
+      <div className="absolute inset-0 hidden sm:block pointer-events-none bg-[linear-gradient(90deg,#fafafa_0%,rgba(250,250,250,.92)_28%,rgba(250,250,250,0)_64%)]" />
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        {/* Eyebrow */}
-        <m.div
-          initial={{ opacity: 1, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 mb-5 sm:mb-6 shadow-sm"
-        >
-          <span className="w-2 h-2 rounded-full bg-emerald-500 pulse-glow" />
-          <span className="text-sm text-zinc-500">{t("Vende a través de la IA sin esfuerzo")}</span>
-        </m.div>
-
+      <div className="relative z-10 w-full max-w-6xl mx-auto text-center lg:text-left">
         {/* H1 */}
         <h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-zinc-900 mb-6 leading-[1.1]"
+          className="text-[clamp(1.35rem,6.3vw,1.625rem)] sm:text-4xl lg:text-5xl font-normal tracking-tight text-zinc-900 mb-8 lg:mb-10 leading-[1.18] lg:max-w-[720px]"
           style={{ fontFamily: "var(--font-instrument-sans), sans-serif" }}
         >
           <span className="block overflow-hidden">
@@ -88,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-[11.2px] sm:text-[12.6px] font-normal text-zinc-500 max-w-3xl mx-auto mb-10 leading-relaxed"
+          className="text-xs sm:text-sm font-medium text-zinc-700 max-w-3xl mx-auto mb-12 lg:mb-14 leading-relaxed lg:mx-0 lg:max-w-xl"
         > {t("The Stack House posiciona tu ecommerce en las respuestas de IA y optimiza tu tienda para convertir ese interés en ventas. Trabajamos tu catálogo, contenido y experiencia de compra, y medimos su impacto comercial.")} </m.h2>
 
         {/* CTA */}
@@ -96,21 +87,24 @@ export function Hero() {
           initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col items-center gap-3 mb-7"
+          className="flex flex-col items-center lg:items-start gap-3"
         >
           <Button
             asChild
             size="lg"
             className="shimmer-btn bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-zinc-900/10"
           >
-            <a href={localizeHref("/auditoria")}> {t("Audita tu tienda")} <ArrowRight className="ml-2 w-4 h-4" />
+            <a href={localizeHref("/auditoria")}> {locale === "en" ? "Let’s review your store" : "Revisemos tu tienda"} <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </Button>
         </m.div>
 
         <IndustryMetrics locale={locale} />
 
-        <HeroBuyerJourney />
+        <div className="relative mt-20 lg:mt-28 text-center">
+          <HeroBuyerJourney />
+        </div>
+
 
       </div>
     </section>

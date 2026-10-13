@@ -1,6 +1,6 @@
 # The Stack House — Documentación completa para modelos de lenguaje
 
-> The Stack House ayuda a ecommerce a ganar presencia en recomendaciones de IA y convertir ese interés en ventas. Trabaja catálogo, contenido, autoridad, conversión y seguimiento comercial.
+> AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.
 
 ---
 
@@ -35,17 +35,17 @@ Conectamos presencia en IA, visitas identificables, compras, contactos y resulta
 
 ## Servicios actuales
 
-El motor de captación de tu ecommerce: posicionamiento de productos, personalización y automatización comercial sobre tus herramientas existentes.
+El motor de captación de tu ecommerce: AEO/SEO, análisis de datos y personalización segmentada con testing sobre tus herramientas existentes.
 
 ## Posicionamiento
 Diagnosticamos catálogo y presencia frente a competidores. Mejoramos fichas, creamos contenido que resuelve dudas de compra y trabajamos referencias en fuentes relevantes.
 Entregamos un plan priorizado y mejoras implementadas en productos y contenido.
 
 ## Personalización y conversión
-Adaptamos mensajes, productos y llamadas a la acción según las señales disponibles de cada visitante. Implementamos experiencias y pruebas para medir qué funciona.
+Adaptamos mensajes, productos y llamadas a la acción según las señales disponibles de cada visitante. Implementamos personalización segmentada y testing de tiendas; realizamos pruebas A/B cuando el volumen permite obtener resultados útiles.
 
-## Automatización comercial
-Conectamos consultas, datos del cliente, CRM y seguimiento para que tu equipo reciba oportunidades con contexto.
+## Análisis de datos
+Conectamos datos de tienda y marketing, analizamos el recorrido de compra y priorizamos oportunidades de mejora con evidencia.
 
 ## Medición
 Relacionamos recomendaciones, visitas y resultados comerciales. Distinguimos el origen rastreable de la influencia declarada y señalamos lo que no se puede atribuir.
@@ -224,7 +224,7 @@ The Stack House permite explícitamente el acceso y la indexación de todo su co
 ## Idiomas de la landing / Landing languages
 
 - [Español](https://thestackhouse.io/es): Versión española de la landing de ecommerce.
-- [English](https://thestackhouse.io/en): AI visibility and conversion for ecommerce. Catalog, content, external authority and sales tracking.
+- [English](https://thestackhouse.io/en): AEO/SEO, data analysis and ecommerce personalization, including store testing and segmented experiences.
 
 La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y /en conservan el idioma solicitado. El blog mantiene sus artículos en español.
 

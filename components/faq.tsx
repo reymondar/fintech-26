@@ -40,7 +40,7 @@ export function FAQ() {
   }
 
   return (
-    <section id="faq" ref={ref} className="py-10 sm:py-14 px-4 scroll-mt-28">
+    <section id="faq" ref={ref} className="py-6 sm:py-8 px-4 scroll-mt-28">
       <div className="max-w-6xl mx-auto grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <m.div
           initial={{ opacity: 1, y: 20 }}

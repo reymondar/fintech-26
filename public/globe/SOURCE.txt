@@ -1,0 +1,5 @@
+Country outlines derived from world-atlas 2 countries-110m.json (ISC), based on Natural Earth public-domain cartography.
+Source: https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json
+https://github.com/topojson/world-atlas
+https://www.naturalearthdata.com/about/terms-of-use/
+Coordinates decoded from TopoJSON and rounded to three decimals. Store nodes are illustrative.

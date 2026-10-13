@@ -55,7 +55,7 @@ export function Honesty() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="honesty" ref={ref} className="py-8 sm:py-10 px-4 overflow-x-clip">
+    <section id="honesty" ref={ref} className="py-6 sm:py-8 px-4 overflow-x-clip">
       <div className="max-w-[1440px] mx-auto">
         {/* 1. Hero */}
         <m.div
@@ -77,7 +77,7 @@ export function Honesty() {
         <FeatureStack />
 
         {/* Comparison panels */}
-        <div id="comparison" className="relative max-w-5xl mx-auto mb-6 scroll-mt-28">
+        <div id="comparison" className="relative max-w-5xl mx-auto scroll-mt-28">
           <div className="relative mb-8 hidden grid-cols-2 items-center rounded-full border border-zinc-200 bg-zinc-100/80 px-6 py-4 md:grid">
             <h3 className="flex items-center gap-3 text-lg font-semibold text-zinc-500"><Hourglass className="h-5 w-5" aria-hidden="true" />{t("Dónde se frena la compra")}</h3>
             <h3 className="flex items-center justify-end gap-3 text-lg font-semibold text-zinc-900"><Zap className="h-5 w-5 text-emerald-600" aria-hidden="true" />{t("Qué hacemos")}</h3>

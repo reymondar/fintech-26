@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const landingEntries: MetadataRoute.Sitemap = (["es", "en"] as const).map(locale => ({
     url: `${SITE_URL}/${locale}`,
+    lastModified: new Date("2026-10-13"),
     changeFrequency: "weekly",
     priority: 1,
     alternates: { languages: { es: `${SITE_URL}/es`, en: `${SITE_URL}/en`, "x-default": SITE_URL } },
@@ -24,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...landingEntries,
     ...["servicios", "auditoria"].flatMap(page => (["es", "en"] as const).map(locale => ({
       url: `${SITE_URL}/${page}?lang=${locale}`,
-      lastModified: new Date("2026-09-16"),
+      lastModified: new Date(page === "servicios" ? "2026-10-13" : "2026-09-16"),
       changeFrequency: "monthly" as const,
       priority: 0.9,
       alternates: { languages: { es: `${SITE_URL}/${page}?lang=es`, en: `${SITE_URL}/${page}?lang=en`, "x-default": `${SITE_URL}/${page}` } },

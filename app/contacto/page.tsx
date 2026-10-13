@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/contact-form"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contacto — The Stack House",
-  description: "Hablemos. Contanos qué está pasando con tu visibilidad en IA y te decimos cómo podemos ayudar.",
+  title: "Contacto",
+  description: "Hablemos de tu ecommerce: AEO/SEO, análisis de datos, testing y personalización segmentada. Contanos qué necesita tu tienda.",
   alternates: {
     canonical: "https://thestackhouse.io/contacto",
   },

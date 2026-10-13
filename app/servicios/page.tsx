@@ -17,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = locale === "en" ? "Services — The Stack House" : "Servicios — The Stack House"
   const description =
     locale === "en"
-      ? "Product visibility, store personalization and sales automation for ecommerce. See what we implement and what you receive."
-      : "Posicionamiento de productos, personalización y automatización comercial para ecommerce. Descubre qué implementamos y qué recibes."
+      ? "AEO/SEO, data analysis and segmented ecommerce personalization. Discover how we analyze, improve and test your store."
+      : "AEO/SEO, análisis de datos y personalización segmentada para ecommerce. Descubre cómo analizamos, mejoramos y testeamos tu tienda."
   return {
     title: { absolute: title },
     description,

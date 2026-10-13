@@ -15,10 +15,10 @@ const products = [
 
 export function TechnologyLogos({ locale }: { locale: Locale }) {
   return (
-    <section aria-labelledby="technology-logos-title" className="py-6 sm:py-8 px-4 ">
-      <div className="mx-auto max-w-6xl border-y border-zinc-200/70 py-8 sm:py-10">
+    <section aria-labelledby="technology-logos-title" className="py-9 sm:py-8 px-4 ">
+      <div className="mx-auto max-w-6xl py-8 sm:py-10">
         <h2 id="technology-logos-title" className="mb-7 text-center text-xs font-medium uppercase tracking-[0.16em] text-zinc-500 sm:mb-8">
-          {locale === "en" ? "Technology we work with" : "Tecnología con la que trabajamos"}
+          {locale === "en" ? "Trusted partners" : "Socios de confianza"}
         </h2>
         <div role="region" aria-labelledby="technology-logos-title" tabIndex={0} className="overflow-x-auto rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
           <ul className="flex w-max min-w-full items-center justify-between gap-4 px-2 py-2 sm:px-4 lg:gap-8">

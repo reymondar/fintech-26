@@ -14,7 +14,7 @@ export function FinalCTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="audit" className="py-6 sm:py-8 px-4">
+    <section id="audit" className="py-9 sm:py-8 px-4">
       <m.div
         ref={ref}
         initial={{ opacity: 1, y: 40 }}
@@ -23,7 +23,7 @@ export function FinalCTA() {
         className="max-w-4xl mx-auto text-center"
       >
         <h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+          className="text-[1.575rem] sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
           <span className="text-zinc-900">{t("Veamos qué oportunidades")}</span>{" "}

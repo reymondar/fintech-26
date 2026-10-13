@@ -40,7 +40,7 @@ export function FAQ() {
   }
 
   return (
-    <section id="faq" ref={ref} className="py-6 sm:py-8 px-4 scroll-mt-28">
+    <section id="faq" ref={ref} className="py-9 sm:py-8 px-4 scroll-mt-28">
       <div className="max-w-6xl mx-auto grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <m.div
           initial={{ opacity: 1, y: 20 }}
@@ -50,7 +50,7 @@ export function FAQ() {
         >
           <span className="mb-6 inline-flex rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm text-zinc-500 shadow-sm">FAQs</span>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] text-zinc-900 mb-6"
+            className="text-[1.3125rem] sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] text-zinc-900 mb-6"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
             <span className="block">{t("Lo que necesitas saber")}</span>

@@ -49,17 +49,17 @@ export function TrustedAtScale() {
   }, [active, running])
 
   return (
-    <section id="how-it-works" ref={ref} className="py-6 sm:py-8 px-4 scroll-mt-28">
+    <section id="how-it-works" ref={ref} className="py-9 sm:py-8 px-4 scroll-mt-28">
       <div id="features" className="mx-auto max-w-6xl">
         <header className="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{t("Cómo funciona")}</p>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{t("Un motor de captación que trabaja alrededor de tu infraestructura")}</h2>
+          <h2 className="text-balance text-[1.3125rem] font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{t("Un motor de captación que trabaja alrededor de tu infraestructura")}</h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-500">{t("Tu tienda y tus herramientas. Nosotros nos encargamos de hacerlo funcionar.")}</p>
         </header>
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.2fr] lg:gap-12"
           onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
           onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false) }}>
-          <div>
+          <div className="hidden lg:block">
             {steps.map((step, index) => (
               <div key={step.number} className="relative border-t border-zinc-200 last:border-b">
                 <h3>
@@ -76,10 +76,7 @@ export function TrustedAtScale() {
           </div>
           <figure className="min-w-0">
             <AILayerFunnel active={active} running={running} locale={locale} />
-            <figcaption className="mt-4 flex items-center justify-between gap-3 text-xs text-zinc-400">
-              <span>{locale === "es" ? "Ilustración del proceso" : "Process illustration"} · {steps[active].number} / 03</span>
-              {!reducedMotion && <button type="button" onClick={() => setPaused(value => !value)} className="rounded-full border border-zinc-200 px-3 py-2 text-zinc-500 hover:text-zinc-900">{locale === "es" ? (paused ? "Reanudar" : "Pausar") : (paused ? "Resume" : "Pause")}</button>}
-            </figcaption>
+
           </figure>
         </div>
       </div>

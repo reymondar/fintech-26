@@ -2,7 +2,7 @@
 
 import { m, useInView, useReducedMotion } from "framer-motion"
 import { useEffect, useRef, useState, type ReactNode } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, TrendingUp, ShoppingBag, MousePointerClick } from "lucide-react"
 import { useTranslation } from "@/components/locale-provider"
 
 const markets = [
@@ -71,19 +71,30 @@ export function Personalization() {
   }, [running])
   const market = markets[blocks.commerce]
   return (
-    <section id="personalization" className="py-6 sm:py-8 px-4 scroll-mt-28" aria-labelledby="personalization-title">
+    <section id="personalization" className="py-9 sm:py-8 px-4 scroll-mt-28" aria-labelledby="personalization-title">
       <div className="mx-auto max-w-6xl">
-        <header className="mx-auto mb-12 max-w-3xl text-center">
+        <header className="mx-auto mb-7 max-w-3xl sm:mb-12 text-center">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{copy("Personalización de tu tienda", "Store personalization")}</p>
-          <h2 id="personalization-title" className="text-balance text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{copy("Una misma tienda. Una experiencia para cada cliente.", "One store. An experience for every customer.")}</h2>
-          <p className="mt-6 text-base leading-relaxed text-zinc-500">{copy("Adaptamos productos y mensajes a cada comprador para facilitar la compra.", "Tailor products and messages to each shopper to make buying easier.")}</p>
+          <h2 id="personalization-title" className="text-balance text-[1.3125rem] font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{copy("Más compras. Más valor en cada visita.", "More purchases. More value from every visit.")}</h2>
+          <p className="mt-6 text-base leading-relaxed text-zinc-500">{copy("Convertí el tráfico que ya tenés en más ventas con ofertas y recomendaciones relevantes para cada comprador.", "Turn the traffic you already have into more sales with offers and recommendations relevant to each shopper.")}</p>
         </header>
-        <div className="grid items-center gap-8 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white p-6 shadow-sm sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">{copy("Tu tienda, en contexto con tu audiencia", "Your store, tailored to your audience")}</h3>
-            <p className="mt-5 leading-relaxed text-zinc-500">{copy("Analizamos tu capa de datos para generar la tienda perfecta para cada visitante", "We analyze your data layer to create the perfect store for every visitor")}</p>
+        <div className="grid items-center gap-8 rounded-[2rem] sm:border sm:border-zinc-200 sm:bg-white sm:p-10 sm:shadow-sm lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+          <div className="hidden lg:block">
+            <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">{copy("Dale a cada comprador un motivo para comprar.", "Give every shopper a reason to buy.")}</h3>
+            <p className="mt-5 leading-relaxed text-zinc-500">{copy("Ayudá a los nuevos visitantes a encontrar su producto y a quienes vuelven a dar el siguiente paso. Testeamos mensajes, ofertas y recomendaciones para descubrir qué genera más compras.", "Help new visitors find their product and returning shoppers take the next step. We test messages, offers and recommendations to discover what drives more purchases.")}</p>
           </div>
-          <div ref={previewRef} className="min-w-0 rounded-3xl border border-emerald-100 bg-emerald-50/60 p-4 sm:p-6">
+          <div ref={previewRef} className="relative min-w-0 rounded-3xl border border-emerald-100 bg-emerald-50/60 px-3 pb-14 pt-12 sm:px-6 sm:pb-14 sm:pt-12">
+            <div className="pointer-events-none absolute inset-0 z-10" aria-label={copy("Métricas que buscamos mejorar", "Metrics we work to improve")}>
+              {[
+                { Icon: TrendingUp, label: copy("Conversión", "Conversion rate"), position: "-left-1 top-3 sm:-left-5", delay: 0 },
+                { Icon: ShoppingBag, label: copy("Valor por pedido", "Order value"), position: "-right-1 top-[46%] sm:-right-5", delay: 1.1 },
+                { Icon: MousePointerClick, label: copy("Compras recurrentes", "Repeat purchases"), position: "bottom-3 left-5", delay: 2.2 },
+              ].map(({ Icon, label, position, delay }) => <m.div key={label}
+                className={`absolute ${position} flex items-center gap-2 rounded-xl border border-emerald-100 bg-white/95 px-3 py-2.5 shadow-[0_8px_24px_-10px_rgba(6,78,59,.28)]`}
+                animate={running ? { y: [0, -6, 0] } : { y: 0 }} transition={{ duration: 4.5, repeat: Infinity, delay, ease: "easeInOut" }}>
+                <Icon className="h-4 w-4 text-emerald-600" aria-hidden="true"/><span className="text-[11px] font-medium text-zinc-700">{label}</span><span className="text-sm font-semibold text-emerald-600" aria-hidden="true">↗</span>
+              </m.div>)}
+            </div>
             <div aria-live="off" className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
               <div className="flex items-center justify-between gap-2 border-b border-zinc-100 px-5 py-4"><span className="text-xs font-semibold tracking-widest text-zinc-800">STUDIO STORE</span><ChangingBlock value={blocks.commerce} preparing={preparing === "commerce"} reduced={reducedMotion}><span className="text-xs text-zinc-500">{market.language} · {market.currency}</span></ChangingBlock></div>
               <div className="p-5 sm:p-6">

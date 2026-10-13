@@ -37,7 +37,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="pb-6 sm:pb-8 relative min-h-screen flex flex-col items-center justify-center px-4 pt-40 sm:px-6 lg:pt-48 overflow-hidden">
+    <section className="pb-9 sm:pb-8 relative min-h-screen flex flex-col items-center justify-center px-4 pt-40 sm:px-6 lg:pt-48 overflow-hidden">
       <div className="absolute inset-0 bg-zinc-50 pointer-events-none" />
       <LatamGlobe />
       <div className="absolute inset-0 hidden sm:block pointer-events-none bg-[linear-gradient(90deg,#fafafa_0%,rgba(250,250,250,.92)_28%,rgba(250,250,250,0)_64%)]" />

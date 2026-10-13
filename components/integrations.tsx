@@ -54,13 +54,13 @@ export function Integrations() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="py-6 sm:py-8 overflow-hidden px-4">
+    <section ref={ref} className="py-9 sm:py-8 overflow-hidden px-4">
       <div className="mx-auto max-w-3xl text-center mb-16">
         <m.h2
           initial={{ opacity: 1, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-3xl sm:text-4xl font-bold tracking-tight mb-6"
+          className="text-[1.3125rem] sm:text-4xl font-bold tracking-tight mb-6"
           style={{ fontFamily: "var(--font-instrument-sans)" }}
         >
           <span className="block text-zinc-900">{t("~29.000 preguntas cada segundo.")}</span>

@@ -126,7 +126,7 @@ export function QueRecibes() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="que-recibes" ref={ref} className="py-6 sm:py-8 px-4">
+    <section id="que-recibes" ref={ref} className="py-9 sm:py-8 px-4">
       <div className="max-w-5xl mx-auto">
         <m.div
           initial={{ opacity: 1, y: 20 }}
@@ -135,7 +135,7 @@ export function QueRecibes() {
           className="text-center mb-16"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-4"
+            className="text-[1.3125rem] sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           > {t("¿Está generando negocio? Vamos a medirlo.")} </h2>
           <p className="text-zinc-500 max-w-2xl mx-auto"> {t("Medimos qué visitas, oportunidades y ventas llegan desde la IA.")} </p>

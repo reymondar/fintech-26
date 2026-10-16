@@ -3,10 +3,12 @@ import { getAllPosts } from "@/lib/posts"
 
 const SITE_URL = "https://thestackhouse.io"
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts()
+export const dynamic = "force-dynamic"
 
-  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getAllPosts()
+
+  const blogEntries: MetadataRoute.Sitemap = posts.filter(post => !post.seo?.noindex).map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "monthly",

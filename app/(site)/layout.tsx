@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import { Manrope, Bricolage_Grotesque, Instrument_Sans } from "next/font/google"
 import { PrivacyControls } from "@/components/privacy-controls"
 import { MotionProvider } from "@/components/motion-provider"
-import "./globals.css"
+import "../globals.css"
 
 const manrope = Manrope({
   subsets: ["latin"],

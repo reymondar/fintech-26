@@ -3,9 +3,9 @@ import { detectLocale, isLocale, LOCALE_COOKIE } from "@/lib/locale"
 
 const LINK_HEADER = '</.well-known/api-catalog>; rel="api-catalog"'
 
-export function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
-  if (pathname === "/mailing" || pathname.startsWith("/mailing/")) {
+  if (pathname === "/admin" || pathname.startsWith("/admin/") || pathname === "/mailing" || pathname.startsWith("/mailing/")) {
     const h = new Headers(request.headers)
     h.set("x-sh-private", "1")
     const res = NextResponse.next({ request: { headers: h } })
@@ -14,6 +14,18 @@ export function middleware(request: NextRequest) {
     res.headers.set("Referrer-Policy", "no-referrer")
     res.headers.set("Content-Security-Policy", "frame-ancestors 'none'")
     return res
+  }
+  if (pathname === '/api/users/first-register' && process.env.VERCEL && process.env.PAYLOAD_ALLOW_SETUP !== 'true') return new NextResponse('Setup disabled', { status: 403 })
+  if (pathname.startsWith('/blog/') && process.env.CMS_BLOG_ENABLED === 'true') {
+    const { getCMS } = await import('@/lib/posts')
+    const payload = await getCMS()
+    const slug = pathname.slice('/blog/'.length)
+    const active = await payload.find({ collection: 'posts', where: { slug: { equals: slug }, _status: { equals: 'published' } }, limit: 1, depth: 0, select: { slug: true }, overrideAccess: false })
+    if (!active.docs.length) {
+      const redirects = await payload.find({ collection: 'redirects', where: { from: { equals: pathname } }, limit: 1, depth: 0 })
+      const destination = redirects.docs[0]?.to
+      if (destination && destination !== pathname && /^\/blog\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(destination)) return NextResponse.redirect(new URL(destination, request.url), 301)
+    }
   }
   const accept = request.headers.get("accept") ?? ""
   const explicit = pathname === "/es" ? "es" : pathname === "/en" ? "en" : null
@@ -59,5 +71,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api/|_next/|.*\\.[^/]+$).*)"],
+  matcher: ["/api/users/first-register", "/((?!api/|_next/|.*\\.[^/]+$).*)"],
 }

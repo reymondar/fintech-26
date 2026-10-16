@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic"
 import { NextResponse } from "next/server"
 import { getPost } from "@/lib/posts"
 
@@ -6,7 +7,7 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params
-  const post = getPost(slug)
+  const post = await getPost(slug)
 
   if (!post) {
     return new NextResponse("Not found", { status: 404 })
@@ -26,7 +27,7 @@ export async function GET(
   return new NextResponse(header + post.content, {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
+      "Cache-Control": "public, max-age=0, must-revalidate",
     },
   })
 }

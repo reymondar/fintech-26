@@ -1,3 +1,7 @@
+import { draftMode } from "next/headers"
+export const dynamic = "force-dynamic"
+import { editorialSchema } from "@/cms/schema"
+import { CMSRichText } from "@/components/cms-rich-text"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ReadingProgress } from "@/components/reading-progress"
@@ -9,7 +13,7 @@ import type { Metadata } from "next"
 import remarkGfm from "remark-gfm"
 
 export async function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }))
+  return (await getAllPosts()).map((p) => ({ slug: p.slug }))
 }
 
 const SITE_URL = "https://thestackhouse.io"
@@ -20,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const post = getPost(slug)
+  const post = await getPost(slug)
   if (!post) return {}
   const postUrl = `${SITE_URL}/blog/${slug}`
   return {
@@ -28,7 +32,8 @@ export async function generateMetadata({
     description: post.description,
     keywords: post.keywords,
     authors: [{ name: post.author, url: SITE_URL }],
-    alternates: { canonical: postUrl },
+    alternates: { canonical: post.seo?.canonical || postUrl },
+    robots: (await draftMode()).isEnabled || post.seo?.noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: "article",
       url: postUrl,
@@ -39,7 +44,7 @@ export async function generateMetadata({
       authors: [post.author],
       images: [
         {
-          url: "/og-default.png",
+          url: post.seo?.image?.url || "/og-default.png",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -50,7 +55,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["/og-default.png"],
+      images: [post.seo?.image?.url || "/og-default.png"],
     },
   }
 }
@@ -127,7 +132,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const post = getPost(slug)
+  const post = await getPost(slug)
   if (!post) notFound()
 
   const postUrl = `${SITE_URL}/blog/${slug}`
@@ -137,15 +142,15 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     "@id": postUrl,
     url: postUrl,
-    headline: post.title,
+    headline: post.h1 || post.title,
     description: post.description,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
+    image: post.seo?.image?.url ? new URL(post.seo.image.url, SITE_URL).href : `${SITE_URL}/og-default.png`,
     author: {
       "@type": "Person",
-      "@id": `${SITE_URL}/#ramon-arana`,
+      "@id": `${SITE_URL}/#author-${encodeURIComponent(post.author)}`,
       name: post.author,
-      jobTitle: "Fundador",
       worksFor: { "@id": `${SITE_URL}/#organization` },
       url: SITE_URL,
     },
@@ -169,8 +174,10 @@ export default async function BlogPostPage({
 
   return (
     <div className="min-h-screen bg-background">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }} />
+      {(await draftMode()).isEnabled && <aside className="relative z-50 bg-amber-100 px-4 py-2 text-center text-sm">Vista previa — cambios sin publicar. <a className="underline" href="/api/cms/preview/exit">Salir de la vista previa</a></aside>}
+      {editorialSchema(post.richContent, post.customSchema, postUrl).map((entity, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entity).replace(/</g, "\\u003c") }} />)}
       <ReadingProgress />
       <Navbar />
 
@@ -212,6 +219,7 @@ export default async function BlogPostPage({
             <span className="text-xs text-zinc-400">
               {new Date(post.date).toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" })}
             </span>
+            {post.updated && <time className="text-xs text-zinc-400" dateTime={post.updated}>Actualizado: {new Date(post.updated).toLocaleDateString("es-AR", { timeZone: "UTC" })}</time>}
             <span className="text-zinc-200">|</span>
             <span className="text-xs text-zinc-400">{post.readTime} de lectura</span>
           </div>
@@ -220,11 +228,11 @@ export default async function BlogPostPage({
 
           {/* MDX Content */}
           <div>
-            <MDXRemote
+            {post.richContent ? <CMSRichText data={post.richContent} /> : <MDXRemote
               source={post.content}
               components={mdxComponents}
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
-            />
+            />}
           </div>
 
           {/* End CTA */}

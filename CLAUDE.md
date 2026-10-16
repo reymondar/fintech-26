@@ -1,3 +1,11 @@
+# CMS update — Payload
+
+When CMS_BLOG_ENABLED=true, publish and edit articles in Payload. MDX files are retained as originals; changing them does not update an imported article. Use npm run cms:import only for initial/import-missing content. Read CMS.md for the deployment, DB migration and scheduling requirements.
+
+llms.txt, llms-full.txt, sitemap and article JSON-LD are generated from published CMS content. Edit the non-blog AI text in content/ai; never create public/llms.txt alongside the route. Record substantial content changes in updated/changeKind/changeNote. The public frontend lives in app/(site); the admin has its own app/(payload) layout. This changes source organization, not URLs.
+
+The historical checklist below describes the MDX-only mode (CMS_BLOG_ENABLED=false).
+
 # The Stack House — Instrucciones para Claude
 
 ## Antes de cada push

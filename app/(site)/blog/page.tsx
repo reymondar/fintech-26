@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { getAllPosts } from "@/lib/posts"
@@ -41,7 +42,7 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const posts = getAllPosts()
+  const posts = await getAllPosts()
   const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE))
   const { page: pageParam } = await searchParams
   const currentPage = getPageNumber(pageParam)
@@ -66,7 +67,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, "\\u003c") }} />
       <Navbar />
 
       <main className="pt-32 pb-24 px-4">

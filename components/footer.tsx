@@ -40,6 +40,9 @@ export function Footer() {
                 <a href={localizeHref("/servicios")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Servicios")} </a>
               </li>
               <li>
+                <a href="/servicios/cro" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">{locale === "en" ? "CRO & personalization (ES)" : "CRO y personalización"}</a>
+              </li>
+              <li>
                 <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Blog")} </a>
               </li>
               <li>

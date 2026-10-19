@@ -197,6 +197,7 @@ export const companySections: InformationSection[] = [
 export const companyLinks = [
   { label: "Página principal", href: `${COMPANY_URL}/es` },
   { label: "Servicios", href: `${COMPANY_URL}/servicios?lang=es` },
+  { label: "CRO y personalización", href: `${COMPANY_URL}/servicios/cro` },
   { label: "Blog", href: `${COMPANY_URL}/blog` },
   { label: "Contacto", href: `${COMPANY_URL}/contacto` },
   { label: "LinkedIn corporativo", href: "https://www.linkedin.com/company/the-stack-house/" },

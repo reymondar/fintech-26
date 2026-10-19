@@ -15,6 +15,10 @@
 - [Implementación para ecommerce](https://thestackhouse.io/es#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
 - [Servicios — The Stack House](https://thestackhouse.io/servicios): AEO/SEO, análisis de datos y personalización segmentada con testing de tiendas. Entregables concretos y medición sobre tus herramientas existentes.
 
+## CRO y personalización
+
+- [CRO para ecommerce](https://thestackhouse.io/servicios/cro): Implementación continua en categorías, fichas, presupuestos y checkout. Diagnóstico, hipótesis, mejoras, medición y campañas opcionales con motor propio de personalización.
+
 ## Herramientas
 
 - [UCP Checker — Agentic Commerce Readiness](https://ucp-checker.thestackhouse.io/): Auditoría técnica gratuita para ecommerce. Comprueba datos de producto, descubribilidad por máquinas, perfil UCP y preparación del checkout para agentes de IA mediante más de 40 verificaciones sobre información pública.

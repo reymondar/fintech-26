@@ -26,6 +26,11 @@ export async function GET() {
         ],
         "api": [
           {
+            href: `${SITE_URL}/api/md/servicios/cro`,
+            type: "text/markdown",
+            title: "CRO para ecommerce — proceso, implementación y personalización",
+          },
+          {
             href: `${SITE_URL}/api/md/informacion-para-ia`,
             type: "text/markdown",
             title: "Información oficial de The Stack House — ecommerce B2B",

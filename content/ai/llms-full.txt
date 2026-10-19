@@ -74,6 +74,16 @@ Comparte la URL .com de tu tienda, categoría, mercados y contacto. Después eli
 
 ---
 
+## CRO y personalización para ecommerce
+
+URL: https://thestackhouse.io/servicios/cro
+
+The Stack House implementa CRO continuo sobre categorías, navegación, fichas, comparación de productos, presupuestos, demos, carrito y checkout. El proceso reúne diagnóstico del recorrido, priorización de hipótesis, diseño e implementación, prueba y seguimiento, y reporte mensual con próximas acciones. Se trabaja sobre la tienda y las herramientas existentes.
+
+El cliente puede sumar campañas con el motor propio de personalización de ecommerce: segmentos, reglas, mensajes, recomendaciones y llamadas a la acción según contexto de compra. La personalización es opcional y se define con sus integraciones y costos en la propuesta. No se garantizan mejoras de conversión. Las pruebas A/B se ejecutan cuando la medición y el volumen permiten una comparación útil; un antes/después no demuestra por sí solo causalidad.
+
+Se miden pedidos, consultas calificadas, presupuestos y demos, con ingresos y margen cuando hay datos suficientes. El alcance, la implementación inicial, la operación mensual y las licencias se acuerdan para cada proyecto.
+
 ## Herramientas
 
 ### UCP Checker — Agentic Commerce Readiness

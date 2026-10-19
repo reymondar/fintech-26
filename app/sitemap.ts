@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...landingEntries,
     ...["servicios", "auditoria"].flatMap(page => (["es", "en"] as const).map(locale => ({
       url: `${SITE_URL}/${page}?lang=${locale}`,
-      lastModified: new Date(page === "servicios" ? "2026-10-13" : "2026-09-16"),
+      lastModified: new Date(page === "servicios" ? "2026-10-19" : "2026-09-16"),
       changeFrequency: "monthly" as const,
       priority: 0.9,
       alternates: { languages: { es: `${SITE_URL}/${page}?lang=es`, en: `${SITE_URL}/${page}?lang=en`, "x-default": `${SITE_URL}/${page}` } },
@@ -47,6 +47,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date("2026-10-19"),
       changeFrequency: "monthly",
       priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/servicios/cro`,
+      lastModified: new Date("2026-10-19"),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     ...blogEntries,
   ]

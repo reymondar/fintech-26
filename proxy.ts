@@ -49,7 +49,7 @@ export async function proxy(request: NextRequest) {
   // Always overwrite the internal language header supplied by the client.
   requestHeaders.set("x-sh-locale", locale)
   requestHeaders.delete("x-sh-private")
-  const hasMarkdown = pathname === "/informacion-para-ia" || pathname === "/" || explicit || pathname === "/services" || pathname === "/servicios" || pathname === "/blog" || pathname.startsWith("/blog/")
+  const hasMarkdown = pathname === "/servicios/cro" || pathname === "/informacion-para-ia" || pathname === "/" || explicit || pathname === "/services" || pathname === "/servicios" || pathname === "/blog" || pathname.startsWith("/blog/")
   if (accept.includes("text/markdown") && hasMarkdown) {
     const url = request.nextUrl.clone()
     url.pathname = explicit || pathname === "/" ? "/api/md" : pathname === "/servicios" ? "/api/md/services" : `/api/md${pathname}`

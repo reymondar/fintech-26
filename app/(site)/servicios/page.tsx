@@ -34,6 +34,15 @@ export default async function ServiciosPage() {
     <LocaleProvider locale={locale}>
       <Navbar />
       <ServiciosContent />
+      <section aria-label={locale === "en" ? "Explore CRO" : "Explora el servicio CRO"} className="border-t border-zinc-200 bg-zinc-50 px-5 py-12">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-xl font-medium tracking-tight text-zinc-900">{locale === "en" ? "CRO and ecommerce personalization" : "CRO y personalización de ecommerce"}</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-600">{locale === "en" ? "See how we analyze, implement and measure improvements to the shopping journey." : "Conoce cómo analizamos, implementamos y medimos las mejoras del recorrido de compra."}</p>
+          </div>
+          <a href="/servicios/cro" className="shrink-0 text-sm font-medium text-emerald-800 underline underline-offset-4">{locale === "en" ? "Explore the process (ES) →" : "Ver el proceso CRO →"}</a>
+        </div>
+      </section>
       <Footer />
     </LocaleProvider>
   )

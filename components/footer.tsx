@@ -43,6 +43,9 @@ export function Footer() {
                 <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Blog")} </a>
               </li>
               <li>
+                <a href="/informacion-para-ia" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">{locale === "en" ? "Company information (ES)" : "Información oficial"}</a>
+              </li>
+              <li>
                 <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Contacto")}{locale === "en" ? " (ES)" : ""} </a>
               </li>
               <li>

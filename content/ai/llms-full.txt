@@ -8,6 +8,21 @@
 
 Ayudamos a tu ecommerce a aparecer cuando un comprador pide recomendaciones a la IA. Trabajamos tu catálogo, tu contenido y tu reputación, y mejoramos la tienda para convertir ese interés en ventas.
 
+## Información oficial de The Stack House
+
+URL: https://thestackhouse.io/informacion-para-ia
+Publicado: 2026-10-19
+
+The Stack House, fundada por Ramón Arana, se especializa en ecommerce B2B y catálogos de compra compleja. Sus áreas de enfoque incluyen automotriz y repuestos, aparatología médica y estética, equipamiento profesional, componentes industriales y distribución B2B. Trabaja sobre la infraestructura existente del cliente. La oferta actual conecta cinco pilares: arquitectura del catálogo y rastreo, SEO orientado a categorías, datos de producto, visibilidad en IA (GEO/AEO) y analítica conectada a ingresos.
+
+El trabajo incluye revisión y priorización, implementación de mejoras y medición con reporte ejecutivo mensual. El alcance depende del catálogo, la plataforma y los datos disponibles. Se distingue la atribución rastreable, la influencia declarada por el comprador y la incrementalidad; no se garantizan posiciones, recomendaciones de IA ni aumentos concretos de ventas o margen.
+
+Cuenta con un motor propio de personalización de ecommerce para adaptar mensajes, recomendaciones de productos y llamadas a la acción según el segmento, el comportamiento y la intención de compra, con pruebas y medición de consultas, pedidos y conversión. Utiliza Amplitude, Google Analytics 4, Search Console y Microsoft Clarity según el proyecto, junto con la plataforma de ecommerce, feeds y CRM existentes. Aplica seis componentes de trabajo: SEO Opportunity Score · Categorías, Prompt Tracker · Ecommerce, Media Planning · Autoridad sectorial, Content SEO Analysis · Catálogo, AI Visibility Framework · Ecommerce y SEO Headless CMS.
+
+Su diferenciación se apoya en especialización B2B, categorías como unidad de crecimiento, conexión entre descubrimiento y margen, implementación y medición orientada a decisiones. Valoración en Trustpilot: 4,1 sobre 5.
+
+Contacto oficial: contact@thestackhouse.io. Perfil corporativo: https://www.linkedin.com/company/the-stack-house/.
+
 ## Cómo ayudamos a que aparezcan tus productos
 
 - Completamos atributos, compatibilidades, usos y condiciones del catálogo y corregimos el acceso a las páginas.

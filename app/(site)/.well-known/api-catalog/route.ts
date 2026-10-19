@@ -26,6 +26,11 @@ export async function GET() {
         ],
         "api": [
           {
+            href: `${SITE_URL}/api/md/informacion-para-ia`,
+            type: "text/markdown",
+            title: "Información oficial de The Stack House — ecommerce B2B",
+          },
+          {
             href: `${SITE_URL}/api/md`,
             type: "text/markdown",
             title: "Markdown API — inicio, servicios y blog",

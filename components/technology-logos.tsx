@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/locale"
 
-const products = [
+export const technologyProducts = [
   { name: "Amplitude", image: "amplitude-symbol.svg" },
   { name: "Personizely", image: "personizely-symbol.svg" },
   { name: "Shopify Plus", image: "shopify.svg" },
@@ -22,7 +22,7 @@ export function TechnologyLogos({ locale }: { locale: Locale }) {
         </h2>
         <div role="region" aria-labelledby="technology-logos-title" tabIndex={0} className="overflow-x-auto rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
           <ul className="flex w-max min-w-full items-center justify-between gap-4 px-2 py-2 sm:px-4 lg:gap-8">
-            {products.map((product) => (
+            {technologyProducts.map((product) => (
               <li key={product.name} title={product.name} className="flex h-12 w-12 shrink-0 items-center justify-center opacity-75 grayscale">
                 <img
                   src={`/technology-logos/${product.image}`}

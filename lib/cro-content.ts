@@ -5,19 +5,19 @@ export const CRO_DESCRIPTION = "Optimizamos categorías, fichas y recorridos de 
 export const CRO_INTRO = "Analizamos cómo compran tus clientes, detectamos qué les frena e implementamos mejoras en tu tienda. Trabajamos categorías, fichas, formularios y recorridos de compra, con seguimiento de pedidos, oportunidades comerciales y margen."
 
 export const croAreas = [
-  { title: "Categorías y navegación", problem: "Buscan el producto, pero no lo encuentran.", body: "Mejoramos la organización, los filtros y la búsqueda para que cada comprador llegue a productos relevantes y pueda comparar alternativas." },
-  { title: "Fichas y comparación", problem: "El producto interesa. Faltan razones para elegirlo.", body: "Trabajamos especificaciones, compatibilidades, imágenes, diferencias entre modelos, disponibilidad y condiciones para resolver las dudas antes del pedido." },
-  { title: "Presupuestos y demos", problem: "La visita termina antes de hablar con ventas.", body: "Ajustamos llamadas a la acción y formularios. Conservamos producto, necesidad y origen de la consulta para dar contexto al equipo comercial." },
-  { title: "Carrito y checkout", problem: "Llegan al final y abandonan.", body: "Revisamos costos de envío, plazos, medios de pago, errores y pasos innecesarios. Implementamos los cambios que permite la plataforma y el alcance acordado." },
-  { title: "Merchandising y recomendaciones", problem: "La tienda muestra lo mismo a compradores distintos.", body: "Priorizamos productos, complementos y mensajes según la categoría y las señales disponibles. Probamos qué ayuda a elegir y qué aporta valor al pedido." },
-  { title: "Compra recurrente", problem: "La primera venta no se convierte en una relación.", body: "Analizamos recorridos de clientes que vuelven, necesidades de reposición y compra complementaria para plantear experiencias relevantes de recompra." },
+  { title: "Categorías y búsqueda · PLP", problem: "Detectar búsquedas sin resultados y salidas tras aplicar filtros.", implementation: "Ajustamos facetas por categoría, sinónimos y orden de resultados. Probamos el cambio sobre una familia de productos.", metric: "Paso de listado a ficha y pedidos por sesión de categoría." },
+  { title: "Ficha de producto · PDP", problem: "Identificar dudas de compatibilidad, entrega o disponibilidad.", implementation: "Probamos mostrar stock, plazo y compatibilidad junto al botón de compra. Añadimos comparativas cuando hay variantes difíciles de distinguir.", metric: "Adiciones al carrito por visita a ficha; compras y devoluciones como control." },
+  { title: "Cotizaciones y demos · Lead gen", problem: "Localizar abandonos entre clic, inicio y envío del formulario.", implementation: "Probamos reducir campos y precargar SKU y variante. Vinculamos la solicitud con su origen y el estado comercial en el CRM.", metric: "Solicitudes calificadas por visita elegible; control de spam y calidad del lead." },
+  { title: "Carrito y checkout · Funnel", problem: "Separar abandonos por envío, validación y errores de pago.", implementation: "Instrumentamos los pasos y probamos mostrar el costo total antes del pago, simplificar campos o conservar el carrito tras un error.", metric: "Compras por inicio de checkout; control de errores y margen por pedido." },
+  { title: "Merchandising · Cross-sell", problem: "Encontrar combinaciones con afinidad y margen suficiente.", implementation: "Probamos módulos de complementos compatibles en ficha o carrito, con reglas de stock y un grupo sin recomendaciones.", metric: "Margen de contribución por visitante expuesto; control de conversión y devoluciones." },
+  { title: "Recompra · Retención", problem: "Estimar el intervalo de reposición por producto y cohorte.", implementation: "Probamos accesos a pedidos previos y recordatorios según el ciclo observado, con un grupo de control para separar la recompra natural.", metric: "Tasa de segundo pedido y margen incremental por cliente elegible." },
 ]
 
 export const croSteps = [
   { title: "Diagnóstico del recorrido", body: "Revisamos medición, embudos, búsquedas internas, sesiones y datos comerciales. Elegimos una categoría o un recorrido con un problema concreto y una oportunidad de negocio.", deliverable: "Mapa de fricciones y punto de partida de las métricas." },
   { title: "Hipótesis y prioridades", body: "Definimos qué cambio proponemos, a quién afecta y qué esperamos observar. Ordenamos las mejoras por evidencia, impacto esperado y esfuerzo, con una métrica principal y criterios de evaluación.", deliverable: "Backlog priorizado y plan de implementación." },
   { title: "Diseño e implementación", body: "Preparamos textos, diseño y cambios funcionales. Los implementamos sobre tu tienda, revisamos móvil y escritorio, y comprobamos formularios, enlaces y eventos antes de activarlos.", deliverable: "Mejoras implementadas, registro de cambios y validación técnica." },
-  { title: "Prueba y seguimiento", body: "Cuando el volumen permite una comparación útil, ejecutamos pruebas con control y variante. En otros casos corregimos fricciones y seguimos la evolución, teniendo en cuenta campañas, stock y estacionalidad.", deliverable: "Seguimiento de la exposición, conversiones y métricas de protección." },
+  { title: "Prueba y seguimiento", body: "Cuando el volumen permite una comparación útil, ejecutamos pruebas con control y variante. En otros casos corregimos fricciones y seguimos la evolución, teniendo en cuenta campañas, inventario y estacionalidad.", deliverable: "Seguimiento de la exposición, conversiones y métricas de protección." },
   { title: "Aprendizaje y siguiente mejora", body: "Revisamos resultados y decidimos qué mantener, ajustar o retirar. Documentamos lo aprendido y actualizamos las prioridades para el siguiente ciclo.", deliverable: "Reporte mensual con resultados, límites y próximas acciones." },
 ]
 
@@ -37,7 +37,7 @@ export const croModes = [
 
 export const croFaqs = [
   { question: "¿Qué incluye la implementación CRO?", answer: "Incluye los cambios de contenido, diseño y funcionamiento acordados para las páginas o recorridos prioritarios, junto con la validación y la medición. Definimos accesos, responsables, capacidad de ejecución y dependencias de la plataforma antes de empezar." },
-  { question: "¿El servicio sirve para ecommerce B2B?", answer: "Sí. Trabajamos tanto la compra directa como la venta que requiere presupuesto, consulta o demo. En B2B medimos la calidad de los contactos y el avance comercial cuando el CRM lo permite, además del envío del formulario." },
+  { question: "¿El servicio sirve para ecommerce B2B?", answer: "Sí. Trabajamos tanto la compra directa como la venta que requiere cotización, consulta o demo. En B2B medimos la calidad de los contactos y el avance comercial cuando el CRM lo permite, además del envío del formulario." },
   { question: "¿La personalización es obligatoria?", answer: "Es opcional. El servicio CRO puede trabajar con mejoras comunes a todos los compradores. Sumamos nuestro motor de personalización cuando existe una hipótesis que requiere adaptar mensajes, recomendaciones o llamadas a la acción por segmento." },
   { question: "¿Qué hace el motor propio de personalización?", answer: "Permite configurar campañas para adaptar mensajes, recomendaciones de productos y llamadas a la acción según segmentos, comportamiento e intención de compra. Definimos reglas, público, variantes y medición para cada campaña. La integración y las señales disponibles se revisan con la plataforma de cada tienda." },
   { question: "¿Siempre hacen pruebas A/B?", answer: "Las usamos cuando la hipótesis, la medición y el volumen permiten obtener una comparación útil. Con poco tráfico podemos corregir problemas de usabilidad y estudiar señales más frecuentes, como comparar productos o iniciar una consulta. Una mejora observada antes y después no demuestra por sí sola un efecto causal." },
@@ -50,7 +50,7 @@ export function croMarkdown() {
   return [
     `# ${CRO_TITLE}`, `URL: ${CRO_URL}`, CRO_INTRO,
     "## Qué es CRO en The Stack House", "CRO es el proceso continuo de mejorar la conversión de una tienda mediante análisis, hipótesis, implementación y evaluación. En The Stack House conecta catálogo, experiencia de compra y resultados comerciales, con foco en ecommerce B2B y compra compleja.",
-    "## Qué optimizamos", ...croAreas.flatMap(a => [`### ${a.title}`, a.problem, a.body]),
+    "## Qué optimizamos", ...croAreas.flatMap(a => [`### ${a.title}`, a.problem, a.implementation, "**Qué medimos:** " + a.metric]),
     "## Cómo lo implementamos", ...croSteps.flatMap((s, i) => [`### ${i + 1}. ${s.title}`, s.body, `Entregable: ${s.deliverable}`]),
     "## Qué recibes", croDeliverables.map(d => `- ${d}`).join("\n"),
     "## Modalidades de trabajo", ...croModes.flatMap(m => [`### ${m.title}`, m.body, m.items.map(i => `- ${i}`).join("\n")]),

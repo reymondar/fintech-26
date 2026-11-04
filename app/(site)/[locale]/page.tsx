@@ -9,10 +9,10 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   if (!isLocale(locale)) notFound()
-  const title = locale === "en" ? "AEO/SEO, Data & Ecommerce | The Stack House" : "AEO/SEO, datos y ecommerce | The Stack House"
+  const title = locale === "en" ? "B2B Ecommerce, GEO & CRO | The Stack House" : "Ecommerce B2B, GEO y CRO | The Stack House"
   const description = locale === "en"
-    ? "AEO/SEO, data analysis and ecommerce personalization. We connect your data, improve your visibility and test your store to turn more visits into sales."
-    : "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más."
+    ? "SEO/GEO, CRO and analytics for B2B ecommerce with large catalogs. We optimize categories, product data, orders and quote requests."
+    : "SEO/GEO, CRO y analítica para ecommerce B2B con catálogos grandes. Optimizamos categorías, datos de producto, pedidos y cotizaciones."
   return {
     title: { absolute: title }, description,
     alternates: { canonical: `${SITE}/${locale}`, languages: { es: `${SITE}/es`, en: `${SITE}/en`, "x-default": SITE } },

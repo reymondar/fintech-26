@@ -237,7 +237,7 @@ export default async function BlogPostPage({
 
           {/* End CTA */}
           <div className="border-t border-zinc-200 mt-14 pt-10">
-            <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-3">¿Querés saber si tu empresa aparece en la IA?</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400 mb-3">¿Quieres saber si tu empresa aparece en la IA?</p>
             <h3 className="font-display text-xl font-bold text-zinc-900 mb-4 leading-snug">
               Hacemos un diagnóstico en vivo de 20 minutos, sin costo.
             </h3>

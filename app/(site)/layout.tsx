@@ -1,10 +1,14 @@
 import { headers } from "next/headers"
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope, Bricolage_Grotesque, Instrument_Sans } from "next/font/google"
+import { Inter, Manrope, Bricolage_Grotesque, Instrument_Sans } from "next/font/google"
 import { PrivacyControls } from "@/components/privacy-controls"
 import { MotionProvider } from "@/components/motion-provider"
 import "../globals.css"
+import "../../styles/liquid-site.css"
+import "../../styles/stackhouse-brand.css"
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" })
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -32,11 +36,11 @@ export const metadata: Metadata = {
     default: "AEO/SEO, datos y ecommerce | The Stack House",
     template: "%s — The Stack House",
   },
-  description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
+  description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y probamos tu tienda para convertir más.",
   authors: [{ name: "Ramón Arana", url: SITE_URL }],
   icons: {
-    icon: "/logo-stackhouse.png",
-    apple: "/logo-stackhouse.png",
+    icon: "/branding/stackhouse-logo.png",
+    apple: "/branding/stackhouse-logo.png",
   },
   openGraph: {
     type: "website",
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "The Stack House",
     title: "The Stack House — AEO/SEO, datos y personalización",
-    description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
+    description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y probamos tu tienda para convertir más.",
     images: [
       {
         url: "/og-default.png",
@@ -57,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Stack House — AEO/SEO, datos y personalización",
-    description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
+    description: "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y probamos tu tienda para convertir más.",
     images: ["/og-default.png"],
   },
   alternates: {
@@ -74,7 +78,7 @@ export default async function RootLayout({
   const locale = (await headers()).get("x-sh-locale") === "en" ? "en" : "es"
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
+      <body data-site-theme={privatePage ? undefined : "liquid"} className={`${inter.variable} ${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -87,7 +91,7 @@ export default async function RootLayout({
                 url: SITE_URL,
                 logo: {
                   "@type": "ImageObject",
-                  url: `${SITE_URL}/logo-stackhouse.png`,
+                  url: `${SITE_URL}/branding/stackhouse-logo.png`,
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
@@ -97,7 +101,7 @@ export default async function RootLayout({
                   availableLanguage: ["Spanish", "English"],
                 },
                 description:
-                  locale === "en" ? "AEO/SEO, data analysis and ecommerce personalization. We connect your data, improve your visibility and test your store to turn more visits into sales." : "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.",
+                  locale === "en" ? "AEO/SEO, data analysis and ecommerce personalization. We connect your data, improve your visibility and test your store to turn more visits into sales." : "AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y probamos tu tienda para convertir más.",
                 knowsAbout: [
                   "Generative Engine Optimization",
                   "AI visibility",

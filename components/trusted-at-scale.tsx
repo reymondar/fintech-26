@@ -8,18 +8,18 @@ import { useEffect, useRef, useState } from "react"
 const steps = [
   {
     "number": "01",
-    "title": "Analizamos tu tienda con agentes de IA",
-    "description": "Evaluamos cómo la IA interpreta tu catálogo y responde a las preguntas de tus compradores."
+    "title": "Atrae más compradores a tus categorías más rentables.",
+    "description": "Desde las fichas y páginas de categoría hasta las reseñas y la reputación de tus productos, fortalecemos tu presencia en Google y asistentes de IA para captar demanda con intención de compra."
   },
   {
     "number": "02",
-    "title": "Construimos tu motor de captación",
-    "description": "Anticipa lo que busca cada comprador y adapta la experiencia para convertir su interés en ventas."
+    "title": "Convierte tu tráfico en oportunidades reales de venta.",
+    "description": "El comportamiento de tus usuarios revela dónde se frena la compra. Usamos esas señales para probar mejoras en navegación, merchandising y personalización que aumenten la conversión."
   },
   {
     "number": "03",
-    "title": "Personalizamos experiencias y te posicionamos",
-    "description": "Adaptamos tu tienda a cada comprador y trabajamos tu presencia en las recomendaciones de IA."
+    "title": "Descubre dónde aumentar tus márgenes con los datos de tu propio negocio.",
+    "description": "Conectamos adquisición, pedidos y costos para entender qué productos, canales y segmentos de clientes aportan más margen. Así puedes decidir dónde invertir, qué promociones sostener y qué pérdidas corregir."
   }
 ]
 
@@ -53,8 +53,8 @@ export function TrustedAtScale() {
       <div id="features" className="mx-auto max-w-6xl">
         <header className="mx-auto mb-12 max-w-4xl text-center lg:mb-16">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{t("Cómo funciona")}</p>
-          <h2 className="text-balance text-[1.3125rem] font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{t("Un motor de captación que trabaja alrededor de tu infraestructura")}</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-500">{t("Tu tienda y tus herramientas. Nosotros nos encargamos de hacerlo funcionar.")}</p>
+          <h2 className="text-balance text-[1.3125rem] font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{t("Construimos el motor de captación que trabaja alrededor de tu infraestructura.")}</h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-500">{t("Tu tienda, tu catálogo y tus herramientas. Un mismo objetivo: captar demanda para tus categorías prioritarias, convertirla en ventas y conocer su contribución al negocio.")}</p>
         </header>
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.2fr] lg:gap-12"
           onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}

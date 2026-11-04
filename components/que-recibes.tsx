@@ -3,124 +3,62 @@
 import { useTranslation } from "@/components/locale-provider"
 
 import { m, useInView } from "framer-motion"
-import { useRef, useState, useEffect } from "react"
+import { useRef } from "react"
 import { Check } from "lucide-react"
 
 const entregables = [
   {
-    "bold": "Presencia en preguntas de compra",
-    "desc": "tu marca, tus competidores y los motores que te recomiendan"
+    "bold": "Hacé crecer las categorías con más potencial",
+    "desc": "identifica dónde captar demanda y dónde recuperar conversión."
   },
   {
-    "bold": "Visitas que podemos identificar",
-    "desc": "qué asistentes envían tráfico y a qué páginas llega"
+    "bold": "Invierte en los canales que aportan valor",
+    "desc": "compará adquisición, ventas y contribución para orientar el presupuesto."
   },
   {
-    "bold": "Compras y contactos",
-    "desc": "dónde convierten y dónde abandonan"
+    "bold": "Protegé el margen de cada venta",
+    "desc": "detecta productos afectados por descuentos, devoluciones y costos variables."
   },
   {
-    "bold": "Oportunidades y ventas",
-    "desc": "del primer contacto al cierre en tu CRM"
+    "bold": "Reconoce a tus clientes más rentables",
+    "desc": "encuentra segmentos con mayor recompra y oportunidades para retenerlos."
   },
   {
-    "bold": "Influencia declarada por el comprador",
-    "desc": "cómo dice el cliente que te encontró"
+    "bold": "Anticipá tus decisiones de inventario",
+    "desc": "identifica riesgo de faltantes y productos de baja rotación."
   },
   {
-    "bold": "Decisiones para el siguiente mes",
-    "desc": "qué mantener, mejorar o probar"
-  }
-]
-
-const bars = [
-  {
-    "label": "Visitas",
-    "width": 100,
-    "highlight": false
-  },
-  {
-    "label": "Consultas",
-    "width": 100,
-    "highlight": false
-  },
-  {
-    "label": "Ventas",
-    "width": 100,
-    "highlight": true
+    "bold": "Avanzá con prioridades claras",
+    "desc": "sabé qué mejoras rindieron y dónde enfocar el siguiente mes."
   }
 ]
 
 function ReportMockup() {
-  const { t, locale, localizeHref } = useTranslation()
-
-  const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
-  const [animate, setAnimate] = useState(false)
-
-  useEffect(() => {
-    if (isInView) setAnimate(true)
-  }, [isInView])
-
+  const { t } = useTranslation()
   return (
-    <div ref={ref} className="relative mx-auto max-w-[380px] md:max-w-[480px]">
-      {/* Back page */}
-      <div
-        className="absolute top-[-8px] right-[-8px] w-full h-full rounded-[10px] bg-white border border-zinc-200/60"
-        aria-hidden="true"
-      />
-      {/* Front page */}
-      <div
-        className="relative rounded-[10px] bg-white border border-zinc-200 p-7 shadow-sm"
-        aria-label={t("Ejemplo del recorrido que medimos: visitas, consultas y ventas. Sin cifras de resultados.")}
-        role="img"
-      >
-        <p className="text-[13px] uppercase tracking-[0.06em] text-zinc-400 mb-1.5"> {t("Seguimiento de tu ecommerce")} </p>
-        <p className="text-[17px] font-medium text-zinc-900 mb-6"> {t("De la recomendación a la venta")} </p>
-
-        <p className="text-[14px] text-zinc-400 mb-1.5">{t("Un recorrido conectado")}</p>
-        <p className="mb-6">
-          <span className="text-[42px] font-medium" style={{ color: "#009967" }}>{t("IA → tienda")}</span>
-          <span className="text-[20px] text-zinc-400"> {t("→ venta")}</span>
-        </p>
-
-        <div className="flex flex-col gap-3.5 mb-6">
-          {bars.map((bar, i) => (
-            <div key={t(bar.label)} className="flex items-center gap-4">
-              <span className={`text-[13px] w-[100px] shrink-0 ${bar.highlight ? "font-medium text-zinc-900" : "text-zinc-500"}`}>
-                {t(bar.label)}
-              </span>
-              <div className="flex-1 h-3 bg-zinc-100 rounded">
-                <div
-                  className="h-3 rounded transition-all duration-1000 ease-out"
-                  style={{
-                    width: animate ? `${bar.width}%` : "0%",
-                    backgroundColor: bar.highlight ? "#009967" : "#d4d4d8",
-                    transitionDelay: `${i * 150}ms`,
-                  }}
-                />
-              </div>
-            </div>
-          ))}
+    <div className="relative mx-auto w-full max-w-[380px] md:max-w-[480px]">
+      <div className="absolute -right-2 -top-2 h-full w-full rounded-[10px] border border-zinc-200/60 bg-white" aria-hidden="true" />
+      <div className="relative rounded-[10px] border border-zinc-200 bg-white p-7 shadow-sm">
+        <p className="mb-2 text-[13px] uppercase tracking-[0.06em] text-zinc-400">{t("Tu reporte ejecutivo mensual")}</p>
+        <p className="mb-6 text-[22px] font-medium leading-snug text-zinc-900">{t("Dónde crecer. Qué corregir. Qué sigue.")}</p>
+        <div className="divide-y divide-zinc-100">
+          {[
+            ["Categorías prioritarias", "Demanda · ventas · conversión"],
+            ["Rentabilidad", "Productos · canales · segmentos"],
+            ["Próximas decisiones", "Inversión · recompra · stock"],
+          ].map(([title, detail]) => <div key={title} className="py-4">
+            <p className="text-sm font-medium text-emerald-700">{t(title)}</p>
+            <p className="mt-1 text-[13px] text-zinc-500">{t(detail)}</p>
+          </div>)}
         </div>
-
-        <div className="border-t border-zinc-100 pt-4">
-          <p className="text-[13px] text-zinc-400"> {t("Esquema ilustrativo · cada etapa se mide por separado")} </p>
-        </div>
+        <p className="mt-4 border-t border-zinc-100 pt-4 text-xs text-zinc-400">{t("Vista ilustrativa del reporte · sin datos de clientes")}</p>
       </div>
-
-      {/* Fallback: barras a su ancho final sin JS */}
-      <noscript>
-        <style>{`
-          [data-bar] { width: var(--bar-w) !important; }
-        `}</style>
-      </noscript>
     </div>
   )
 }
 
 export function QueRecibes() {
-  const { t, locale, localizeHref } = useTranslation()
+  const { t } = useTranslation()
 
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -137,8 +75,8 @@ export function QueRecibes() {
           <h2
             className="text-[1.3125rem] sm:text-4xl font-bold text-zinc-900 mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
-          > {t("¿Está generando negocio? Vamos a medirlo.")} </h2>
-          <p className="text-zinc-500 max-w-2xl mx-auto"> {t("Medimos qué visitas, oportunidades y ventas llegan desde la IA.")} </p>
+          > {t("Cada mes, una visión clara de dónde crecer y qué corregir.")} </h2>
+          <p className="text-zinc-500 max-w-2xl mx-auto"> {t("Descubre qué categorías impulsan tus ventas, dónde se pierde margen y qué decisiones pueden mejorar el próximo mes.")} </p>
         </m.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

@@ -7,7 +7,7 @@ import { useTranslation } from "@/components/locale-provider"
 export function LanguageSwitcher() {
   const pathname = usePathname()
   const { locale } = useTranslation()
-  const flowPage = ["/auditoria", "/servicios"].includes(pathname)
+  const flowPage = ["/auditoria", "/servicios", "/nosotros"].includes(pathname)
   if (!["/", "/es", "/en"].includes(pathname) && !flowPage) return null
 
   function remember(next: Locale) {
@@ -26,7 +26,7 @@ export function LanguageSwitcher() {
           aria-label={next === "es" ? "Español" : "English"}
           aria-current={locale === next ? "page" : undefined}
           onClick={event => { if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0) { event.preventDefault(); remember(next) } }}
-          className={`rounded-full px-2.5 py-2 text-xs font-semibold transition-colors ${locale === next ? "bg-zinc-900 text-white" : "text-zinc-500 hover:text-zinc-900"}`}>
+          className={`flex h-9 w-9 items-center justify-center rounded-full p-0 text-xs font-semibold transition-colors ${locale === next ? "bg-zinc-900 text-white" : "text-zinc-500 hover:text-zinc-900"}`}>
           {next.toUpperCase()}
         </a>
       ))}

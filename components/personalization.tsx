@@ -76,12 +76,12 @@ export function Personalization() {
         <header className="mx-auto mb-7 max-w-3xl sm:mb-12 text-center">
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-emerald-600">{copy("Personalización de tu tienda", "Store personalization")}</p>
           <h2 id="personalization-title" className="text-balance text-[1.3125rem] font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-instrument-sans)" }}>{copy("Más compras. Más valor en cada visita.", "More purchases. More value from every visit.")}</h2>
-          <p className="mt-6 text-base leading-relaxed text-zinc-500">{copy("Convertí el tráfico que ya tenés en más ventas con ofertas y recomendaciones relevantes para cada comprador.", "Turn the traffic you already have into more sales with offers and recommendations relevant to each shopper.")}</p>
+          <p className="mt-6 text-base leading-relaxed text-zinc-500">{copy("Convierte el tráfico que ya tienes en más ventas con ofertas y recomendaciones relevantes para cada comprador.", "Turn the traffic you already have into more sales with offers and recommendations relevant to each shopper.")}</p>
         </header>
         <div className="grid items-center gap-8 rounded-[2rem] sm:border sm:border-zinc-200 sm:bg-white sm:p-10 sm:shadow-sm lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <div className="hidden lg:block">
             <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">{copy("Dale a cada comprador un motivo para comprar.", "Give every shopper a reason to buy.")}</h3>
-            <p className="mt-5 leading-relaxed text-zinc-500">{copy("Ayudá a los nuevos visitantes a encontrar su producto y a quienes vuelven a dar el siguiente paso. Testeamos mensajes, ofertas y recomendaciones para descubrir qué genera más compras.", "Help new visitors find their product and returning shoppers take the next step. We test messages, offers and recommendations to discover what drives more purchases.")}</p>
+            <p className="mt-5 leading-relaxed text-zinc-500">{copy("Ayuda a los nuevos visitantes a encontrar su producto y a quienes vuelven a dar el siguiente paso. Probamos mensajes, ofertas y recomendaciones para descubrir qué genera más compras.", "Help new visitors find their product and returning shoppers take the next step. We test messages, offers and recommendations to discover what drives more purchases.")}</p>
           </div>
           <div ref={previewRef} className="relative min-w-0 rounded-3xl border border-emerald-100 bg-emerald-50/60 px-3 pb-14 pt-12 sm:px-6 sm:pb-14 sm:pt-12">
             <div className="pointer-events-none absolute inset-0 z-10" aria-label={copy("Métricas que buscamos mejorar", "Metrics we work to improve")}>

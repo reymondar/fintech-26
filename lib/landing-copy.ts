@@ -2,7 +2,7 @@
 export const landingFaqs = [
   {
     "question": "¿Qué hacen para que mi ecommerce aparezca en ChatGPT?",
-    "answer": "Revisamos cómo aparece tu tienda y qué fuentes cita la IA. Con ese diagnóstico, mejoramos catálogo, contenido y referencias externas para que tus productos entren en la selección."
+    "answer": "Priorizamos categorías y preguntas de compra. Mejoramos acceso, fichas, atributos, comparativas y referencias externas para facilitar que buscadores y asistentes encuentren y entiendan tu catálogo. Seguimos presencia y fuentes citadas por separado del tráfico y las ventas."
   },
   {
     "question": "Si ya tengo SEO, ¿qué aporta The Stack House?",
@@ -10,7 +10,7 @@ export const landingFaqs = [
   },
   {
     "question": "¿Van a trabajar todo mi catálogo o priorizar ciertos productos?",
-    "answer": "Priorizamos productos y preguntas de compra según su valor comercial, las dudas de tus clientes y lo que encontramos en las respuestas de IA. No hace falta rehacerlo todo."
+    "answer": "Trabajamos por categorías y familias de productos. Priorizamos según demanda, valor comercial, calidad del catálogo y capacidad de implementación. El alcance puede cubrir una categoría, varias o el catálogo por etapas."
   },
   {
     "question": "¿Qué hacen si aparezco en la IA pero no llegan ventas?",
@@ -18,7 +18,7 @@ export const landingFaqs = [
   },
   {
     "question": "¿Cómo sabré si ChatGPT está generando ventas?",
-    "answer": "Conectamos las visitas identificables desde IA con compras y oportunidades en tu analítica y CRM. Separamos ese origen de la influencia que declara el comprador y señalamos lo que no podemos atribuir."
+    "answer": "Relacionamos las visitas identificables desde IA con pedidos y oportunidades registradas en analítica y CRM. Distinguimos la fuente rastreable de la influencia declarada por el comprador. Las ventas atribuidas no equivalen a ventas incrementales; esa pregunta requiere una evaluación específica."
   },
   {
     "question": "¿Tengo que cambiar de plataforma o instalar otra herramienta?",
@@ -38,6 +38,6 @@ export const landingFaqs = [
   },
   {
     "question": "¿Cómo definen el precio y qué revisamos en la primera llamada?",
-    "answer": "La revisión inicial es gratis: vemos tu tienda y las recomendaciones de tu categoría. Con eso, definimos si encaja y qué alcance e inversión tendría el trabajo."
+    "answer": "La revisión inicial no tiene costo: revisamos tienda, categorías prioritarias, recorrido comercial y datos disponibles. La propuesta identifica implementación inicial, ejecución y análisis mensual, y licencias necesarias. Se dimensiona por alcance y complejidad, además del tamaño del catálogo."
   }
 ]

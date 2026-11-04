@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Contacto",
-  description: "Hablemos de tu ecommerce: AEO/SEO, análisis de datos, testing y personalización segmentada. Contanos qué necesita tu tienda.",
+  description: "Hablemos de tu ecommerce: AEO/SEO, análisis de datos, testing y personalización segmentada. Cuéntanos qué necesita tu tienda.",
   alternates: {
     canonical: "https://thestackhouse.io/contacto",
   },

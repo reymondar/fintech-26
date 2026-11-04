@@ -1,6 +1,6 @@
 # The Stack House
 
-> AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.
+> AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y probamos tu tienda para convertir más.
 
 ## Inicio
 
@@ -13,15 +13,11 @@
 ## Cómo trabajamos
 
 - [Implementación para ecommerce](https://thestackhouse.io/es#how-it-works): Revisión, implementación y mejora continua sobre la tienda y las herramientas existentes. Alcance e inversión según el proyecto.
-- [Servicios — The Stack House](https://thestackhouse.io/servicios): AEO/SEO, análisis de datos y personalización segmentada con testing de tiendas. Entregables concretos y medición sobre tus herramientas existentes.
+- [Servicios — The Stack House](https://thestackhouse.io/servicios?lang=es): AEO/SEO, análisis de datos y personalización segmentada con testing de tiendas. Entregables concretos y medición sobre tus herramientas existentes.
 
 ## CRO y personalización
 
-- [CRO para ecommerce](https://thestackhouse.io/servicios/cro): Implementación continua en categorías, fichas, presupuestos y checkout. Diagnóstico, hipótesis, mejoras, medición y campañas opcionales con motor propio de personalización.
-
-## Herramientas
-
-- [UCP Checker — Agentic Commerce Readiness](https://ucp-checker.thestackhouse.io/): Auditoría técnica gratuita para ecommerce. Comprueba datos de producto, descubribilidad por máquinas, perfil UCP y preparación del checkout para agentes de IA mediante más de 40 verificaciones sobre información pública.
+- [CRO para ecommerce](https://thestackhouse.io/servicios/cro): Diagnóstico, implementación y métricas para categorías, fichas, cotizaciones, checkout, recomendaciones y recompra. Pruebas controladas cuando el volumen lo permite.
 
 ## Blog
 

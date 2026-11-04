@@ -1,0 +1,24 @@
+.about{background:#eaf1f5;color:#102532;font-family:var(--font-instrument-sans),Arial,sans-serif;padding-bottom:90px}.hero{text-align:center;padding:145px 24px 70px;background:radial-gradient(ellipse at 50% 35%,#234a65 0,transparent 60%),#0b1924;color:#edf6fb}.logo{width:190px;height:190px;object-fit:contain;margin:0 auto 18px}.eyebrow{font-size:10px;letter-spacing:.2em;color:#a8c7da}.hero h1{font-size:clamp(45px,7vw,82px);font-weight:400;letter-spacing:-.06em;margin:12px 0 20px}.lead{max-width:530px;margin:auto;font-size:clamp(20px,3vw,27px);line-height:1.4;color:#bdd0dd}.story,.mission,.experience{max-width:940px;margin:auto;padding:65px 28px}.story{display:grid;grid-template-columns:1fr 1.5fr;gap:65px}.story h2,.mission h2{font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-.035em;margin:0}.story p,.mission p{font-size:16px;line-height:1.85;color:#526f81;margin:0 0 20px}.experience{padding-top:30px;padding-bottom:35px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:35px;border-top:1px solid #c9d9e3;border-bottom:1px solid #c9d9e3}.experience>p{font-size:10px;letter-spacing:.15em;color:#526f81}.experience strong{font-size:48px;font-weight:400;display:block;letter-spacing:-.04em}.experience span{font-size:14px;color:#526f81}.mission{max-width:710px;text-align:center;padding-bottom:0}.mission h2{margin-bottom:22px}.mission a{display:inline-block;font-size:14px;color:#143c57;border-bottom:1px solid #95b7cd;padding-bottom:7px;margin:10px 14px}@media(max-width:700px){.hero{padding-top:125px;padding-bottom:45px}.logo{width:150px;height:150px}.story{grid-template-columns:1fr;gap:25px;padding-top:45px;padding-bottom:25px}.story h2,.mission h2{font-size:28px}.experience{margin:0 24px;padding:24px 0;grid-template-columns:1fr 1fr;gap:20px}.experience>p{grid-column:1/-1;margin:0}.experience strong{font-size:40px}.story p,.mission p{font-size:14px}.mission{padding-top:45px}}
+
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:560px;display:flex;flex-direction:column;justify-content:center;padding-top:180px;padding-bottom:110px}
+.hero .logo{position:absolute;z-index:-1;width:570px;height:570px;max-width:none;left:50%;top:50%;transform:translate(-50%,-43%) rotate(-12deg);opacity:.23;margin:0;pointer-events:none}
+.hero h1{font-size:clamp(44px,7.5vw,96px);letter-spacing:-.045em;line-height:1.05;max-width:1100px;margin:18px auto 24px}
+.hero .lead{color:#d4e3ed;max-width:560px}
+.beliefs{max-width:940px;margin:0 auto;padding:65px 28px 20px;display:grid;grid-template-columns:1fr 1fr;gap:55px}
+.beliefs .eyebrow{color:#5c7b90;font-size:10px;margin-bottom:18px}
+.beliefs h2{font-size:32px;line-height:1.2;font-weight:400;letter-spacing:-.035em;margin:0 0 22px}
+.beliefs p:not(.eyebrow){font-size:16px;line-height:1.85;color:#526f81;margin:0}
+.aboutLinks{text-align:center;margin-top:20px}.aboutLinks a{display:inline-block;font-size:14px;color:#143c57;border-bottom:1px solid #95b7cd;padding-bottom:7px;margin:10px 14px}
+@media(max-width:700px){.hero{min-height:510px;padding:155px 24px 85px}.hero .logo{width:450px;height:450px;transform:translate(-50%,-42%) rotate(-12deg);opacity:.2}.hero h1{font-size:clamp(40px,11vw,66px)}.beliefs{grid-template-columns:1fr;gap:38px;padding:45px 28px 15px}.beliefs h2{font-size:28px}.beliefs p:not(.eyebrow){font-size:14px}}
+
+/* Architectural identity. */
+.about{background:#0b0b0f;color:#f5f6f7;font-family:var(--font-inter),sans-serif}
+.hero{background:radial-gradient(ellipse at 65% 30%,#4a5cff40,transparent 65%),#0b0b0f;border-bottom:1px solid #4a5cff30}
+.hero .logo{transform:translate(-50%,-43%);opacity:.22;filter:drop-shadow(0 0 45px #4a5cff40)}
+.lead,.hero .lead{color:#c9cbd1}.story p,.mission p,.experience span,.beliefs p:not(.eyebrow){color:#b3b4c3}
+.eyebrow,.beliefs .eyebrow,.experience>p{color:#80aeff}.experience{border-color:#ffffff20}.experience strong{color:#80aeff}
+.beliefs{gap:24px}.beliefs>div{padding:28px;border:1px solid #ffffff20;background:linear-gradient(140deg,#101a30,#101015);border-radius:12px}
+.aboutLinks a{color:#80aeff;border-color:#4a5cff60}
+@media(max-width:700px){.beliefs>div{padding:22px}}
+
+.hero{background:radial-gradient(ellipse at 70% 20%,#123dff55,transparent 62%),#0b0b0f}.hero .logo{filter:drop-shadow(0 0 40px #1645ff70)}.beliefs>div{background:radial-gradient(ellipse at 100% 0,#1645ff25,transparent 70%),#111620;border-color:#5588ff35}

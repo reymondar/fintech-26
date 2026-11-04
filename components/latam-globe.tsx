@@ -20,7 +20,7 @@ const routes = connections.map(([from, to]) => {
   })
 })
 
-export function LatamGlobe() {
+export function LatamGlobe({ paused = false }: { paused?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -118,7 +118,7 @@ export function LatamGlobe() {
       nodes.forEach((node, i) => {
         const [x, y, z] = project(node)
         if (z <= 0) return
-        const pulse = reduced.matches ? 0.35 : (time * 0.33 + i * 0.21) % 1
+        const pulse = (reduced.matches || paused) ? 0.35 : (time * 0.33 + i * 0.21) % 1
         ctx.beginPath(); ctx.arc(x, y, 5 + pulse * 12, 0, Math.PI * 2)
         ctx.strokeStyle = `rgba(5,150,105,${(1 - pulse) * 0.26})`; ctx.lineWidth = 1; ctx.stroke()
         ctx.beginPath(); ctx.arc(x, y, 3.2, 0, Math.PI * 2)
@@ -146,8 +146,8 @@ export function LatamGlobe() {
       if (last && now - last < 32) { frame = requestAnimationFrame(tick); return }
       elapsed += last ? Math.min((now - last) / 1000, 0.1) : 0
       last = now
-      draw(reduced.matches ? 0 : elapsed)
-      if (!reduced.matches) frame = requestAnimationFrame(tick)
+      draw((reduced.matches || paused) ? 0 : elapsed)
+      if (!reduced.matches && !paused) frame = requestAnimationFrame(tick)
     }
     function restart() {
       cancelAnimationFrame(frame); last = 0
@@ -159,7 +159,7 @@ export function LatamGlobe() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
       canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-      draw(reduced.matches ? 0 : elapsed)
+      draw((reduced.matches || paused) ? 0 : elapsed)
     })
     resize.observe(canvas)
     const observer = new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; restart() })
@@ -177,7 +177,7 @@ export function LatamGlobe() {
       document.removeEventListener("visibilitychange", restart)
       reduced.removeEventListener("change", restart)
     }
-  }, [])
+  }, [paused])
 
   return <div aria-hidden="true" className="latam-globe pointer-events-none absolute">
     <canvas ref={canvasRef} className="h-full w-full" />

@@ -1,0 +1,53 @@
+/* Shared public-site identity. Private CMS and mailing layouts are excluded. */
+body[data-site-theme="liquid"]{--background:#f2f1f4;--foreground:#22222d;--primary:#27273c;--primary-foreground:#f7f7f8;--border:#d5d5db;--ring:#8585a6;background:#f2f1f4;color:#22222d;font-family:var(--font-inter),sans-serif}
+body[data-site-theme="liquid"] main :is(h1,h2,h3){font-family:var(--font-inter),sans-serif!important;font-weight:400;letter-spacing:-.04em}
+body[data-site-theme="liquid"] :is([class~="bg-zinc-50"],[class~="bg-zinc-100"]){background-color:#f2f1f4}
+body[data-site-theme="liquid"] :is([class~="border-zinc-200"],[class~="border-emerald-100"],[class~="border-emerald-200"]){border-color:#d4d4db}
+body[data-site-theme="liquid"] :is([class~="text-emerald-600"],[class~="text-emerald-700"],[class~="text-emerald-800"],[class~="text-emerald-900"]){color:#444466}
+body[data-site-theme="liquid"] :is([class~="bg-emerald-50"],[class~="bg-emerald-100"]){background-color:#e9e9ec}
+body[data-site-theme="liquid"] :is([class~="bg-emerald-700"],[class~="bg-emerald-800"],[class~="bg-emerald-900"],[class~="bg-emerald-950"]){background-color:#22222f}
+body[data-site-theme="liquid"] :is([class~="text-emerald-100"],[class~="text-emerald-200"]){color:#d3d3d9}
+body[data-site-theme="liquid"] :is([class~="bg-violet-50"],[class~="bg-orange-50"],[class~="bg-amber-50"]){background-color:#ececef}
+body[data-site-theme="liquid"] main :is([class~="text-violet-600"],[class~="text-violet-700"],[class~="text-orange-700"],[class~="text-amber-700"]){color:#676784}
+body[data-site-theme="liquid"] main :is(input,select,textarea){border-color:#ccccd4;accent-color:#676686}
+body[data-site-theme="liquid"] main :is(input,select,textarea):focus-visible{outline-color:#8282a2}
+body[data-site-theme="liquid"] .site-navbar{max-width:1280px;top:22px}
+body[data-site-theme="liquid"] .site-navbar>nav{padding:13px 20px;background:linear-gradient(120deg,#22222ff5,#16161df5);border:1px solid #adadca38;box-shadow:inset 0 1px 0 #e7e7eb12,0 12px 32px #12121913;backdrop-filter:blur(22px)}
+body[data-site-theme="liquid"] .site-navbar :is(a,button,span){color:#ceced6}
+body[data-site-theme="liquid"] .site-navbar a:hover,body[data-site-theme="liquid"] .site-navbar button:hover{color:#f9f9fa}
+body[data-site-theme="liquid"] .site-navbar a[href="/es"],body[data-site-theme="liquid"] .site-navbar a[href="/en"]{color:#f6f6f7}
+body[data-site-theme="liquid"] .site-navbar nav>a:first-child img{width:34px;height:34px}
+body[data-site-theme="liquid"] .site-navbar nav>a:first-child span{font-size:11px;letter-spacing:.12em;font-weight:500}
+body[data-site-theme="liquid"] .site-navbar :is([role="menu"],[class~="bg-white/95"]){background:#1e1e28;border-color:#9f9fb646}
+body[data-site-theme="liquid"] .site-navbar [class~="bg-zinc-100"]{background:#9f9fbc24}
+body[data-site-theme="liquid"] .site-navbar :is(a[class~="bg-zinc-900"],a[class~="bg-zinc-900"] span){background:linear-gradient(120deg,#fafafa,#d5d5db);color:#232336;border-color:#e6e6e9}
+body[data-site-theme="liquid"] .site-navbar [role="menuitem"]:hover{background:#a2a2bd16}
+body[data-site-theme="liquid"] .site-footer{background:radial-gradient(ellipse at 95% 0,#26263b66,transparent 50%),#13131a;border-color:#b0b0cb2b}
+body[data-site-theme="liquid"] .site-footer :is(a,p){color:#b3b3c4}
+body[data-site-theme="liquid"] .site-footer :is(h4,span){color:#ededf0}
+body[data-site-theme="liquid"] .site-footer a:hover{color:#fff}
+body[data-site-theme="liquid"] .site-footer [class~="border-zinc-200"]{border-color:#9898b12b}
+body[data-site-theme="liquid"] .site-footer img{width:32px;height:32px}
+body[data-site-theme="liquid"] .site-footer p{font-size:12px;line-height:1.9}
+@media(max-width:700px){body[data-site-theme="liquid"] .site-navbar{top:16px}body[data-site-theme="liquid"] .site-navbar>nav{padding:10px 13px}body[data-site-theme="liquid"] .site-navbar nav>a:first-child span{display:block;font-size:8px}body[data-site-theme="liquid"] .site-navbar nav>a:first-child img{width:28px;height:28px}}
+
+body[data-site-theme="liquid"] .site-navbar [role="group"]{background:#9f9fbc16;border-color:#9f9fbc44}
+body[data-site-theme="liquid"] .site-navbar [role="group"] a[aria-current="page"]{background:#dbdbe1;color:#242438}
+
+/* Shared Stackhouse brand, preserving content and navigation. */
+body[data-site-theme="liquid"]{--primary:#4a5cff;--ring:#4a5cff}
+body[data-site-theme="liquid"] .site-navbar>nav{background:#101015ed;border-color:#ffffff20;border-radius:12px;box-shadow:none}
+body[data-site-theme="liquid"] .site-navbar :is(a,button,span){color:#c9cbd1}
+body[data-site-theme="liquid"] .site-navbar nav>a:first-child img{width:30px;height:38px;object-fit:contain}
+body[data-site-theme="liquid"] .site-navbar nav>a:first-child span{font-size:11px;letter-spacing:.15em;color:#f5f6f7}
+body[data-site-theme="liquid"] .site-navbar a[class~="bg-zinc-900"]{background:#4a5cff;color:#fff;border-radius:6px}
+body[data-site-theme="liquid"] .site-navbar :is([role="menu"],[class~="bg-white/95"]){background:#14141c;border-color:#ffffff20}
+body[data-site-theme="liquid"] .site-navbar [role="group"]{background:#ffffff08;border-color:#ffffff20}
+body[data-site-theme="liquid"] .site-navbar [role="group"] a[aria-current="page"]{background:#4a5cff;color:#fff}
+body[data-site-theme="liquid"] .site-footer{background:#0b0b0f;border-color:#ffffff20}
+body[data-site-theme="liquid"] .site-footer :is(a,p){color:#a8a8b5}
+body[data-site-theme="liquid"] .site-footer :is(h4,span){color:#f5f6f7}
+body[data-site-theme="liquid"] .site-footer img{width:32px;height:42px;object-fit:contain}
+body[data-site-theme="liquid"] :is(a,button):focus-visible{outline-color:#6699ff}
+
+body[data-site-theme="liquid"] .site-navbar [role="group"] a{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%!important;padding:0;flex-shrink:0}

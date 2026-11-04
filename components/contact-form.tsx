@@ -104,7 +104,7 @@ export function ContactForm() {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          placeholder="Contanos qué está pasando con tu visibilidad en IA, o qué necesitás..."
+          placeholder="Cuéntanos qué está pasando con tu visibilidad en IA, o qué necesitas..."
           className="w-full px-3 py-2.5 text-sm bg-white border border-zinc-200 rounded-xl text-zinc-900 placeholder:text-zinc-300 focus:outline-none focus:border-zinc-400 transition-colors resize-none"
         />
       </div>
@@ -112,7 +112,7 @@ export function ContactForm() {
       <p className="text-xs text-zinc-500">Usamos tus datos para atender tu consulta. <a href="/privacidad" className="underline">Política de privacidad</a>.</p>
 
       {status === "error" && (
-        <p className="text-xs text-red-500">Algo salió mal. Escribinos directamente a contact@thestackhouse.io</p>
+        <p className="text-xs text-red-500">Algo salió mal. Escríbenos directamente a contact@thestackhouse.io</p>
       )}
 
       <button

@@ -17,7 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const landingEntries: MetadataRoute.Sitemap = (["es", "en"] as const).map(locale => ({
     url: `${SITE_URL}/${locale}`,
-    lastModified: new Date("2026-10-13"),
+    lastModified: new Date("2026-11-03"),
     changeFrequency: "weekly",
     priority: 1,
     alternates: { languages: { es: `${SITE_URL}/es`, en: `${SITE_URL}/en`, "x-default": SITE_URL } },
@@ -25,9 +25,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...landingEntries,
-    ...["servicios", "auditoria"].flatMap(page => (["es", "en"] as const).map(locale => ({
+    ...["servicios", "auditoria", "nosotros"].flatMap(page => (["es", "en"] as const).map(locale => ({
       url: `${SITE_URL}/${page}?lang=${locale}`,
-      lastModified: new Date(page === "servicios" ? "2026-10-19" : "2026-09-16"),
+      lastModified: new Date("2026-11-03"),
       changeFrequency: "monthly" as const,
       priority: 0.9,
       alternates: { languages: { es: `${SITE_URL}/${page}?lang=es`, en: `${SITE_URL}/${page}?lang=en`, "x-default": `${SITE_URL}/${page}` } },
@@ -50,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${SITE_URL}/servicios/cro`,
-      lastModified: new Date("2026-10-19"),
+      lastModified: new Date("2026-11-04"),
       changeFrequency: "monthly",
       priority: 0.8,
     },

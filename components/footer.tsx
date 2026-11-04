@@ -12,7 +12,7 @@ export function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
-    <footer ref={ref} className="border-t border-zinc-200 bg-zinc-100">
+    <footer ref={ref} className="site-footer border-t border-zinc-200 bg-zinc-100">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <m.div
           initial={{ opacity: 1, y: 20 }}
@@ -23,16 +23,17 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href={localizeHref("/")} className="flex items-center gap-2 mb-4">
-              <img src="/logo-stackhouse.png" alt={t("The Stack House")} className="w-6 h-6 object-contain" />
-              <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">{t("The Stack House")}</span>
+              <img src="/branding/stackhouse-logo.png" alt={t("The Stack House")} className="w-6 h-6 object-contain" />
+              <span className="font-semibold text-zinc-900 tracking-wide text-sm uppercase">{t("The Stackhouse")}</span>
             </a>
-            <p className="text-sm text-zinc-500"> {t("Ayudamos a tu ecommerce a aparecer en la IA y convertir ese interés en ventas.")} </p>
+            <p className="text-sm text-zinc-500"> {locale === "en" ? "Visibility, conversion and analytics for B2B ecommerce with large catalogs." : "Visibilidad, conversión y analítica para ecommerce B2B con catálogos grandes."} </p>
           </div>
 
           {/* Sitio */}
           <div>
             <h4 className="text-sm font-semibold text-zinc-900 mb-4">{t("Sitio")}</h4>
             <ul className="space-y-3">
+              <li><a href={localizeHref("/nosotros")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">{locale === "en" ? "About us" : "Sobre nosotros"}</a></li>
               <li>
                 <a href={localizeHref("/#how-it-works")} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Cómo funciona")} </a>
               </li>
@@ -44,9 +45,6 @@ export function Footer() {
               </li>
               <li>
                 <a href="/blog" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Blog")} </a>
-              </li>
-              <li>
-                <a href="/informacion-para-ia" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">{locale === "en" ? "Company information (ES)" : "Información oficial"}</a>
               </li>
               <li>
                 <a href="/contacto" className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors"> {t("Contacto")}{locale === "en" ? " (ES)" : ""} </a>
@@ -75,6 +73,7 @@ export function Footer() {
         <nav aria-label={locale === "en" ? "Legal information" : "Información legal"} className="mt-8 flex flex-wrap gap-5 text-sm text-zinc-500">
           <a href="/aviso-legal" className="transition-colors hover:text-zinc-900">{locale === "en" ? "Legal notice (ES)" : "Aviso legal"}</a>
           <a href="/privacidad" className="transition-colors hover:text-zinc-900">{locale === "en" ? "Privacy policy (ES)" : "Política de privacidad"}</a>
+          <button type="button" onClick={() => window.dispatchEvent(new Event("sh:privacy-open"))} className="text-left transition-colors hover:text-white">{locale === "en" ? "Privacy preferences" : "Preferencias de privacidad"}</button>
         </nav>
         {/* Bottom */}
         <m.div

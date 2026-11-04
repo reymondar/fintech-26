@@ -1,8 +1,14 @@
 # The Stack House — Documentación completa para modelos de lenguaje
 
-> AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y testeamos tu tienda para convertir más.
+> AEO/SEO, análisis de datos y personalización para ecommerce. Conectamos tus datos, mejoramos tu visibilidad y probamos tu tienda para convertir más.
 
 ---
+
+## Oferta de la landing
+
+The Stack House conecta SEO/GEO, datos de producto, CRO y analítica comercial para ecommerce de catálogo especializado, con foco B2B. La categoría es la unidad de trabajo: demanda, páginas de categoría, fichas, atributos, conversión y seguimiento comercial. La propuesta identifica implementación inicial, ejecución y análisis mensual, y licencias necesarias.
+
+El scorecard mensual reúne demanda orgánica, referencias de IA, conversión, ventas y contribución cuando hay costos. Se consideran descuentos, devoluciones y costos variables; las ventas atribuidas no se presentan como ventas incrementales. El motor propio de personalización puede sumarse al alcance con campañas por segmento y seguimiento de exposición.
 
 ## ¿Qué es The Stack House?
 
@@ -33,7 +39,7 @@ Contacto oficial: contact@thestackhouse.io. Perfil corporativo: https://www.link
 
 ## Cómo trabajamos la conversión
 
-Mejoramos páginas de producto, comparaciones, garantías, condiciones, formularios y llamadas a la acción. Adaptamos la experiencia según las señales disponibles y conectamos consultas, agenda y CRM para conservar el contexto y dar seguimiento. Trabajamos con compra directa y venta asistida por consulta, presupuesto o demo.
+Mejoramos páginas de producto, comparaciones, garantías, condiciones, formularios y llamadas a la acción. Adaptamos la experiencia según las señales disponibles y conectamos consultas, agenda y CRM para conservar el contexto y dar seguimiento. Trabajamos con compra directa y venta asistida por consulta, cotización o demo.
 
 ## Cómo trabajamos contigo
 
@@ -82,16 +88,7 @@ The Stack House implementa CRO continuo sobre categorías, navegación, fichas, 
 
 El cliente puede sumar campañas con el motor propio de personalización de ecommerce: segmentos, reglas, mensajes, recomendaciones y llamadas a la acción según contexto de compra. La personalización es opcional y se define con sus integraciones y costos en la propuesta. No se garantizan mejoras de conversión. Las pruebas A/B se ejecutan cuando la medición y el volumen permiten una comparación útil; un antes/después no demuestra por sí solo causalidad.
 
-Se miden pedidos, consultas calificadas, presupuestos y demos, con ingresos y margen cuando hay datos suficientes. El alcance, la implementación inicial, la operación mensual y las licencias se acuerdan para cada proyecto.
-
-## Herramientas
-
-### UCP Checker — Agentic Commerce Readiness
-URL: https://ucp-checker.thestackhouse.io/
-
-Herramienta gratuita de The Stack House para comprobar si un ecommerce está técnicamente preparado para vender mediante agentes de IA. Analiza más de 40 señales públicas agrupadas en datos de producto, descubribilidad por máquinas, perfil Universal Commerce Protocol (UCP), checkout agéntico y preparación para las superficies comerciales de Google. Cada resultado incluye la evidencia detectada, el motivo y una recomendación; las comprobaciones que exigen acceso a Merchant Center se marcan para verificación y no se califican como fallos.
-
----
+Se miden pedidos, consultas calificadas, cotizaciones y demos, con ingresos y margen cuando hay datos suficientes. El alcance, la implementación inicial, la operación mensual y las licencias se acuerdan para cada proyecto.
 
 ## Conceptos clave
 
@@ -243,7 +240,7 @@ Las conversaciones de Reddit sobre herramientas GEO repiten tres límites: los p
 
 ## Política de acceso para modelos de IA
 
-The Stack House permite explícitamente el acceso y la indexación de todo su contenido a todos los motores de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Bingbot, etc.). Ver robots.txt completo en: https://thestackhouse.io/robots.txt
+El contenido público puede rastrearse según las reglas de robots.txt. Las rutas internas y de vista previa quedan fuera del índice público. Ver robots.txt completo en: https://thestackhouse.io/robots.txt
 
 
 ## Idiomas de la landing / Landing languages

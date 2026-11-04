@@ -42,7 +42,7 @@ export async function proxy(request: NextRequest) {
     return response
   }
 
-  const flowPage = ["/auditoria", "/servicios"].includes(pathname)
+  const flowPage = ["/auditoria", "/servicios", "/nosotros"].includes(pathname)
   const queryLocale = request.nextUrl.searchParams.get("lang")
   const locale = explicit ?? (flowPage ? (isLocale(queryLocale) ? queryLocale : detected) : pathname === "/" ? detected : "es")
   const requestHeaders = new Headers(request.headers)

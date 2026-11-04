@@ -8,13 +8,13 @@ export function AILayerFunnel({ active, running, locale }: { active: number; run
   const uid = useId().replace(/:/g, "")
   const en = locale === "en"
   const stages = en ? [
-    { title: "Understand demand", lines: ["Purchase questions", "Store · catalog · competitors"], tag: "DIAGNOSIS" },
-    { title: "Your acquisition engine", lines: ["Anticipate buyer needs", "Adapt the experience to drive sales"], tag: "IMPLEMENTATION" },
-    { title: "Measure and improve", lines: ["Visibility · inquiries · sales", "Analytics + CRM → next action"], tag: "OPTIMIZATION" },
+    { title: "High-value categories", lines: ["Capture purchase intent", "Google · AI discovery"], tag: "ACQUISITION" },
+    { title: "Sales opportunities", lines: ["Navigation · merchandising", "Personalization · conversion"], tag: "CONVERSION" },
+    { title: "Increase your margins", lines: ["Products · channels · segments", "Business data → next decision"], tag: "PROFITABILITY" },
   ] : [
-    { title: "Entender la demanda", lines: ["Preguntas de compra", "Tienda · catálogo · competencia"], tag: "DIAGNÓSTICO" },
-    { title: "Tu motor de captación", lines: ["Anticipa lo que busca cada comprador", "Adapta la experiencia para vender"], tag: "IMPLEMENTACIÓN" },
-    { title: "Medir y mejorar", lines: ["Visibilidad · consultas · ventas", "Analítica + CRM → siguiente acción"], tag: "OPTIMIZACIÓN" },
+    { title: "Categorías más rentables", lines: ["Demanda con intención de compra", "Google · descubrimiento en IA"], tag: "CAPTACIÓN" },
+    { title: "Oportunidades de venta", lines: ["Navegación · merchandising", "Personalización · conversión"], tag: "CONVERSIÓN" },
+    { title: "Aumenta tus márgenes", lines: ["Productos · canales · segmentos", "Datos del negocio → decisiones"], tag: "RENTABILIDAD" },
   ]
   const paths = [
     "M42 142 Q170 104 298 142 L265 226 Q170 253 75 226 Z",
@@ -24,7 +24,7 @@ export function AILayerFunnel({ active, running, locale }: { active: number; run
   const ellipses = [{cx:170,cy:142,rx:128,ry:25},{cx:170,cy:244,rx:89,ry:20},{cx:170,cy:345,rx:49,ry:13}]
   return <div className="relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-white via-zinc-50/50 to-emerald-50/60 p-3 shadow-[0_18px_60px_-35px_rgba(5,150,105,.25)] sm:p-5">
     <svg viewBox="0 0 640 540" className="block h-auto w-full" role="img" aria-labelledby={`${uid}-title ${uid}-desc`}>
-      <title id={`${uid}-title`}>{en ? "The AI layer across your sales funnel" : "El AI layer a lo largo de tu embudo de ventas"}</title>
+      <title id={`${uid}-title`}>{en ? "Acquisition, conversion and profitability" : "Captación, conversión y rentabilidad"}</title>
       <desc id={`${uid}-desc`}>{stages[active].title}. {stages[active].lines.join(". ")}</desc>
       <defs>
         <linearGradient id={`${uid}-on`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#a7f3d0" stopOpacity=".85"/><stop offset=".55" stopColor="#10b981" stopOpacity=".5"/><stop offset="1" stopColor="#047857" stopOpacity=".85"/></linearGradient>
@@ -33,7 +33,7 @@ export function AILayerFunnel({ active, running, locale }: { active: number; run
         <pattern id={`${uid}-grid`} width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#a1a1aa" opacity=".2"/></pattern>
       </defs>
       <rect width="640" height="540" fill={`url(#${uid}-grid)`}/>
-      <text x="28" y="34" fontSize="11" letterSpacing="2.4" fill="#059669" fontFamily="monospace">THE STACK HOUSE / AI LAYER</text>
+      <text x="28" y="34" fontSize="11" letterSpacing="2.4" fill="#059669" fontFamily="monospace">THE STACK HOUSE / GROWTH ENGINE</text>
       <text x="28" y="65" fontSize="21" fontWeight="500" fill="#18181b">{en ? "Your infrastructure. Connected." : "Tu infraestructura. Conectada."}</text>
       <g fontSize="10" fill="#71717a" textAnchor="middle">
         {[en ? "Questions" : "Preguntas",en ? "Products" : "Productos",en ? "Buyers" : "Compradores"].map((s,i)=><g key={s}><rect x={43+i*86} y="87" width="80" height="23" rx="11.5" fill="white" stroke="#e4e4e7"/><text x={83+i*86} y="102">{s}</text></g>)}
@@ -54,7 +54,7 @@ export function AILayerFunnel({ active, running, locale }: { active: number; run
         </m.g>
       </g>)}
       {running && !reduced && [0,1,2].map(i=><m.circle key={`${active}-${i}`} cx={150+i*20} r="2.8" fill="#059669" initial={{cy:[119,231,335][active],opacity:0}} animate={{cy:[228,330,434][active],opacity:[0,1,1,0]}} transition={{duration:2.8,delay:i*.65,repeat:Infinity,ease:"easeInOut"}}/>)}
-      <m.g animate={{opacity:active===2?1:.4}}><rect x="91" y="450" width="158" height="32" rx="16" fill="#ecfdf5" stroke="#a7f3d0"/><text x="170" y="470" textAnchor="middle" fontSize="12" fill="#047857">{en ? "Sales opportunities" : "Oportunidades de venta"}</text></m.g>
+      <m.g animate={{opacity:active===2?1:.4}}><rect x="91" y="450" width="158" height="32" rx="16" fill="#ecfdf5" stroke="#a7f3d0"/><text x="170" y="470" textAnchor="middle" fontSize="12" fill="#047857">{en ? "Profitable growth" : "Crecimiento rentable"}</text></m.g>
       <path d="M282 466H612Q626 466 626 452V111Q626 95 612 95H340" fill="none" stroke={active===2?"#34d399":"#e4e4e7"} strokeWidth="1.3" strokeDasharray="4 6"/>
       <path d="M348 91L340 95L348 99" fill="none" stroke={active===2?"#34d399":"#d4d4d8"}/>
       <text x="430" y="488" textAnchor="middle" fontSize="10" fill={active===2?"#059669":"#a1a1aa"}>{en ? "What we learn feeds the next improvement" : "Lo que aprendemos alimenta la siguiente mejora"}</text>

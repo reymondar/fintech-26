@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const description =
     locale === "en"
       ? "AEO/SEO, data analysis and segmented ecommerce personalization. Discover how we analyze, improve and test your store."
-      : "AEO/SEO, análisis de datos y personalización segmentada para ecommerce. Descubre cómo analizamos, mejoramos y testeamos tu tienda."
+      : "AEO/SEO, análisis de datos y personalización segmentada para ecommerce. Descubre cómo analizamos, mejoramos y probamos tu tienda."
   return {
     title: { absolute: title },
     description,
@@ -40,7 +40,7 @@ export default async function ServiciosPage() {
             <h2 className="text-xl font-medium tracking-tight text-zinc-900">{locale === "en" ? "CRO and ecommerce personalization" : "CRO y personalización de ecommerce"}</h2>
             <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-600">{locale === "en" ? "See how we analyze, implement and measure improvements to the shopping journey." : "Conoce cómo analizamos, implementamos y medimos las mejoras del recorrido de compra."}</p>
           </div>
-          <a href="/servicios/cro" className="shrink-0 text-sm font-medium text-emerald-800 underline underline-offset-4">{locale === "en" ? "Explore the process (ES) →" : "Ver el proceso CRO →"}</a>
+          <a href="/servicios/cro" className="shrink-0 text-sm font-medium text-[#4A5CFF] underline underline-offset-4">{locale === "en" ? "Explore the process (ES) →" : "Ver el proceso CRO →"}</a>
         </div>
       </section>
       <Footer />

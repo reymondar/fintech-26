@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: COMPANY_INFORMATION_TITLE, description: COMPANY_INFORMATION_DESCRIPTION,
     url: COMPANY_INFORMATION_URL, type: "website", locale: "es_ES", siteName: "The Stack House",
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "/branding/social-card.png", width: 1200, height: 630 }],
   },
-  twitter: { card: "summary_large_image", title: COMPANY_INFORMATION_TITLE, description: COMPANY_INFORMATION_DESCRIPTION, images: ["/og-default.png"] },
+  twitter: { card: "summary_large_image", title: COMPANY_INFORMATION_TITLE, description: COMPANY_INFORMATION_DESCRIPTION, images: ["/branding/social-card.png"] },
 }
 
 export default function CompanyInformationPage() {

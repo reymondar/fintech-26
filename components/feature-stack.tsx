@@ -22,7 +22,7 @@ export function FeatureStack() {
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-[28px]" style={{ padding: 1, background: "linear-gradient(0deg, rgba(5,150,105,.55), rgba(16,185,129,.12) 28%, transparent 75%)", mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)", maskComposite: "exclude" }} />
           <div className="absolute inset-x-4 bottom-8 h-32 rounded-full bg-emerald-400/10 blur-3xl" aria-hidden="true" />
           <div className="relative flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28">
-            <img src="/logo-stackhouse.png" alt="The Stack House" className="h-16 w-16 object-contain sm:h-20 sm:w-20" />
+            <img src="/branding/stackhouse-logo.png" alt="The Stack House" className="h-16 w-16 object-contain sm:h-20 sm:w-20" />
           </div>
         </div>
         {features.map(({ icon: Icon, title, description, position }, index) => (

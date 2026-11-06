@@ -9,8 +9,8 @@ import { CRO_URL, CRO_TITLE, CRO_DESCRIPTION, CRO_INTRO, croAreas, croSteps, cro
 export const metadata: Metadata = {
   title: CRO_TITLE, description: CRO_DESCRIPTION,
   alternates: { canonical: CRO_URL },
-  openGraph: { title: CRO_TITLE, description: CRO_DESCRIPTION, url: CRO_URL, type: "website", locale: "es_ES", siteName: "The Stack House", images: [{ url: "/og-default.png", width: 1200, height: 630 }] },
-  twitter: { card: "summary_large_image", title: CRO_TITLE, description: CRO_DESCRIPTION, images: ["/og-default.png"] },
+  openGraph: { title: CRO_TITLE, description: CRO_DESCRIPTION, url: CRO_URL, type: "website", locale: "es_ES", siteName: "The Stack House", images: [{ url: "/branding/social-card.png", width: 1200, height: 630 }] },
+  twitter: { card: "summary_large_image", title: CRO_TITLE, description: CRO_DESCRIPTION, images: ["/branding/social-card.png"] },
 }
 
 const stepIcons = [Search, ListFilter, Wrench, FlaskConical, ChartNoAxesCombined]

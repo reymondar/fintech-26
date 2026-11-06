@@ -6,6 +6,7 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 import { useState, useRef, useCallback } from "react"
 import { usePathname } from "next/navigation"
 import { m } from "framer-motion"
+import { UCP_CHECKER_URL } from "@/lib/ucp-checker"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
@@ -13,6 +14,7 @@ const navItems = [
   { label: "Servicios", href: "/servicios" },
   { label: "CRO", href: "/servicios/cro" },
   { label: "Blog", href: "/blog" },
+  { label: "UCP Checker", href: UCP_CHECKER_URL },
 ]
 
 export function Navbar() {

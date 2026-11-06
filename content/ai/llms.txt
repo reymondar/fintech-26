@@ -19,6 +19,10 @@
 
 - [CRO para ecommerce](https://thestackhouse.io/servicios/cro): Diagnóstico, implementación y métricas para categorías, fichas, cotizaciones, checkout, recomendaciones y recompra. Pruebas controladas cuando el volumen lo permite.
 
+## Herramientas
+
+- [UCP Checker](https://ucp-checker.thestackhouse.io/): herramienta para revisar la preparación técnica de una tienda para el comercio agéntico. El análisis se ejecuta en el checker.
+
 ## Blog
 
 - [Blog — The Stack House](https://thestackhouse.io/blog): Guías, análisis y perspectivas sobre visibilidad en IA, GEO y el futuro del marketing digital.

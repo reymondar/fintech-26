@@ -24,8 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { absolute: title },
     description,
     alternates: { canonical: `${SITE}/auditoria?lang=${locale}`, languages: { es: `${SITE}/auditoria?lang=es`, en: `${SITE}/auditoria?lang=en`, "x-default": `${SITE}/auditoria` } },
-    openGraph: { title, description, type: "website", siteName: "The Stack House", url: `${SITE}/auditoria?lang=${locale}`, locale: locale === "en" ? "en_US" : "es_ES", images: [{ url: "/og-default.png", width: 1200, height: 630 }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-default.png"] },
+    openGraph: { title, description, type: "website", siteName: "The Stack House", url: `${SITE}/auditoria?lang=${locale}`, locale: locale === "en" ? "en_US" : "es_ES", images: [{ url: "/branding/social-card.png", width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/branding/social-card.png"] },
   }
 }
 

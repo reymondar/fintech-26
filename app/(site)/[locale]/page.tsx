@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: { absolute: title }, description,
     alternates: { canonical: `${SITE}/${locale}`, languages: { es: `${SITE}/es`, en: `${SITE}/en`, "x-default": SITE } },
-    openGraph: { title, description, type: "website", siteName: "The Stack House", url: `${SITE}/${locale}`, locale: locale === "en" ? "en_US" : "es_ES", alternateLocale: locale === "en" ? "es_ES" : "en_US", images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "The Stack House" }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-default.png"] },
+    openGraph: { title, description, type: "website", siteName: "The Stack House", url: `${SITE}/${locale}`, locale: locale === "en" ? "en_US" : "es_ES", alternateLocale: locale === "en" ? "es_ES" : "en_US", images: [{ url: "/branding/social-card.png", width: 1200, height: 630, alt: "The Stack House" }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/branding/social-card.png"] },
   }
 }
 

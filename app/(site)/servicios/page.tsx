@@ -23,8 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { absolute: title },
     description,
     alternates: { canonical: `${SITE}/servicios?lang=${locale}`, languages: { es: `${SITE}/servicios?lang=es`, en: `${SITE}/servicios?lang=en`, "x-default": `${SITE}/servicios` } },
-    openGraph: { title, description, type: "website", siteName: "The Stack House", url: `${SITE}/servicios?lang=${locale}`, locale: locale === "en" ? "en_US" : "es_ES", images: [{ url: "/og-default.png", width: 1200, height: 630 }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-default.png"] },
+    openGraph: { title, description, type: "website", siteName: "The Stack House", url: `${SITE}/servicios?lang=${locale}`, locale: locale === "en" ? "en_US" : "es_ES", images: [{ url: "/branding/social-card.png", width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/branding/social-card.png"] },
   }
 }
 

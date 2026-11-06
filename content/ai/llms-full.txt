@@ -257,3 +257,7 @@ La raíz selecciona idioma por país y preferencia del visitante. Las URLs /es y
 - [Auditoría ES](https://thestackhouse.io/auditoria?lang=es)
 - [Store audit EN](https://thestackhouse.io/auditoria?lang=en)
 - [Servicios en Markdown, español](https://thestackhouse.io/api/md/services)
+
+## Herramientas
+
+- [UCP Checker](https://ucp-checker.thestackhouse.io/): herramienta para revisar la preparación técnica de una tienda para el comercio agéntico. El análisis se ejecuta en el checker.

@@ -1,5 +1,6 @@
 "use client"
 
+import { UCP_CHECKER_URL } from "@/lib/ucp-checker"
 import { useTranslation } from "@/components/locale-provider"
 
 import { useEffect, useRef, useState } from "react"
@@ -106,6 +107,15 @@ export function LiquidConcept() {
       <section id="preguntas" className={s.faq}>
         <div><p className={s.sectionKicker}>{t("PREGUNTAS FRECUENTES")}</p><h2>{t("Lo que necesitas saber")}<br /><span>{t("antes de empezar.")}</span></h2><p>{t("¿Tienes otra pregunta?")} <a href="mailto:contact@thestackhouse.io">{t("Escríbenos.")}</a></p></div>
         <div className={s.faqItems}>{landingFaqs.map(faq => <details key={t(faq.question)}><summary>{t(faq.question)}<span aria-hidden="true">+</span></summary><p>{t(faq.answer)}</p></details>)}</div>
+      </section>
+
+      <section id="ucp-checker" className={s.ucpSection} aria-labelledby="ucp-checker-title">
+        <div>
+          <p className={s.sectionKicker}>{locale === "en" ? "FREE TOOL" : "HERRAMIENTA GRATUITA"}</p>
+          <h2 id="ucp-checker-title">UCP Checker</h2>
+          <p>{locale === "en" ? "Check whether your store is ready for agentic commerce. Enter your store URL in the checker to run the analysis." : "Comprobá si tu tienda está preparada para el comercio agéntico. Ingresá la URL de tu tienda en el checker para ejecutar el análisis."}</p>
+        </div>
+        <a href={UCP_CHECKER_URL} className={s.primary}>{locale === "en" ? "Open UCP Checker" : "Abrir UCP Checker"} <ArrowUpRight size={17} aria-hidden="true" /></a>
       </section>
 
       <section className={s.closing}><div className={s.closingRipple} aria-hidden="true" /><p className={s.eyebrow}>{t("EL SIGUIENTE PASO")}</p><h2>{t("¿Qué categoría merece")}<br />{t("tu")}{" "}<em>{t("próxima inversión?")}</em></h2><p>{t("Revisemos demanda, catálogo y recorrido de compra. Definimos qué implementar primero, con qué datos medirlo y qué alcance necesita tu tienda.")}</p><a href={`/auditoria?lang=${locale}`} className={s.primary}>{t("Revisemos tu ecommerce")} <ArrowUpRight size={17} /></a><small>{t("Revisión inicial sin costo ni compromiso.")}</small></section>

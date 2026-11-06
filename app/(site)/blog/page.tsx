@@ -36,7 +36,7 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
       url: canonical,
       title: `Blog — The Stack House${pageSuffix}`,
       description: "Guías y análisis sobre visibilidad en IA, Share of Model, GEO y cómo las marcas se posicionan en la nueva búsqueda.",
-      images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+      images: [{ url: "/branding/social-card.png", width: 1200, height: 630 }],
     },
   }
 }

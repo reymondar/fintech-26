@@ -44,7 +44,7 @@ export async function generateMetadata({
       authors: [post.author],
       images: [
         {
-          url: post.seo?.image?.url || "/og-default.png",
+          url: post.seo?.image?.url || "/branding/social-card.png",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -55,7 +55,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: [post.seo?.image?.url || "/og-default.png"],
+      images: [post.seo?.image?.url || "/branding/social-card.png"],
     },
   }
 }
@@ -146,7 +146,7 @@ export default async function BlogPostPage({
     description: post.description,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
-    image: post.seo?.image?.url ? new URL(post.seo.image.url, SITE_URL).href : `${SITE_URL}/og-default.png`,
+    image: post.seo?.image?.url ? new URL(post.seo.image.url, SITE_URL).href : `${SITE_URL}/branding/social-card.png`,
     author: {
       "@type": "Person",
       "@id": `${SITE_URL}/#author-${encodeURIComponent(post.author)}`,
